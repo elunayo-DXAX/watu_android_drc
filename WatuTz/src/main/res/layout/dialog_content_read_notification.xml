@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+
+    >
+
+
+	<RelativeLayout
+        android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="20dp"
+
+		android:background="@color/black"
+		>
+
+
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:id="@+id/toolView"
+			android:layout_marginTop="10dp"
+			android:layout_height="wrap_content">
+
+			<com.watutz.app.view.MaterialRippleLayout
+				android:id="@+id/backRips"
+				style="@style/RippleStyle"
+				android:layout_width="50dp"
+				android:layout_height="50dp"
+				app:rippleColor="@color/transparent" >
+
+				<RelativeLayout
+					android:id="@+id/btnBack"
+					android:layout_width="match_parent"
+					android:padding="10dp"
+					android:layout_height="match_parent" >
+
+					<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_centerInParent="true"
+						app:srcCompat="@drawable/ics_back" />
+
+				</RelativeLayout>
+			</com.watutz.app.view.MaterialRippleLayout>
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:id="@+id/header"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="10dp"
+				android:layout_height="wrap_content">
+
+				<ImageView
+					android:id="@+id/icon"
+					android:layout_width="25dp"
+					android:src="@drawable/ics_notification_general"
+					android:layout_centerVertical="true"
+					android:scaleType="centerCrop"
+					android:layout_height="25dp"
+					/>
+
+				<com.watutz.app.font.FirmaTextView
+					android:id="@+id/type"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
+					android:layout_toRightOf="@+id/icon"
+					android:text="@string/filter_general_notifications"
+					android:textColor="@color/white"
+					android:layout_centerVertical="true"
+					android:textSize="@dimen/textsize_medium_small"
+					app:firmatypeface="firmaBold" />
+
+			</RelativeLayout>
+
+
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/date"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/header"
+				android:layout_centerHorizontal="true"
+				android:gravity="center"
+				android:layout_marginTop="20dp"
+				android:text="@string/date"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_medium_small"
+				app:firmatypeface="firmaMedium" />
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/time"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/date"
+				android:gravity="center"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="5dp"
+				android:text="@string/date"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_small"
+				app:firmatypeface="firmaMedium" />
+
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:background="@xml/rounded_list_button_black_dark"
+			android:id="@+id/placeBack"
+			android:layout_below="@+id/toolView"
+			android:layout_margin="10dp"
+			android:layout_height="wrap_content"
+			android:padding="10dp"
+			android:minHeight="100dp">
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:layout_width="wrap_content"
+				android:id="@+id/message"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:layout_marginLeft="5dp"
+				android:text="@string/nameh"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_small"
+				app:firmatypeface="firmaLight" />
+
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_below="@+id/message"
+				android:layout_marginTop="30dp"
+				android:layout_height="wrap_content">
+
+
+				<com.watutz.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+					android:layout_width="50dp"
+					android:layout_height="50dp"
+					android:layout_centerVertical="true"
+					app:rippleColor="@color/transparent">
+
+					<RelativeLayout
+						android:id="@+id/btnDeleteNotification"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="5dp"
+						>
+
+						<ImageView
+							android:layout_width="20dp"
+							android:layout_height="20dp"
+							android:layout_centerVertical="true"
+							android:src="@drawable/ics_icon_delete"
+							android:tint="@color/white" />
+
+
+					</RelativeLayout>
+
+				</com.watutz.app.view.MaterialRippleLayout>
+
+
+				<com.watutz.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+					android:layout_width="wrap_content"
+					android:layout_height="35dp"
+					android:layout_centerVertical="true"
+					android:minWidth="100dp"
+					android:layout_alignParentRight="true"
+					app:rippleColor="@color/transparent">
+
+					<RelativeLayout
+						android:id="@+id/btnNotification"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:padding="5dp"
+						android:background="@xml/rounded_list_button">
+
+						<com.watutz.app.font.FirmaTextView
+							android:id="@+id/buttonText"
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:layout_centerInParent="true"
+							android:text="@string/done"
+							android:textColor="@color/white"
+							android:textSize="@dimen/textsize_medium_small"
+							app:firmatypeface="firmaMedium" />
+
+
+					</RelativeLayout>
+
+				</com.watutz.app.view.MaterialRippleLayout>
+
+			</RelativeLayout>
+
+
+
+
+
+
+		</RelativeLayout>
+
+
+
+	</RelativeLayout>
+      
+      
+    
+
+ </RelativeLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="10dp"
+        android:background="@color/white">
+
+            <com.watutz.app.view.CircleImage
+                android:id="@+id/countryImage"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                app:img_radius="10"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                app:srcCompat="@drawable/ics_country_kenya" />
+
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/lastContent"
+			android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/countryImage">
+
+
+            <com.watutz.app.font.FirmaTextView
+                android:id="@+id/countryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/name"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/textsize_medium_small"
+                app:firmatypeface="firmaMedium" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/lastContent"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:id="@+id/countryChecked"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerInParent="true"
+                android:button="@drawable/custom_checkbox" />
+
+
+        </RelativeLayout>
+
+
+        <com.watutz.app.font.FontView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/userImage"
+            android:layout_alignBottom="@+id/userImage"
+            android:background="@xml/rounded_circle_theme_tiny"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/dw_tick"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_small"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>

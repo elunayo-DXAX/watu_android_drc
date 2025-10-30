@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@xml/rounded_list_dark_light">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/backRips"
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/transparent" >
+
+                <RelativeLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:padding="10dp"
+                    android:layout_height="50dp" >
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:id="@+id/icBack"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ics_back" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <com.watutz.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/commonappissues"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:firmatypeface="firmaBold" />
+        </RelativeLayout>
+
+
+
+        <!-- Help Options Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/topView"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp"
+           >
+
+            <!-- Help Item 1 -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                style="@style/RippleStyle"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnTemporaryUnlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icTemporary"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@xml/rounded_list_black_light"
+                        android:padding="10dp"
+                        android:src="@drawable/ics_icon_lock_open"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@id/icTemporary"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true">
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/phoneunlockhelp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/troubleshootunlockingyourphone"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Help Item 2 -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                style="@style/RippleStyle"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnMakePayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icMakePayment"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@xml/rounded_list_black_light"
+                        android:padding="8dp"
+                        android:src="@drawable/ics_icon_card"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@id/icMakePayment"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true">
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/payments"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/howtomakepayments"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Help Item 3 -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                style="@style/RippleStyle"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/icSignup"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@xml/rounded_list_black_light"
+                        android:padding="8dp"
+                        android:src="@drawable/ics_icon_shield_empty"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_toEndOf="@id/icSignup"
+                        android:layout_marginStart="16dp"
+                        android:layout_centerVertical="true">
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/howtosignup"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/havingissueswith_loggingin"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

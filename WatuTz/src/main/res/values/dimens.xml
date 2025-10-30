@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- SP adjusts according the users setting, DP is static -->
+    <dimen name="textsize_xlarge">28dp</dimen>
+    <dimen name="textsize_xxlarge">32dp</dimen>
+    <dimen name="textsize_xxxlarge">68dp</dimen>
+    <dimen name="textsize_large">24dp</dimen>
+    <dimen name="textsize_medium_large">20dp</dimen>
+    <dimen name="textsize_medium">18sp</dimen>
+    <dimen name="textsize_medium_small">16sp</dimen>
+    <dimen name="textsize_small">14sp</dimen>
+    <dimen name="textsize_xsmall">12sp</dimen>
+    <dimen name="textsize_xxsmall">10sp</dimen>
+    <!-- Dialog Dimens -->
+
+
+    <dimen name="tab_heightx">50dp</dimen>
+     <dimen name="tab_heightxx">60dp</dimen>
+
+</resources>

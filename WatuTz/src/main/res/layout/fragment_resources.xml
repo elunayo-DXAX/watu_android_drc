@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-10dp"
+    android:fitsSystemWindows="true"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+           >
+
+            <com.watutz.app.font.FirmaTextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/helpcenter"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium"
+                app:firmatypeface="firmaBold" />
+
+
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/backRips"
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/icBack"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ics_back" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+        </RelativeLayout>
+
+
+        <!-- Grid of Help Options -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topView"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:columnCount="2"
+            android:rowCount="4"
+            android:orientation="horizontal">
+
+            <!-- Example grid item: Phone Unlock -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/phoneUnlockRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnPhoneUnlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/iconPhoneUnlock"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_phone_unlock"/>
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconPhoneUnlock"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/phone_unlock"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Device Stolen -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/deviceStolenRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnDeviceStolen"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/iconDeviceStolen"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_device_stolen"/>
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconDeviceStolen"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/device_stolen"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Replacement Process -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/replacementProcessRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnReplacement"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+                    <ImageView
+                        android:id="@+id/iconReplacement"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_replacement"/>
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconReplacement"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/replacement_nprocess"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Returns -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/returnsRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnReturns"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+                    <ImageView
+                        android:id="@+id/iconReturns"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ics_icon_returns"/>
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconReturns"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/returns"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Recovery Process -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/recoveryProcessRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnRecovery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+                    <ImageView
+                        android:id="@+id/iconRecovery"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_recovery"/>
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconRecovery"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/recovery_nprocess"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Service Center -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/serviceCenterRips"
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnServiceCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+                    <ImageView
+                        android:id="@+id/iconServiceCenter"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_service_center"/>
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconServiceCenter"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/service_center"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+            <!-- Common App Issues (full width) -->
+            <com.watutz.app.view.MaterialRippleLayout
+                android:id="@+id/commonAppIssuesRips"
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_columnSpan="2"
+                android:layout_margin="12dp">
+                <RelativeLayout
+                    android:id="@+id/btnCommonIssues"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@xml/rounded_list_black_light">
+                    <ImageView
+                        android:id="@+id/iconCommonIssues"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_common_issues"/>
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iconCommonIssues"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/commonappissues"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:firmatypeface="firmaMedium"
+                        android:gravity="center" />
+                </RelativeLayout>
+            </com.watutz.app.view.MaterialRippleLayout>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+    <!-- this is where we’ll load child fragments -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+   </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout> 

@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="app_name">Watu Tz</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail_view">Watu</string>
+
+    <string name="infobip_application_code">adff3f87f45e160b94ef46454d32b38f-287681f4-d0bf-4c52-abf8-dc7fcec885f3</string>
+
+    <string name="dw_logout">&#xf29e;</string>
+    <string name="dw_cancel">&#xf2d7;</string>
+    <string name="dw_tick">&#xf3fd;</string>
+    <string name="dw_circle_question_mark">&#xf445;</string>
+    <string name="dw_back">&#xf3d5;</string>
+    <string name="dw_next">&#xf3d6;</string>
+    <string name="dw_next_triangle">&#xf3d1;</string>
+    <string name="dw_orders">&#xf110;</string>
+    <string name="dw_eye">&#xf133;</string>
+
+
+    <string name="loggingin">Give us a moment as we log you in.</string>
+    <string name="loginerror">Sorry, but we could not log you in.  Try again and contact support if the problem continues.</string>
+    <string name="loginsuccesstitle">Login Successful.</string>
+    <string name="loginsuccess">Logged in successfully.</string>
+
+    <string name="registering">Give us a moment as we sign you up.</string>
+    <string name="registererror">We are having difficulties in processing your login request. If you need immediate assistance, please visit our website or reach out to customer care.</string>
+    <string name="registersuccess">We need you to verify email address  <b>%1$s</b> to complete your sign up process. It\'s  as simple as clicking the link in the verification email we sent you.</string>
+    <string name="registersuccesstitle">To proceed, please verify your email</string>
+
+    <string name="didntreceive">Didn\'t get the mail?</string>
+    <string name="sendagain"><u>Send Again</u></string>
+
+
+    <string name="resettingpassword">Give us a moment as we set your PIN.</string>
+    <string name="resetpassworderror">Sorry, but we could not set your PIN.  Try again and contact support if problem continues.</string>
+    <string name="resetpasswordsuccess">PIN set successfully for  <b>%1$s</b>. Proceed</string>
+    <string name="resetpasswordsuccesstitle">Successful</string>
+
+
+    <string name="verifyidentityerror">Sorry, but we could not verify your details.  Try again and contact support if problem continues.</string>
+    <string name="verifyidentitysuccess">Successfully verified your details.</string>
+    <string name="verifyidentitysuccesstitle">Verification Successful</string>
+
+    <string name="error">Sorry. Could not complete the request. Try again</string>
+
+
+    <string name="requestingotp">Requesting confirmation code.</string>
+    <string name="requestingotperror">Sorry, but we could not request the confirmation code.  Try again and contact support if problem continues.</string>
+    <string name="requestingotpsuccess">Confirmation code sent successfully.</string>
+    <string name="requestingotpsuccesstitle">Confirmation code sent.</string>
+
+
+    <string name="confirmingotp">Confirming verification code.</string>
+    <string name="confirmingotperror">Sorry, but we could not confirm verification code.  Try again and contact support if problem continues.</string>
+    <string name="confirmingotpsuccess">Verification code confirmed successfully.</string>
+    <string name="confirmingotpsuccesstitle">Verification Successful.</string>
+
+    <string name="failed">Failed</string>
+
+    <string name="gettingmyprofile">Give us a moment as we get your profile.</string>
+    <string name="getmyprofileerror">Could not get your profile.  Try again and contact support if problem continues.</string>
+
+
+    <string name="editingmyprofile">Give us a moment as we get update your details.</string>
+    <string name="editmyprofileerror">Could not update your details.  Try again and contact support if problem continues.</string>
+    <string name="editmyprofilessuccess">We have successfully updated your details</string>
+
+    <string name="uploadingdocument">Give us a moment as we upload the document.</string>
+    <string name="uploaddocumenterror">Sorry, but we could not upload the document.  Try again and contact support if problem continues.</string>
+    <string name="uploaddocumentsuccess">Your documents have been submitted successfully and are under review.</string>
+
+
+    <string name="uploadingprofilepicimage">Give us a moment as we update your profile picture.</string>
+    <string name="uploadprofilepicerror">Sorry, but we could not update your profile picture.  Try again and contact support if problem continues.</string>
+    <string name="uploadprofilepicsuccess">Profile picture updated successfully. </string>
+    <string name="taptodismiss">  Tap to dismiss.</string>
+
+
+    <string name="amount">Tzs. %1$s</string>
+
+    <string name="mainmsg1">OWNERSHIP</string>
+    <string name="mainmsg2">CUSTOMER FOCUS</string>
+    <string name="mainmsg3">EMPOWERMENT</string>
+    <string name="mainmsg4">WATU</string>
+
+    <string name="awesome">Awesome</string>
+    <string name="successful">Successful</string>
+
+    <string name="makepayment">Make payment</string>
+
+    <string name="outstandingbalance">Outstanding Balance</string>
+
+    <string name="submsg1">We believe in honesty and transparency. Manage your asset easily on our Watu App.</string>
+    <string name="submsg2">We believe in honesty and transparency. Manage your asset easily on our Watu App.</string>
+    <string name="submsg3">We believe in honesty and transparency. Manage your asset easily on our Watu App.</string>
+    <string name="submsg4">We believe in honesty and transparency. Manage your asset easily on our Watu App.</string>
+
+
+    <string name="download">Download</string>
+    <string name="confirmlogout">Are you sure you want to log out from your account?</string>
+    <string name="accept">Accept</string>
+    <string name="accepted">Accepted</string>
+    <string name="demo_title_custom_tab_icons">Custom Tab Icons</string>
+    <string name="demo_tab_1">Tab1</string>
+    <string name="demo_tab_2">Tab2</string>
+    <string name="demo_tab_3">Tab3</string>
+    <string name="demo_tab_4">Tab4</string>
+    <string name="demo_tab_5">Tab5</string>
+    <string name="phone">Phone</string>
+
+    <string name="title_warning">Warning</string>
+    <string name="info_lose_internet">No internet connection.Please turn on internet and check again!</string>
+    <string name="info_server_error">We can not connect to the server. Check Connection and try again!</string>
+    <string name="title_yes">Yes</string>
+    <string name="title_no">No</string>
+    <string name="title_confirm">Confirm</string>
+    <string name="quit_message">Do you want to quit this application?</string>
+    <string name="info_empty">Please enter the keyword!</string>
+    <string name="retry">Retry</string>
+    <string name="decline">Decline</string>
+    <string name="nameh">Name</string>
+
+    <string name="tab_1">Home</string>
+    <string name="tab_2">Transactions</string>
+    <string name="tab_3">Payments</string>
+
+    <string name="loading">Please wait...</string>
+    <string name="skip">Skip</string>
+    <string name="alreadyhaveanaccount">Already have an account? </string>
+    <string name="signin">Sign In</string>
+    <string name="confirm">Confirm</string>
+    <string name="set">Set</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="changelanguage">Change Language</string>
+    <string name="emailaddress">Email address</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="name">Name</string>
+    <string name="resetpassword">PIN set successfully</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset">Reset</string>
+    <string name="zero">0</string>
+    <string name="permgivepermissions">Allow Permissions to continue</string>
+    <string name="permallow">Please "Allow" Permissions to be able to proceed on the next pop ups</string>
+    <string name="enteremail">Enter email address</string>
+    <string name="enterphonenumber">Enter Phone Number</string>
+    <string name="okay">Okay</string>
+    <string name="turnon">Turn On</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="done">Done</string>
+    <string name="noitemsview">There are no items</string>
+
+
+    <string name="item">Featured</string>
+
+    <string name="phonenumber">Phone Number</string>
+    <string name="continueh">Continue</string>
+    <string name="share">Share</string>
+
+
+    <string name="success">Success</string>
+
+    <string name="logintoyouraccount">Login to your account</string>
+    <string name="entervalidphonenumber">Enter a valid phone number</string>
+    <string name="enterthecodereceived">Enter the code received via SMS</string>
+
+
+    <string name="newuser">New User?</string>
+
+
+    <string name="welcomeback">Welcome back</string>
+    <string name="selectcountry">Select Country</string>
+    <string name="selectyourcountrytocontinue">"Select your country to continue"</string>
+    <string name="openemailapp">Open Email App</string>
+    <string name="enterregisterphone">We\'ll send a One Time Passcode to this number to verify your identity</string>
+
+
+    <string name="idnumber">Enter your ID number</string>
+    <string name="day">Day</string>
+    <string name="paymentmethod">Payment method</string>
+    <string name="mpesah">M-Pesa</string>
+
+
+    <string name="other">Other</string>
+
+
+    <string name="hello">Hello</string>
+
+
+    <string name="submit">Submit</string>
+
+    <string name="step1">Step 1</string>
+    <string name="step2">Step 2</string>
+
+    <string name="step3U">Step 3</string>
+
+
+    <string name="transactions">Transactions</string>
+
+    <string name="getloanserror">Could not fetch loan accounts. Try again and contact support if problem continues.</string>
+
+    <string name="gettingpayments">Fetching payments.</string>
+    <string name="getpaymentserror">Could not fetch payments. Try again and contact support if problem continues.</string>
+
+
+    <string name="gettingloandetails">Fetching account details.</string>
+    <string name="getloandetailsserror">Could not fetch account details. Try again and contact support if problem continues.</string>
+
+
+    <string name="initiatingpayment">Initiating payment.</string>
+    <string name="initiatepaymenterror">Could not initiate payment. Try again and contact support if problem continues.</string>
+
+    <string name="confirmingpayment">Waiting to confirm payment.</string>
+    <string name="confirmpaymenterror">Could not confirm payment. Try again and contact support if problem continues.</string>
+
+
+    <string name="getupcomingpaymentserror">Could not fetch upcoming payments. Try again and contact support if problem continues.</string>
+    <string name="monthlypayment">Monthly Payment</string>
+
+    <string name="paymentsuccesstitle">Payment successful</string>
+    <string name="paymentsuccessmessage">Your payment has been initiated successfully.</string>
+
+    <string name="logout">Logout</string>
+
+    <string name="paynow">Pay now</string>
+    <string name="enteramount">Enter Amount</string>
+
+    <string name="chatwithus">Chat with us</string>
+    <string name="helpcenter">Resource Centre</string>
+
+    <string name="welcometowatu">Watu...Empowering the future of mobility in Africa</string>
+    <string name="areyouanexisting">Are you an existing sales agent?</string>
+    <string name="idnumberh">ID number</string>
+
+    <string name="ksh">Tzs. </string>
+
+    <string name="date">Date</string>
+    <string name="notifications">Notifications</string>
+    <string name="aboutus">About Us</string>
+    <string name="settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="enter">Enter</string>
+    <string name="logindot">Login</string>
+    <string name="signupdot">Sign Up</string>
+    <string name="enteronetimecode">Enter the One Time Passcode sent to</string>
+    <string name="enterpin">Enter PIN</string>
+    <string name="confirmpin">Confirm PIN</string>
+    <string name="forgotpin">Forgot PIN</string>
+    <string name="watusimu">Watu Simu</string>
+    <string name="watuboda">Watu Boda</string>
+    <string name="amountpaid">Amount Paid</string>
+    <string name="pay">Pay</string>
+    <string name="recenttransactions">Recent Transactions</string>
+    <string name="payment">Payment</string>
+    <string name="monthly">Monthly</string>
+    <string name="daily">Daily</string>
+    <string name="choosepaymentplan">Choose Payment Plan</string>
+    <string name="paideveryweek">Paid every week</string>
+    <string name="weekly">Weekly</string>
+    <string name="ownership">Karibu Watu</string>
+    <string name="termsofservice">Terms of Service</string>
+    <string name="enterwatudetails">Enter your Watu registered phone number to Create Account</string>
+    <string name="declined">Declined</string>
+    <string name="fetchfailed">Sorry. Could not fetch details.</string>
+    <string name="asof">As of </string>
+    <string name="loanfrom">From: %1$s</string>
+    <string name="at">At: %1$s</string>
+    <string name="on">On: %1$s</string>
+    <string name="acceptterms">Accept the terms and conditions to proceed</string>
+    <string name="sorry">Failed!</string>
+    <string name="difficulties">We are having difficulties in processing your login request. If you need immediate assistance, please visit our website or reach out to customer care.</string>
+    <string name="supportnumbers">0800 750 228</string>
+    <string name="emergencynumbers">0800 750 228</string>
+    <string name="supportnumbersimu">0800 750 228 </string>
+    <string name="supportnumberboda">0800 750 228 </string>
+    <string name="simunumber">0800 750 228</string>
+    <string name="emergencies">(Emergencies)</string>
+    <string name="watugari">Watu Gari</string>
+    <string name="garinumber">0800 750 228</string>
+    <string name="verify">Verify</string>
+    <string name="loantype">Loan Type</string>
+    <string name="loanstatus">Loan Status</string>
+    <string name="loantypeh">Loan Type:</string>
+    <string name="issuedateh">Issue Date:</string>
+    <string name="maturitydateh">Maturity Date:</string>
+    <string name="loanstatush">Loan Status:</string>
+    <string name="overdue">Overdue</string>
+    <string name="totalpayment">Total Payment</string>
+    <string name="amountoverdue">Amount Overdue</string>
+    <string name="dailypayment">Daily Payment</string>
+    <string name="installmentperiod">Installment Period</string>
+    <string name="week">Week</string>
+    <string name="deviceactivetill">Device Active Until</string>
+    <string name="mynumber">My Number</string>
+    <string name="paymentconfirmation">Payment Confirmation</string>
+    <string name="from">From</string>
+    <string name="type">Type</string>
+    <string name="processingpayment">Processing Payment</string>
+    <string name="wrongcode">You have entered an incorrect code. See below to retry.</string>
+    <string name="resend">Resend</string>
+    <string name="privacynotice">Privacy notice</string>
+    <string name="anothernumber">Another Number</string>
+    <string name="paideveryday">Paid every day</string>
+    <string name="paideverymonth">Paid every month</string>
+    <string name="bridging">Bridging the gap between people and accessibility to flexible financing.</string>
+    <string name="aboutwatu">Watu is an Asset FinTech revolutionising mass-market mobility across Africa through financial inclusion and accessibility.\n\nAt a median age of 18, Africa is the youngest continent globally and is growing at an unprecedented rate. With an estimated 1.2 billion person growth in the next ten years, Watu is committed to transforming urban mobility and the financial lending landscape. We are continuously helping to shape a brighter and better future by giving people opportunities to build and change the course of their lives.</string>
+    <string name="watuwebsite">www.watuafrica.co.tz</string>
+    <string name="installmentamount">Instalment Amount</string>
+    <string name="wrongpin">The PIN you entered is wrong</string>
+    <string name="loanassetupdated">%1$s updated.</string>
+    <string name="hellowatu">Hello Watu</string>
+    <string name="supportinquiry">Support Inquiry</string>
+    <string name="sorryunder">Sorry we are under maintenance!</string>
+    <string name="checklater">Kindly check later</string>
+    <string name="selectasset">Select loan type to pay for</string>
+    <string name="app_version">WATU App Version %1$s</string>
+    <string name="nextpaymentdate">Next Payment Date</string>
+    <string name="confirmpaymentfailed">Could not confirm the payment. The status is %1$s</string>
+    <string name="languagelugha">Chagua Lugha | Select Language</string>
+    <string name="language">Language</string>
+    <string name="kiswahili">Kiswahili</string>
+    <string name="english">English</string>
+    <string name="languagechanged">Language changed to</string>
+
+    <string name="loanbalance">Loan Balance</string>
+    <string name="lastpayment">Last Payment</string>
+    <string name="weeklypayment">Weekly Payment</string>
+    <string name="amountduetounlock">Amount To Unlock</string>
+    <string name="registrationneeded">You need to activate your account</string>
+
+    <string name="feedback">Feedback</string>
+    <string name="wewouldlove">We would love to hear from you</string>
+    <string name="selecttheitem">Select the item of concern</string>
+    <string name="accountdetails">Account Details</string>
+    <string name="userexperience">User Experience</string>
+    <string name="pleasetype">Please type here your additional feedback.......</string>
+
+
+    <string name="submittingfeedback">Submitting feedback.</string>
+    <string name="submitfeedbackserror">Could not submit feedback. Try again and contact support if problem continues.</string>
+    <string name="thankyouforyourfeedback">Thank you for your feedback.</string>
+    <string name="feedbacksubmitted">Feedback Submitted</string>
+    <string name="temporaryunlock">Temporary Unlock</string>
+
+
+    <string name="requestingunlock">Requesting temporary unlock.</string>
+    <string name="requestingunlockerror">Sorry, but we could not request temporary unlock.  Try again and contact support if problem continues.</string>
+    <string name="requestingunlocksuccess"> <Data><![CDATA[<font color=\'#ffffff\'>Your phone is temporarily unlocked for &nbsp;</font><font color=\'#04AFAB\'>%1$s </font>]]></Data></string>
+    <string name="requestingunlocksuccessmessage">To continue using your phone,please press the button below</string>
+    <string name="unlocklimitreached">Sorry you have exceeded your temporary\nunlock limit. Please try again later</string>
+    <string name="deviceacquired">Device Acquired</string>
+    <string name="kindlyratepayment">Kindly rate your overall satisfaction with your payment process</string>
+    <string name="seeaccountstatus">See the status of your account</string>
+    <string name="thankyouforfeedback">Thank you for your payment.</string>
+
+
+    <string name="accountstatus">Account Status</string>
+    <string name="devicelockedon">Device Locked On</string>
+    <string name="progressstatus">Progress Status</string>
+    <string name="calluson">Call Us On</string>
+    <string name="maxunlockattempts">Looks like you reached your daily limit for you to temporary unlock your phone. Give it a try again tomorrow?"</string>
+
+
+    <string name="maxpayforanother">Your Pay with another number was unsuccessful because you have reached your daily limit of the pay with another number. Please try again tomorrow.</string>
+    <string name="dailyamount">Daily Amount</string>
+    <string name="temporarilyunlockedfor">Temporarily unlocked</string>
+    <string name="minutesremaining"> remaining</string>
+    <string name="alreadyunlocked">Your phone appears to be temporarily unlocked already</string>
+    <string name="devicealreadyunlocked">Device already unlocked temporarily</string>
+    <string name="paybill">650880</string>
+    <string name="makepayments">Make Payments</string>
+    <string name="howtopayviampesa">How to pay via MPESA</string>
+    <string name="paympesa"><Data><![CDATA[1. Dial <font color=\'#9CC652\'> %1$s</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Select 4 Pay with M-Pesa.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Select 4 Enter Business Number <font color=\'#9CC652\'> %2$s</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Enter the payment reference number <font color=\'#9CC652\'> (%3$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Enter the amount for your weekly repayment.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Enter Your PIN.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7. Confirm the payment by selecting 1. Company Name <font color=\'#9CC652\'> %4$s</font>. <br /> <br /> ]]></Data></string>
+
+
+    <string name="howtopayviaairtel">How to pay via Airtel Money</string>
+    <string name="payairtel"><Data><![CDATA[1. Dial <font color=\'#EC665C\'> %1$s</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Select 5 Pay Bill.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Select 2 Enter Business Number.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Select 7 Choose Business.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Select # to continue with the list.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Enter 20 (To select Watu Credit from the list).<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7. Enter the amount for your weekly repayment.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[8. Enter the payment reference number (Business number for boda-boda and tuk-tuk loans. Phone number for mobile loans).<br /> <br /> ]]></Data>
+                            <Data><![CDATA[9. Select 1 to confirm the payment.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[10. Then enter your PIN.<br /> <br /> ]]></Data></string>
+
+
+    <string name="howtopayviatigo">How to pay via Mixx By Yas</string>
+    <string name="paytigo"><Data><![CDATA[1. Dial <font color=\'#04AFAB\'> %1$s</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Select 4 Pay Bill.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Select 4 Enter Business Number.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Enter Business Number <font color=\'#04AFAB\'> (%2$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Enter the amount for your weekly repayment.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Enter the payment reference number <font color=\'#04AFAB\'> (%3$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7. Enter Your PIN.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[8. Confirm Company Name <font color=\'#04AFAB\'> %4$s</font>. <br /> <br /> ]]></Data></string>
+
+
+    <string name="paybillnumber">Paybill Number</string>
+    <string name="yourphonenumber">Your Phone Number</string>
+
+    <string name="payall30days">Pay Monthly Amount</string>
+    <string name="days">Days</string>
+    <string name="slidetoselect">Slide to select days to pay</string>
+
+
+    <string name="sorryundermaintenance">Sorry we are under maintenance!</string>
+    <string name="loginagainlater">Kindly log in later</string>
+    <string name="currentlyundermaintenance">We are currently under maintenance. Kindly check back later</string>
+    <string name="activebranchh">Activation Branch:</string>
+    <string name="havingaproblemsignup">Having issues Signing Up?</string>
+    <string name="pleaseverifyagain">Kindly verify your account to continue.</string>
+
+    <string name="amountlessthandaily">The amount is less than the daily amount</string>
+
+
+    <string name="paywithphonenumber">Pay With Phone Number</string>
+
+    <string name="congrats">Congrats</string>
+    <string name="wearehappy">"We're happy to inform you that your loan payment is complete. "</string>
+    <string name="gobackhome">Go back to home</string>
+
+
+    <string name="knoxmessage">Are you having trouble logging from your\nWatu financed phone? \nClick here for your One Time Passcode</string>
+    <string name="havingissuesmakingpayment">Having issues making payments?</string>
+    <string name="havingissuesunlockingdevice">Having issues with Unlocking your Device?</string>
+    <string name="resendknox">A passcode has been sent to your device. You can request a new one after %1$s</string>
+    <string name="resendsms">A passode has been sent to your number. You can request a new one after %1$s sec</string>
+
+
+    <string name="securenotification">Secure Notification</string>
+    <string name="havingtroublereceiving">Having trouble receiving your one time passcode via SMS?</string>
+    <string name="knoxinstruction">1. Make sure you requesting from a Watu Financed Device.\n2. Make Sure you connected to the internet, Mobile Data or Wifi.\n3. Remember to memorize or write down the passcode shared from the secured notification.</string>
+    <string name="smsinstruction">1. Make sure you are requesting from a Watu Registered Number.\n2. The One time PassCode will be sent to your SMS Inbox.</string>
+
+    <string name="getyouronetimepasscode">Get your One Time Passcode</string>
+    <string name="unabletosendknox">We are unable securely to deliver the Passcode please retry.</string>
+
+
+    <string name="addinguserction">Adding user action.</string>
+    <string name="adduseractionsuccess">Added user action successfully.</string>
+    <string name="adduseractionerror">Could not add user action. Try again and contact support if problem continues.</string>
+
+
+    <string name="pleaseturnonnetwork">Please Turn On your Internet</string>
+    <string name="havingtroublenetwork">Turn on your internet settings to continue using the app.</string>
+
+    <string name="howtosignup">How to sign up</string>
+    <string name="howtomakepayments">How to make payments</string>
+    <string name="loancompletetext">Thank you for being a valued Watu customer. We hope your %1$s has been everything you wanted—and more!</string>
+
+
+    <string name="markallasread">Mark All as Read</string>
+    <string name="filternotifications">Filter Notifications</string>
+    <string name="filter_all">All</string>
+    <string name="filter_unread">Unread</string>
+    <string name="filter_general_notifications">General Notifications</string>
+    <string name="filter_payment_notifications">Payment Notifications</string>
+    <string name="filter_reminders">Reminders</string>
+    <string name="viewtransactionsh">View Transactions</string>
+
+
+    <string name="instructionsforotherpayment">Instructions for Other Payment options</string>
+
+    <string name="general">General</string>
+
+
+    <string name="updatingtoken">Updating user token.</string>
+    <string name="updatetokensuccess">Updated user token successfully.</string>
+    <string name="updatetokenerror">Could not add update user token. Try again and contact support if problem continues.</string>
+
+
+    <string name="turnedon">Turned On</string>
+    <string name="reminder">Reminder</string>
+
+
+    <string name="pendingpayment">Pending Payment</string>
+    <string name="confirmpending">Could not confirm the payment. The status\nis PENDING</string>
+    <string name="paymentfailed">Your payment is unsuccessful.</string>
+    <string name="confirmyourpayment">Confirm Your Payment</string>
+    <string name="confirmpayment">Confirm Payment</string>
+
+    <string name="paymentcompletedmessage">Your payment has been completed successfully.</string>
+    <string name="enteramountgreaterthanfive">Enter amount greater than 500</string>
+
+
+    <string name="smspasscode">SMS Pass Code</string>
+    <string name="getcodeviaknox">Get Code Via Knox</string>
+    <string name="getcodeviasms">Get Code Via SMS</string>
+
+
+    <string name="termsandconditions">Terms and Conditions</string>
+    <string name="acceptthe">Accept the</string>
+    <string name="foryoutogetstarted">for you to get started.</string>
+    <string name="gettingstarted">Getting Started</string>
+    <string name="enter5digitcode">Enter 5 Digit Code</string>
+    <string name="confirmyourpin">Confirm your PIN</string>
+    <string name="enterthesamepin">Enter the same PIN.</string>
+    <string name="pindoesnotmatch">PIN does not match</string>
+    <string name="enterpindigits">Please enter all 4 digits in both fields</string>
+    <string name="hiname">Hi, %1$s!</string>
+    <string name="helptip">Help Tip</string>
+    <string name="tiphelpcontent">&#8226; Are you logging in from your Watu Registered Number?\n\n&#8226; Make sure you have Active data on your device for you to log in</string>
+
+
+    <string name="hours">Hours</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Seconds</string>
+    <string name="refresh">Refresh</string>
+    <string name="helloicon">Hello ✋🏾</string>
+    <string name="seeaccountdetails">See your account details</string>
+    <string name="yourdevicewillbeactivefor">Your device will be active for</string>
+    <string name="downloadstatement">Download Statement</string>
+    <string name="amounttounlock">Amount To Unlock</string>
+    <string name="paymentprogress">Payment Progress</string>
+    <string name="yourbalanceis">Your Balance is</string>
+    <string name="jijenge">Jijenge!</string>
+    <string name="yourjourneystartshere">Your journey starts here...</string>
+    <string name="ownit">Own It!</string>
+    <string name="tracktheprogressofyourjourney">Track the progress of your journey and clear your balance to own your asset</string>
+    <string name="checkprogress">Check Progress</string>
+    <string name="yourdevicewaslockedon">Your device was locked on</string>
+    <string name="generalsettings">General Settings</string>
+    <string name="downloads">Downloads</string>
+    <string name="levelup">Level Up</string>
+    <string name="more">More</string>
+    <string name="faqsupport">FAQ Support</string>
+    <string name="resourcecenter">Resource Centre</string>
+    <string name="pleasewait">Please wait...</string>
+    <string name="documents">Documents</string>
+    <string name="confirmyourfingeprint">Confirm your Fingerprint</string>
+    <string name="enabletouchid">Enable Touch ID</string>
+    <string name="placeyourfingerprint">Tap Set Fingeprint below and place your finger on the sensor to authenticate</string>
+    <string name="setfingerprint">Set Fingerprint</string>
+    <string name="fingeprintnotsupported">Biometric authentication not supported on this device</string>
+    <string name="fingeprintnotsetup">No fingerprint enrolled. Please set up biometrics.</string>
+    <string name="loginwithfingerprint">Login with Fingerprint</string>
+    <string name="touchfingerprinttoauthenticate">Authenticate to access the app</string>
+    <string name="loansuccessful">Your loan has been successfully paid off!</string>
+    <string name="totalamount">Total Amount</string>
+    <string name="support">Support</string>
+    <string name="getyourdocumentshere">Get your documents here.</string>
+    <string name="loanagreementform">Loan Agreement Form</string>
+    <string name="accountstatements">Account Statement</string>
+
+    <string name="downloadingloanagreement">Downloading Loan Agreement...</string>
+    <string name="unabletodownloadloanagreement">Unable to Load Loan Agreement</string>
+
+    <string name="downloadloanagreementerror">We\’re unable to load your loan agreement right now.\nDon\’t worry, our team can help. Just chat with us on WhatsApp for assistance.
+</string>
+
+    <string name="biometricauthentication">Biometric Authentication</string>
+    <string name="commonappissues">Common App Issues</string>
+    <string name="phoneunlockhelp">Phone Unlock Help</string>
+    <string name="troubleshootunlockingyourphone">Troubleshoot unlocking your phone</string>
+    <string name="payments">Payments</string>
+    <string name="havingissueswith_loggingin">Having issues with logging in?</string>
+
+
+    <string name="help_center">Help Center</string>
+    <string name="phone_unlock">Phone Unlock</string>
+    <string name="device_stolen">Device Stolen</string>
+    <string name="replacement_process">Replacement Process</string>
+    <string name="returns">Returns</string>
+    <string name="service_center">Repair Support</string>
+    <string name="check_progress">Check Progress</string>
+    <string name="upgrade_your_device">Upgrade your device</string>
+    <string name="recovery_nprocess">Recovery\nProcess</string>
+
+    <!-- Phone Unlock Help Strings -->
+    <string name="quick_simple_step_by_step">Quick,\nSimple,\nstep-by-step</string>
+    <string name="step_1">Step 1.</string>
+    <string name="step_2">Step 2.</string>
+    <string name="step_3">Step 3.</string>
+    <string name="is_done_on_the_phone_condition">is done on the phone condition.</string>
+    <string name="step_4">Step 4</string>
+    <string name="refund_takes_about">Refund takes about</string>
+    <string name="_3_days"> 3 days.</string>
+    <string name="loan_must">Loan must</string>
+    <string name="not"> NOT </string>
+    <string name="be_matured">be matured</string>
+    <string name="screen_damage_or_missing_accessories">Screen damage or missing accessories =</string>
+    <string name="no_refund_or_deductions">no refund or deductions</string>
+    <string name="chat_with_us">Chat with us</string>
+    <string name="similar_issues">Similar Issues</string>
+    <string name="replacement_nprocess">Replacement\nProcess</string>
+    <string name="service_ncenter">Repair\nSupport</string>
+    <string name="my_asset">My Asset</string>
+    <string name="check_your_current_loan_status_and_stay_on_track">Check your current loan status and stay on track.</string>
+    <string name="unlock_after_payment">Unlock After Payment</string>
+    <string name="make_your_payment">Make your payment.</string>
+    <string name="if_still_locked_make_sure_you_re_connected_to_the_internet">If still locked, make sure you\'re connected to the internet.</string>
+    <string name="tap_support_then_refresh">Tap Support→ then Refresh</string>
+    <string name="phone_will_unlock">Phone will unlock</string>
+
+    <string name="unlock_step1_sentence"><![CDATA[Tap <font color=\'#04AFAB\'><b>Temporary Unlock</b></font> in the app]]></string>
+    <string name="unlock_step2_sentence"><![CDATA[Your phone will unlock for <font color=\'#04AFAB\'><b>5 minutes</b></font> to allow you to complete payment.]]></string>
+
+    <string name="device_stolen_step1"><![CDATA[<font color=\'#04AFAB\'><b>Report to Watu Customer Care </b></font> immediately. <WhatsApp: 0758 399 169 </b></font> or call: 0800 750 228]]></string>
+    <string name="device_stolen_step2"><![CDATA[\Go to the <font color=\'#04AFAB\'><b>police station</b></font> and report the theft to get a loss report with the IMEI of the stolen phone.]]></string>
+
+    <string name="device_stolen_step3"><![CDATA[Go to the <font color=\'#04AFAB\'><b>police station</b></font> and report the theft.]]></string>
+    <string name="device_stolen_step4"><![CDATA[Get a <font color=\'#04AFAB\'><b>police abstract</b></font>.]]></string>
+    <string name="device_stolen_step5"><![CDATA[Send the abstract by <font color=\'#04AFAB\'><b>WhatsApp: 0757555111</b></font>, <font color=\'#04AFAB\'><b>Email: customercare@watuafrica.co.ke</b></font> or visit a <font color=\'#04AFAB\'><b>Watu office</b></font> near you.]]></string>
+    <string name="device_stolen_step6"><![CDATA[Wait at least <font color=\'#04AFAB\'><b>2 weeks</b></font> to see if the device will be recovered by the police or 3rd party.]]></string>
+    <string name="device_stolen_step71"><![CDATA[If you sent a WhatsApp or email: <font color=\'#04AFAB\'><b>Follow up with us on WhatsApp</b></font>.]]></string>
+    <string name="device_stolen_step8"><![CDATA[If you visited: <font color=\'#04AFAB\'><b>Return to the office</b></font> for next steps.]]></string>
+    <string name="step_5">Step 5</string>
+    <string name="step_6">Step 6</string>
+    <string name="step_7">Step 7</string>
+    <string name="step_8">Step 8</string>
+    <string name="if_you_visited_return_to_the_office_for_next_steps">If you visited: Return to the office for next steps.</string>
+    <string name="stolen_device">Stolen Device</string>
+
+    <string name="replacement_step1"><![CDATA[<font color=\'#04AFAB\'><b>Make at least 10 weekly payments</b></font>, pay a smaller down payment for the replacement device, loan balance must be above <font color=\'#04AFAB\'><b>3,000</b></font>, and <font color=\'#04AFAB\'><b>no replacement for fully paid (mature) loans</b></font>.]]></string>
+    <string name="replacement_step2"><![CDATA[<font color=\'#04AFAB\'><b>Visit the nearest Watu office</b></font>. A replacement ticket is created. If approved, you get a <font color=\'#04AFAB\'><b>replacement phone</b></font>.]]></string>
+    <string name="device_nstolen">Device\nStolen</string>
+    <string name="phone_nunlock">Phone\nUnlock</string>
+
+
+    <string name="ifyourphoneisstolen">If Your\nPhone is Stolen</string>
+    <string name="toqualifyyourdevice">To qualify for a\nreplacement \nphone, you\nneed to</string>
+    <string name="assessment">Assessment</string>
+    <string name="borrower_nrecovery">Borrower\nRecovery</string>
+
+    <string name="returns_step1"><![CDATA[Visit a <font color=\'#04AFAB\'><b>Watu office</b></font> near you.]]></string>
+    <string name="returns_step2"><![CDATA[A <font color=\'#04AFAB\'><b>Return Ticket</b></font> is created in the app.]]></string>
+    <string name="returns_step3"><![CDATA[An <font color=\'#04AFAB\'><b>Assessment</b></font> is done on the phone condition.]]></string>
+    <string name="returns_step4"><![CDATA[You may get a <font color=\'#04AFAB\'><b>partial refund</b></font> of your down payment.]]></string>
+
+    <string name="recovery_step1"><![CDATA[<font color=\'#04AFAB\'><b>WhatsApp: 0757555111</b></font> or visit a <font color=\'#04AFAB\'><b>Watu office</b></font> near you.]]></string>
+    <string name="recovery_step2"><![CDATA[<font color=\'#04AFAB\'><b>We will restore your access to the phone</b></font>.]]></string>
+    <string name="recovery_step3"><![CDATA[An <font color=\'#04AFAB\'><b>Assessment</b></font> is done on the phone condition.]]></string>
+    <string name="recovery_step4"><![CDATA[You may get a <font color=\'#04AFAB\'><b>partial refund</b></font> of your down payment only.]]></string>
+
+    <string name="service_center_step1"><![CDATA[<b>Step 1.</b> Visit a Samsung Accredited Service Centre (ASC), you will be given a copy of a <font color=\'#00C6B7\'><b>Samsung job card</b></font> after your device is booked.]]></string>
+    <string name="service_center_step2"><![CDATA[<b>Step 2.</b> Follow up after <font color=\'#00C6B7\'><b>2 weeks</b></font>.]]></string>
+    <string name="service_center_step3"><![CDATA[<b>Step 3.</b> Collect your phone within 30 days once notified that it is ready. Failure to which, the device shall be considered as surrendered to Watu.]]></string>
+
+    <string name="service_center_note_bullet1"><![CDATA[You may qualify to pay <font color=\'#00C6B7\'><b>30% only</b></font> (if eligible)]]></string>
+    <string name="service_center_note_bullet2"><![CDATA[<font color=\'#00C6B7\'>Additional payment</font> to the 30% will be required based on arrears amount]]></string>
+    <string name="service_center_note_bullet3">Watu will pay the full amount to the service center, and amount will be added to your loan amount</string>
+    <string name="service_center_note_bullet4"><![CDATA[WhatsApp us on <font color=\'#00C6B7\'><b>0757555111</b></font> to find out if you are eligible]]></string>
+
+    <string name="can_t_afford_full_repair">Can\'t afford full repair?</string>
+    <string name="go_further">Go further with the latest tech — longer battery, sharper camera, smoother performance.</string>
+    <string name="upgrade_now">Upgrade Now</string>
+    <string name="view_status">View Status</string>
+    <string name="on_the_path">You\'re on the path to full ownership! Track your progress and clear your balance.</string>
+    <string name="returningyourdevice">Returning\nYour\nDevice</string>
+    <string name="note">Note</string>
+
+
+    <string name="upgradeyourdevice">Upgrade your device</string>
+    <string name="currentdevice">Current device</string>
+    <string name="paynowtoupgrade">Pay to Upgrade</string>
+    <string name="downpayment">Down payment</string>
+    <string name="yourupgradeoptions">Your Upgrade Options!</string>
+    <string name="longerbatterylife">Longer battery life</string>
+    <string name="bettercamera">Better Camera</string>
+    <string name="increasedstoragecapacity">Increased storage capacity</string>
+    <string name="fasterprocessing">Faster processing</string>
+    <string name="chatuswhatssapp">Chat with us via WhatsApp</string>
+    <string name="cannotupgrade">Cannot upgrade. Try again later.</string>
+    <string name="ram">RAM</string>
+    <string name="rom">ROM</string>
+    <string name="camera">Camera</string>
+    <string name="battery">Battery</string>
+    <string name="whatsappnotinstalled">WhatsApp is not installed on your device</string>
+    <string name="problemopeningwhatsapp">Error opening WhatsApp</string>
+    <string name="whatsapp_upgrade_message">Message:Upsell Hi Support, I want to upgrade my current device for asset number %1$s to the Device Model %2$s. </string>
+    <string name="youarejustfromupgrade"><Data><![CDATA[ You are just <font color=\'#04AFAB\'> %1$s </font> from your upgrade]]></Data> </string>
+    <string name="youcanunlock">You can now unlock your next available Upgrade!!!!!</string>
+    <string name="unlocklonger">Unlock Longer battery life, Better camera, Increased storage capacity and Faster processing. "</string>
+    <string name="getbiggerstorage">Get bigger storage, better performance, longer battery life.</string>
+
+    <string name="downloadloanagreement">Download Loan Agreement</string>
+    <string name="paywithanothernumber">Pay With Another Number</string>
+    <string name="selectapaymentprovider">Select a Payment Provider</string>
+    <string name="accessgranted">Access Granted</string>
+    <string name="accessexpire">This access will automatically expire.\nPlease complete your Payment within this timeframe.</string>
+    <string name="couldnotdisplaydocument">Sorry. Could not display the document.</string>
+    <string name="downloadsuccess">Downloaded successfully</string>
+    <string name="viewdocument">View Document</string>
+    <string name="pdfsavedtodownloads">PDF saved to Downloads</string>
+    <string name="downloadfailed">Could not download document.</string>
+    <string name="sharefilevia">Share Document via</string>
+    <string name="couldnotsharedocument">Could not share document.</string>
+    <string name="enjoyingtheapp">Enjoying the app?</string>
+    <string name="enjoyingtheappsofar">Are you enjoying your experience so far?</string>
+    <string name="notreally">Not Really</string>
+    <string name="readmore">Read More</string>
+
+    <string name="did_you_know"><Data><![CDATA[
+        <b>Did you know? The Watu App gives you full control!</b><br/><br/>
+        &#8226; Make payments in seconds<br/>
+        &#8226; Unlock your device with a single tap<br/>
+        &#8226; Track all your past payments<br/>
+        &#8226; Check your remaining loan balance<br/><br/>
+        <b>Need any help? Check out our Help Center</b>
+        ]]></Data></string>
+
+    <string name="welcomeh">Welcome</string>
+    <string name="didyouknowthewatuapp">Did you know? The Watu App gives you full control!</string>
+    <string name="watuwelcomebody"> Make payments in seconds • Unlock your device with a single tap • Track all your past payments • Check your remaining loan balance. Need any help? Check out our Help Center</string>
+    <string name="temporary_unlock_5_mins">Temporary Unlock (5 mins)</string>
+    <string name="color_teal_text">Temporary Unlock</string>
+    <string name="then">→ then</string>
+    <string name="text_support">\"Support\"</string>
+    <string name="unlock_step3_sentence">Make your payment.</string>
+    <string name="unlock_step4_sentence">If still locked, make sure you\'re connected to the internet.</string>
+    <string name="unlock_step5_sentence"><![CDATA[Tap <font color=\"#04AFAB\">\"Support\"</font> → then <font color=\"#04AFAB\">\"Refresh\"</font>]]></string>
+    <string name="ifyourphoneisstolenH">If Your Phone is Stolen</string>
+    <string name="send_the_loss_report_by">Send the loss report by:</string>
+    <string name="whatsapp_0758399169">WhatsApp: 0758399169</string>
+    <string name="visit_a_watu_office_near_you">Visit a Watu office near you.</string>
+    <string name="device_status_after_theft">Device Status After Theft</string>
+    <string name="the_phone_will_be_locked_and_cannot_be_used">The phone will be locked and cannot be used.</string>
+    <string name="email_customercare_watuafrica_co_tz"><![CDATA[Email: <font color=\"#04AFAB\">customercare@watuafrica.co.TZ</font>]]></string>
+    <string name="device_stolen_step7"><![CDATA[A message on the screen:<br><i>\"This device has been reported stolen.<br>Please return it to any Watu Credit branch near you for a cash reward of 20,000TZS.\"</i>\n]]></string>
+    <string name="to_qualify_for_a_replacement_phone_you_need_to">To qualify for a replacement phone, you need to:</string>
+    <string name="steps">Steps:</string>
+    <string name="select_among_the_phones_you_will_be_shown_at_the_office">Select among the phones you will be shown at the office.</string>
+    <string name="a_loan_officer_will_register_you_and_you_can_leave_with_your_phone">A loan officer will register you and you can leave with your phone.</string>
+    <string name="replacement_step_1">Have reported the theft to Watu Customer Care or at a Watu office near you.</string>
+    <string name="replacement_step_2"><![CDATA[Make at <font color=\"#04afab\">least 10 full weekly payments.</font>]]></string>
+    <string name="replacement_step_3"><![CDATA[Pay a <font color=\"#04afab\">smaller down payment</font> for replacement device.]]></string>
+    <string name="replacement_step_4">No replacements for fully paid (matured) loans.</string>
+    <string name="replacement_step_5">Visit a Watu office near you.</string>
+    <string name="replacement_step_6">Select among the phones you will be shown at the office.</string>
+    <string name="replacement_step_7">A loan officer will register you and you can leave with your phone.</string>
+    <string name="borrower_recovery">Borrower Recovery</string>
+    <string name="third_party_recovery">Third-Party Recovery</string>
+    <string name="returns_step_1">Contact us on WhatsApp : 0758399169, call us on 0800750228 or visit a Watu office near you.</string>
+    <string name="returns_step_2">We will restore your access to the phone.</string>
+    <string name="returns_step_3">Loan restructuring applies.</string>
+    <string name="returns_step_4">Their details are taken down.</string>
+    <string name="returns_step_5">Once we verify, the phone is returned to you.</string>
+    <string name="returns_step_6"><![CDATA[We will restore your access to the phone. ]]></string>
+    <string name="returning_your_device">Returning Your Device</string>
+    <string name="note_">Note:</string>
+    <string name="recovery_step_1">Visit the nearest Watu office.</string>
+    <string name="recovery_step_2">An assessment is done on the phone condition.</string>
+    <string name="recovery_step_3">You may get a partial refund of your down payment only.</string>
+    <string name="recovery_step_4"><![CDATA[Refund takes about <font color=\"#04afab\">5 working days.</font>]]></string>
+    <string name="recovery_step_5"><![CDATA[Loan must <font color=\"#04afab\">not be matured.</font>]]></string>
+    <string name="recovery_step_6"><![CDATA[Screen damage or missing accessories <font color=\"#04afab\">= no refund or deductions.</font>]]></string>
+    <string name="in_warranty">In Warranty:</string>
+    <string name="out_of_warranty">Out of Warranty:</string>
+    <string name="service_center_step_1"><![CDATA[Visit a Samsung Accredited Service Centre (ASC), you will be given a <font color=\"#04afab\">5copy of a Samsung job card</font> after your device is booked]]>.</string>
+    <string name="service_repairs"><![CDATA[Service & Repairs]]></string>
+    <string name="need_na_repair">Need \nA Repair?</string>
+    <string name="returning_nyour_ndevice">Returning\nYour\nDevice</string>
+    <string name="if_the_phone_nis_recovered">If the Phone\nis Recovered</string>
+    <string name="if_someone_returns_your_phone">If someone returns your phone:</string>
+    <string name="toomanyrequests">Too many requests</string>
+    <string name="throttlederror">We are still processing your last request. Please try again shortly.</string>
+    <string name="important">Important</string>
+    <string name="service_center_step_2">Defects arising due to a defective part of the device from the factory (e.g. speaker or mic problems). Repair cost is taken up by Samsung.</string>
+    <string name="service_center_step_3">Damage caused by the user (e.g. cracked screen). Repair cost is taken up by the customer.</string>
+
+    <string name="service_center_step_5">Only use a Samsung Accredited Service Centre (ASC).</string>
+    <string name="find_samsung_asc">Find a Samsung Accredited Service Centre</string>
+    <string name="device_beyond_nrepair">Device beyond\nRepair</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="if_your_phone_can_t_be_fixed">If your phone can’t be fixed:</string>
+    <string name="beyond_repair_step1">Return it to Watu.</string>
+    <string name="beyond_repair_step2"><![CDATA[Make at least <font color=\"#04afab\">15 full weekly payments.</font>]]></string>
+    <string name="beyond_repair_step3"><![CDATA[Pay a <font color=\"#04afab\">smaller down payment</font> for replacement device.\n]]></string>
+    <string name="beyond_repair_step4"><![CDATA[Get a replacement (not an upgrade]]></string>
+    <string name="service_center_step_4"><![CDATA[Third-party repairs void <font color=\"#04afab\">the warranty.</font>\n]]></string>
+    <string name="recovery_process">Recovery Process</string>
+    <string name="unlock_step6_sentence">Phone will unlock.</string>
+    <string name="device_nbeyond_nrepair">Device\nBeyond\nRepair</string>
+
+
+    <string name="updatinginformation">Updating information...</string>
+    <string name="updateinformationfailednetwork">Sorry. Could not update the information. Check your internet connection and tap to try again.</string>
+    <string name="updateinformationerror">Sorry, but we could not update the information.  Try again and contact support if problem continues.</string>
+    <string name="updateinformationsuccess">Infomration updated successfully.</string>
+    <string name="updateinformationtitle">Information Updated.</string>
+    <string name="info_gps_enable">Turn on the location GPS to improve your experience</string>
+
+    <string name="serviceinterruption">Service Interruption</string>
+    <string name="closeh">Close</string>
+
+    <string name="servicedowndescription"><Data><![CDATA[ We\’re currently experiencing a service interruption affecting the app and some services. \n\nYou can still pay easily <font color=\'#9CC652\'>via Paybill on 650880</font>. \nWe\'re working to get everything back up and running.]]></Data> </string>
+    <string name="levelupoptions">Your Options to Level Up!</string>
+    <string name="yourupgradeoption">Your Upgrade Option!</string>
+    <string name="yourlevelupoption">Your Leve Up Option!</string>
+
+
+
+
+
+
+
+
+</resources>

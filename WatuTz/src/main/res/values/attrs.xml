@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleImage">
+        <attr name="img_radius" format="float" />
+    </declare-styleable>
+    
+     <declare-styleable name="FirmaTextView">
+        <attr name="firmatypeface" format="enum">
+            <enum name="firmaLight" value="0" />
+            <enum name="firmaBold" value="1" />
+            <enum name="firmaMedium" value="2" />
+          
+        </attr>
+    </declare-styleable>
+
+
+      <declare-styleable name="UIParallaxScroll">
+        <attr name="headerView" format="integer"/>
+        <attr name="backgroundView" format="integer"/>
+    </declare-styleable>
+    
+      <declare-styleable name="PlacesAutoCompleteEditText" >
+        <attr name="item_layout" format="reference" />
+        <attr name="item_text_id" format="reference" />
+        <attr name="north_bound" format="float" />
+        <attr name="south_bound" format="float" />
+        <attr name="east_bound" format="float" />
+        <attr name="west_bound" format="float" />
+    </declare-styleable>
+    
+    
+    <declare-styleable name="SlidingUpPanelLayout">
+        <attr name="collapsedContentHeight" format="dimension" />
+        <attr name="shadowHeight" format="dimension" />
+        <attr name="fadeColor" format="color" />
+        <attr name="flingVelocity" format="integer" />
+        <attr name="dragView" format="reference" />
+    </declare-styleable>
+    
+  <declare-styleable name="MaterialRippleLayout">
+        <attr name="rippleColor" format="color" />
+        <attr name="rippleDimension" format="dimension" />
+        <attr name="rippleOverlay" format="boolean" />
+        <attr name="rippleAlpha" format="float" />
+        <attr name="rippleDuration" format="integer" />
+        <attr name="rippleFadeDuration" format="integer" />
+        <attr name="rippleHover" format="boolean" />
+        <attr name="rippleBackground" format="color" />
+        <attr name="rippleDelayClick" format="boolean" />
+        <attr name="ripplePersistent" format="boolean" />
+		<attr name="rippleInAdapter" format="boolean"/>
+       <attr name="rippleRoundedCorners" format="boolean" />
+    </declare-styleable>
+    
+       <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+       </declare-styleable>
+       
+       <declare-styleable name="ExpandableLayoutView">
+	    <attr name="handle" format="reference" />
+	    <attr name="content" format="reference" />
+	    <attr name="collapsedHeight" format="dimension" />
+	    <attr name="animationDuration" format="integer" />
+	  </declare-styleable>
+       
+       <declare-styleable name="ProgressWheel">
+        <attr name="pwText" format="string" />
+        <attr name="pwTextColor" format="color" />
+        <attr name="pwTextSize" format="dimension" />
+        <attr name="pwBarColor" format="color" />
+        <attr name="pwRimColor" format="color" />
+        <attr name="pwRimWidth" format="dimension" />
+        <attr name="pwSpinSpeed" format="dimension" />
+        <attr name="pwDelayMillis" format="integer" />
+        <attr name="pwCircleColor" format="color" />
+        <attr name="pwRadius" format="dimension" />
+        <attr name="pwBarWidth" format="dimension" />
+        <attr name="pwBarLength" format="dimension" />
+        <attr name="pwContourColor" format="color"/>
+        <attr name="pwContourSize" format="dimension"/>
+    </declare-styleable> 
+    
+      <declare-styleable name="SeekBarView">
+        <attr name="metric" format="string" />
+    </declare-styleable> 
+     
+    
+    <declare-styleable name="GifTextureView"><attr format="reference|string" name="gifSource"/><attr format="boolean" name="isOpaque"/></declare-styleable>
+    <declare-styleable name="GifView"><attr format="boolean" name="freezesAnimation"/></declare-styleable>
+    
+    <declare-styleable name="FloatLabeledEditText">
+        <attr name="fletFloatingHint" format="string" />
+        <attr name="fletSingleLine" format="boolean" />
+        <attr name="fletPassword" format="boolean" />
+        <attr name="fletTextBackground" format="reference" />
+        <attr name="fletTextGravity">
+            <flag name="top" value="0x30" />
+            <flag name="bottom" value="0x50" />
+            <flag name="left" value="0x03" />
+            <flag name="right" value="0x05" />
+            <flag name="center_vertical" value="0x10" />
+            <flag name="fill_vertical" value="0x70" />
+            <flag name="center_horizontal" value="0x01" />
+            <flag name="fill_horizontal" value="0x07" />
+            <flag name="center" value="0x11" />
+            <flag name="fill" value="0x77" />
+            <flag name="clip_vertical" value="0x80" />
+            <flag name="clip_horizontal" value="0x08" />
+            <flag name="start" value="0x00800003" />
+            <flag name="end" value="0x00800005" />
+        </attr>
+        <attr name="fletTextLines" format="integer" />
+        <attr name="fletHintTextColor" format="reference|color" />
+        <attr name="fletTextColor" format="reference|color" />
+        <attr name="fletImeActionLabel" format="string" />
+        <attr name="fletImeActionId" format="integer" />
+        <attr name="fletInputType">
+            <flag name="none" value="0x00000000" />
+            <flag name="text" value="0x00000001" />
+            <flag name="textCapCharacters" value="0x00001001" />
+            <flag name="textCapWords" value="0x00002001" />
+             <flag name="textCapSentences" value="0x00004001" />
+            <flag name="textAutoCorrect" value="0x00008001" />
+            <flag name="textAutoComplete" value="0x00010001" />
+            <flag name="textMultiLine" value="0x00020001" />
+            <flag name="textImeMultiLine" value="0x00040001" />
+            <flag name="textNoSuggestions" value="0x00080001" />
+            <flag name="textUri" value="0x00000011" />
+            <flag name="textEmailAddress" value="0x00000021" />
+            <flag name="textEmailSubject" value="0x00000031" />
+            <flag name="textShortMessage" value="0x00000041" />
+            <flag name="textLongMessage" value="0x00000051" />
+            <flag name="textPersonName" value="0x00000061" />
+            <flag name="textPostalAddress" value="0x00000071" />
+            <flag name="textPassword" value="0x00000081" />
+            <flag name="textVisiblePassword" value="0x00000091" />
+            <flag name="textWebEditText" value="0x000000a1" />
+            <flag name="textFilter" value="0x000000b1" />
+            <flag name="textPhonetic" value="0x000000c1" />
+            <flag name="textWebEmailAddress" value="0x000000d1" />
+            <flag name="textWebPassword" value="0x000000e1" />
+            <flag name="number" value="0x00000002" />
+            <flag name="numberSigned" value="0x00001002" />
+            <flag name="numberDecimal" value="0x00002002" />
+            <flag name="numberPassword" value="0x00000012" />
+            <flag name="phone" value="0x00000003" />
+            <flag name="datetime" value="0x00000004" />
+            <flag name="date" value="0x00000014" />
+             <flag name="time" value="0x00000024" />
+        </attr>
+   
+        <attr name="fletImeOptions">
+            <flag name="normal" value="0x00000000" />
+            <flag name="actionUnspecified" value="0x00000000" />
+            <flag name="actionNone" value="0x00000001" />
+            <flag name="actionGo" value="0x00000002" />
+            <flag name="actionSearch" value="0x00000003" />
+            <flag name="actionSend" value="0x00000004" />
+            <flag name="actionNext" value="0x00000005" />
+            <flag name="actionDone" value="0x00000006" />
+            <flag name="actionPrevious" value="0x00000007" />
+            <flag name="flagNoFullscreen" value="0x2000000" />
+            <flag name="flagNavigatePrevious" value="0x4000000" />
+            <flag name="flagNavigateNext" value="0x8000000" />
+            <flag name="flagNoExtractUi" value="0x10000000" />
+            <flag name="flagNoAccessoryAction" value="0x20000000" />
+            <flag name="flagNoEnterAction" value="0x40000000" />
+            <flag name="flagForceAscii" value="0x80000000" />
+        </attr>
+    </declare-styleable>
+    
+    	<declare-styleable name="PhoneBar">
+        <attr name="indicator" format="boolean" />
+        <attr name="phone" format="float" />
+        <attr name="type" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="small" value="1" />
+        </attr>
+        <attr name="coloredPhoneBarStyle" format="reference" />
+        <!-- Indicator PhoneBar style. -->
+        <attr name="coloredPhoneBarStyleIndicator" format="reference" />
+        <!-- Small PhoneBar style. -->
+        <attr name="coloredPhoneBarStyleSmall" format="reference" />
+        <!-- Small indicator PhoneBar style. -->
+        <attr name="coloredPhoneBarStyleSmallIndicator" format="reference" />
+    </declare-styleable>
+    
+    	<declare-styleable name="ToggleSwitch">
+        <attr name="kswThumbDrawable" format="reference"/>
+        <attr name="kswThumbColor" format="color|reference"/>
+        <attr name="kswThumbMargin" format="dimension|reference"/>
+        <attr name="kswThumbMarginTop" format="dimension|reference"/>
+        <attr name="kswThumbMarginBottom" format="dimension|reference"/>
+        <attr name="kswThumbMarginLeft" format="dimension|reference"/>
+        <attr name="kswThumbMarginRight" format="dimension|reference"/>
+        <attr name="kswThumbWidth" format="dimension|reference"/>
+        <attr name="kswThumbHeight" format="dimension|reference"/>
+        <attr name="kswThumbRadius" format="dimension|reference"/>
+        <attr name="kswBackRadius" format="dimension|reference"/>
+        <attr name="kswBackDrawable" format="reference"/>
+        <attr name="kswBackColor" format="color|reference"/>
+        <attr name="kswFadeBack" format="boolean"/>
+        <attr name="kswBackMeasureRatio" format="float"/>
+        <attr name="kswAnimationDuration" format="integer"/>
+        <attr name="kswTintColor" format="color|reference"/>
+        <attr name="kswTextOn" format="string"/>
+        <attr name="kswTextOff" format="string"/>
+        <attr name="kswTextMarginH" format="dimension"/>
+        <attr name="kswAutoAdjustTextPosition" format="boolean"/>
+    </declare-styleable>
+      <declare-styleable name="PriceEditText">
+        <attr name="enable_default_hint" format="boolean"/>
+        <attr name="allow_negative_values" format="boolean" />
+    </declare-styleable>
+    
+     
+</resources>

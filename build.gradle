@@ -1,0 +1,41 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        jcenter()
+        google()
+        maven {
+            url "http://maven.nodle.io"
+            allowInsecureProtocol = true
+        }
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath 'com.google.gms:google-services:4.3.10'
+        // Add the Crashlytics Gradle plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.1'
+        classpath 'com.google.firebase:perf-plugin:1.4.2'
+
+
+
+    }
+
+
+
+}
+
+
+allprojects {
+    repositories {
+        jcenter()
+        google()
+        mavenCentral()
+        maven {
+            url "http://maven.nodle.io"
+            allowInsecureProtocol = true
+        }
+        maven { url 'https://jitpack.io' }
+    }
+}

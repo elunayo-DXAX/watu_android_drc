@@ -1,0 +1,338 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header Row -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.watutz.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/levelup"
+                android:textColor="@color/theme_color"
+                android:textSize="@dimen/textsize_xxlarge"
+                app:firmatypeface="firmaBold"/>
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_level_up_icon"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/theme_color"/>
+        </RelativeLayout>
+
+        <com.watutz.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/yourjourneystartshere"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium"
+            app:firmatypeface="firmaBold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Card 1: My Asset -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/theme_dark_grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Accent Dot -->
+                <ImageView
+                    android:id="@+id/card1AccentDot"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_dot"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="2dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/card1AccentDot"
+                    android:layout_marginTop="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="57dp"
+                            android:layout_height="56dp"
+                            android:padding="10dp"
+                            android:background="@xml/rounded_list_transparent_white_stroke"
+                            android:src="@drawable/ics_simu"
+                            android:layout_marginBottom="8dp" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/my_asset"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_large"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/check_your_current_loan_status_and_stay_on_track"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Button: View Status -->
+                        <com.watutz.app.view.MaterialRippleLayout
+                            android:layout_width="101dp"
+                            android:layout_height="33dp"
+                            app:rippleColor="@color/theme_color"
+                            android:background="@xml/rounded_list_button">
+                            <RelativeLayout
+                                android:id="@+id/btnViewStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.watutz.app.font.FirmaTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/view_status"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+                        </com.watutz.app.view.MaterialRippleLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_width="162dp"
+                        android:layout_height="145dp"
+                        android:src="@drawable/img_asset_woman"
+                        android:scaleType="fitCenter"
+                        android:layout_marginStart="12dp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 2: Own It -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/theme_dark_grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Accent Dot -->
+                <ImageView
+                    android:id="@+id/card2AccentDot"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_dot"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="2dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/card2AccentDot"
+                    android:layout_marginTop="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:background="@xml/rounded_list_transparent_white_stroke"
+                            android:src="@drawable/ic_ownership"
+                            android:layout_marginBottom="8dp" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/ownit"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_large"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/on_the_path"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Button: Check Progress -->
+                        <com.watutz.app.view.MaterialRippleLayout
+                            android:layout_width="127dp"
+                            android:layout_height="34dp"
+                            app:rippleColor="@color/theme_color"
+                            android:background="@xml/rounded_list_button">
+                            <RelativeLayout
+                                android:id="@+id/btnCheckProgress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.watutz.app.font.FirmaTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="@string/check_progress"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    app:firmatypeface="firmaBold"
+                                    android:gravity="center"/>
+                            </RelativeLayout>
+                        </com.watutz.app.view.MaterialRippleLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <ImageView
+                        android:layout_width="103dp"
+                        android:layout_height="155dp"
+                        android:src="@drawable/img_device_pair"
+                        android:scaleType="fitCenter"
+                        android:layout_marginStart="12dp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card 3: Upgrade Your Device -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="@color/theme_dark_grey">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Accent Dot -->
+                <ImageView
+                    android:id="@+id/card3AccentDot"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_dot"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="2dp"/>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/ic_hidden_container"
+                    android:gravity="center_vertical"
+                    android:layout_below="@id/card3AccentDot"
+                    android:layout_marginTop="8dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="62dp"
+                            android:layout_height="50dp"
+                            android:padding="10dp"
+                            android:background="@xml/rounded_list_transparent_white_stroke"
+                            android:src="@drawable/ic_level_up_icon"
+                            android:layout_marginBottom="8dp" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/upgrade_your_device"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_large"
+                            app:firmatypeface="firmaBold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:text="@string/go_further"
+                            android:textColor="@color/theme_hint"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaLight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp" />
+
+                        <!-- Button: Upgrade Now -->
+                        <com.watutz.app.view.MaterialRippleLayout
+                            android:layout_width="127dp"
+                            android:layout_height="34dp"
+                            app:rippleColor="@color/theme_orange_light"
+                            android:background="@drawable/rounded_button_orange">
+                            <RelativeLayout
+                                android:id="@+id/btnUpgradeNow"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.watutz.app.font.FirmaTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:text="@string/upgrade_now"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+                        </com.watutz.app.view.MaterialRippleLayout>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</RelativeLayout>
+
+

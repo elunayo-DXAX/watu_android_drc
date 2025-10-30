@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.watutz.app"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="20dp"
+    android:gravity="center_vertical"
+    android:minHeight="60dp"
+    android:divider="@color/white"
+    android:paddingRight="20dp" >
+
+    <com.watutz.app.font.FontView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minHeight="44dp"
+        android:padding="4dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/dw_next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_medium_small" />
+
+    <com.watutz.app.font.FirmaTextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:minHeight="44dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_medium"
+        app:firmatypeface="firmaLight" />
+
+</LinearLayout>

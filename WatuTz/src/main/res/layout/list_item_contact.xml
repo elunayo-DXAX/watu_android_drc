@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="wrap_content" 
+  >
+    <RelativeLayout 
+            android:layout_width="match_parent"
+            android:background="@color/white"
+        android:padding="10dp"
+            android:layout_height="wrap_content">
+            
+        <com.watutz.app.font.FirmaTextView
+                   android:id="@+id/contactName"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:firmatypeface="firmaBold"
+                   android:textColor="@color/theme_dark"
+                   android:text="@string/name"
+                   android:textSize="@dimen/textsize_medium_large" />
+
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/contactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:firmatypeface="firmaLight"
+            android:layout_below="@+id/contactName"
+            android:textColor="@color/theme_dark"
+            android:text="@string/item"
+            android:textSize="@dimen/textsize_medium" />
+
+        <com.watutz.app.view.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            app:rippleColor="@color/transparent" >
+
+            <RelativeLayout
+                android:id="@+id/btnShareToContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@xml/rounded_list_white_theme_stroke"
+                android:gravity="center"
+                android:padding="10dp" >
+
+                <com.watutz.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/share"
+                    android:textAllCaps="true"
+                    android:textColor="@color/theme_dark"
+                    android:textSize="@dimen/textsize_small" />
+            </RelativeLayout>
+        </com.watutz.app.view.MaterialRippleLayout>
+   
+          
+        </RelativeLayout>
+       
+      
+</FrameLayout>

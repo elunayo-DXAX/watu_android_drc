@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+
+    >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/transparent"
+        android:layout_height="250dp">
+
+
+       <RelativeLayout
+        android:layout_width="match_parent"
+           android:background="@xml/rounded_list_black_light"
+        android:layout_height="match_parent">
+
+
+           <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+			   android:visibility="gone"
+                android:background="@xml/rounded_list_white_bottom_none_small"
+                android:minHeight="50dp">
+
+
+		         <com.watutz.app.font.FirmaTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/confirm"
+		            android:layout_centerInParent="true"
+		            app:firmatypeface="firmaLight"
+					 android:layout_marginRight="10dp"
+		            android:textColor="@color/white"
+		            android:textSize="@dimen/textsize_medium_small"/>
+
+           </RelativeLayout>
+
+           <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/midContent"
+			    android:layout_below="@+id/title"
+			   android:layout_marginTop="20dp"
+			    android:gravity="center"
+                android:layout_height="wrap_content">
+
+
+			   <com.watutz.app.font.FontView
+				   android:id="@+id/icon"
+				   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_centerHorizontal="true"
+				   android:layout_marginStart="5dp"
+				   android:layout_marginTop="5dp"
+				   android:layout_marginEnd="5dp"
+				   android:layout_marginBottom="5dp"
+				   android:text="@string/dw_circle_question_mark"
+				   android:textColor="@color/theme_color"
+				   android:textSize="@dimen/textsize_xxxlarge" />
+
+
+			   <com.watutz.app.font.FirmaTextView
+				   android:id="@+id/confirmText"
+				   android:layout_width="match_parent"
+				   android:layout_height="wrap_content"
+				   android:layout_below="@+id/icon"
+				   android:layout_marginStart="15dp"
+				   android:layout_marginTop="5dp"
+				   android:layout_marginEnd="15dp"
+				   android:layout_marginBottom="5dp"
+				   android:gravity="center"
+				   android:text="@string/cancel"
+				   android:textColor="@color/white"
+				   android:textSize="@dimen/textsize_medium_small"
+				   app:firmatypeface="firmaMedium" />
+
+            </RelativeLayout>
+
+              <LinearLayout
+							android:layout_width="match_parent"
+							android:layout_height="60dp"
+							android:weightSum="2"
+			            	android:layout_below="@+id/midContent"
+				            android:layout_margin="20dp"
+				 			android:id="@+id/botView"
+							android:orientation="horizontal"
+							>
+	                     <RelativeLayout
+				             android:layout_width="0dp"
+				             android:layout_weight="1"
+				             android:gravity="center"
+				             android:layout_height="match_parent">
+
+	              <com.watutz.app.view.MaterialRippleLayout
+				        style="@style/RippleStyle"
+				        android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+					  android:layout_marginRight="5dp"
+				        app:rippleColor="@color/transparent">
+
+		     <RelativeLayout
+		        android:layout_width="match_parent"
+		        android:id="@+id/btnNo"
+		        android:background="@xml/rounded_list_button_stroke"
+		        android:layout_height="match_parent">
+
+
+				 <com.watutz.app.font.FirmaTextView
+					 android:layout_width="wrap_content"
+					 android:layout_height="wrap_content"
+					 android:layout_centerInParent="true"
+					 android:text="@string/no"
+					 android:textColor="@color/white"
+					 android:textSize="@dimen/textsize_medium_small"
+					 app:firmatypeface="firmaMedium" />
+
+
+		         </RelativeLayout>
+
+		     </com.watutz.app.view.MaterialRippleLayout>
+
+	                      </RelativeLayout>
+
+	                      <RelativeLayout
+				             android:layout_width="0dp"
+				             android:layout_weight="1"
+				             android:gravity="center"
+				             android:layout_height="match_parent">
+
+	              <com.watutz.app.view.MaterialRippleLayout
+				        style="@style/RippleStyle"
+				        android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+					  android:layout_marginLeft="5dp"
+				        app:rippleColor="@color/transparent">
+
+						     <RelativeLayout
+						        android:layout_width="match_parent"
+						        android:id="@+id/btnYes"
+						        android:background="@xml/rounded_list_button"
+						        android:layout_height="match_parent">
+
+
+								 <com.watutz.app.font.FirmaTextView
+									 android:id="@+id/acceptText"
+									 android:layout_width="wrap_content"
+									 android:layout_height="wrap_content"
+									 android:layout_centerInParent="true"
+									 android:text="@string/yes"
+									 android:textColor="@color/white"
+									 android:textSize="@dimen/textsize_medium_small"
+									 app:firmatypeface="firmaMedium" />
+
+
+						         </RelativeLayout>
+
+		     </com.watutz.app.view.MaterialRippleLayout>
+
+	                      </RelativeLayout>
+
+	           </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+     <include layout="@layout/loading_view_dialog" />
+
+
+      </RelativeLayout>
+
+
+
+
+ </RelativeLayout>

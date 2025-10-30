@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:orientation="vertical"
+            android:background="@color/transparent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/knoxContent"
+                android:background="@xml/rounded_list_button_black_dark"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/midContent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/topSecure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:src="@drawable/ics_icon_secure"
+                            android:id="@+id/icSecure"
+                            android:layout_centerVertical="true"
+                            android:layout_height="50dp"/>
+
+
+                        <com.watutz.app.font.FirmaTextView
+                            android:id="@+id/secureText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/icSecure"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/securenotification"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/textsize_medium"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+
+
+
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/topSecure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/knoxinstruction"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/midContent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:id="@+id/errorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_margin="10dp"
+                        android:text="@string/unabletosendknox"
+                        android:textColor="@color/theme_orange"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                    <ImageView
+                        android:id="@+id/progressWheelKnox"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="80dp"
+                        android:layout_centerInParent="true"
+                        />
+
+
+                    <com.watutz.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="match_parent"
+                        android:id="@+id/requestRipsKnox"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="match_parent"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/btnRequestKnox"
+                            android:background="@xml/rounded_list_button"
+                            android:layout_height="50dp">
+
+
+                            <com.watutz.app.font.FirmaTextView
+                                android:id="@+id/acceptText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/getcodeviaknox"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium_small"
+                                app:firmatypeface="firmaMedium" />
+
+
+                        </RelativeLayout>
+
+                    </com.watutz.app.view.MaterialRippleLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/smsContent"
+                android:background="@xml/rounded_list_button_black_dark"
+                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:layout_below="@+id/knoxContent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/midSMSContent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/botSecure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="wrap_content">
+
+
+
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:src="@drawable/ics_secure_sms"
+                        android:id="@+id/icSecureSMS"
+                        android:layout_centerVertical="true"
+                        android:layout_height="50dp"/>
+
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/icSecureSMS"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/smspasscode"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_medium"
+                        app:firmatypeface="firmaBold" />
+
+                    </RelativeLayout>
+
+
+
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/botSecure"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="left"
+                        android:layout_marginBottom="10dp"
+                        android:lineSpacingExtra="10sp"
+                        android:text="@string/smsinstruction"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/midSMSContent"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <com.watutz.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_margin="10dp"
+                        android:text="@string/unabletosendknox"
+                        android:textColor="@color/theme_orange"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                    <ImageView
+                        android:id="@+id/progressWheelSMS"
+                        android:layout_height="80dp"
+                        android:layout_margin="10dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="80dp"
+                        android:layout_centerInParent="true"
+                        />
+
+
+                    <com.watutz.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="match_parent"
+                        android:id="@+id/requestRipsSMS"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:layout_height="match_parent"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/btnRequestSMS"
+                            android:background="@xml/rounded_list_button_stroke"
+                            android:layout_height="50dp">
+
+
+                            <com.watutz.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/getcodeviasms"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_medium_small"
+                                app:firmatypeface="firmaMedium" />
+
+
+                        </RelativeLayout>
+
+                    </com.watutz.app.view.MaterialRippleLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+    <include layout="@layout/loading_view" />
+
+
+</RelativeLayout>

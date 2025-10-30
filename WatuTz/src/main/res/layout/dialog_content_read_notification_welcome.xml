@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@xml/rounded_list_button_black_dark"
+    android:layout_width="320dp"
+    android:layout_gravity="center"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/welcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomeh"
+            android:textColor="@color/theme_green"
+            android:textStyle="bold"
+            android:textSize="18sp"/>
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/welcomeBody"
+            android:layout_below="@id/welcomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/did_you_know"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:id="@+id/welcomeImage"
+            android:layout_below="@id/welcomeBody"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/welcome_en"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="16dp"/>
+
+        <com.watutz.app.view.MaterialRippleLayout
+            style="@style/RippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcomeImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:rippleColor="@color/theme_green"
+            android:background="@xml/rounded_list_button">
+            <RelativeLayout
+                android:id="@+id/helpCenterButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.watutz.app.font.FirmaTextView
+                    android:layout_width="109dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:text="@string/help_center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_medium_small"
+                    app:firmatypeface="firmaMedium"/>
+            </RelativeLayout>
+        </com.watutz.app.view.MaterialRippleLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+    <!-- LEFT COLUMN (Category, From, Time, Date) -->
+    <LinearLayout
+        android:id="@+id/leftColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/payment"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/textsize_small"
+            app:firmatypeface="firmaMedium" />
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="@string/loanfrom"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_small"
+            app:firmatypeface="firmaMedium" />
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/on"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_xsmall"
+            app:firmatypeface="firmaMedium" />
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/at"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_xsmall"
+            app:firmatypeface="firmaMedium" />
+
+
+    </LinearLayout>
+
+    <!-- RIGHT COLUMN (Amount = Currency + Amount) -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ksh"
+            android:layout_alignBaseline="@+id/transactionAmount"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/textsize_xsmall"
+            app:firmatypeface="firmaMedium" />
+
+        <com.watutz.app.font.FirmaTextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/transactionCurrency"
+            android:layout_marginStart="4dp"
+            android:text="@string/zero"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/textsize_medium_large"
+            app:firmatypeface="firmaBold" />
+    </RelativeLayout>
+
+    <!-- DIVIDER -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/leftColumn"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/theme_grey_dark" />
+</RelativeLayout>

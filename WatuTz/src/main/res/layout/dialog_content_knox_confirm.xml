@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+
+    >
+
+	<ScrollView
+		android:layout_width="wrap_content"
+		android:fillViewport="true"
+		android:layout_height="wrap_content">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+		android:padding="10dp"
+        android:background="@color/transparent"
+        android:layout_height="wrap_content">
+
+
+       <RelativeLayout
+        android:layout_width="match_parent"
+           android:background="@xml/rounded_list_black_light"
+        android:layout_height="match_parent">
+
+
+           <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+			   android:visibility="gone"
+                android:background="@xml/rounded_list_white_bottom_none_small"
+                android:minHeight="50dp">
+
+
+		         <com.watutz.app.font.FirmaTextView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/confirm"
+		            android:layout_centerInParent="true"
+		            app:firmatypeface="firmaLight"
+					 android:layout_marginRight="10dp"
+		            android:textColor="@color/white"
+		            android:textSize="@dimen/textsize_medium_small"/>
+
+           </RelativeLayout>
+
+           <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/midContent"
+			    android:layout_below="@+id/title"
+			   android:layout_marginTop="10dp"
+			    android:gravity="center"
+                android:layout_height="wrap_content">
+
+
+			   <ImageView
+				   android:layout_width="80dp"
+				   android:src="@drawable/ics_icon_secure"
+				   android:id="@+id/icSecure"
+				   android:layout_centerHorizontal="true"
+				   android:layout_height="80dp"/>
+
+
+			   <com.watutz.app.font.FirmaTextView
+				   android:id="@+id/secureText"
+				   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_below="@+id/icSecure"
+				   android:layout_centerHorizontal="true"
+				   android:layout_marginTop="10dp"
+				   android:text="@string/securenotification"
+				   android:textColor="@color/theme_color"
+				   android:textSize="@dimen/textsize_xlarge"
+				   android:textAllCaps="true"
+				   app:firmatypeface="firmaBold" />
+
+
+			   <com.watutz.app.font.FirmaTextView
+				   android:id="@+id/troubleText"
+				   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_below="@+id/secureText"
+				   android:layout_centerHorizontal="true"
+				   android:layout_marginStart="10dp"
+				   android:layout_marginTop="10dp"
+				   android:layout_marginEnd="10dp"
+				   android:layout_marginBottom="10dp"
+				   android:gravity="center"
+				   android:text="@string/havingtroublereceiving"
+				   android:textColor="@color/white"
+				   android:textSize="@dimen/textsize_medium_small"
+				   app:firmatypeface="firmaBold" />
+
+
+			   <com.watutz.app.font.FirmaTextView
+                   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:layout_below="@+id/troubleText"
+				   android:layout_centerHorizontal="true"
+				   android:layout_marginStart="10dp"
+				   android:layout_marginTop="10dp"
+				   android:layout_marginEnd="10dp"
+				   android:layout_marginBottom="10dp"
+				   android:lineSpacingExtra="10sp"
+				   android:text="@string/knoxinstruction"
+				   android:textColor="@color/white"
+				   android:textSize="@dimen/textsize_small"
+				   app:firmatypeface="firmaMedium" />
+
+
+		   </RelativeLayout>
+
+		   <LinearLayout
+			   android:layout_width="match_parent"
+			   android:orientation="vertical"
+			   android:layout_below="@+id/midContent"
+			   android:layout_marginTop="10dp"
+			   android:layout_height="wrap_content">
+
+			   <com.watutz.app.font.FirmaTextView
+				   android:id="@+id/errorText"
+				   android:layout_width="wrap_content"
+				   android:layout_height="wrap_content"
+				   android:visibility="gone"
+				   android:layout_margin="10dp"
+				   android:text="@string/unabletosendknox"
+				   android:textColor="@color/theme_orange"
+				   android:textSize="@dimen/textsize_small"
+				   app:firmatypeface="firmaBold" />
+
+
+			   <ImageView
+				   android:id="@+id/progressWheel"
+				   android:layout_height="80dp"
+				   android:layout_margin="10dp"
+				   android:layout_gravity="center_horizontal"
+				   android:layout_width="80dp"
+				   android:layout_centerInParent="true"
+				   />
+
+
+			   <com.watutz.app.view.MaterialRippleLayout
+				   style="@style/RippleStyle"
+				   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+				   android:layout_margin="10dp"
+				   app:rippleColor="@color/transparent">
+
+				   <RelativeLayout
+					   android:layout_width="match_parent"
+					   android:id="@+id/btnRequestKnox"
+					   android:background="@xml/rounded_list_button"
+					   android:layout_height="60dp">
+
+
+					   <com.watutz.app.font.FirmaTextView
+						   android:id="@+id/acceptText"
+						   android:layout_width="wrap_content"
+						   android:layout_height="wrap_content"
+						   android:layout_centerInParent="true"
+						   android:text="@string/getyouronetimepasscode"
+						   android:textColor="@color/white"
+						   android:textSize="@dimen/textsize_medium_small"
+						   app:firmatypeface="firmaMedium" />
+
+
+				   </RelativeLayout>
+
+			   </com.watutz.app.view.MaterialRippleLayout>
+
+
+		   </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+
+
+     <include layout="@layout/loading_view_dialog" />
+
+
+      </RelativeLayout>
+
+	</ScrollView>
+
+
+ </RelativeLayout>

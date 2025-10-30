@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap >
+
+    <!-- color entries -->
+    <entry>
+        <key>theme_color</key>
+        <value>#04AFAB</value>
+    </entry>
+    <entry>
+        <key>color_primary_dark</key>
+        <value>#303F9F</value>
+    </entry>
+
+
+
+
+</defaultsMap>

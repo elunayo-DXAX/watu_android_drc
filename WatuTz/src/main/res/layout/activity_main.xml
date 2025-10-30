@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_fragment"
+    android:fitsSystemWindows="true"
+    android:background="@color/theme_grey"
+    android:orientation="vertical" >
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/mainContent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            <include layout="@layout/toolbar" />
+        </RelativeLayout>
+
+
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@+id/top" >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/black"
+
+                android:layout_height="match_parent" >
+
+
+                <com.watutz.app.view.ViewPagerNoScroll
+                    android:id="@+id/theViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_above="@+id/tabView"
+                    android:background="@color/white"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/botView"
+                    android:visibility="gone"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:background="@color/theme_color"
+                        android:visibility="visible"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="10dp"/>
+
+
+<!--                    <com.etebarian.meowbottomnavigation.MeowBottomNavigation-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        app:mbn_backgroundBottomColor="@color/theme_color"-->
+<!--                        app:mbn_countBackgroundColor="@color/theme_red"-->
+<!--                        app:mbn_countTextColor="@color/white"-->
+<!--                        app:mbn_defaultIconColor="@color/white"-->
+<!--                        android:visibility="gone"-->
+<!--                        app:mbn_circleColor="@color/theme_color"-->
+<!--                        app:mbn_rippleColor="@color/white"-->
+<!--                        app:mbn_selectedIconColor="@color/white"-->
+<!--                        app:mbn_shadowColor="@color/transparent"/>-->
+
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/tabView"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:weightSum="1"
+                    android:layout_height="60dp">
+
+
+                    <FrameLayout
+                        android:id="@+id/theTab"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/tab_heightxx"
+                        android:visibility="visible"
+                        android:background="@color/black" />
+
+
+
+
+                </LinearLayout>
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <include layout="@layout/loading_view" />
+
+
+            <include
+                android:layout_width="350dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                layout="@layout/drawer_account" />
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/maintenance_view" />
+
+</RelativeLayout>

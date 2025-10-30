@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:background="@color/transparent"
+	android:descendantFocusability="blocksDescendants"
+	android:layout_height="wrap_content"
+	>
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:background="@xml/rounded_notification_bg"
+		android:id="@+id/placeBack"
+		android:layout_height="wrap_content">
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+			android:layout_height="wrap_content">
+
+			<ImageView
+				android:id="@+id/icon"
+				android:layout_width="20dp"
+				android:src="@drawable/ics_notification_general"
+				android:layout_centerVertical="true"
+				android:scaleType="centerCrop"
+				android:tint="@color/white"
+				android:layout_height="20dp"
+				/>
+
+			<RelativeLayout
+				android:layout_width="wrap_content"
+				android:layout_centerVertical="true"
+				android:layout_toRightOf="@+id/icon"
+				android:layout_height="wrap_content">
+
+
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:id="@+id/title"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="5dp"
+					android:text="@string/nameh"
+					android:textColor="@color/white"
+					android:textSize="@dimen/textsize_small"
+					app:firmatypeface="firmaMedium" />
+
+
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:id="@+id/message"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="5dp"
+					android:layout_marginLeft="5dp"
+					android:layout_below="@+id/title"
+					android:text="@string/nameh"
+					android:textColor="@color/white"
+					android:textSize="@dimen/textsize_small"
+					app:firmatypeface="firmaLight" />
+
+
+
+
+			</RelativeLayout>
+
+
+
+		</RelativeLayout>
+
+
+
+
+	</RelativeLayout>
+</FrameLayout>

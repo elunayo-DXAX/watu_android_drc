@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/header_container"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="wrap_content"
+	android:background="@color/black"
+
+	>
+
+
+	<RelativeLayout
+        android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:background="@color/black"
+		android:padding="20dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:id="@+id/toolView"
+			android:layout_height="wrap_content">
+
+
+
+			<com.watutz.app.view.MaterialRippleLayout
+				android:id="@+id/backRips"
+				style="@style/RippleStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentStart="true"
+				android:layout_centerVertical="true"
+				android:layout_margin="10dp"
+				app:rippleColor="@color/transparent">
+
+				<RelativeLayout
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:layout_height="50dp"
+					android:padding="10dp">
+
+					<ImageView
+						android:id="@+id/icBack"
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:layout_centerVertical="true"
+						app:srcCompat="@drawable/ics_back" />
+				</RelativeLayout>
+			</com.watutz.app.view.MaterialRippleLayout>
+
+
+
+		</RelativeLayout>
+
+
+		<RelativeLayout
+			android:id="@+id/iconView"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_below="@+id/toolView"
+			android:layout_margin="15dp"
+			android:background="@xml/rounded_list_transparent_green_stroke"
+			android:padding="10dp">
+
+			<ImageView
+				android:id="@+id/payIcon"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_centerHorizontal="true"
+				android:src="@drawable/ics_rect_mpesa" />
+
+		</RelativeLayout>
+
+
+
+		<RelativeLayout
+			android:layout_width="wrap_content"
+			android:layout_below="@+id/iconView"
+			android:layout_height="wrap_content">
+
+
+
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:id="@+id/activeView"
+			android:layout_height="match_parent">
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/paymentH"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/paymentconfirmation"
+				android:textColor="@color/white"
+				android:layout_marginTop="80dp"
+				android:textSize="@dimen/textsize_medium_large"
+				app:firmatypeface="firmaBold" />
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/payH"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/paymentH"
+				android:layout_marginTop="35dp"
+				android:text="@string/pay"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_medium_small"
+				app:firmatypeface="firmaMedium" />
+
+
+			<RelativeLayout
+				android:id="@+id/payView"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="bottom"
+				android:layout_below="@+id/payH"
+				android:layout_marginTop="5dp">
+
+
+				<com.watutz.app.font.FirmaTextView
+					android:id="@+id/payCurrency"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="TZS.."
+					android:layout_alignBaseline="@+id/payAmount"
+					android:textColor="@color/white"
+					android:textSize="@dimen/textsize_medium"
+					app:firmatypeface="firmaLight" />
+
+				<com.watutz.app.font.FirmaTextView
+					android:id="@+id/payAmount"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="0dp"
+					android:layout_toRightOf="@+id/payCurrency"
+					android:text="150"
+					android:textColor="@color/white"
+					android:textSize="@dimen/textsize_large"
+					app:firmatypeface="firmaBold" />
+
+			</RelativeLayout>
+
+
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/fromH"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/payView"
+				android:layout_marginTop="20dp"
+				android:text="@string/from"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_small"
+				app:firmatypeface="firmaLight" />
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/fromNumber"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/fromH"
+				android:layout_marginTop="5dp"
+				android:text="254 700 000 000"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_large"
+				app:firmatypeface="firmaBold" />
+
+
+			<ImageView
+				android:id="@+id/progressWheel"
+				android:layout_width="200dp"
+				android:layout_height="200dp"
+				android:layout_below="@+id/fromNumber"
+				android:layout_centerInParent="true"
+				android:layout_marginTop="30dp" />
+
+
+
+		</RelativeLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:id="@+id/pendingCounterView"
+			android:visibility="gone"
+			android:layout_height="match_parent">
+
+			<ImageView
+				android:id="@+id/progressWheelWallet"
+				android:layout_width="200dp"
+				android:layout_height="200dp"
+				android:layout_below="@+id/counterView"
+				android:layout_centerHorizontal="true"
+				android:layout_marginTop="30dp" />
+
+
+			<RelativeLayout
+				android:id="@+id/counterView"
+				android:layout_width="80dp"
+				android:layout_height="80dp"
+				android:layout_centerInParent="true"
+				android:layout_marginTop="60dp"
+				android:background="@drawable/ics_circle_white">
+
+				<com.watutz.app.font.FirmaTextView
+					android:id="@+id/counterText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerInParent="true"
+					android:text="@string/zero"
+					android:textColor="@color/black"
+					android:textSize="@dimen/textsize_medium"
+					app:firmatypeface="firmaBold" />
+
+
+			</RelativeLayout>
+
+
+			<com.watutz.app.font.FirmaTextView
+				android:id="@+id/pendingH"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="80dp"
+				android:text="@string/pendingpayment"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_xlarge"
+				app:firmatypeface="firmaBold" />
+
+			<com.watutz.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@+id/pendingH"
+				android:layout_marginTop="20dp"
+				android:text="@string/confirmpending"
+				android:textColor="@color/white"
+				android:textSize="@dimen/textsize_medium_small"
+				app:firmatypeface="firmaMedium" />
+
+
+			<com.watutz.app.view.MaterialRippleLayout
+				android:id="@+id/confirmRips"
+				style="@style/RippleStyle"
+				android:layout_width="match_parent"
+				android:layout_height="60dp"
+				android:layout_below="@+id/counterView"
+				android:layout_marginTop="60dp"
+				android:visibility="gone"
+				app:rippleColor="@color/transparent">
+
+				<RelativeLayout
+					android:id="@+id/btnConfirmPayment"
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:background="@xml/rounded_list_button">
+
+					<com.watutz.app.font.FirmaTextView
+						android:id="@+id/btnDoneText"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_centerInParent="true"
+						android:text="@string/confirmyourpayment"
+						android:textColor="@color/white"
+						android:textSize="@dimen/textsize_small"
+						app:firmatypeface="firmaBold" />
+
+
+				</RelativeLayout>
+
+			</com.watutz.app.view.MaterialRippleLayout>
+
+		   </RelativeLayout>
+
+
+		</RelativeLayout>
+
+
+		<include layout="@layout/loading_view_dialog" />
+
+
+	</RelativeLayout>
+
+
+
+
+</RelativeLayout>
