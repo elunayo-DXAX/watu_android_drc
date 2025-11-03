@@ -23,8 +23,7 @@ public class OpenFragment extends Fragment implements IWhereMyLocationConstants 
     public static OpenActivity parentActivity;
 	static Context mContext;
 
-	
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {

@@ -444,10 +444,6 @@ public class FragmentLogin extends Fragment implements IWhereMyLocationConstants
 		}
 	}
 
-
-
-
-
 	@Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);

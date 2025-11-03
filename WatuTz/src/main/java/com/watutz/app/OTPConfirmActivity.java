@@ -85,7 +85,7 @@ public class OTPConfirmActivity extends BaseActivity implements IWhereMyLocation
 			}
 		});
 		
-		changeFragment(new com.watumx.app.fragments.FragmentOTPConfirm());
+		changeFragment(new com.watutz.app.fragments.FragmentOTPConfirm());
 
 
 	}

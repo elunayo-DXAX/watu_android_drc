@@ -6,14 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.watutz.app.GeneralCommands;
-import com.watutz.app.MainActivity;
 import com.watutz.app.R;
 import com.watutz.app.font.FirmaTextView;
 
