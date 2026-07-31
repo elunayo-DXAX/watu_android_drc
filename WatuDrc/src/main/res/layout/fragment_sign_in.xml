@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="3"
+            android:orientation="vertical"
+
+            android:layout_height="match_parent">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/previewImagesView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.4"
+                app:disableAutoPlayOnUserInteraction="false"
+                app:autoPlay="true"
+                app:fillColor="@color/theme_color"
+                app:pageColor="#00000000"
+                app:radius="6dp"
+                app:strokeColor="@color/theme_color"
+                app:strokeWidth="1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_below="@+id/previewImagesView"
+                android:padding="10dp"
+                android:layout_weight="0.6"
+                android:layout_height="0dp">
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/tagH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/welcometowatu"
+                    android:layout_centerHorizontal="true"
+                    android:lineSpacingExtra="5dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_small"
+                    app:firmatypeface="firmaBold" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_below="@+id/tagH"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/regRips"
+                    android:layout_height="wrap_content">
+
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/loginRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="190dp"
+                        android:layout_height="52dp"
+                        android:layout_marginRight="5dp"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnLogin"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_button">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/signin"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium_small"
+                                app:firmatypeface="firmaBold" />
+
+
+                        </RelativeLayout>
+
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="200dp"
+                        android:layout_toRightOf="@+id/loginRips"
+                        android:layout_marginLeft="5dp"
+                        android:layout_height="52dp"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnRegister"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_button_blue_light">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/register"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_medium_small"
+                                app:firmatypeface="firmaBold" />
+
+
+                        </RelativeLayout>
+
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/existing"
+                    android:layout_below="@+id/regRips"
+                    android:layout_marginTop="20dp"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:background="@color/theme_hint"
+                        android:id="@+id/im1"
+                        android:layout_centerVertical="true"
+                        android:layout_height="2dp"/>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/existingH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/im1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:text="@string/areyouanexisting"
+                        android:textColor="@color/theme_hint"
+                        android:textSize="@dimen/textsize_xsmall"
+                        app:firmatypeface="firmaMedium" />
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:background="@color/theme_hint"
+                        android:layout_toRightOf="@+id/existingH"
+                        android:layout_marginLeft="10dp"
+                        android:layout_centerVertical="true"
+                        android:layout_height="2dp"/>
+
+                </RelativeLayout>
+
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="300dp"
+                    android:layout_below="@+id/existing"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="50dp"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnActivateAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/continueh"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

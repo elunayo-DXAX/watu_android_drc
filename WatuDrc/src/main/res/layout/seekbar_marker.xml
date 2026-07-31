@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:id="@+id/rlMarker">
+
+    <com.watudrc.app.font.FirmaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvProgress"
+        android:gravity="center"
+        android:padding="10dp"
+        app:firmatypeface="firmaMedium"
+        android:textColor="@android:color/black"
+        android:background="@drawable/seekbar_marker_shape"
+        android:text="1"/>
+
+    <View
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/vArrow"
+        android:gravity="center"
+        android:rotation="180"
+        android:layout_below="@id/tvProgress"
+        android:background="@drawable/seekbar_marker_arrow_shape"/>
+
+</RelativeLayout>

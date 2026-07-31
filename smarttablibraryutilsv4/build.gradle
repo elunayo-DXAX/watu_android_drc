@@ -1,8 +1,8 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 27
-
+    compileSdkVersion 30
+    namespace 'com.ogaclejapan.smarttablayout.utils'
     defaultConfig {
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
 }
 
 dependencies {

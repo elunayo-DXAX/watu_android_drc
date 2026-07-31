@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/header_container"
+	android:layout_width="match_parent"
+	android:orientation="vertical"
+	android:layout_height="wrap_content"
+	android:background="@color/black">
+
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_centerInParent="true"
+		android:background="@color/black"
+		>
+
+		<com.watudrc.app.view.MaterialRippleLayout
+				android:id="@+id/backRips"
+				style="@style/RippleStyle"
+				android:layout_width="wrap_content"
+				android:layout_height="50dp"
+				android:layout_alignParentRight="true"
+				app:rippleColor="@color/transparent" >
+
+				<RelativeLayout
+					android:id="@+id/btnBack"
+					android:layout_width="wrap_content"
+					android:padding="10dp"
+					android:layout_height="match_parent" >
+
+					<ImageView
+						android:layout_width="20dp"
+						android:layout_height="20dp"
+						android:id="@+id/backIcon"
+						android:layout_centerVertical="true"
+						app:srcCompat="@drawable/ics_back" />
+
+
+					<com.watudrc.app.font.FirmaTextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_toRightOf="@+id/backIcon"
+						android:layout_marginLeft="10dp"
+						android:text="@string/back"
+						android:textColor="@color/theme_color"
+						android:textSize="@dimen/textsize_medium"
+						app:firmatypeface="firmaMedium" />
+
+
+				</RelativeLayout>
+			</com.watudrc.app.view.MaterialRippleLayout>
+
+		<com.synnapps.carouselview.CarouselView
+			android:id="@+id/previewImagesView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_below="@+id/backRips"
+			app:slideInterval="8000"
+			android:layout_marginLeft="10dp"
+			android:layout_marginRight="10dp"
+			android:background="@color/black"
+			app:fillColor="@color/theme_color"
+			app:pageColor="@color/black"
+			app:radius="5dp"
+			app:strokeColor="@color/theme_color"
+			app:strokeWidth="1dp" />
+
+     <include layout="@layout/loading_view_dialog" />
+
+
+      </RelativeLayout>
+
+
+
+
+ </RelativeLayout>

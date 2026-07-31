@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@color/black">
+
+        <com.watudrc.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/header"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_xlarge"
+            app:firmatypeface="firmaBold" />
+
+
+        <com.watudrc.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:id="@+id/title"
+            android:layout_below="@+id/header"
+            android:text="@string/general"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/textsize_medium_large"
+            app:firmatypeface="firmaBold" />
+
+
+
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/languageRips"
+            style="@style/RippleStyle"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rippleColor="@color/transparent">
+
+        <RelativeLayout
+           android:layout_width="match_parent"
+            android:id="@+id/btnLanguage"
+           android:layout_height="60dp">
+
+
+            <ImageView
+                android:layout_width="30dp"
+                android:id="@+id/icLanguage"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ics_language_icon"
+                android:layout_height="30dp"/>
+
+
+            <com.watudrc.app.font.FirmaTextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="10dp"
+               android:id="@+id/languageH"
+                android:layout_toRightOf="@+id/icLanguage"
+                android:layout_marginLeft="10dp"
+               android:text="@string/language"
+               android:textColor="@color/white"
+               android:textSize="@dimen/textsize_small"
+               app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FontView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/icon"
+                android:text="@string/dw_next_triangle"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_xlarge"
+                app:firmatypeface="firmaBold" />
+
+
+
+
+
+
+       </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/languageRips"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/icNotification"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ics_notification"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/theme_color"
+                    android:layout_height="30dp"/>
+
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/icNotification"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/notifications"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/textsize_medium_large"
+                    app:firmatypeface="firmaBold" />
+
+
+
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentRight="true"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button_orange">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/notificationText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/turnon"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

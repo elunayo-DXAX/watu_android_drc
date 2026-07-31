@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/transparent"
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+    app:theme="@style/AppTheme.Title" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent" >
+
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/backRips"
+            style="@style/RippleStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            app:rippleColor="@color/transparent" >
+
+            <RelativeLayout
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="match_parent" >
+
+               <ImageView
+                   android:layout_width="20dp"
+                   app:srcCompat="@drawable/ics_back"
+                   android:layout_centerInParent="true"
+                   android:layout_height="20dp"/>
+
+            </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+        <TextView
+            android:id="@+id/titleBarText"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:singleLine="true"
+            android:text="@string/name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_large" />
+
+
+    </RelativeLayout>
+
+</androidx.appcompat.widget.Toolbar>

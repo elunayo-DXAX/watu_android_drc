@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-10dp"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Header -->
+                <RelativeLayout
+                    android:id="@+id/topView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp">
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/resourcecenter"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium"
+                        app:firmatypeface="firmaBold" />
+
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/backRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/icBack"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_centerVertical="true"
+                                app:srcCompat="@drawable/ics_back" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+                </RelativeLayout>
+
+
+                <!-- Grid of Help Options -->
+                <GridLayout
+                    android:id="@+id/grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/topView"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:rowCount="3"
+                    android:visibility="gone">
+
+                    <!-- Example grid item: Phone Unlock -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/phoneUnlockRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnPhoneUnlock"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconPhoneUnlock"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_phone_unlock" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconPhoneUnlock"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/phone_unlock"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                    <!-- Device Stolen -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/deviceStolenRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnDeviceStolen"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconDeviceStolen"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_device_stolen" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconDeviceStolen"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/device_stolen"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                    <!-- Replacement Process -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/replacementProcessRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnReplacement"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconReplacement"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_replacement" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconReplacement"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/replacement_process"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                    <!-- Returns -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/returnsRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnReturns"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconReturns"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ics_icon_returns" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconReturns"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:text="@string/returns"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                    <!-- Recovery Process -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/recoveryProcessRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnRecovery"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconRecovery"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_recovery" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconRecovery"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/recovery_process"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                    <!-- Service Center -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/serviceCenterRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnServiceCenter"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconServiceCenter"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_service_center" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconServiceCenter"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/service_center"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                </GridLayout>
+
+                <!-- Grid of Help Options -->
+                <GridLayout
+                    android:id="@+id/grid_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/grid"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:rowCount="4">
+
+<!--                    &lt;!&ndash; Prepayment Process  &ndash;&gt;-->
+<!--                    <com.watudrc.app.view.MaterialRippleLayout-->
+<!--                        android:id="@+id/prepaymentRips"-->
+<!--                        style="@style/RippleStyle"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="120dp"-->
+<!--                        android:layout_rowWeight="1"-->
+<!--                        android:layout_columnWeight="1"-->
+<!--                        android:layout_margin="8dp">-->
+
+<!--                        <RelativeLayout-->
+<!--                            android:id="@+id/btnPrepaymentProcess"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="match_parent"-->
+<!--                            android:background="@xml/rounded_list_black_light">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/iconPrepaymentProcess"-->
+<!--                                android:layout_width="40dp"-->
+<!--                                android:layout_height="40dp"-->
+<!--                                android:layout_centerHorizontal="true"-->
+<!--                                android:layout_marginTop="20dp"-->
+<!--                                android:src="@drawable/ic_prepayment" />-->
+
+<!--                            <com.watudrc.app.font.FirmaTextView-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layout_below="@id/iconPrepaymentProcess"-->
+<!--                                android:layout_centerHorizontal="true"-->
+<!--                                android:layout_marginTop="12dp"-->
+<!--                                android:gravity="center"-->
+<!--                                android:text="@string/prepayment_process"-->
+<!--                                android:textColor="@color/white"-->
+<!--                                android:textSize="15sp"-->
+<!--                                app:firmatypeface="firmaMedium" />-->
+<!--                        </RelativeLayout>-->
+<!--                    </com.watudrc.app.view.MaterialRippleLayout>-->
+
+                    <!-- Common App Issues  -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:id="@+id/commonAppIssuesRips"
+                        style="@style/RippleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="2"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/btnCommonIssues"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_black_light">
+
+                            <ImageView
+                                android:id="@+id/iconCommonIssues"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/ic_common_issues" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/iconCommonIssues"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="12dp"
+                                android:gravity="center"
+                                android:text="@string/commonappissues"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                app:firmatypeface="firmaMedium" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+                </GridLayout>
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/grid_2"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="30dp"
+                    app:rippleColor="#00C6B7">
+
+                    <RelativeLayout
+                        android:id="@+id/btnChatWithUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:id="@+id/chatIcon"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:src="@drawable/ics_icon_chat"
+                            app:tint="@color/theme_green" />
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/ftv_chat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/chatIcon"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="@string/live_chat_with_us"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaMedium" />
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ftv_chat"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="3dp"
+                            android:gravity="center"
+                            android:text="@string/watu_live_chat"
+                            android:textColor="@color/theme_teal"
+                            android:textSize="@dimen/textsize_xsmall"
+                            app:firmatypeface="firmaMedium" />
+
+                    </RelativeLayout>
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+            </RelativeLayout>
+
+            <!-- this is where we’ll load child fragments -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout> 

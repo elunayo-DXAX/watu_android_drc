@@ -1,0 +1,1888 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="-10dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:fillViewport="true">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@xml/rounded_list_black"
+                android:padding="10dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/headerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/btnUserIcon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/inView"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="10dp"
+                            android:background="@xml/rounded_circle_white_small">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/userInitials"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+
+                                android:text="JM"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+                        </RelativeLayout>
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/userHelloH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/inView"
+                            android:text="@string/helloicon"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/userHelloH"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@+id/inView"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+                    </RelativeLayout>
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnNotifications"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingStart="12dp"
+                            android:paddingEnd="12dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/ics_notification_bell_empty" />
+
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/refreshView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/headerView"
+                    android:layout_marginTop="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/accountDetailsH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/accountdetails"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/accountDetailsH"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/seeaccountdetails"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaLight" />
+
+
+                    </RelativeLayout>
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnRefreshAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@xml/rounded_list_button_black_dark"
+                            android:padding="10dp">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/refreshButtonTop"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="@string/refresh"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xxsmall"
+                                app:firmatypeface="firmaMedium" />
+
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_below="@+id/refreshButtonTop"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/ics_refresh"
+                                android:tint="@color/theme_orange_light" />
+
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/refreshView"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/assetsView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:visibility="visible">
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/simuRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:id="@+id/btnSimu"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@xml/rounded_circle_transparent_black_small_green_stroke"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconSimu"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ics_simu"
+                                    android:tint="@color/theme_green" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/bodaRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:visibility="gone"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:id="@+id/btnBoda"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@xml/rounded_circle_transparent_black_small"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconBoda"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ics_icon_boda" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/tvRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:visibility="gone"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:id="@+id/btnTv"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@xml/rounded_circle_transparent_black_small"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconTv"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ics_icon_tv" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/tukTukRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:visibility="gone"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:id="@+id/btnTukTuk"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@xml/rounded_circle_transparent_black_small"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconTukTuk"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ics_tuk_tuk"
+                                    android:tint="@color/white" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/gariRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50dp"
+                            android:visibility="gone"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:id="@+id/btnGari"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:background="@xml/rounded_circle_transparent_black_small"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconGari"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ics_gari"
+                                    android:tint="@color/white" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.watudrc.app.view.MaterialRippleLayout
+                            android:id="@+id/mainRips"
+                            style="@style/RippleStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:rippleAlpha="0.1"
+                            app:rippleColor="@color/transparent"
+                            app:rippleDuration="0"
+                            app:rippleOverlay="false">
+
+
+                            <RelativeLayout
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:background="@xml/rounded_circle_transparent_black_small_green_stroke"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    android:id="@+id/iconMain"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerInParent="true"
+                                    android:tint="@color/theme_green" />
+
+                            </RelativeLayout>
+
+                        </com.watudrc.app.view.MaterialRippleLayout>
+
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toRightOf="@id/mainRips"
+                            android:fillViewport="true"
+                            android:scrollbars="none">
+
+
+                            <LinearLayout
+                                android:id="@+id/secondaryDevicesContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+
+                            </LinearLayout>
+
+                        </HorizontalScrollView>
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/activeLoanView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/activeUntilView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/topView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="10dp"
+                            android:background="@xml/rounded_list_dark_with_no_stroke"
+                            android:padding="10dp">
+
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:id="@+id/unlockToolTipRips"
+                                style="@style/RippleStyle"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                app:rippleAlpha="0.1"
+                                app:rippleColor="@color/transparent"
+                                app:rippleDuration="0"
+                                app:rippleOverlay="false">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnUnlockTip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true">
+
+
+                                        <ImageView
+                                            android:id="@+id/payUnlockIcon"
+                                            android:layout_width="25dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ics_help_no_tint"
+                                            android:tint="@color/white" />
+
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                            <!-- Icon + Label container -->
+                            <RelativeLayout
+                                android:id="@+id/iconLabelContainer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginStart="30dp">
+
+                                <ImageView
+                                    android:id="@+id/iconLock"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ics_lock" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/deviceActiveH"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_toEndOf="@+id/iconLock"
+                                    android:text="@string/yourdevicewillbeactivefor"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    app:firmatypeface="firmaLight" />
+                            </RelativeLayout>
+
+                            <!-- Countdown background strip -->
+                            <RelativeLayout
+                                android:id="@+id/countView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iconLabelContainer"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginBottom="4dp"
+                                android:background="@xml/rounded_list_black_light"
+                                android:padding="8dp"
+                                android:visibility="gone">
+
+                                <!-- Centered countdown container -->
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <!-- DAYS block -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/tvDaysValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="25"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xlarge"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvDaysValue"
+                                        android:layout_alignStart="@+id/tvDaysValue"
+                                        android:text="@string/days"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xxsmall"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <!-- colon -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/sep1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@+id/tvDaysValue"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toEndOf="@+id/tvDaysValue"
+                                        android:text=":"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_large"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <!-- HOURS block -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/tvHoursValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@+id/tvDaysValue"
+                                        android:layout_toEndOf="@+id/sep1"
+                                        android:text="09"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xlarge"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvHoursValue"
+                                        android:layout_alignStart="@+id/tvHoursValue"
+                                        android:text="@string/hours"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xxsmall"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <!-- colon -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/sep2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/tvDaysValue"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toEndOf="@id/tvHoursValue"
+                                        android:text=":"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_large"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <!-- MINUTES block -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/tvMinutesValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/tvDaysValue"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_toEndOf="@id/sep2"
+                                        android:text="00"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xlarge"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvMinutesValue"
+                                        android:layout_alignStart="@id/tvMinutesValue"
+                                        android:text="@string/minutes"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xxsmall"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <!-- colon -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/sep3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/tvDaysValue"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_toEndOf="@id/tvMinutesValue"
+                                        android:text=":"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_large"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <!-- SECONDS block -->
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/tvSecondsValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@id/tvDaysValue"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_toEndOf="@id/sep3"
+                                        android:text="00"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xlarge"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/tvSecondsValue"
+                                        android:layout_alignStart="@id/tvSecondsValue"
+                                        android:text="@string/seconds"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_xxsmall"
+                                        app:firmatypeface="firmaLight" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/tempUnlockView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/iconLabelContainer"
+                                android:layout_marginTop="10dp"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:layout_toLeftOf="@+id/unlockRips"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:padding="8dp">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/deviceActiveDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="@string/date"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/theme_orange"
+                                        android:textSize="@dimen/textsize_medium_large"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+                                <com.watudrc.app.view.MaterialRippleLayout
+                                    android:id="@+id/unlockRips"
+                                    style="@style/RippleStyle"
+                                    android:layout_width="150dp"
+                                    android:layout_height="60dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    app:rippleColor="@color/transparent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnUnlock"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@xml/rounded_list_button_orange_light"
+                                        android:gravity="center"
+                                        android:padding="5dp">
+
+                                        <ImageView
+                                            android:id="@+id/unlockIcon"
+                                            android:layout_width="15dp"
+                                            android:layout_height="15dp"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ics_hourglass"
+                                            android:tint="@color/white" />
+
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:id="@+id/unlockText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_toRightOf="@+id/unlockIcon"
+                                            android:text="@string/temporaryunlock"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_xxsmall"
+                                            app:firmatypeface="firmaMedium" />
+
+
+                                    </RelativeLayout>
+
+                                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/unlockLimitView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/unlockRips"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone">
+
+
+                            <ImageView
+                                android:id="@+id/iconEmergency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ics_emergency" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/iconEmergency"
+                                android:text="@string/unlocklimitreached"
+                                android:textColor="@color/theme_orange"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaMedium" />
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/loanStatusView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/activeUntilView"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ics_back_green"
+                            android:padding="16dp">
+
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:id="@+id/payToolTipRips"
+                                style="@style/RippleStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentRight="true"
+                                app:rippleAlpha="0.0"
+                                app:rippleColor="@color/transparent"
+                                app:rippleDuration="0"
+                                app:rippleOverlay="false">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnPayTip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/payHTooltip"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/howtomakepayments"
+                                        android:textColor="@color/black"
+                                        android:textSize="@dimen/textsize_xxsmall"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toRightOf="@+id/payHTooltip"
+                                        android:src="@drawable/ics_help_no_tint"
+                                        android:tint="@color/black" />
+
+
+                                </RelativeLayout>
+
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/accountStatusLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="@string/accountstatus"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_xsmall"
+                                android:textStyle="bold"
+                                android:visibility="gone"
+                                app:firmatypeface="firmaLight" />
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:id="@+id/refreshRips"
+                                style="@style/RippleStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:visibility="gone"
+                                app:rippleAlpha="0.1"
+                                app:rippleColor="@color/transparent"
+                                app:rippleDuration="0"
+                                app:rippleOverlay="false">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnRefresh"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:alpha="0.4"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:paddingStart="12dp"
+                                    android:paddingEnd="12dp">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:drawablePadding="8dp"
+                                        android:text="Refresh Account"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaMedium" />
+                                </RelativeLayout>
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/amountToUnlockLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/accountStatusLabel"
+                                android:layout_marginTop="40dp"
+                                android:text="@string/amounttounlock"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_xsmall"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/amountValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/amountToUnlockLabel"
+                                android:layout_marginTop="4dp"
+                                android:text="USD."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_medium_large"
+                                android:textStyle="bold"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                style="@style/RippleStyle"
+                                android:layout_width="150dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="40dp"
+                                app:rippleColor="@color/white_transparent">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnPay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@xml/rounded_list_button">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true">
+
+                                        <ImageView
+                                            android:id="@+id/payIcon"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:src="@drawable/ics_coins" />
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_toRightOf="@+id/payIcon"
+                                            android:text="@string/pay"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_medium_small"
+                                            app:firmatypeface="firmaBold" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ad_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:contentDescription="ad card"
+                            android:scaleType="centerCrop"
+                            android:visibility="gone"/>
+
+
+                        <RelativeLayout
+                            android:id="@+id/paymentProgressSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/simuDetailsSection"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="16dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/seekView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/paymentProgressTitle">
+
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/progressText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignStart="@id/seekBar"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@xml/rounded_list_theme"
+                                    android:paddingHorizontal="10dp"
+                                    android:text="0%"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaBold" />
+
+                                <SeekBar
+                                    android:id="@+id/seekBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_below="@id/progressText"
+                                    android:layout_marginTop="10dp"
+                                    android:max="100"
+                                    android:progress="0"
+                                    android:progressDrawable="@drawable/seek_progress_theme"
+                                    android:thumb="@color/transparent" />
+
+                            </RelativeLayout>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/paymentProgressTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/paymentprogress"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/seekView"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginTop="16dp"
+                                android:text="@string/amountpaid"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xsmall"
+                                app:firmatypeface="firmaLight" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanTotalPayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/yourBalanceLabel"
+                                android:layout_alignParentStart="true"
+                                android:text="USD"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_medium"
+                                android:textStyle="bold"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/yourBalanceLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/seekView"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginTop="16dp"
+                                android:text="@string/yourbalanceis"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xsmall"
+                                app:firmatypeface="firmaLight" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanBalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/yourBalanceLabel"
+                                android:layout_alignParentEnd="true"
+                                android:text="USD"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_medium"
+                                android:textStyle="bold"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:id="@+id/statementRips"
+                                style="@style/RippleStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_below="@+id/loanTotalPayment"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="5dp"
+                                app:rippleColor="@color/transparent">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnDownloadStatement"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@xml/rounded_list_button_white_stroke"
+                                    android:gravity="center"
+                                    android:paddingHorizontal="10dp">
+
+
+                                    <ImageView
+                                        android:id="@+id/iconDownload"
+                                        android:layout_width="20dp"
+                                        android:layout_height="20dp"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ics_icon_download_nose" />
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@+id/iconDownload"
+                                        android:text="@string/downloadloanagreement"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_xsmall"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/simuDetailsSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_below="@+id/loanStatusView"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/rounded_pill_dark_lighter"
+                            android:padding="10dp">
+
+
+                            <!-- Last Payments Row -->
+                            <RelativeLayout
+                                android:id="@+id/lastPaymentsRow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp">
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/lastpayment"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/asOf"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text="@string/asof"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+
+
+                            <!-- Device Acquired Row -->
+                            <RelativeLayout
+                                android:id="@+id/deviceAcquiredRow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/lastPaymentsRow"
+                                android:layout_marginTop="8dp">
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentStart="true"
+                                    android:text="@string/deviceacquired"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/issueDateText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:text=""
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+
+
+                        </RelativeLayout>
+
+                        <!-- Payment Cards Container  -->
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/deviceAcquiredRow"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="-10dp"
+                            android:layout_marginRight="20dp"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <!-- Daily Payment Card -->
+                            <RelativeLayout
+                                android:id="@+id/btnDaily"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_pill_dark"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/iconDailyPayment"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ics_icon_calendar" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/labelDailyPayment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iconDailyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="@string/daily"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/loanDailyAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/labelDailyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="USD."
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    android:textStyle="bold"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+
+                            <!-- Weekly Payment Card -->
+                            <RelativeLayout
+                                android:id="@+id/btnWeekly"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_pill_dark"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/iconWeeklyPayment"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ics_icon_calendar" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/labelWeeklyPayment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iconWeeklyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="@string/weekly"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/loanWeeklyAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/labelWeeklyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="USD."
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    android:textStyle="bold"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+
+                            <!-- Monthly Payment Card -->
+                            <RelativeLayout
+                                android:id="@+id/btnMonthly"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_pill_dark"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/iconMonthlyPayment"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/ics_icon_calendar" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/labelMonthlyPayment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/iconMonthlyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="@string/monthly"
+
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/loanMonthlyAmount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/labelMonthlyPayment"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="4dp"
+                                    android:gravity="center"
+                                    android:text="USD."
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    android:textStyle="bold"
+                                    app:firmatypeface="firmaBold" />
+                            </RelativeLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/loanCompleteView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+
+                        <RelativeLayout
+                            android:id="@+id/content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/black"
+                            android:padding="20dp">
+
+
+                            <RelativeLayout
+                                android:id="@+id/icCongrats"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/topView"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/ic_congrats"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/congratsText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/congrats"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_xxlarge"
+                                        app:firmatypeface="firmaBold" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/happyText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="48dp"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginEnd="48dp"
+                                        android:gravity="center"
+                                        android:text="@string/loansuccessful"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_medium_small"
+                                        app:firmatypeface="firmaBold" />
+                                </LinearLayout>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/paymentProgressSectionComplete"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/icCongrats"
+                                android:layout_marginTop="10dp"
+                                android:padding="16dp">
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/progressStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/paymentprogress"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_medium"
+                                    app:firmatypeface="firmaBold" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/percentageBubbleComplete"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progressStatus"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/rounded_percentage_bubble"
+                                    android:paddingStart="12dp"
+                                    android:paddingTop="4dp"
+                                    android:paddingEnd="12dp"
+                                    android:paddingBottom="4dp"
+                                    android:text="100%"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_small"
+                                    android:textStyle="bold"
+                                    app:firmatypeface="firmaBold" />
+
+                                <SeekBar
+                                    android:id="@+id/seekBarComplete"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="10dp"
+                                    android:layout_below="@+id/percentageBubbleComplete"
+                                    android:layout_marginTop="12dp"
+                                    android:max="100"
+                                    android:progress="100"
+                                    android:progressDrawable="@drawable/seekbar_custom"
+                                    android:thumb="@color/transparent" />
+
+                                <com.watudrc.app.view.MaterialRippleLayout
+                                    style="@style/RippleStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:id="@+id/statementCompleteRips"
+                                    android:layout_below="@+id/seekBarComplete"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="10dp"
+                                    app:rippleColor="@color/transparent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnDownloadStatementComplete"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="@xml/rounded_list_button_white_stroke"
+                                        android:gravity="center"
+                                        android:paddingHorizontal="10dp">
+
+
+                                        <ImageView
+                                            android:id="@+id/iconDownloadComplete"
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/ics_icon_download_nose" />
+
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_toRightOf="@+id/iconDownloadComplete"
+                                            android:text="@string/downloadloanagreement"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_xsmall"
+                                            app:firmatypeface="firmaLight" />
+
+
+                                    </RelativeLayout>
+
+
+                                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                            </RelativeLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/paymentProgressSectionComplete"
+                                android:layout_marginTop="10dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/icC1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ics_coins" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_toEndOf="@+id/icC1"
+                                        android:text="@string/totalamount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/totalPaymentText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/amount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/icC2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ics_coins" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_toRightOf="@+id/icC2"
+                                        android:text="@string/outstandingbalance"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/outstandingBalanceText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/amount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/icC3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ics_coins" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_toEndOf="@+id/icC3"
+                                        android:text="@string/installmentamount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/installmentAmountText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/amount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_marginTop="10dp"
+                                    android:background="@xml/rounded_list_black_light"
+                                    android:padding="10dp">
+
+                                    <ImageView
+                                        android:id="@+id/icC4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:src="@drawable/ics_coins" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_toEndOf="@+id/icC4"
+                                        android:text="@string/dailypayment"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/dailyPaymentText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_centerVertical="true"
+                                        android:text="@string/amount"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaLight" />
+
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/jijengeContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/paymentProgressSection"
+                        android:layout_marginTop="16dp"
+                        android:visibility="gone"
+                        android:padding="10dp"
+                        android:background="@xml/rounded_list_theme">
+
+                        <!-- Jijenge! Header Section -->
+                        <RelativeLayout
+                            android:id="@+id/jijengeHeaderSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/jijengeTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:text="@string/upgrade"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium_large"
+                                android:textStyle="bold"
+                                app:firmatypeface="firmaBold"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/jijengeTitle"
+                                android:layout_alignParentStart="true"
+                                android:text="@string/yourjourneystartshere"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaLight"/>
+
+                            <ImageView
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentTop="true"
+                                android:src="@drawable/ics_icon_upgrade" />
+                        </RelativeLayout>
+
+                        <!-- Own It! and Upgrade your device -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/jijengeHeaderSection"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="16dp"
+                            android:weightSum="2">
+
+                            <!-- Own It! Card -->
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_pill_dark"
+                                android:padding="10dp"
+                                android:layout_marginEnd="8dp">
+
+                                <ImageView
+                                    android:id="@+id/iconOwnIt"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:padding="5dp"
+                                    android:layout_alignParentStart="true"
+                                    android:background="@xml/rounded_list_transparent_white_light_stroke"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:src="@drawable/ics_icon_clipboard" />
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/titleOwnIt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/iconOwnIt"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/ownit"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_medium"
+                                    app:firmatypeface="firmaBold"/>
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:id="@+id/descriptionOwnIt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/titleOwnIt"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="@string/tracktheprogressofyourjourney"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/textsize_xsmall"
+                                    app:firmatypeface="firmaLight"/>
+
+                                <com.watudrc.app.view.MaterialRippleLayout
+                                    style="@style/RippleStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/descriptionOwnIt"
+                                    android:layout_margin="5dp"
+                                    app:rippleAlpha="0.1"
+                                    app:rippleOverlay="false"
+                                    app:rippleDuration="0"
+                                    app:rippleColor="@color/theme_color">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnCheckProgress"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="30dp"
+                                        android:padding="5dp"
+                                        android:background="@xml/rounded_list_button"
+                                        >
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="@string/checkprogress"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_xxsmall"
+                                            app:firmatypeface="firmaMedium" />
+                                    </RelativeLayout>
+                                </com.watudrc.app.view.MaterialRippleLayout>
+                            </RelativeLayout>
+
+                            <!-- Upgrade your device Card -->
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@drawable/rounded_pill_dark"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/upgradeLockedView"
+                                    android:visibility="gone"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/ics_upgrade_blurred" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="10dp"
+                                    android:id="@+id/upgradeUnlockedView"
+                                    android:layout_marginEnd="8dp">
+
+                                    <ImageView
+                                        android:id="@+id/iconUpgrade"
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:padding="5dp"
+                                        android:layout_alignParentStart="true"
+                                        android:background="@xml/rounded_list_transparent_white_light_stroke"
+                                        android:layout_marginStart="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginEnd="5dp"
+                                        android:src="@drawable/ics_icon_upgrade" />
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/upgradeH"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/iconUpgrade"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/upgrade"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_medium"
+                                        app:firmatypeface="firmaBold"/>
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/upgradeDesc"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/upgradeH"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:text="@string/unlocklongershort"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_xsmall"
+                                        app:firmatypeface="firmaLight"/>
+
+                                    <com.watudrc.app.view.MaterialRippleLayout
+                                        style="@style/RippleStyle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/upgradeDesc"
+                                        android:layout_margin="5dp"
+                                        app:rippleAlpha="0.1"
+                                        app:rippleOverlay="false"
+                                        app:rippleDuration="0"
+                                        app:rippleColor="@color/theme_color">
+
+                                        <RelativeLayout
+                                            android:id="@+id/btnUpgradeNow"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="30dp"
+                                            android:padding="5dp"
+                                            android:background="@xml/rounded_list_button_orange_light"
+                                            >
+
+                                            <com.watudrc.app.font.FirmaTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_centerInParent="true"
+                                                android:text="@string/upgradenow"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/textsize_xxsmall"
+                                                app:firmatypeface="firmaMedium" />
+                                        </RelativeLayout>
+                                    </com.watudrc.app.view.MaterialRippleLayout>
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <include layout="@layout/loading_view" />
+    </RelativeLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

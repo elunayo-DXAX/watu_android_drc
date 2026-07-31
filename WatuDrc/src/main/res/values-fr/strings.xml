@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_description">Watu. Économisez plus</string>
+    <string name="api_key">AIzaSyBBAMIdM1a5YhZHFA8_qIUF-chA4wUSXE0</string>
+    <string name="hello_world">Salut tout le monde!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="title_activity_detail_view">Watu</string>
+    <string name="crashtoast">Désolé Quelque chose s\'est passé</string>
+    <string name="probleminternet">Vérifiez votre connexion internet et réessayez</string>
+    <string name="gettinglocationdetails">Nous obtenons les détails de localisation...</string>
+    <string name="problemlocationdetails">Impossible d\'obtenir les détails de l\'emplacement</string>
+    <string name="gettingdirections">Nous obtenons un itinéraire vers %1$s...</string>
+    <string name="finalizing">Finalisation...</string>
+    <string name="turningonlocation">Activation de la localisation... Réessayez après quelques secondes...</string>
+    <string name="loggingin">Donnez-nous un instant pendant que nous vous connectons.</string>
+    <string name="loginfailednetwork">Désolé. Impossible de vous connecter. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="loginfaileddetails">Désolé. Impossible de vous connecter. Vérifiez votre nom d\'utilisateur ou votre code PIN et appuyez pour réessayer.</string>
+    <string name="loginerror">Désolé, mais nous n\'avons pas pu vous connecter. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="loginsuccesstitle">Connexion réussie.</string>
+    <string name="loginsuccess">Connecté avec succès.</string>
+    <string name="loginemailnotregistered">Désolé. Mais il semble que votre email n\'a pas été enregistré. Veuillez d\'abord vous inscrire.</string>
+    <string name="registering">Donnez-nous un instant pendant que nous vous inscrivons.</string>
+    <string name="registerfailednetwork">Désolé. Impossible de vous inscrire. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="registererror">Nous rencontrons des difficultés pour traiter votre demande de connexion. Si vous avez besoin d\'une assistance immédiate, veuillez visiter notre site Web ou contacter le service client</string>
+    <string name="registersuccess">
+Nous avons besoin que vous vérifiiez votre adresse e-mail
+<b>%1$s</b>
+pour terminer votre processus d\'inscription. C\'est aussi simple que de cliquer sur le lien dans l\'e-mail de vérification que nous vous avons envoyé.
+    </string>
+    <string name="registersuccesstitle">Pour continuer, veuillez vérifier votre email</string>
+    <string name="registeralreadyregistered">Désolé. Mais il semble que vous soyez déjà inscrit. Veuillez vous connecter ou choisir mot de passe oublié si vous avez oublié votre mot de passe.</string>
+    <string name="didntreceive">Vous n\'avez pas reçu l\'e-mail?</string>
+    <string name="sendagain">
+<u>Envoyer à nouveau</u>
+    </string>
+    <string name="resettingpassword">Accordez-nous un instant pendant que nous définissons votre code PIN.</string>
+    <string name="resetpasswordfailednetwork">Désolé. Impossible de définir votre code PIN. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="resetpassworderror">Désolé, mais nous n\'avons pas pu définir votre code PIN. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="resetpasswordsuccess">
+PIN défini avec succès pour
+<b>%1$s</b>
+. Procéder
+    </string>
+    <string name="resetpasswordsuccesstitle">Réussi</string>
+    <string name="verifyingidentity">Donnez-nous un instant pendant que nous vérifions vos informations.</string>
+    <string name="verifyidentityfailednetwork">Désolé. Impossible de vérifier vos informations. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="verifyidentityerror">Désolé, mais nous n\'avons pas pu vérifier vos informations. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="verifyidentitysuccess">Vos informations ont été vérifiées avec succès.</string>
+    <string name="verifyidentitysuccesstitle">Vérification réussie</string>
+    <string name="processing">Veuillez patienter...</string>
+    <string name="failednetwork">Vérifiez votre connexion Internet et réessayez.</string>
+    <string name="error">Désolé. Impossible de terminer la demande. Réessayez</string>
+    <string name="requestingotp">Demande de code de confirmation.</string>
+    <string name="requestingotpfailednetwork">Désolé. Impossible de demander le code de confirmation. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="requestingotperror">Désolé, mais nous n\'avons pas pu demander le code de confirmation. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="requestingotpsuccess">Code de confirmation envoyé avec succès.</string>
+    <string name="requestingotpsuccesstitle">Code de confirmation envoyé.</string>
+    <string name="addingdevice">Ajout d\'un appareil...</string>
+    <string name="adddevicefailednetwork">Désolé. Impossible d\'ajouter l\'appareil. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="adddeviceperror">Désolé, mais nous n\'avons pas pu ajouter l\'appareil. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="adddevicesuccess">Appareil ajouté avec succès.</string>
+    <string name="addevicesuccesstitle">Appareil ajouté.</string>
+    <string name="confirmingotp">Confirmation du code de vérification.</string>
+    <string name="confirmingotpfailednetwork">Désolé. Impossible de confirmer le code de vérification. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="confirmingotperror">Désolé, mais nous n\'avons pas pu confirmer le code de vérification. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="confirmingotpsuccess">Code de vérification confirmé avec succès.</string>
+    <string name="confirmingotpsuccesstitle">Vérification réussie.</string>
+    <string name="failed">Échoué</string>
+    <string name="mobilenumberconfirmation">Confirmation du numéro de téléphone</string>
+    <string name="otpconfirmation">vérifier le numéro de téléphone</string>
+    <string name="resetpasswordemailnotfound">Désolé. Mais il semble que votre email n\'a pas été enregistré. Vous pouvez confirmer et réessayer ou vous inscrire si vous n\'avez pas encore de compte.</string>
+    <string name="gettingmyprofile">Donnez-nous un instant pendant que nous accédons à votre profil.</string>
+    <string name="getmyprofilefailednetwork">Désolé. Impossible d\'accéder à votre profil. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="getmyprofileerror">Impossible d\'accéder à votre profil. Réessayez et contactez le support si le problème persiste</string>
+    <string name="getmyprofilessuccess">Nous avons trouvé votre profil</string>
+    <string name="editingmyprofile">Donnez-nous un instant pendant que nous arrivons à mettre à jour vos informations.</string>
+    <string name="editmyprofilefailednetwork">Désolé. Impossible de mettre à jour vos informations. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="editmyprofileerror">Impossible de mettre à jour vos informations. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="editmyprofilessuccess">Nous avons mis à jour vos informations avec succès</string>
+    <string name="uploadingdocument">Accordez-nous un instant pendant que nous téléchargeons le document.</string>
+    <string name="uploaddocumentfailednetwork">Désolé. Impossible de télécharger le document. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="uploaddocumenterror">Désolé, mais nous n\'avons pas pu télécharger le document. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="uploaddocumentsuccess">Vos documents ont été soumis avec succès et sont en cours de révision.</string>
+    <string name="uploadingprofilepicimage">Accordez-nous un instant pendant que nous mettons à jour votre photo de profil.</string>
+    <string name="uploadprofilepicfailednetwork">Désolé. Impossible de mettre à jour votre photo de profil. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="uploadprofilepicerror">Désolé, mais nous n\'avons pas pu mettre à jour votre photo de profil. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="uploadprofilepicsuccess">Photo de profil mise à jour avec succès.</string>
+    <string name="taptodismiss">Appuyez pour rejeter.</string>
+    <string name="getstarted">Commencer</string>
+    <string name="nopayments">Aucun paiement pour le moment</string>
+    <string name="nopaymentsh">Lorsque vous avez quelque chose à payer, vous le trouverez ici</string>
+    <string name="nopurchases">Aucun achat pour le moment</string>
+    <string name="nopurchasesh">Lorsque vous avez des achats que vous avez effectués, vous les trouverez ici</string>
+    <string name="notransactions">Aucune transaction pour le moment</string>
+    <string name="notransactionsh">Lorsque vous avez des transactions récentes, vous les trouverez ici</string>
+    <string name="startshopping">Commencer à acheter</string>
+    <string name="requesthigherlimit">Demander une limite plus élevée</string>
+    <string name="available">Disponible</string>
+    <string name="valueofpurchases">Valeur des achats</string>
+    <string name="creditlimit">Limite de crédit</string>
+    <string name="amount">USD. %1$s</string>
+    <string name="amountug">USD %1$s</string>
+    <string name="mainmsg1">Restez informé</string>
+    <string name="mainmsg2">Gérez vos actifs</string>
+    <string name="mainmsg3">Suivez les transactions</string>
+
+    <string name="mainmsg4">WATU</string>
+    <string name="awesome">Génial</string>
+    <string name="successful">Réussi</string>
+    <string name="makepayment">Effectuer un paiement</string>
+    <string name="activepurchases">Achats actifs</string>
+    <string name="completed">Complété</string>
+    <string name="alltransactions">Toutes transactions</string>
+    <string name="underdevelopment">En cours de développement</string>
+    <string name="upcomingpayment">Paiement prochain</string>
+    <string name="outstandingbalance">Solde impayé</string>
+    <string name="upcoming">Prochain</string>
+    <string name="outstanding">Impayé</string>
+    <string name="selectapaymentmethod">Sélectionnez un mode de paiement</string>
+    <string name="submsg1">Nous croyons en l\'honnêteté et la transparence. Gérez facilement votre bien sur notre application Watu.</string>
+    <string name="submsg2">Nous croyons en l\'honnêteté et la transparence. Gérez facilement votre bien sur notre application Watu.</string>
+    <string name="submsg3">Nous croyons en l\'honnêteté et la transparence. Gérez facilement votre bien sur notre application Watu.</string>
+    <string name="submsg4">Nous croyons en l\'honnêteté et la transparence. Gérez facilement votre bien sur notre application Watu.</string>
+    <string name="problemconnecting">Problème de connexion?</string>
+    <string name="contactsupport">Contacter le support</string>
+    <string name="uploadupcomingfailed">Prochain</string>
+    <string name="userordersh">COMMANDES</string>
+    <string name="usersalesh">VENTES</string>
+    <string name="userfavoritesh">FAVORIS</string>
+    <string name="userbalance">SOLDE</string>
+    <string name="upload">Télécharger</string>
+    <string name="upload2">Télécharger 2</string>
+    <string name="upload3">Télécharger 3</string>
+    <string name="uploadfailed">Téléchargement échoué</string>
+    <string name="download">Téléchargement</string>
+    <string name="status">Statut</string>
+    <string name="select">Sélectionner</string>
+    <string name="favoriteproducts">Produits favoris</string>
+    <string name="searchandchooselocation">Veuillez d\'abord rechercher et choisir un emplacement</string>
+    <string name="selectoptionfirst">Sélectionnez d\'abord l\'option</string>
+    <string name="remove">Retirer</string>
+    <string name="delete">Supprimer</string>
+    <string name="confirmlogout">Etes-vous sûr de vouloir vous déconnecter de votre compte?</string>
+    <string name="accept">Accepter</string>
+    <string name="accepted">Accepté</string>
+    <string name="add">Ajouter</string>
+    <string name="searchlocation">Rechercher un emplacement</string>
+    <string name="permissionsnotgranted">Annulation... Les autorisations requises n\'ont pas été accordées. Veuillez permettez les autorisations pour continuer</string>
+    <string name="createaccount">Créer un compte</string>
+    <string name="demo_title_custom_tab_icons">Icônes d\'onglets personnalisées</string>
+    <string name="demo_tab_1">Onglet1</string>
+    <string name="demo_tab_2">Onglet2</string>
+    <string name="demo_tab_3">Onglet3</string>
+    <string name="demo_tab_4">Onglet4</string>
+    <string name="demo_tab_5">Onglet5</string>
+    <string name="messagest">Messages</string>
+    <string name="messagesd">Voir vos messages</string>
+    <string name="profilet">Profil</string>
+    <string name="profiled">Afficher ou modifier les détails du compte</string>
+    <string name="invitefriendst">Inviter des amis</string>
+    <string name="invitefriendsd">Partager avec des amis</string>
+    <string name="ratet">Évaluez-nous</string>
+    <string name="rated">Donnez-nous 5 étoiles</string>
+    <string name="languagest">Langages</string>
+    <string name="languagesd">Changer le langage actuel</string>
+    <string name="feedbackt">Votre Avis</string>
+    <string name="feedbackd">Donnez votre avis à l\'équipe Watu</string>
+    <string name="logoutt">Déconnexion</string>
+    <string name="logoutd">Déconnectez-vous de votre compte</string>
+    <string name="saysomething">Dites quelque chose...</string>
+    <string name="referh">Des réductions exceptionnelles</string>
+    <string name="refertext">Vos amis peuvent-ils bénéficier de Watu? Invitez vos amis et bénéficiez de réductions intéressantes lorsqu\'ils s\'inscrivent en utilisant votre code d\'invitation ci-dessous</string>
+    <string name="refercode">XXXXXX</string>
+    <string name="referaldescription">Téléchargez et rejoignez Watu en utilisant le lien ci-dessous.</string>
+    <string name="close">Fermer</string>
+    <string name="phone">Téléphone</string>
+    <string name="groups">Groupes</string>
+    <string name="newrequests">Nouvelles demandes</string>
+    <string name="nomorerequests">Aucune nouvelle demande</string>
+    <string name="groupname">Nom du groupe</string>
+    <string name="addfriend">Ajouter un ami</string>
+    <string name="clear">EFFACER</string>
+    <string name="mute">COUPER LE SON</string>
+    <string name="unmute">RÉACTIVER LE SON</string>
+    <string name="exit">SORTIE</string>
+    <string name="join">Rejoindre</string>
+    <string name="submitbankstatement">Soumettre un relevé bancaire</string>
+    <string name="clearconversation">Effacer la conversation</string>
+    <string name="deletevybe">Supprimer la discussion</string>
+    <string name="pending">Vous avez %1$s nouvelles demandes de discussion</string>
+    <string name="added">ajouté</string>
+    <string name="title_warning">Avertissement</string>
+    <string name="info_lose_internet">Pas de connexion Internet. Veuillez activer l\'Internet et vérifier à nouveau!</string>
+    <string name="info_close_app">Voulez-vous quitter l\'application?</string>
+    <string name="info_server_error">Nous ne pouvons pas nous connecter au serveur. Vérifiez la connexion et réessayez!</string>
+    <string name="title_yes">Oui</string>
+    <string name="title_no">Non</string>
+    <string name="title_ok">OK</string>
+    <string name="title_cancel">Annuler</string>
+    <string name="title_confirm">Confirmer</string>
+    <string name="quit_message">Voulez-vous quitter cette application?</string>
+    <string name="info_empty">Veuillez saisir le mot clé</string>
+    <string name="retry">Réessayer</string>
+    <string name="decline">Décliner</string>
+    <string name="info_version_format">Version %1$s</string>
+    <string name="info_distance_km_format">%1$s km</string>
+    <string name="info_distance_miles_format">%1$s mi</string>
+
+    <!-- Format strings with CDATA. Changed 'color=\'#XXXXXX\'' to color="#XXXXXX" -->
+    <string name="format_start_address">
+        <Data>
+            <![CDATA[ <font color="#999999">From&nbsp;</font><font color="#000000">%1$s</font> ]]>
+        </Data>
+    </string>
+
+    <string name="format_end_address">
+        <Data>
+            <![CDATA[ <font color="#999999">To&nbsp;</font><font color="#000000">%1$s</font> ]]>
+        </Data>
+    </string>
+
+    <string name="format_duration_distance">
+        <Data>
+            <![CDATA[ <font color="#000000">%1$s&nbsp;</font><font color="#999999">(%2$s)</font> ]]>
+        </Data>
+    </string>
+
+    <string name="format_sumary">
+        <Data>
+            <![CDATA[ <font color="#999999">Via %1$s</font> ]]>
+        </Data>
+    </string>
+
+    <string name="action_edit">Modifier</string>
+    <string name="action_add">Ajouter</string>
+    <string name="title_search">Rechercher une localisation</string>
+    <string name="title_quick_distance">Changer le rayon</string>
+    <string name="title_place_info">Informations sur la localisation</string>
+    <string name="title_user_reviews">Avis des utilisateurs</string>
+    <string name="nameh">Nom</string>
+    <string name="titlebrowse">Faites glisser pour parcourir les correspondances potentielles.</string>
+    <string name="tipbrowse">Vous pouvez glisser vers la droite ou vers la gauche pour parcourir les différentes correspondances potentielles.</string>
+    <string name="titleprofile">Votre profil</string>
+    <string name="tipprofile">Consultez votre profil, les messages de chat avec les vendeurs ou les acheteurs, et modifier certains paramètres tels que la langue </string>
+    <string name="titlenav">Onglet de navigation</string>
+    <string name="tipnav">Utilisez cet onglet pour naviguer dans les différentes pages</string>
+    <string name="turnoninternet">Veuillez activer votre connexion Internet</string>
+    <string name="tab_1">Accueil</string>
+    <string name="tab_2">Transactions</string>
+    <string name="tab_3">Paiements</string>
+    <string name="tab_4">À propos de nous</string>
+    <string name="tab_5">Paramètre</string>
+    <string name="ohno">Oh non!</string>
+    <string name="loading">Veuillez patienter...</string>
+    <string name="skip">PASSER</string>
+    <string name="connectwith">S E C O N N E C T E R A V E C</string>
+    <string name="signupwithemail">Inscrivez-vous avec votre e-mail</string>
+    <string name="alreadyhaveanaccount">Vous avez déjà un compte?</string>
+    <string name="signin">Se connecter</string>
+    <string name="edit">Modifier</string>
+    <string name="confirm">Confirmer</string>
+    <string name="notification">Notification</string>
+
+    <string name="dismiss">Rejeter</string>
+    <string name="searchradius">Rayon de recherche</string>
+    <string name="distanceinkm">%1$s km.</string>
+    <string name="set">Régler</string>
+    <string name="no">Non</string>
+    <string name="yes">Oui</string>
+    <string name="forh">Pour</string>
+    <string name="profile">Profil</string>
+    <string name="changelanguage">Changer de langue</string>
+    <string name="email">Email</string>
+    <string name="emailaddress">Addresse Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="passwordhint">Mot de passe</string>
+    <string name="forgotpassword">Mot de passe oublié?</string>
+    <string name="login">Se connecter</string>
+    <string name="register">S\'inscrire</string>
+    <string name="name">Nom</string>
+    <string name="referrallnumber">Numéro de référence (Facultatif)</string>
+    <string name="confirmpassword">Confirmez le mot de passe</string>
+    <string name="orsignupvia">Ou connectez-vous à travers</string>
+    <string name="resetpassword">PIN défini avec succès</string>
+    <string name="changepassword">Créer un nouveau mot de passe</string>
+    <string name="createstrongpassword">Créez un nouveau mot de passe fort pour votre compte</string>
+    <string name="cancel">Annuler</string>
+    <string name="reset">Réinitialiser</string>
+    <string name="zero">0</string>
+    <string name="permgivepermissions">Permettez les autorisations pour continuer</string>
+    <string name="permallow">Veuillez «Permettre» les autorisations pour pouvoir continuer sur les prochaines fenêtres</string>
+    <string name="search">Recherche</string>
+    <string name="enteremail">Saisir l\'adresse e-mail</string>
+    <string name="enteryouremail">Saisissez votre adresse e-mail</string>
+    <string name="entervalidemail">Saisissez une adresse e-mail valide</string>
+    <string name="enterpassword">Saisissez le code PIN</string>
+    <string name="enteryourpassword">Saisissez votre code PIN</string>
+    <string name="entervalidpassword">Saisissez un code PIN valide de 4 caractères</string>
+    <string name="enterpasswordsdontmatch">Les codes PIN ne correspondent pas</string>
+    <string name="enterconfirmpassword">Confirmer le code PIN</string>
+    <string name="enterpasswordcharacters">Le code PIN doit comporter 4 caractères</string>
+    <string name="entername">Saisissez le nom</string>
+    <string name="enterphonenumber">Saisissez le numéro de téléphone</string>
+    <string name="passwordsdontmatch">Les codes PIN ne correspondent pas</string>
+    <string name="fbsignup">Vous pouvez désormais vous inscrire à travers Facebook. Si vous ne pouvez pas vous inscrire à travers Facebook, utilisez l\'inscription normale.</string>
+    <string name="cancelled">Annulé</string>
+    <string name="okay">Ok</string>
+    <string name="permissionnotgranted">Permission non accordée</string>
+    <string name="tapfacebook">Appuyez pour vous connecter avec Facebook</string>
+    <string name="successfacebook">Les détails ont été récupérés avec succès. Connexion en cours.</string>
+    <string name="failedfacebook">Impossible de récupérer les détails</string>
+    <string name="block">Bloquer</string>
+    <string name="unblock">Débloquer</string>
+    <string name="similarinterests">Intérêts Similaires</string>
+    <string name="you">Vous</string>
+    <string name="makegroupadmin">Nommer Admin du Groupe</string>
+    <string name="removefromgroup">Supprimer du groupe</string>
+    <string name="mutenotifications">Couper le son des notifications</string>
+    <string name="unmutenotifications">Réactiver le son des notifications</string>
+    <string name="exitgroup">Quitter le groupe</string>
+    <string name="deletegroup">Supprimer le groupe</string>
+    <string name="copymessage">Copier</string>
+    <string name="forwardmessage">Transférer</string>
+    <string name="deletemessage">Supprimer</string>
+    <string name="forwardtogroup">Transférer a un groupe</string>
+    <string name="forwardtoperson">Transférer a une personne</string>
+    <string name="sendmessage">Envoyer un message</string>
+    <string name="admin">Admin du groupe</string>
+    <string name="viewprofile">Voir le profil</string>
+    <string name="groupadmin">Créé par %1$s</string>
+    <string name="groupmembersh">Membres du groupe</string>
+    <string name="groupmembersnumber">%1$s membres</string>
+    <string name="groupmembername">Nom du membre</string>
+    <string name="groupmembercampus">Campus de membre</string>
+    <string name="title_info">Information</string>
+    <string name="title_my_location">Localisation Actuelle</string>
+    <string name="title_place_location">Localisation du Lieu</string>
+    <string name="title_delivery_location">Localisation</string>
+    <string name="title_unknown_location">Localisation Inconnue</string>
+    <string name="title_unknown_address">Addresse Inconnue</string>
+    <string name="title_enable">Activer</string>
+    <string name="title_improve_location">Améliorez votre localisation</string>
+    <string name="title_location_services_disable">Services de localisation désactivés</string>
+    <string name="info_location_services_disable">Watu a besoin d\'accéder à votre localisation. Veuillez activer l\'accès à la localisation</string>
+    <string name="info_show_again">N\'afficher plus</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="turnon">Allumer</string>
+    <string name="chooseoption">Choisissez l\'option</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="thankyou">MERCI</string>
+    <string name="or">ou</string>
+    <string name="info_location_name">Nom de la localisation</string>
+    <string name="drawer_open">Ouvrir</string>
+    <string name="drawer_close">Fermer</string>
+    <string name="category">Categorie</string>
+    <string name="map">Carte</string>
+    <string name="done">Fait</string>
+    <string name="profileedit">Modifier le profil</string>
+    <string name="profileeditdesc">Modifier les détails du compte</string>
+    <string name="submitrequest">Soumettre une demande</string>
+    <string name="skipfornow">Passer pour l\'instant</string>
+    <string name="cannotmessageyourself">Vous ne pouvez pas vous envoyer de message</string>
+    <string name="noitemsview">Il n\'y a aucun article</string>
+    <string name="fb_login_protocol_scheme">fb183811895609192</string>
+    <string name="facebook_app_name">watu</string>
+    <string name="facebook_app_id">183811895609192</string>
+    <string name="facebookdetails">Récupération des détails Facebook.</string>
+    <string name="description">Description</string>
+    <string name="featured">Fonctionnalité</string>
+    <string name="item">Fonctionnalité</string>
+    <string name="updatelocation">Mettre à jour la localisation</string>
+    <string name="en">En</string>
+    <string name="swa">Fr</string>
+    <string name="phonenumber">Numéro de téléphone</string>
+    <string name="next">Suivant</string>
+    <string name="continueh">Continuer</string>
+    <string name="allowtoviewcontacts">Autoriser l\'affichage des contacts</string>
+    <string name="allowlocationpermission">Permetter l\'autorisation de localisation</string>
+    <string name="share">Partager</string>
+    <string name="allgoodhere">Succès</string>
+    <string name="toomuchbrokenhere">Échoué</string>
+    <string name="details">Détails</string>
+    <string name="somethingwentwrong">Quelque chose s\'est mal passé</string>
+    <string name="success">Succès</string>
+    <string name="verified">vérifié</string>
+    <string name="home">Accueil</string>
+    <string name="typelocation">Saisir la localisation</string>
+    <string name="viewdetails">Voir les détails</string>
+    <string name="pass">********</string>
+    <string name="employment">Emploi</string>
+    <string name="occupationalinfo">Informations sur la profession</string>
+    <string name="preview_1">Connectez-vous au compte...</string>
+    <string name="logintoyouraccount">Connectez-vous à votre compte</string>
+    <string name="createyouraccount">Créez votre compte</string>
+    <string name="enteryourphonenumber">Saisissez votre numéro de téléphone</string>
+    <string name="checksms">Veuillez saisir le code d\'accès à usage unique envoyé à %1$s</string>
+    <string name="verification">Verification</string>
+    <string name="code">Code</string>
+    <string name="entercode">Saisissez le code</string>
+    <string name="didntreceivecode">Vous n\'avez pas reçu de SMS?</string>
+    <string name="entervalidphonenumber">Saisissez un numéro de téléphone valide</string>
+    <string name="enterthecodereceived">Saisissez le code reçu par SMS</string>
+    <string name="usernameandage">%1$s, %2$s</string>
+    <string name="nopotentialview">Il n\'y a actuellement aucune correspondance potentielle dans votre région. Vérifiez à nouveau plus tard</string>
+    <string name="nodatesview">Vous n\'avez actuellement aucune date prévue. A vérifier plus tard</string>
+    <string name="venue">Lieu</string>
+    <string name="messages">Messages</string>
+    <string name="matches">Correspondances</string>
+    <string name="aboutme">A propos de moi</string>
+    <string name="userbio">Biographie de l\'utilisateur</string>
+    <string name="occupation">Profession</string>
+    <string name="distance">%1$s km</string>
+    <string name="lastseen">depuis %1$s</string>
+    <string name="matchescount">Vous avez 34 correspondances</string>
+    <string name="matchessmall">correspondances</string>
+    <string name="user_chidlren">Parent</string>
+    <string name="user_language">Parle anglais</string>
+    <string name="user_ethnicity">RDC</string>
+    <string name="user_height">170cm</string>
+    <string name="islamiclife">La vie islamique</string>
+    <string name="isl_sect">Sunnites</string>
+    <string name="isl_practising">Pratiquer</string>
+    <string name="isl_prayer">Prières</string>
+    <string name="isl_hijab">Hijab</string>
+    <string name="isl_halal">Ne mange que du halal</string>
+    <string name="isl_alcohol">Ne consomme pas d\'alcool</string>
+    <string name="isl_smoke">Fumées</string>
+    <string name="marriagegoals">Objectifs du mariage</string>
+    <string name="marriage_time">Chercher à se marier le plus tôt possible</string>
+    <string name="marriage_abroad">Déménager à l\'étranger</string>
+    <string name="mybadges">Mes badges</string>
+    <string name="newuser">Nouvel utilisateur ?</string>
+    <string name="whatarebadges">Que sont les badges?</string>
+    <string name="searchmessages">
+        <font size="14">Rechercher des messages</font>
+    </string>
+    <string name="recentlyactive">Actif récemment</string>
+    <string name="online">en ligne</string>
+    <string name="sorrynodates">Désolé !!..Il n\'y a pas encore de dates ici. Continuez à glisser et rencontrez quelqu\'un pour pouvoir planifier un rendez-vous.</string>
+    <string name="revealmylikes">Révéler mes préférences</string>
+    <string name="yourlikeslist">Votre liste de favoris</string>
+    <string name="keepswiping">Continuez à balayer</string>
+    <string name="reveallikes">Ces correspondances potentielles qui vous plaisent ne doivent pas nécessairement être un secret. Révélez-les et aimez-les pour qu\'ils correspondent.</string>
+    <string name="johndoe">James Reed</string>
+    <string name="premiumfeatures">Fonctionnalités Premium</string>
+    <string name="unlimitedlikes">Nombre illimité de J\'aime</string>
+    <string name="dontmissout">Ne manquez pas votre chance de rencontrer celui d\'aujourd\'hui.</string>
+    <string name="premiumfeatures_2">Voyez qui vous aime</string>
+    <string name="unlimitedlikes_2">Voir les mentions J\'aime</string>
+    <string name="dontmissout_2">Mettez à niveau et voyez qui vous aime pour trouver des correspondances potentielles.</string>
+    <string name="premiumfeatures_3">Débloquer le rembobinage</string>
+    <string name="unlimitedlikes_3">rembobiner en arrière</string>
+    <string name="dontmissout_3">Débloquer la possibilité de revenir en arrière et de trouver une correspondance.</string>
+    <string name="upgradenow">Mettre à jour maintenant</string>
+    <string name="welcome">Découvrez la nouvelle façon de faire les achats avec Watu</string>
+    <!--    <string name="welcomeback_">Ravi de te revoir, %1$s</string>-->
+    <string name="welcomeback">Content de vous revoir</string>
+
+    <string name="selectcountry">Sélectionnez un pays</string>
+    <string name="tagline">Achetez maintenant, payez plus tard avec Watu</string>
+    <string name="selectyourcountrytocontinue">"Sélectionnez votre pays pour continuer"</string>
+    <string name="signup">S\'inscrire</string>
+    <string name="terms">En continuant, j\'accepte les conditions de service de Watu et confirme avoir lu la politique de confidentialité de Watu.</string>
+    <string name="enteremailandpassword">Veuillez saisir votre addresse e-mail et votre mot de passe</string>
+    <string name="show">Montrer</string>
+    <string name="hide">Masquer</string>
+    <string name="signintoyouraccount">Connectez-vous à votre compte</string>
+    <string name="donthaveanaccount">Vous n\'avez pas de compte?</string>
+    <string name="enterregisteremail">Saisissez l\'adresse e-mail que vous avez utilisée lors de votre inscription et nous vous enverrons les instructions pour réinitialiser votre mot de passe.</string>
+    <string name="openemailapp">Ouvrir l\'application d\'email</string>
+    <string name="enterregisterphone">Nous enverrons un code d\'accès à usage unique à ce numéro pour vérifier votre identité</string>
+    <string name="stepone">Étape 1 sur 4</string>
+    <string name="steptwo">Étape 2 sur 4</string>
+    <string name="stepthree">Étape 3 sur 4</string>
+    <string name="stepfour">Étape 4 sur 4</string>
+    <string name="gettoknowyou">Apprenons à mieux vous connaître</string>
+    <string name="occupationdetails">Détails de la profession</string>
+    <string name="wellusethisinformation">Nous utiliserons ces informations pour créer votre profil</string>
+    <string name="wellusethisinformationcredit">Nous utiliserons ces informations pour calculer votre limite de crédit</string>
+    <string name="lastname">Nom</string>
+    <string name="firstname">Prénom</string>
+    <string name="idnumber">Saisissez votre numéro d\'identité</string>
+    <string name="whatsyourdateofbirth">Quelle est votre date de naissance?</string>
+    <string name="whatsyouremploymenttype">Quel est votre type d\'emploi?</string>
+    <string name="whosyouremployer">Qui est votre employeur?</string>
+    <string name="month">Mois</string>
+    <string name="day">Jour</string>
+    <string name="yyyy">AAAA</string>
+    <string name="maritalstatus">État Civil</string>
+    <string name="gender">Sexe</string>
+    <string name="year">Année</string>
+    <string name="single">Célibataire</string>
+    <string name="married">Marié(e)</string>
+    <string name="divorced">Divorcé(e)</string>
+    <string name="male">Homme</string>
+    <string name="female">Femme</string>
+    <string name="entervalidmonth">Saisissez un mois valide</string>
+    <string name="entervalidday">Saisissez un jour valide</string>
+    <string name="entervalidyear">Saisissez une année valide</string>
+    <string name="companyname">Nom de l\'entreprise</string>
+    <string name="jobfunction">Fonction du poste</string>
+    <string name="joblevel">Niveau d\'emploi</string>
+    <string name="monthlyincome">Revenu mensuel</string>
+    <string name="monthlyexpense">Dépense mensuelle</string>
+    <string name="employmenttype">Type d\'emploi</string>
+    <string name="sector">Secteur</string>
+    <string name="privatesector">Secteur privé</string>
+    <string name="government">Gouvernement</string>
+    <string name="partnership">Partenariat</string>
+    <string name="employed">Employé</string>
+    <string name="selfemployed">Travailleur indépendant</string>
+    <string name="entrylevel">Débutant</string>
+    <string name="midlevel">Cadre intermédiaire</string>
+    <string name="management">Direction</string>
+    <string name="intern">Stagiaire</string>
+    <string name="associate">Associé</string>
+    <string name="juniormanager">Chef de Projet Junior</string>
+    <string name="seniormanager">Cadre Supérieur</string>
+    <string name="executivemanager">Directeur Exécutif</string>
+    <string name="jobgroup">Groupe d\'emploi</string>
+    <string name="entervalidmonthlyincome">Saisissez un revenu valide</string>
+    <string name="entervalidmonthlyexpense">Saisissez un dépense valide</string>
+    <string name="ministry">Ministère</string>
+    <string name="paymentmethod">Mode de paiement</string>
+    <string name="monthlyincomebusiness">Revenu mensuel brut</string>
+    <string name="monthlyexpensebusiness">Dépense mensuelle moyenne</string>
+    <string name="monthlyexpenseself">Dépenses personnelles moyennes</string>
+    <string name="bank">Banque</string>
+    <string name="cash">Cash</string>
+    <string name="mpesa">Mobile Money</string>
+    <string name="mpesah">M-Pesa</string>
+    <string name="continuetopay">Continuer pour payer</string>
+    <string name="youwillreceivestk">Vous recevrez un push stk sur ce numéro pour autoriser le paiement</string>
+    <string name="businessdetails">Parlez-nous davantage de votre entreprise</string>
+    <string name="businesslocation">Où est située votre entreprise?</string>
+    <string name="officesuite">Numéro d\'adresse du bureau</string>
+    <string name="streetname">Nom de l\'avenue</string>
+    <string name="businessphonenumber">Numéro de téléphone de l\'entreprise</string>
+    <string name="businessemail">Addresse e-mail de l\'entreprise (facultatif)</string>
+    <string name="completeyourprofile">Complétez votre profil en le sécurisant</string>
+    <string name="passwordauthorize">Vous utiliserez votre mot de passe pour autoriser les transactions</string>
+    <string name="whatsyouremail">Quelle est votre adresse e-mail</string>
+    <string name="createpassword">Créer un mot de passe</string>
+    <string name="repeatpassword">Confirmez votre mot de passe</string>
+    <string name="businesstype">Type d\'entreprise</string>
+    <string name="student">Étudiant(e)</string>
+    <string name="freelancer">Independent</string>
+    <string name="sole_proprietorship">Entreprise individuelle</string>
+    <string name="limited_company">Société à responsabilité limitée</string>
+    <string name="company">Entreprise</string>
+    <string name="businesscompanytype">Type d\'entreprise</string>
+    <string name="businessfreelancetype">Type d\'indépendant</string>
+    <string name="taxiandride">Services de taxi et de covoiturage</string>
+    <string name="creatives">Créatives</string>
+    <string name="other">Autre</string>
+    <string name="businesstaxitype">Principale compagnie de taxi</string>
+    <string name="bolt">Boulon</string>
+    <string name="uber">Uber</string>
+    <string name="littlecab">Petit taxi</string>
+    <string name="safeboda">Boda sûre</string>
+    <string name="sendy">Envoyer</string>
+    <string name="businesscreativetype">Type de création</string>
+    <string name="photographyandvideo">Photographie et vidéo</string>
+    <string name="socialmedia">Réseaux sociaux</string>
+    <string name="writing">Écrire, bloguer, éditer et transcrire</string>
+    <string name="development">Développement et programmation de logiciels</string>
+    <string name="design">Conception (Graphique, UI/UX)</string>
+    <string name="architecture">Architecture, décoration et design intérieur</string>
+    <string name="fitness">Forme physique et nutrition</string>
+    <string name="fashion">Mode et beauté</string>
+    <string name="education">Éducation</string>
+    <string name="businesscompanyregistered">Entreprise enregistrée ?</string>
+    <string name="averageridesperday">Nombre moyen de trajets par jour</string>
+    <string name="averagepayperride">Rémunération moyenne par trajet</string>
+    <string name="nameofplatform">Nom de la plate-forme</string>
+    <string name="averagegigsperday">Nombre moyen de concert par jour</string>
+    <string name="averagepaypergig">Rémunération moyenne par concert</string>
+    <string name="nameofbusiness">Saisir le nom de l\'entreprise</string>
+    <string name="shortdescriptionofbusiness">Brève description de l\'entreprise</string>
+    <string name="hello">Bonjour</string>
+    <string name="youqualifyforcredit">Bonne nouvelle! Vous êtes pré-qualifié pour une limite de crédit de USD %1$s</string>
+    <string name="youqualifyforcreditug">Bonne nouvelle! Vous êtes pré-qualifié pour une limite de crédit de USD %1$s</string>
+    <string name="checkstatus">Vérifier le statut</string>
+    <string name="wallet">Portefeuille</string>
+    <string name="uploadnow">Télécharger maintenant</string>
+    <string name="uploadbankstatement">Télécharger le relevé bancaire</string>
+    <string name="uploadbankstatementh">Téléchargez votre relevé bancaire de 3 mois</string>
+    <string name="youarealmostready">Vous êtes presque prêt à payer avec Watu !</string>
+    <string name="pleaseuploadyourlast">Veuillez télécharger vos relevés bancaires des 3 derniers mois pour activer votre limite de crédit et commencer à faire des achats.</string>
+    <string name="pleaseuploadyourlastu">Veuillez télécharger 3 mois de relevés bancaires et une copie de votre carte d\'identité ou de votre passeport afin d\'activer votre crédit.</string>
+    <string name="submit">Soumettre</string>
+    <string name="pleasesubmitstatement">Veuillez soumettre votre relevé M-pesa de six mois pour vérification afin que nous puissions déterminer votre limite de crédit réelle</string>
+    <string name="step1">Étape 1</string>
+    <string name="step2">Étape 2</string>
+    <string name="purchases">Achats</string>
+    <string name="howtosendyourstatement">Comment envoyer votre relevé de compte M-pesa</string>
+    <string name="privacyh">Nous prenons votre confidentialité très au sérieux et promettons de ne jamais partager vos informations avec des tiers.</string>
+    <string name="step1U">Étape 1</string>
+    <string name="step2U">Étape 2</string>
+    <string name="step3U">Étape 3</string>
+    <string name="wehavestores">
+        <![CDATA[ Nous nous sommes associés à vos magasins préférés et vous pouvez désormais acheter des appareils électroniques et des meubles et les payer plus tard par mensualités. Contactez nous sur <b><font color="#00376B">+256 7788 89332</font></b></b> pour obtenir la liste complète de nos partenaires commerciaux. ]]>
+    </string>
+    <string name="step1hU">Cliquez ici pour télécharger le formulaire de consentement</string>
+    <string name="step2hU">Vous pouvez le télécharger sur ce site ou l\'envoyer à askuganda@watu.co.ug.</string>
+    <string name="step3hU">Veuillez télécharger vos relevés bancaires de trois mois, une copie de votre carte d\'identité/passeport et un formulaire de consentement au crédit Metropol dûment signé en cliquant sur le bouton ci-dessous.</string>
+    <string name="step1h">Composez *234*5*1*3#, changez l\'adresse email en buy@watu.com</string>
+    <string name="step2h">Composez ensuite *234*5*1*1*2#, pour transmettre la déclaration à buy@watu.com.</string>
+    <string name="transactions">Transactions</string>
+    <string name="needhelp">Avez-vous besoin d\'aide ?</string>
+    <string name="callus">Appelez-nous au 0710123456</string>
+    <string name="callusug">Appelez-nous au +256 7788 89332</string>
+    <string name="discover">Découvrir</string>
+    <string name="selectdocument">Sélectionnez au moins un document à télécharger</string>
+    <string name="goodmorning">Bonjour</string>
+    <string name="goodafternoon">Bon après-midi</string>
+    <string name="goodevening">Bonsoir</string>
+    <string name="gettingloans">Récupération des comptes de prêt.</string>
+    <string name="getloansfailednetwork">Impossible de récupérer les comptes de prêt. Vérifiez votre connexion et réessayez.</string>
+    <string name="getloanserror">Impossible de récupérer les comptes de prêt. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="gettingpayments">Récupération des paiements.</string>
+    <string name="getpaymentsfailednetwork">Impossible de récupérer les paiements. Vérifiez votre connexion et réessayez.</string>
+    <string name="getpaymentserror">Impossible de récupérer les paiements. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="gettingloandetails">Récupération des détails du compte.</string>
+    <string name="getloandetailsfailednetwork">Impossible de récupérer les informations du compte. Vérifiez votre connexion et réessayez.</string>
+    <string name="getloandetailsserror">Impossible de récupérer les informations du compte. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="initiatingpayment">Lancement du paiement.</string>
+    <string name="initiatepaymentfailednetwork">Impossible d\'initier le paiement. Vérifiez votre connexion et réessayez.</string>
+    <string name="initiatepaymenterror">Impossible d\'initier le paiement. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="confirmingpayment">En attente de confirmation du paiement.</string>
+    <string name="confirmpaymentfailednetwork">Impossible de confirmer le paiement. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="confirmpaymenterror">Impossible de confirmer le paiement. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="gettinglimit">Récupération de la limite de crédit.</string>
+    <string name="getlimitfailednetwork">Impossible de récupérer la limite de crédit. Vérifiez la connexion et réessayez.</string>
+    <string name="getlimiterror">Impossible de récupérer la limite. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="gettingupcomingpayments">Récupération des paiements prochains.</string>
+    <string name="getupcomingpaymentsfailednetwork">Impossible de récupérer les paiements prochains. Vérifiez la connexion et réessayez.</string>
+    <string name="getupcomingpaymentserror">Impossible de récupérer les paiements prochains. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="monthlypayment">Paiement Mensuel</string>
+    <string name="duedate">Dû: %1$s</string>
+    <string name="payearlyfees">Nous ne facturons pas de frais pour les paiements anticipés - payez tôt et économisez</string>
+    <string name="makeapayment">Effectuer un paiement</string>
+    <string name="payeither">Vous pouvez payer soit le prochain paiement, soit le solde restant.</string>
+    <string name="entermobilenumber">Saisissez le numéro de téléphone</string>
+    <string name="paymentsuccesstitle">Paiement réussi</string>
+    <string name="paymentsuccessmessage">Votre paiement a été initié avec succès.</string>
+    <string name="paymentcompletedmessage">Votre paiement a été effectué avec succès</string>
+    <string name="logout">Déconnexion</string>
+    <string name="personalinfo">Informations Personnelles</string>
+    <string name="unfortunatelyyoudontqualify">Malheureusement, vous ne pouvez pas bénéficier d\'une limite de crédit pour le moment.</string>
+    <string name="butdontworry">Mais ne vous inquiétez pas, vous pouvez encore améliorer votre score de crédit et demander une autre limite de crédit.</string>
+    <string name="learnhowtoimprove">Apprenez comment améliorer votre score de crédit pour vivre plus d\'expérience</string>
+    <string name="viewhowtoimprovescore">Découvrez comment vous pouvez améliorer votre pointage de crédit dès aujourd’hui pour pouvoir commencer à magasiner.</string>
+    <string name="paynow">Payer maintenant</string>
+    <string name="viewmarketplace">Voir la place du marché</string>
+    <string name="viewandstartshopping">Consultez la place du marché et commencez à acheter dès aujourd\'hui</string>
+    <string name="enteramount">Saisissez le montant</string>
+    <string name="toactivatethislimit">Pour activer cette limite et commencer à acheter, veuillez télécharger vos relevés bancaires des trois derniers mois, une copie de votre pièce d\'identité ou de votre passeport et un formulaire de consentement au crédit Metropol dûment signé.</string>
+    <string name="goodnews">Bonne nouvelle ! Vous avez été préapprouvé pour une limite de crédit de %1$s</string>
+    <string name="uploaddocuments">Télécharger des documents</string>
+    <string name="downloaded">Enregistré dans les téléchargements</string>
+    <string name="clickhere">Cliquez Ici</string>
+    <string name="paymentiniated">Paiement initié</string>
+    <string name="paymentinitiatedsuccessmessage">Paiement effectué avec succès sur le numéro de téléphone %1$s</string>
+    <string name="statusfailed">Paiement non confirmé. Le statut est %1$s</string>
+    <string name="needhelph">Besoin d\'aide?</string>
+    <string name="needhelptext">Nous sommes là pour vous aider. Notre équipe d\'assistance est disponible 24 heures sur 24, 7 jours sur 7, du lundi au samedi.</string>
+    <string name="weaimtohelp">Nous visons de vous aider dans les minutes qui suivent</string>
+    <string name="chatwithus">Discutez avec nous</string>
+    <string name="faqs">FAQ</string>
+    <string name="faqtext">Il y a de fortes chances que votre question soit parmi celles-ci, et c\'est le moyen le plus rapide d\'obtenir des réponses</string>
+    <string name="helpcenter">Centre d\'assistance</string>
+    <string name="searchfortopic">Rechercher un sujet</string>
+    <string name="mostcommon">Le plus courant</string>
+    <string name="faq1">"Que se passe-t-il une fois que la limite de crédit a été approuvée ?"</string>
+    <string name="faq_desc1_ke">
+Il vous suffit de vous rendre dans l\'un de nos magasins partenaires et d\'y acheter l\'article de votre choix Consultez nos magasins partenaires ici
+<b>https://watu.co.ke/where-to-shop</b>
+ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifier et acheter l\'article de votre choix.
+<b>+254 709684000</b>
+    </string>
+    <string name="faq_desc1_ug">
+Il vous suffit de vous rendre dans l\'un de nos magasins partenaires et d\'y acheter l\'article de votre choix Consultez nos magasins partenaires ici
+<b>https://watu.co.ug/where-to-shop</b>
+ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifier et acheter l\'article de votre choix
+<b>+256 778889332</b>
+    </string>
+    <string name="faq_desc1_rw">
+Il vous suffit de vous rendre dans l\'un de nos magasins partenaires et d\'y acheter l\'article de votre choix Consultez nos magasins partenaires ici
+<b>https://watu.co.rw/where-to-shop</b>
+ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifier et acheter l\'article de votre choix
+<b>+254 718329656</b>
+    </string>
+    <string name="faq2">"Que dois-je faire si je souhaite une limite de crédit plus élevée que celle qui m\'a été approuvée ? "</string>
+    <string name="faq_desc2">"Il suffit de cliquer sur le bouton « Demander une limite plus élevée » de votre tableau de bord et de suivre les instructions. "</string>
+    <string name="faq3">"Dois-je renouveler ma demande si j\'ai besoin d\'un autre établissement ? "</string>
+    <string name="faq_desc3">"Non, ce n\'est pas le cas. Il vous suffit de vous rendre chez l\'un de nos partenaires et d\'utiliser votre limite de crédit disponible pour poursuivre vos achats ou d\'appeler notre centre d\'appel si vous avez besoin d\'aide pour identifier et acheter un article."</string>
+    <string name="faq4">"Que se passe-t-il si je veux continuer à faire des achats mais que j\'ai déjà utilisé toute ma limite de crédit ? "</string>
+    <string name="faq_desc4">"Si vous effectuez vos remboursements conformément au contrat, votre limite sera augmentée mensuellement d\'une partie de vos versements mensuels et, lorsque vous aurez fini de payer les facilités actives, votre limite sera à nouveau augmentée jusqu\'à votre limite de crédit initialement approuvée. "</string>
+    <string name="faq5">"Comment mes remboursements sont-ils déterminés ? "</string>
+    <string name="faq_desc5">"Nous facturons un taux d\'intérêt forfaitaire de 4,2 % par mois et la durée est fixée à 12 mois pour tous les prêts. Les clients qui ont l\'intention de rembourser leur prêt avant terme pourront bénéficier d\'une exonération d\'intérêts. Tous les clients devront effectuer un paiement minimum mensuel. Nous facturons des frais d\'assurance supplémentaires de 5 % sur tous les appareils électroniques, payables en même temps que le premier versement. Une fois ces frais payés, le montant des versements pour les mois suivants est ramené au minimum."</string>
+    <string name="faq6">"Que se passe-t-il si je souhaite une durée plus courte que les 12 mois ? "</string>
+    <string name="faq_desc6">"Ce n\'est pas grave, mais nous calculerons toujours votre plan de paiement sur 12 mois pour déterminer le paiement minimum. Vous ne devrez pas payer moins que ce paiement minimum. Si vous souhaitez rembourser votre prêt dans un délai plus court, il vous suffit de payer plus que le paiement minimum et nous calculerons le montant des intérêts que vous devez au moment du paiement et le solde/l\'excédent sera annulé."</string>
+    <string name="faq7">"Puis-je payer un montant inférieur au paiement minimum ?"</string>
+    <string name="faq_desc7">"Non, vous êtes tenu d\'effectuer au minimum le paiement minimum à une date donnée. Si vous ne le faites pas, cela signifie que vous êtes en retard de paiement."</string>
+    <string name="faq8">"Si j\'ai plus d\'une installation, puis-je effectuer des paiements séparés ?"</string>
+    <string name="faq_desc8">"Chaque fois que vous achetez une nouvelle facilité, nous combinons les deux facilités (le capital restant dû de la facilité active et le capital de la nouvelle facilité) et calculons un paiement minimum unique qui sera dû à une date précise de chaque mois."</string>
+    <string name="welcometowatu">Watu...Autonomiser l\'avenir de la mobilité en Afrique</string>
+    <string name="areyouanexisting">Êtes-vous un agent des ventes existant?</string>
+    <string name="activateaccount">Activer mon compte</string>
+    <string name="pleasesignin">Veuillez vous connecter</string>
+    <string name="mobilenumber">Numéro de téléphone</string>
+    <string name="idnumberh">Numéro d\'identité</string>
+    <string name="personaldetails">Données personnelles</string>
+    <string name="pleaseenterpersonal">Veuillez saisir vos données personnelles</string>
+    <string name="locationdetails">Détails de localisation</string>
+    <string name="pleaseenterlocation">Veuillez saisir les détails de votre localisation</string>
+    <string name="cityortown">Ville/Village</string>
+    <string name="entercityortown">Saisissez le nom de ville/village</string>
+    <string name="streetaddress">Adresse de la rue/avenue</string>
+    <string name="enterstreetaddress">Saisissez l\'adresse de la rue/avenue</string>
+    <string name="accountpending">Compte en attente</string>
+    <string name="underreview">Vos informations sont actuellement en cours d\'examen. Nous vous informerons dès que nous aurons activé votre compte.</string>
+    <string name="timewait">Ce processus peut prendre jusqu\'à 24 heures. Vous pouvez fermer l\'application et revenir plus tard !</string>
+    <string name="contactus">Contactez-nous</string>
+    <string name="welcomename">Bienvenu(e), %1$s!</string>
+    <string name="balance">Solde</string>
+    <string name="requestwithdrawal">Demander le retrait</string>
+    <string name="makeapplication">Faire une demande</string>
+    <string name="checkcreditlimit">Vérifier la limite de crédit</string>
+    <string name="checkcreditlimith">Vérifier la limite de crédit</string>
+    <string name="findproduct">Trouver un produit</string>
+    <string name="findproducth">Trouver un produit</string>
+    <string name="noapplications">Vous n\'avez pas de nouvelles demandes</string>
+    <string name="nocontracts">Vous n\'avez pas de nouveaux contrats</string>
+    <string name="nosales">Vous n\'avez pas de ventes pour le moment</string>
+    <string name="newapplication">Nouvelle application</string>
+    <string name="newcontract">Nouveau contrat</string>
+    <string name="myapplications">Mes applications</string>
+    <string name="mycontracts">Mes contrats</string>
+    <string name="mywallet">Mon portefeuille</string>
+    <string name="availablebalance">Solde disponible</string>
+    <string name="nowithdrawals">Vous n\'avez pas de demande de retrait pour le moment.</string>
+    <string name="requests">Demandes</string>
+    <string name="commissions">Commissions</string>
+    <string name="customerpersonaldetails">Données personnelles du client</string>
+    <string name="dateofbirth">Date de Naissance</string>
+    <string name="dob">JJ/MM/AAA</string>
+    <string name="customeroccuaptiondetails">Données relatives à la profession du client</string>
+    <string name="jobtitle">Titre du poste</string>
+    <string name="ksh">USD. </string>
+    <string name="isyourcompanyregistered">Votre entreprise est-elle enregistrée ?</string>
+    <string name="freelancetype">Type de travailleur indépendant</string>
+    <string name="serviceprovider">Prestataire de services</string>
+    <string name="averagenumberofridesperday">Nombre moyen de trajets par jour</string>
+    <string name="onlineplatform">Plate-forme en ligne</string>
+    <string name="businessname">Nom de l\'entreprise</string>
+    <string name="businessdescription">Description de l\'entreprise</string>
+    <string name="companyinfo">Informations sur l\'entreprise</string>
+    <string name="moreinfoaboutthecompany">Plus d\'informations sur l\'entreprise</string>
+    <string name="companylocation">Localisation de l\'entreprise</string>
+    <string name="street">Rue</string>
+    <string name="companyphonenumber">Numéro de mobile de l\'entreprise</string>
+    <string name="companyemailaddress">Adresse e-mail de l\'entreprise</string>
+    <string name="applicationsubmitted">Demande soumise</string>
+    <string name="applicationunderreview">Votre demande a été soumise et est en cours d\'examen. Nous vous informerons dès qu\'elle aura été approuvée</string>
+    <string name="idno">Numéro d\'identification %1$s</string>
+    <string name="recentapplications">Les applications récentes</string>
+    <string name="seeall">Voir tous</string>
+    <string name="today">Aujourd\'hui</string>
+    <string name="yesterday">Hier</string>
+    <string name="noapplicationssubmittedtoday">Aucune demande n\'a été soumise aujourd\'hui</string>
+    <string name="noapplicationssubmittedyesterday">Aucune demande n\'a été soumise hier</string>
+    <string name="nocontractssubmittedtoday">Aucun contrat n\'a été soumis aujourd\'hui</string>
+    <string name="nocontractssubmittedyesterday">Aucun contrat n\'a été soumis hier</string>
+    <string name="all">Tout</string>
+    <string name="pendingh">En attente</string>
+    <string name="approved">Approuvé</string>
+    <string name="rejected">Rejeté</string>
+    <string name="createacontract">Créer un contrat</string>
+    <string name="vendor">Vendeur</string>
+    <string name="selectvendor">Sélectionner le vendeur</string>
+    <string name="itemtype">Type d\'élément</string>
+    <string name="selectitemtype">Sélectionnez le type d\'élément</string>
+    <string name="itemname">Nom d\'élément</string>
+    <string name="enteritemname">Saisissez le nom d\'élément</string>
+    <string name="selectitembrand">Sélectionner la marque de l\'article</string>
+    <string name="brand">Marque</string>
+    <string name="adddescription">Ajouter une description</string>
+    <string name="amounth">Montant</string>
+    <string name="availablecreditlimit">Limite du crédit disponible</string>
+    <string name="duration">Durée </string>
+    <string name="selectduration">Sélectionner la durée</string>
+    <string name="interest">Intérêt</string>
+    <string name="findavendor">Trouver un vendeur</string>
+    <string name="selectavendor">Sélectionner un vendeur</string>
+    <string name="selectbrand">Sélectionner la marque</string>
+    <string name="reviewandsend">Réviser et envoyer</string>
+    <string name="itemprice">Prix de l\'article</string>
+    <string name="interestrate">Taux d\'intérêt</string>
+    <string name="totalloan">Total du prêt</string>
+    <string name="sendcontract">Envoyer le contrat</string>
+    <string name="contractsent">Contrat envoyé</string>
+    <string name="contractsentvalue">Un contrat a été envoyé au numéro de mobile %1$s pour signature. Nous vous informerons lorsque le contrat aura été signé.</string>
+    <string name="alldone">Tout est fait</string>
+    <string name="paywithwatu">Payer avec Watu</string>
+    <string name="whatwouldyouliketodo">Qu\'aimeriez-vous faire ?</string>
+    <string name="creditcalculator">Calculateur de crédit</string>
+    <string name="sharemylink">Partager mon lien</string>
+    <string name="downloadapp">Télécharger l\'application</string>
+    <string name="date">Date</string>
+    <string name="customerdetails">Détails du client</string>
+    <string name="contractdetails">Détails du contrat</string>
+    <string name="editprofile">Modifier la photo du profil</string>
+    <string name="notifications">Notifications</string>
+    <string name="tellafriend">Informer un ami</string>
+    <string name="helpandsupport">Aide et Support</string>
+    <string name="aboutus">À propos de nous</string>
+    <string name="customerid">ID Client</string>
+    <string name="entercustomerid">Saisir le numéro d\'identification du client</string>
+    <string name="checkingcreditlimit">Veuillez patienter pendant que nous récupérons le solde de la limite de crédit...</string>
+    <string name="makepurchase">Effectuer un achat</string>
+    <string name="createcontract">Créer un contrat</string>
+    <string name="active">Actif</string>
+    <string name="requestwithdraw">Demander le retrait</string>
+    <string name="howmuchwouldyouliketowithdraw">Combien souhaitez-vous retirer ?</string>
+    <string name="settings">Paramètres</string>
+    <string name="editdetails">Modifier les détails</string>
+    <string name="proceed">Allons-y</string>
+    <string name="back">Retour</string>
+    <string name="enter">Saisissez</string>
+    <string name="enterh">Entrer</string>
+    <string name="logindot">Se Connecter</string>
+    <string name="signupdot">S\'inscrire</string>
+    <string name="rememberpassword">Mémoriser le code PIN</string>
+    <string name="rememberme">Souviens-toi de moi</string>
+    <string name="enterotp">Saisissez le mot de passe à usage unique</string>
+    <string name="enteronetimecode">Saisissez le mot de passe à usage unique envoyé à</string>
+    <string name="newpin">Nouveau code PIN</string>
+    <string name="enternewpin">Saisissez votre code PIN à 4 chiffres souhaité</string>
+    <string name="reenternewpin">Ressaisissez votre code PIN à 4 chiffres</string>
+    <string name="confirmnewpin">Confirmer le nouveau code PIN</string>
+    <string name="enterpin">Saisissez le code PIN</string>
+    <string name="confirmpin">Confirmer le code PIN</string>
+    <string name="forgotpin">Code PIN oublié?</string>
+    <string name="loanmanagement">Gestion des prêts</string>
+    <string name="seeprogress">Consultez ici l\'état de vos prêts</string>
+    <string name="totalloanbalance">Solde Total du Prêt</string>
+    <string name="watusimu">Watu Simu</string>
+    <string name="watuboda">Watu Boda</string>
+    <string name="currentloans">Prêts En Cours</string>
+    <string name="paymenthistory">Historique des Paiements</string>
+    <string name="amountpaid">Montant Payé</string>
+    <string name="pay">Payer</string>
+    <string name="recenttransactions">Transactions Récentes</string>
+    <string name="loanamount">Montant du Prêt</string>
+    <string name="transactiondate">Date de la Transaction</string>
+    <string name="viewtransactions">Voir toutes vos transactions</string>
+    <string name="pin">Code PIN</string>
+    <string name="paymentshistory">Historique des Paiements</string>
+    <string name="allyourpayments">Tous vos paiements</string>
+    <string name="payment">Paiement</string>
+    <string name="selectpayment">Sélectionnez le type de paiement qui vous convient le mieux.</string>
+    <string name="payotheramount">Payer un autre montant</string>
+    <string name="monthly">Mensuel</string>
+    <string name="daily">Journalier</string>
+    <string name="choosepaymentplan">Choisissez un Plan de Paiement</string>
+    <string name="paideveryweek">Payé chaque semaine</string>
+    <string name="weekly">Hebdomadaire</string>
+    <string name="useothernumber">Utiliser un numéro différent</string>
+    <string name="gettingclientloans">Récupération des prêts du client</string>
+    <string name="loanoverdue">Prêt en Souffrance</string>
+    <string name="overdueloans">Prêts en Souffrance</string>
+    <string name="youhaveoverdueloans">Vous avez des prêts en souffrance. Veuillez les payer rapidement.</string>
+    <string name="ownership">Bienvenue à Watu</string>
+    <string name="agreetowatus">Accepter les conditions</string>
+    <string name="privacypolicy">La Politique de Confidentialité</string>
+    <string name="and">et</string>
+    <string name="termsofuse">Les Conditions d\'Utilisation</string>
+    <string name="rememberpin">Mémoriser le code PIN</string>
+    <string name="enteryourdesired">Saisissez votre code PIN à 4 chiffres souhaité</string>
+    <string name="enteryourdetails">Saisissez vos coordonnées pour vous connecter</string>
+    <string name="termsofservice">Les Conditions d\'Utilisation</string>
+    <string name="confirmdelete">Etes-vous sûr de vouloir supprimer %1$s</string>
+    <string name="pleasewait">Veuillez patienter...</string>
+    <string name="uploadingimage">Téléchargement de l\'image...</string>
+    <string name="accountnotfound">Utilisateur non trouvé</string>
+    <string name="enterwatudetails">Entrez votre numéro de téléphone Watu souscris pour vous inscrire</string>
+    <string name="declined">Refusé</string>
+    <string name="fetchfailed">Désolé. Impossible de récupérer les détails.</string>
+    <string name="paymentreceipts">Reçus de Paiement</string>
+    <string name="selectloans">Veuillez sélectionner le prêt que vous souhaitez payer et gérer</string>
+    <string name="asof">à partir de</string>
+    <string name="loanfrom">Depuis: %1$s</string>
+    <string name="at">À: %1$s</string>
+    <string name="on">Le: %1$s</string>
+    <string name="acceptterms">Acceptez les termes et conditions pour continuer</string>
+    <string name="sorry">Désolé!</string>
+    <string name="difficulties">Nous rencontrons des difficultés pour traiter votre demande de connexion. Si vous avez besoin d\'une assistance immédiate, veuillez visiter notre site Web ou contacter le service client.</string>
+
+    <string name="supportnumbers">0907 288 800</string>
+    <string name="emergencynumbers">0907 288 800</string>
+    <string name="supportnumbersimu">0907 288 800 </string>
+    <string name="supportnumberboda">0907 288 800</string>
+
+    <string name="simunumber">0907 288 800</string>
+    <string name="emergencies">(Urgences)</string>
+    <string name="watugari">Watu Gari</string>
+    <string name="garinumber">0907 288 800</string>
+
+    <string name="setpin">Définir le code PIN</string>
+    <string name="verify">Vérifier</string>
+    <string name="loantype">Type de Prêt</string>
+    <string name="loanstatus">Statut du Prêt</string>
+    <string name="issuedate">Date d\'Émission</string>
+    <string name="loantypeh">Type de Prêt:</string>
+    <string name="issuedateh">Date d\'Émission:</string>
+    <string name="maturitydateh">Date de Maturité</string>
+    <string name="loanstatush">Statut du Prêt:</string>
+    <string name="overdue">En Souffrance</string>
+    <string name="totalpayment">Paiement Total</string>
+    <string name="amountoverdue">Montant en Souffrance</string>
+    <string name="dailypayment">Paiement Journalier</string>
+    <string name="installmentperiod">Période de Versement</string>
+    <string name="week">Semaine</string>
+    <string name="deviceactivetill">Appareil actif jusqu\'à</string>
+    <string name="mynumber">Mon numéro de téléphone</string>
+    <string name="othenumber">Autre numéro de téléphone</string>
+    <string name="paymentnumber">Numéro de Paiement</string>
+    <string name="paymentconfirmation">Confirmation de Paiement</string>
+    <string name="from">De</string>
+    <string name="type">Type</string>
+    <string name="enteryouregistered">Saisissez votre numéro de téléphone Watu souscris et le nouveau code PIN</string>
+    <string name="processingpayment">Traitement du Paiement</string>
+    <string name="wrongcode">Le code que vous avez saisi est incorrect</string>
+    <string name="resend">Renvoyer</string>
+    <string name="privacynotice">Avis de Confidentialité</string>
+    <string name="anothernumber">Un Autre Numéro</string>
+    <string name="paideveryday">Payé chaque jour</string>
+    <string name="paideverymonth">Payé chaque mois</string>
+    <string name="paywith">Payer Avec</string>
+    <string name="seelatesttramsactions">Veuillez consulter un résumé de vos dernières transactions</string>
+    <string name="receipts">Reçus</string>
+    <string name="bridging">Réduire l\'écart entre les personnes et l’accessibilité au financement flexible.</string>
+    <string name="aboutwatu">Watu est une FinTech qui révolutionne la mobilité de masse en Afrique grâce à l\'inclusion et à l\'accessibilité financières. Avec un âge médian de 18 ans, l\'Afrique est le continent le plus jeune du monde et connaît une croissance sans précédent. Avec une croissance estimée à 1,2 milliard de personnes au cours des dix prochaines années, Watu s\'engage à transformer la mobilité urbaine et le paysage des prêts financiers. Nous contribuons continuellement à façonner un avenir meilleur et plus radieux en donnant aux gens la possibilité de construire et de changer le cours de leur vie.</string>
+    <string name="watuwebsite">www.watu.com/drc/</string>
+    <string name="installmentamount">Montant du Versement</string>
+    <string name="wrongpin">Le code PIN que vous avez saisi est est incorrect</string>
+    <string name="loanassetupdated">%1$s mis à jour.</string>
+    <string name="hellowatu">Bonjour le monde!</string>
+    <string name="supportinquiry">Demande d\'Assistance</string>
+    <string name="sorryunder">Désolé, nous subissons des travaux de maintenance!</string>
+    <string name="checklater">Veuillez vérifier plus tard</string>
+    <string name="selectasset">Sélectionnez le type de prêt à payer</string>
+    <string name="onlydigitsallowed">Seuls les chiffres sont autorisés</string>
+    <string name="app_version">Version de l\'application WATU %1$s</string>
+    <string name="nextpaymentdate">Date de paiement prochaine</string>
+    <string name="devicewillbeactivefor">L\'appareil sera actif pour</string>
+    <string name="confirmpaymentfailed">Impossible de confirmer le paiement. Le statut est %1$s</string>
+    <string name="language">Langue</string>
+    <string name="english_">Français</string>
+    <string name="english">English</string>
+    <string name="languagechanged">Langage changée en</string>
+    <string name="loanbalance">Solde du Prêt</string>
+    <string name="lastpayment">Dernier Paiement</string>
+    <string name="weeklypayment">Paiement Hebdomadaire</string>
+    <string name="totalrepaymentamount">Montant Total de Remboursement</string>
+    <string name="amountduetounlock">Montant pour débloquer</string>
+    <string name="registrationneeded">Vous devez activer votre compte</string>
+    <string name="paymenttimelimit">Votre paiement a échoué. Vous avez atteint la limite maximale pour payer avec un autre numéro. Réessayez plus tard.</string>
+    <string name="attemptsleft">entatives restantes</string>
+    <string name="fetchingmoretransactions">Récupération des transactions...</string>
+    <string name="totalamountpaid">Montant Total Payé</string>
+    <string name="feedback">Votre Avis</string>
+    <string name="wewouldlove">Nous aimerions connaître votre avis</string>
+    <string name="selecttheitem">Sélectionnez le sujet de votre commentaire</string>
+    <string name="accountdetails">Détails du Compte</string>
+    <string name="userexperience">Expérience Utilisateur</string>
+    <string name="pleasetype">Veuillez saisir ici vos commentaires supplémentaires.......</string>
+    <string name="menu">Menu</string>
+    <string name="submittingfeedback">Soumission des commentaires.</string>
+    <string name="submitfeedbackfailednetwork">Impossible de soumettre les commentaires. Vérifiez la connexion et réessayez.</string>
+    <string name="submitfeedbackserror">Impossible de soumettre les commentaires. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="thankyouforyourfeedback">Merci pour vos commentaires.</string>
+    <string name="feedbacksubmitted">Commentaires Soumis</string>
+    <string name="temporaryunlock">Déblocage Temporaire</string>
+    <string name="requestingunlock">Demande de déblocage temporaire.</string>
+    <string name="requestingumlockfailednetwork">Désolé. Impossible de demander un déblocage temporaire. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="requestingunlockerror">Désolé, mais nous n\'avons pas pu demander le déblocage temporaire. Réessayez et contactez le support si le problème persiste.</string>
+    <!-- Changed \N to \n in the following string -->
+    <string name="requestingunlocksuccess">
+        <![CDATA[ <font color="#ffffff">Votre téléphone est temporairement déverrouillé pour&nbsp;</font><font color="#04AFAB">%1$s </font> ]]>
+    </string>
+    <string name="requestingunlocksuccessmessage">Pour continuer à utiliser votre téléphone, veuillez appuyer sur le bouton ci-dessous</string>
+    <string name="unlocklimitreached">Désolé, vous avez dépassé votre limite de déblocage temporaire. Veuillez réessayer plus tard</string>
+    <string name="deviceacquired">Appareil Acquis</string>
+    <string name="kindlyratepayment">Veuillez évaluer votre satisfaction globale à l\'égard du processus de paiement</string>
+    <string name="seeaccountstatus">Voir le statut de votre compte</string>
+    <string name="thankyouforfeedback">Merci pour votre paiement.</string>
+    <string name="accountstatus">Statut du Compte</string>
+    <string name="devicelockedon">Appareil Bloqué Le</string>
+    <string name="payvia">Payer Par</string>
+    <string name="payviampesa">Payer Par M-PESA</string>
+    <string name="progressstatus">État du Progrès</string>
+    <string name="calluson">Appelez-nous Au</string>
+    <string name="maxunlockattempts">Il semble que vous ayez atteint votre limite par jour pour débloquer temporairement votre téléphone. Réessayez demain?</string>
+    <string name="maxpayforanother">Votre opération &quot;Payer Avec Un Autre Numéro&quot; a échoué car vous avez atteint votre limite par jour de &quot;Payer Avec Un Autre Numéro&quot;. Veuillez réessayer demain.</string>
+    <string name="dailyamount">Montant Journalier</string>
+    <string name="temporarilyunlockedfor">Débloqué temporairement</string>
+    <string name="minutesremaining">restant</string>
+    <string name="alreadyunlocked">Votre téléphone semble déjà être temporairement débloqué</string>
+    <string name="devicealreadyunlocked">Appareil déjà débloqué temporairement</string>
+    <string name="maximumulockattempts">Nombre maximal de tentatives de déblocage</string>
+
+    <string name="makepayments">Effectuer des paiements</string>
+    <string name="howtopayviampesa"> Comment payer via M-PESA</string>
+    <string name="paympesa"><Data><![CDATA[Composez <font color=\'#9CC652\'> %1$s</font><br /> <br /> ]]></Data>
+                            <Data><![CDATA[1. Selectionnez 1.USD<br />]]></Data>
+                            <Data><![CDATA[2. Selectionnez 5.Mes Paiements<br /> ]]></Data>
+                            <Data><![CDATA[3. Selectionnez 10.Watu<br /> <br />]]></Data>
+                            <Data><![CDATA[Saisissez:<br />]]></Data>
+                            <Data><![CDATA[Le numero de reference<br />]]></Data>
+                            <Data><![CDATA[Le montant<br />]]></Data>
+                            <Data><![CDATA[Le mot de passe<br />]]></Data></string>
+
+
+    <string name="howtopayviaairtel">Comment payer via Airtel Money</string>
+    <string name="payairtel"><Data><![CDATA[Appuyez <font color=\'#EC665C\'> %1$s</font><br /> <br /> ]]></Data>
+                            <Data><![CDATA[1. USD<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Appuyez 3. Paiements<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Appuyez 9. Watu <br /> <br /> <br />]]></Data>
+                            <Data><![CDATA[   --  Numéro de référence: %2$s<br /> <br /> ]]></Data>
+                            <Data><![CDATA[   --  Montant à payer<br /> <br /><br /> ]]></Data>
+                            <Data><![CDATA[   --  Mot de passe<br /> <br /> ]]></Data></string>
+
+
+    <string name="howtopayviaafrimoney">Comment payer via Afrimoney</string>
+    <string name="payafrimoney"><Data><![CDATA[Composez <font color=\'#DD8A39\'> %1$s</font><br /> <br /> ]]></Data>
+                            <Data><![CDATA[1. Selectionnez 1.USD<br />]]></Data>
+                            <Data><![CDATA[2. Selectionnez 4.Mes Paiements<br /> ]]></Data>
+                            <Data><![CDATA[3. Selectionnez 5.Payer Service<br />]]></Data>
+                            <Data><![CDATA[4. Selectionnez 1.Watu<br /> <br />]]></Data>
+                            <Data><![CDATA[Saisissez:<br/>]]></Data>
+                            <Data><![CDATA[Le numero de reference<br/>]]></Data>
+                            <Data><![CDATA[Le montant<br/>]]></Data>
+                            <Data><![CDATA[Le mot de passe<br/>]]></Data></string>
+
+
+    <string name="payall30days">Payer le montant mensuel</string>
+    <string name="days">Jours</string>
+    <string name="hours">Heures</string>
+    <string name="minutes">Minutes</string>
+    <string name="seconds">Secondes</string>
+    <string name="slidetoselect">Glisser pour sélectionner les jours de paiement</string>
+    <string name="sorryundermaintenance">Désolé, nous sommes en maintenance !</string>
+    <string name="loginagainlater">Veuillez vous connecter plus tard</string>
+    <string name="currentlyundermaintenance">Nous sommes actuellement en cours des travaux de maintenance. Veuillez vérifier plus tard.</string>
+    <string name="activebranchh">Branche d\'activation :</string>
+    <string name="havingaproblemsignup">Vous n\'arrivez pas à vous inscrire ?</string>
+    <string name="pleaseverifyagain">Veuillez vérifier votre compte pour continuer.</string>
+    <string name="amountlessthandaily">Le montant est inférieur au montant journalier</string>
+    <string name="paywithphonenumber">Payer avec le numéro de téléphone</string>
+    <string name="changenumber">Numéro de changement</string>
+    <string name="payfor">Payer pour</string>
+    <string name="congrats">Félicitations</string>
+    <string name="wearehappy">"Nous sommes heureux de vous informer que le paiement de votre prêt est terminé."</string>
+    <string name="gobackhome">Retour à l\'accueil</string>
+    <string name="knoxmessage">Vous n\'arrivez pas à vous connecter à partir de votre téléphone financé par Watu ? \\Cliquez ici pour obtenir votre code d\'accès unique</string>
+    <string name="havingissuesmakingpayment">Vous avez des difficultés à effectuer des paiements ?</string>
+    <string name="havingissuesunlockingdevice">Vous avez des difficultés pour débloquer votre appareil ?</string>
+    <string name="resendknox">Un code d\'accès a été envoyé à votre appareil. Vous pouvez en demander un nouveau après %1$s</string>
+    <string name="securenotification">Notification sécurisée</string>
+    <string name="havingtroublereceiving">Vous n\'arrivez pas à recevoir votre code d\'accès unique par SMS ?</string>
+
+    <!-- Fixed \N -> \n and escaped apostrophes in knoxinstruction -->
+    <string name="knoxinstruction">1. Assurez-vous que vous demandez à partir d\'un appareil financé par Watu.\n2. Assurez-vous d\'être connecté à Internet, aux données mobiles ou au Wifi.\n3. N\'oubliez pas de mémoriser ou de noter le code d\'accès communiqué dans la notification sécurisée.</string>
+
+    <string name="getyouronetimepasscode">Obtenez votre code d\'accès à usage unique</string>
+    <string name="unabletosendknox">Nous ne sommes pas en mesure de fournir le code d\'accès sécurisée, veuillez réessayer.</string>
+    <string name="getyouronetimepasscodeviasms">Obtenez votre code d\'accès à usage unique par SMS</string>
+    <string name="addinguserction">Ajout d\'une action utilisateur.</string>
+    <string name="adduseractionsuccess">Action utilisateur ajoutée avec succès.</string>
+    <string name="adduseractionfailednetwork">Impossible d\'ajouter une action utilisateur. Vérifiez la connexion et réessayez.</string>
+    <string name="adduseractionerror">Impossible d\'ajouter une action utilisateur. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="pleaseturnonnetwork">Veuillez activer votre Internet</string>
+    <string name="havingtroublenetwork">Activez vos paramètres internet pour continuer à utiliser l\'application.</string>
+    <string name="haveallsolutions">Obtenez toutes les solutions à vos questions sur l\'application en cliquant simplement sur un bouton.</string>
+    <string name="howtosignup">Comment s\'inscrire ?</string>
+    <string name="howtotemporaryunlock">Comment déverrouiller temporairement ?</string>
+    <string name="howtomakepayments">Comment effectuer des paiements ?</string>
+    <string name="loancompletetext">Nous vous remercions de votre fidélité à Watu. Nous espérons que votre %1$s a été à la hauteur de vos attentes, et même plus !</string>
+    <string name="updatingtoken">Mise à jour du jeton d\'utilisateur.</string>
+    <string name="updatetokensuccess">Mise à jour du jeton d\'utilisateur réussie.</string>
+    <string name="updatetokenfailednetwork">Impossible de mettre à jour le jeton d\'utilisateur. Vérifiez le réseau et réessayez.</string>
+    <string name="updatetokenerror">Impossible d\'ajouter un jeton d\'utilisateur de mise à jour. Réessayez et contactez le support si le problème persiste.</string>
+    <string name="turnedon">Allumé</string>
+    <string name="reminder">Rappel</string>
+    <string name="markallasread">Marquer tout comme lu</string>
+    <string name="filternotifications">Filtrer les notifications</string>
+    <string name="filter_all">Tous</string>
+    <string name="filter_unread">Non lu</string>
+    <string name="filter_general_notifications">Notifications générales</string>
+    <string name="filter_payment_notifications">Notifications de paiement</string>
+    <string name="filter_reminders">Rappels</string>
+    <string name="viewtransactionsh">Voir les transactions</string>
+    <string name="general">Général</string>
+    <string name="appnotifications">Notifications des applications</string>
+    <string name="pendingpayment">Paiement en attente</string>
+    <string name="confirmpending">Impossible de confirmer le paiement. Le statut est en attente</string>
+    <string name="paymentfailed">Votre paiement a échoué.</string>
+    <string name="confirmyourpayment">Confirmer votre paiement</string>
+    <string name="confirmpayment">Confirmer le paiement</string>
+
+
+    <string name="servicedowndescription"><Data><![CDATA[ Nous rencontrons actuellement une interruption de service affectant l\’application et certains services. \n\nVous pouvez toujours payer facilement <font color=\'#9CC652\'>via Paybill au 650880</font>. \nNous travaillons à tout remettre en service.]]></Data> </string>
+    <string name="throttlederror">Nous traitons encore votre dernière demande. Veuillez réessayer sous peu.</string>
+    <string name="toomanyrequests">Trop de requêtes</string>
+
+    <string name="updatinginformation">Mise à jour des informations...</string>
+    <string name="updateinformationfailednetwork">Désolé. Impossible de mettre à jour les informations. Vérifiez votre connexion Internet et appuyez pour réessayer.</string>
+    <string name="updateinformationerror">Désolé, mais nous n\’avons pas pu mettre à jour les informations. Réessayez et contactez l\’assistance si le problème persiste.</string>
+    <string name="updateinformationsuccess">Informations mises à jour avec succès.</string>
+    <string name="updateinformationtitle">Informations mises à jour.</string>
+    <string name="info_gps_enable">Activez le GPS de localisation pour améliorer votre expérience</string>
+    <string name="serviceinterruption">Interruption de service</string>
+    <string name="closeh">Fermer</string>
+
+    <string name="commonappissues">Problèmes courants de l\'application</string>
+    <string name="live_chat_with_us">Chat en direct avec nous :</string>
+    <string name="watu_live_chat">Chat en direct Watu</string>
+    <string name="seeaccountdetails">Voir les détails de votre compte</string>
+    <string name="yourdevicewillbeactivefor">Votre appareil sera actif pendant</string>
+    <string name="yourdevicewaslockedon">Votre appareil a été verrouillé le</string>
+    <string name="paymentprogress">Progression du paiement</string>
+    <string name="yourbalanceis">Votre solde est</string>
+    <string name="generalsettings">Paramètres généraux</string>
+    <string name="levelupnow">Montez de niveau maintenant !</string>
+    <string name="biometricauthentication">Authentification biométrique</string>
+    <string name="more">Plus</string>
+    <string name="faqsupport">Assistance FAQ</string>
+    <string name="resourcecenter">Centre de Ressources</string>
+    <string name="chat_with_us">Discutez avec nous</string>
+
+    <string name="device">Appareil</string>
+    <string name="amount_c">Montant</string>
+    <string name="make_payments">Effectuer des paiements</string>
+    <string name="payment_information">Informations de paiement</string>
+    <string name="gettingstarted">Pour commencer</string>
+    <string name="unlocklongershort">Déverrouillez une batterie plus longue, un meilleur appareil photo et une capacité de stockage accrue.</string>
+
+
+    <string name="termsandconditions">Termes et conditions</string>
+    <string name="acceptthe">Accepter le</string>
+    <string name="foryoutogetstarted">pour commencer.</string>
+    <string name="enter5digitcode">Entrez le code à 5 chiffres</string>
+    <string name="confirmyourpin">Confirmez votre code PIN</string>
+    <string name="enterthesamepin">Entrez le même code PIN.</string>
+    <string name="confirmyourfingeprint">Confirmez votre empreinte digitale</string>
+    <string name="enabletouchid">Activer Touch ID</string>
+    <string name="placeyourfingerprint">Appuyez sur \"Définir l’empreinte digitale\" ci-dessous et placez votre doigt sur le capteur pour vous authentifier</string>
+    <string name="setfingerprint">Définir l\'empreinte digitale</string>
+    <string name="support">Aide</string>
+    <string name="levelup">Mettre à niveau</string>
+    <string name="upgrade">Mettre à niveau</string>
+    <string name="unlock_the_next_level">Débloquez le niveau suivant</string>
+    <string name="checkprogress">Vérifier la progression</string>
+    <string name="ownit">Possédez-le !</string>
+    <string name="on_the_path">Vous êtes sur la voie de la pleine propriété ! Suivez votre progression et régularisez votre solde.</string>
+    <string name="yourjourneystartshere">Votre parcours commence ici…</string>
+    <string name="upgrade_your_device">Mettez à niveau votre appareil</string>
+    <string name="tracktheprogressofyourjourney">Suivez la progression de votre parcours et régularisez votre solde pour posséder votre bien</string>
+    <string name="refresh">Rafraîchir</string>
+    <string name="helloicon">Bonjour ✋🏾</string>
+
+
+    <string name="phoneunlockhelp">Aide au déverrouillage du téléphone</string>
+    <string name="troubleshootunlockingyourphone">Dépannage du déverrouillage de votre téléphone</string>
+    <string name="payments">Paiements</string>
+    <string name="havingissueswith_loggingin">Vous avez des problèmes de connexion ?</string>
+
+
+    <!--    <string name="did_you_know"><![CDATA[-->
+    <!--        <b>Le saviez-vous ? L\'application Watu vous donne un contrôle total !</b><br/><br/>-->
+    <!--        • Effectuez des paiements en quelques secondes<br/>-->
+    <!--        • Déverrouillez votre appareil d\'une simple pression<br/>-->
+    <!--        • Suivez tous vos paiements passés<br/>-->
+    <!--        • Consultez le solde restant de votre prêt<br/><br/>-->
+    <!--        <b>Besoin d'aide ? Consultez notre centre d'aide</b>-->
+    <!--        ]]></string>-->
+
+    <string name="welcomeh">Bienvenue</string>
+    <string name="help_center">Centre d\'aide</string>
+    <string name="readmore">Lire la suite</string>
+
+    <string name="did_you_know"><![CDATA[
+<b>Le saviez-vous ? L&apos;application Watu vous donne un contrôle total !</b><br/><br/>
+&#8226; Effectuez des paiements en quelques secondes<br/>
+&#8226; Déverrouillez votre appareil d&apos;une simple pression<br/>
+&#8226; Suivez tous vos paiements passés<br/>
+&#8226; Consultez le solde restant de votre prêt<br/><br/>
+<b>Besoin d&apos;aide ? Consultez notre Centre d&apos;aide</b>
+]]></string>
+
+    <string name="didyouknowthewatuapp">Le saviez-vous ? L\'application Watu vous donne un contrôle total !</string>
+    <string name="watuwelcomebody">Effectuez des paiements en quelques secondes • Déverrouillez votre appareil en un seul appui • Suivez tous vos paiements passés • Vérifiez le solde restant de votre prêt. Besoin d\'aide ? Consultez notre Centre d\'assistance</string>
+
+    <string name="helptip">Astuce d\'aide</string>
+    <string name="tiphelpcontent">&#8226; Vous connectez-vous avec votre numéro enregistré Watu ?\n\n&#8226; Assurez-vous de disposer de données Active sur votre appareil pour pouvoir vous connecter.</string>
+    <string name="paywithanothernumber">Payer avec un\nautre numéro</string>
+
+
+    <string name="pay_now">Payer Maintenant</string>
+    <string name="no_transactions_yet">Aucune transaction pour le moment.</string>
+    <string name="no_transactions_desc">Payez maintenant pour voir votre activité ici et suivre votre parcours de propriété.</string>
+
+    <string name="whatsapp">WhatsApp</string>
+    <string name="receiveotpviawhatsapp">Recevoir l’OTP via WhatsApp</string>
+    <string name="whatsappinstructions"><Data><![CDATA[1. Assurez-vous d’effectuer la demande à partir d’un numéro enregistré chez Watu, se terminant par <font color=\'#04AFAB\'>%1$s </font><br>2. Assurez-vous que le numéro est enregistré sur WhatsApp.<br>3. L’OTP sera envoyé dans votre discussion WhatsApp.<br>4. Assurez-vous d’être connecté à Internet, soit via les données mobiles soit via le Wi-Fi.]]></Data></string>
+    <string name="knoxinstructions"><Data><![CDATA[1. Assurez-vous d’effectuer la demande depuis un appareil financé par Watu.<br>2. Assurez-vous d’être connecté à Internet, soit via les données mobiles soit via le Wi-Fi.<br>3. L’OTP sera envoyé sous forme de fenêtre contextuelle en bas de l’écran du téléphone.<br>4. N’oubliez pas de mémoriser ou de noter le code d’accès unique partagé dans la notification sécurisée.]]></Data></string>
+    <string name="smsinstructions"><Data><![CDATA[1. Assurez-vous d’effectuer la demande avec un numéro enregistré chez Watu.<br>2. Le mot de passe à usage unique (OTP) sera envoyé dans votre boîte SMS.]]></Data></string>
+
+    <string name="receiveotpviaknox">Recevoir l’OTP via Pop-Up</string>
+    <string name="choosehowtoreceive">Choisissez comment recevoir</string>
+    <string name="sms">SMS</string>
+    <string name="receiveotpviasms">Recevoir l’OTP via SMS</string>
+
+    <string name="contact_us">Contactez-nous</string>
+    <string name="throttle_timer"><![CDATA[Réessayez dans <font color=\'#04AFAB\'>%s</font>]]></string>
+    <string name="internet">Internet</string>
+    <string name="location">Localisation</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="settingupwatu">Nous configurons automatiquement votre application Watu \npour des performances sécurisées et optimales.</string>
+    <string name="gettingthingsready">Préparation en cours...</string>
+    <string name="biometrics">Biométrie</string>
+    <string name="enable_calling">Activer les appels</string>
+    <string name="turnonallpermissions">Activez toutes les autorisations pour continuer</string>
+    <string name="automaticsetupinprogress">La configuration automatique est en cours.</string>
+    <string name="setupcomplete">Configuration terminée !</string>
+    <string name="deviceready">Votre appareil est prêt</string>
+
+    <string name="temporary_unlock_for_5_minutes">Déblocage temporaire pour 5 minutes</string>
+    <string name="you_have_3_temporary_unlocks_remaining_today">Il vous reste %1$s déverrouillages temporaires aujourd’hui. Payez maintenant pour éviter de perdre l’accès à votre téléphone.</string>
+    <string name="make_a_payment_to_unlock_and_keep_using_your_device">Paiement requis pour rétablir l\'accès complet</string>
+    <string name="device_locked">Appareil bloqué</string>
+    <string name="max_unlocks_left">/ %1$s Déblocages restants</string>
+    <string name="max_unlocks_left_1_3">/ %1$s déverrouillages restants</string>
+    <string name="max_unlocks">/ 3 Déblocages restants</string>
+    <string name="payment_prompt_2_attempts">Paiement requis pour rétablir l\'accès complet</string>
+    <string name="make_payment_desc_2_attempts">Vous n’avez pas effectué de paiement après votre dernier déverrouillage temporaire. Payez maintenant pour restaurer vos %1$s déverrouillages.</string>
+    <string name="make_payment_desc_2_attempts_daily">Il vous reste %1$s déblocages temporaires aujourd\'hui. Payez maintenant pour éviter de perdre l\'accès à votre téléphone.</string>
+    <string name="make_payment_desc_1_attempts_daily">C\'est le dernier déblocages temporaires pour aujourd\'hui. Payez maintenant pour éviter de perdre l\'accès à votre téléphone.</string>
+    <string name="make_payment_desc_1_attempts">Il vous reste %1$s déverrouillage temporaire aujourd’hui. Effectuez un paiement pour restaurer vos %2$s déverrouillages</string>
+    <string name="make_payment_desc_0_attempts">Le déverrouillage temporaire n’est plus disponible aujourd’hui. Payez maintenant pour restaurer vos %1$s déverrouillages.</string>
+    <string name="make_payment_desc_min_1_attempts">Vous n’avez pas effectué de paiement après votre dernier déverrouillage temporaire. Votre limite de déverrouillage disponible a été réduite.\nEffectuez un paiement pour restaurer vos %1$s déverrouillages.</string>
+    <string name="make_payment_desc_min_1_attempts_daily">Dernier déverrouillage temporaire aujourd’hui. Payez maintenant pour obtenir un accès complet à votre appareil.</string>
+    <string name="make_payment_desc_min_0_attempts">Vous avez épuisé vos déverrouillages temporaires. Payez maintenant pour retrouver l’accès à votre appareil et obtenir 3 déverrouillages temporaires.</string>
+    <string name="temp_unlock_exhausted"><Data><![CDATA[Payez au moins <b><font color=\'#04AFAB\'>USD %1$s </font><b> pour restaurer vos %2$s déverrouillages temporaires.]]></Data></string>
+    <string name="temp_unlock_exhausted_prompt">Limite de déverrouillage temporaire atteinte</string>
+    <string name="temp_unlock_exhausted_learn_to_pay">Apprendre à payer</string>
+    <string name="unlocks_left">Déverrouillages restants</string>
+    <string name="temporary_unlock_unavailable_daily">Le déverrouillage temporaire n’est plus disponible aujourd’hui. Payez maintenant pour déverrouiller et obtenir un accès complet à votre appareil.</string>
+    <string name="payment_prompt_2_2_attempts">Votre limite de déverrouillage a été réduite.</string>
+    <string name="payment_desc_2_1_attempts">Dernier déverrouillage temporaire aujourd’hui. Payez maintenant pour éviter de perdre l’accès à votre téléphone.</string>
+    <string name="unlocks_left_2_1">Déverrouillages restants </string>
+    <string name="payment_prompt_2_0_attempts">Limite de déverrouillage temporaire atteinte.</string>
+    <string name="payment_prompt_1_1_attempts">Votre limite de déverrouillage a été réduite.</string>
+    <string name="make_payment_desc_min_1_1_attempts">Vous n’avez pas effectué de paiement après votre dernier déverrouillage temporaire. Payez maintenant pour restaurer vos %1$s déverrouillages.</string>
+    <string name="payment_prompt_1_0_attempts">Limite de déverrouillage temporaire atteinte.</string>
+    <string name="permissions">Autorisations</string>
+    <string name="preference">Préférence</string>
+
+    <string name="whatsapp_issue_help"><Data><![CDATA[Avez-vous des difficultés à recevoir l’OTP via WhatsApp ? <b><u>Cliquez ici</u></b> pour demander l’OTP via Pop-Up ou SMS.]]></Data></string>
+    <string name="pop_up_issue_help"><Data><![CDATA[Avez-vous des difficultés à recevoir l’OTP via Pop-Up ? <b><u>Cliquez ici</u></b> pour demander l’OTP via WhatsApp ou SMS.]]></Data></string>
+    <string name="sms_issue_help"><Data><![CDATA[Avez-vous des difficultés à recevoir l’OTP via SMS ? <b><u>Cliquez ici</u></b> pour demander l’OTP via Pop-Up ou WhatsApp.]]></Data></string>
+
+    <string name="copy_the_number_or_use_another_phone_to_call_customer_care">Copiez le numéro ou utilisez un autre téléphone pour appeler le service client.</string>
+    <string name="please_turn_on_your_internet">Veuillez activer votre connexion Internet</string>
+    <string name="try_again_in_font_color_04afab_s_font"><![CDATA[Réessayez dans <font color=\'#04AFAB\'>%s</font>]]></string>
+    <string name="you_can_now_call_again">Vous pouvez maintenant appeler à nouveau !</string>
+    <string name="copied_text">Texte copié</string>
+    <string name="call_permission_is_required_please_enable_it_in_app_settings">L’autorisation d’appel est requise. Veuillez l’activer dans les paramètres de l’application.</string>
+    <string name="call_failed">"Échec de l’appel : "</string>
+    <string name="chat_unavailable_nwithout_data">Chat indisponible\nsans données</string>
+    <string name="turn_on_your_data_or_connect_to_wifi_for_live_chat_ncall_customer_care_for_urgent_issues">Activez vos données ou connectez-vous au Wi-Fi pour le chat en direct.\nAppelez le service client pour les urgences.</string>
+    <string name="call_customer_care">Appeler le service client</string>
+    <string name="_0700_000_000">0800 750 228</string>
+    <string name="calling_isn_t_enabled">Les appels ne sont pas activés</string>
+    <string name="to_call_customer_care_from_watu_app_please_allow_phone_call_permission">Pour appeler le service client depuis l’application Watu, veuillez autoriser les appels téléphoniques.</string>
+    <string name="open_live_chat">Ouvrir le chat en direct</string>
+    <string name="enable_calling_for_help">Activer les appels pour obtenir de l’aide</string>
+    <string name="your_privacy_is_protected">Votre vie privée est protégée.</string>
+    <string name="we_don_t_access_your_call_history_or_contacts">Nous n’accédons pas à votre historique d’appels ni à vos contacts.</string>
+    <string name="live_chat_works_without_this_permission">Le chat en direct fonctionne sans cette autorisation</string>
+    <string name="continue_with_live_chat">Continuer avec le chat en direct</string>
+    <string name="fastest_option">Option la plus rapide</string>
+    <string name="calling_permission_is_blocked_in_settings">L’autorisation d’appel est bloquée dans les paramètres</string>
+    <string name="enable_phone_call_permission_to_call_customer_care_from_within_watu">Activez l’autorisation d’appel pour appeler le service client depuis Watu</string>
+    <string name="open_settings">Ouvrir les paramètres</string>
+    <string name="calling_is_temporarily_unavailable">Les appels sont temporairement indisponibles</string>
+    <string name="please_use_live_chat_for_immediate_help">Veuillez utiliser le chat en direct pour une aide immédiate.</string>
+    <string name="repair_nsupport">Support de réparation</string>
+
+    <string name="prepayment_process">Processus de prépaiement</string>
+    <string name="prepayment">Prépaiement</string>
+    <string name="what_is_a_prepayment">Qu’est-ce qu’un prépaiement ?</string>
+    <string name="loan_prepayment_description"><![CDATA[
+Un <font color=\'#04AFAB\'>prépaiement</font> signifie rembourser votre prêt
+<font color=\'#04AFAB\'>avant la fin de votre période de remboursement. </font>Vous pouvez effectuer un prépaiement à tout moment. Au lieu de payer par versements, vous remboursez <font color=\'#04AFAB\'>en une seule fois le solde restant total du prêt</font>.]]></string>
+
+    <string name="clearing_your_loan_early">Rembourser\nvotre prêt\nplus tôt</string>
+    <string name="how_much_do_i_need_to_pay">Combien dois-je payer ?</string>
+    <string name="prepayment_amount_note"><![CDATA[Le montant du prépaiement <font color=\'#04AFAB\'>n’est pas le même pour tous les clients.</font> Votre montant total peut inclure :]]></string>
+    <string name="account_status_notice"><![CDATA[Comme ce montant dépend de l’état de votre compte et de la date de paiement,<font color=\'#04AFAB\'> il ne peut pas encore être affiché dans l’application.</font>]]></string>
+    <string name="remaining_loan_balance">Solde restant du prêt</string>
+    <string name="any_unpaid_interest">Tout intérêt impayé</string>
+    <string name="any_overdue_charges_if_applicable">Tous frais de retard (le cas échéant)</string>
+    <string name="how_do_i_get_my_prepayment_amount">Comment obtenir mon montant de prépaiement ?</string>
+
+    <string name="exact_amount_info"><![CDATA[Pour connaître le <font color=\'#04AFAB\'>montant exact</font> nécessaire pour rembourser votre prêt, vous pouvez :]]></string>
+    <string name="watu_contact_info"><![CDATA[WhatsApp du service client Watu : <font color=\'#04AFAB\'>0758 399 169</font> ou appelez le 0800 750 228]]></string>
+    <string name="visit_watu_branch"><![CDATA[<font color=\'#04AFAB\'>Visitez votre agence Watu la plus proche</font>]]></string>
+    <string name="next_steps">Notre équipe confirmera le montant correct et vous guidera pour les prochaines étapes.</string>
+
+    <string name="email_customercare_watuafrica_co_tz"><![CDATA[Email : <font color=\"#04AFAB\">info_drc@watuafrica.com</font>]]></string>
+
+</resources>

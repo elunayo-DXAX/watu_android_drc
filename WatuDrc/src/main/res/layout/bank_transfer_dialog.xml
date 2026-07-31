@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@xml/rounded_list_black_light"
+        android:padding="20dp">
+
+
+        <RelativeLayout
+            android:id="@+id/topLayer"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_list_button_stroke_white"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/iconImage"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:contentDescription="null"
+                        android:src="@drawable/ic_bank_transfer" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_toEndOf="@+id/iconImage"
+                        android:text="@string/bank_transfer"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+        </RelativeLayout>
+
+        <!-- Title -->
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topLayer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/make_payments"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_large"
+            android:textStyle="bold"
+            app:firmatypeface="firmaBold" />
+
+        <!-- SubText -->
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/subText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/how_to_make_via_bank_transfer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium"
+            android:textStyle="bold"
+            app:firmatypeface="firmaBold" />
+
+        <LinearLayout
+            android:id="@+id/llOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subText1"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/copy_the_paga_account_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llOne"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/open_your_bank_app_and_paste_the_account_number"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llTwo"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/_3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/select_bank_as_paga"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llThree"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/_4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/input_your_repayment_amount_weekly_daily_or_monthly_amount"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llFour"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/proceed_to_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                android:textStyle="bold"
+                app:firmatypeface="firmaMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/botView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/llFive"
+            android:layout_marginTop="20dp"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnCancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button_stroke">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/cancel"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="5dp">
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/acceptText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/done"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

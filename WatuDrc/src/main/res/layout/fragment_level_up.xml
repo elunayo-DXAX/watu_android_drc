@@ -1,0 +1,433 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:id="@+id/headerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/btnUserIcon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/inView"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="10dp"
+                        android:background="@xml/rounded_circle_white_small">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/userInitials"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+
+                            android:text="JM"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/userHelloH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/inView"
+                        android:text="@string/helloicon"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/userHelloH"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@+id/inView"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+                </RelativeLayout>
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    style="@style/RippleStyle"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ics_notification_bell_empty" />
+
+                    </RelativeLayout>
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </RelativeLayout>
+
+            <!-- Header Row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="20dp">
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/upgradeDeviceText"
+                    android:text="@string/upgradeyourdevice"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/textsize_large"
+                    app:firmatypeface="firmaBold"/>
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_level_up_icon"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/theme_color"/>
+            </RelativeLayout>
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/yourjourneystartshere"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium"
+                app:firmatypeface="firmaBold"
+                android:layout_marginBottom="16dp"/>
+
+
+            <!-- Card 2: Own It -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/theme_dark_grey">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <!-- Accent Dot -->
+                    <ImageView
+                        android:id="@+id/card2AccentDot"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ics_dot_green"
+                        android:layout_alignParentStart="true"
+                        android:visibility="gone"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginStart="2dp"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:id="@+id/ownView"
+                        android:gravity="center_vertical"
+                        android:layout_below="@id/card2AccentDot"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="47dp"
+                                android:layout_height="46dp"
+                                android:padding="10dp"
+                                android:background="@xml/rounded_list_transparent_white_stroke"
+                                android:src="@drawable/ic_ownership"
+                                android:layout_marginBottom="8dp" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:text="@string/ownit"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:text="@string/on_the_path"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xsmall"
+                                android:id="@+id/ownText"
+                                app:firmatypeface="firmaLight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp" />
+
+                            <!-- Button: Check Progress -->
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:layout_width="127dp"
+                                android:layout_height="34dp"
+                                app:rippleColor="@color/theme_color"
+                                android:id="@+id/ownRips"
+                                android:background="@xml/rounded_list_button">
+                                <RelativeLayout
+                                    android:id="@+id/btnCheckProgress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="@string/check_progress"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+                                </RelativeLayout>
+                            </com.watudrc.app.view.MaterialRippleLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <ImageView
+                            android:layout_width="150dp"
+                            android:layout_height="200dp"
+                            android:id="@+id/ownIcon"
+                            android:src="@drawable/ic_upgrade_eligible"
+                            android:scaleType="centerCrop"
+                            android:layout_marginStart="12dp" />
+
+
+
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/ownView"
+                        android:id="@+id/seekView"
+                        android:visibility="gone"
+                        android:layout_height="60dp">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/progressText"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_height="wrap_content"
+                            android:text="100%"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@xml/rounded_list_theme_green"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_xsmall"
+                            app:firmatypeface="firmaBold" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/progressText"
+                            android:layout_marginTop="10dp"
+                            android:progress="100"
+                            android:max="100"
+                            android:progressDrawable="@drawable/seek_progress"
+                            android:thumb="@color/transparent" >
+                        </SeekBar>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3: Upgrade Your Device -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                android:backgroundTint="@color/theme_dark_grey"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/upgradeUnlockedView"
+                    android:visibility="gone"
+                    android:layout_height="match_parent">
+
+                    <!-- Accent Dot -->
+                    <ImageView
+                        android:id="@+id/card3AccentDot"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ics_dot_orange"
+                        android:visibility="gone"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="18dp"/>
+
+                    <!-- Content Layer ) -->
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_below="@id/card3AccentDot"
+                        android:layout_marginTop="10dp"
+                        android:padding="16dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="47dp"
+                                android:layout_height="46dp"
+                                android:padding="10dp"
+                                android:background="@xml/rounded_list_transparent_white_stroke"
+                                android:src="@drawable/ic_level_up_icon"
+                                android:tint="@color/theme_color"
+                                android:layout_marginBottom="8dp" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:text="@string/upgrade_your_device"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaBold"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:text="@string/go_further"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xsmall"
+                                app:firmatypeface="firmaLight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp" />
+
+                            <!-- Button: Upgrade Now -->
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:layout_width="127dp"
+                                android:layout_height="34dp"
+                                app:rippleColor="@color/theme_orange_light"
+                                android:background="@drawable/rounded_button_orange">
+                                <RelativeLayout
+                                    android:id="@+id/btnUpgradeNow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:text="@string/upgrade_now"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+                                </RelativeLayout>
+                            </com.watudrc.app.view.MaterialRippleLayout>
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="150dp"
+                            android:src="@drawable/ics_upgrade_couple"
+                            android:scaleType="fitXY"
+                            />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </RelativeLayout>
+
+                <!-- Overlay Layer -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/upgradeLockedView"
+                    android:visibility="visible"
+                    >
+
+                    <!-- Overlay Image -->
+                    <ImageView
+                        android:id="@+id/upgradeOverlayImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_upgrade_unlock" />
+
+                    <!-- Floating CTA Button -->
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:layout_alignBottom="@id/upgradeOverlayImage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="16dp"
+                        android:background="@xml/rounded_list_button"
+                        app:rippleColor="@color/theme_color">
+
+                        <RelativeLayout
+                            android:id="@+id/btnUnlock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:text="@string/unlock_the_next_level"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+                        </RelativeLayout>
+                    </com.watudrc.app.view.MaterialRippleLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
+</RelativeLayout>
+
+

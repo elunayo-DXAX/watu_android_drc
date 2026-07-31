@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@color/black"
+	android:gravity="center">
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+
+		<ImageView
+			android:id="@+id/imageView"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:scaleType="centerCrop" />
+	</RelativeLayout>
+
+	<ImageView
+        android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentStart="true"
+		android:layout_alignParentTop="true"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="10dp"
+		android:src="@drawable/ic_watu_logo_white"/>
+
+	<LinearLayout
+		android:id="@+id/indicatorView"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal" />
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:id="@+id/botView"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/indicatorView"
+		android:layout_marginTop="10dp">
+
+		<com.watudrc.app.font.FirmaTextView
+			android:id="@+id/mainMsg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="15dp"
+			android:layout_marginEnd="10dp"
+			android:layout_marginBottom="10dp"
+			android:gravity="center"
+			android:text="@string/mainmsg1"
+			android:textColor="@color/white"
+			android:textSize="@dimen/textsize_xlarge"
+			app:firmatypeface="firmaBold" />
+
+		<com.watudrc.app.font.FirmaTextView
+			android:id="@+id/subMsg"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginStart="30dp"
+			android:layout_marginTop="5dp"
+			android:layout_marginEnd="30dp"
+			android:layout_below="@id/mainMsg"
+			android:layout_marginBottom="20dp"
+			android:gravity="center"
+			android:lineSpacingExtra="10dp"
+			android:text="@string/submsg1"
+			android:textColor="@color/white"
+			android:textSize="@dimen/textsize_small"
+			app:firmatypeface="firmaMedium" />
+
+	</RelativeLayout>
+
+</RelativeLayout>

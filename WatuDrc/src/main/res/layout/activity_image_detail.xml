@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:fitsSystemWindows="true"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+     >
+            
+     
+   <RelativeLayout
+        android:layout_height="match_parent"
+       android:layout_width="match_parent">
+        
+        <RelativeLayout
+        android:layout_height="wrap_content"
+        android:id="@+id/top"
+        android:layout_width="wrap_content">
+            <include layout="@layout/toolbar_back" />
+     </RelativeLayout>
+     
+        <RelativeLayout
+        android:layout_height="match_parent"
+            android:layout_below="@+id/top"
+        android:layout_width="match_parent">
+            
+            
+      <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+           <ImageView 
+	        android:layout_width="match_parent" 
+	        android:id="@+id/resultImage"
+	        android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+	        android:layout_height="match_parent"/>
+           
+           
+            <com.watudrc.app.view.MaterialRippleLayout
+		            style="@style/RippleStyle"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:id="@+id/downloadRips"
+		            app:rippleColor="@color/transparent" >
+		            
+          <RelativeLayout 
+		            android:layout_width="match_parent"
+		            android:background="@color/black"
+		            android:alpha="0.5"
+		            android:layout_height="match_parent">
+		           
+		           
+				    <ProgressBar
+				        android:id="@+id/progressBar"
+				        style="?android:attr/progressBarStyleHorizontal"
+				        android:layout_width="70dp"
+				        android:layout_height="70dp"
+				        android:layout_centerInParent="true"
+				        android:background="@drawable/progress_bg"
+				        android:indeterminate="false"
+				        android:max="100"
+				        android:progress="0"
+				        android:progressDrawable="@drawable/progress" />
+				    
+				    
+				     <com.watudrc.app.font.FirmaTextView
+					            android:layout_width="wrap_content"
+					            android:id="@+id/downloadText"
+					            android:layout_height="wrap_content"
+					            android:text="@string/download"
+					            android:padding="10dp"
+					            android:layout_margin="5dp"
+					            android:layout_centerHorizontal="true"
+					            android:layout_below="@+id/progressBar"
+					            android:background="@xml/rounded_list_theme"
+					            android:textColor="@color/white"
+					            android:textSize="@dimen/textsize_medium" />
+				    
+				    </RelativeLayout>
+				    
+          </com.watudrc.app.view.MaterialRippleLayout>
+				        
+    </RelativeLayout>
+     
+        
+       </RelativeLayout>
+       
+        </RelativeLayout>
+   
+</RelativeLayout>

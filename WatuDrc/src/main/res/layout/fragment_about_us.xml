@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@color/black">
+
+
+
+        <com.watudrc.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutText"
+            android:text="@string/bridging"
+            android:layout_below="@+id/aboutH"
+            android:lineSpacingExtra="5dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_small"
+            app:firmatypeface="firmaMedium" />
+
+        <ImageView
+            android:id="@+id/aboutImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:layout_below="@+id/aboutText"
+            app:srcCompat="@drawable/ic_about" />
+
+        <com.watudrc.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aboutContent"
+            android:text="@string/aboutwatu"
+            android:lineSpacingExtra="5dp"
+            android:layout_below="@+id/aboutImage"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_small"
+            app:firmatypeface="firmaLight" />
+
+
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/aboutRips"
+            style="@style/RippleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/aboutContent"
+            android:layout_marginTop="10dp"
+            app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/watuwebsite"
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/textsize_small"
+                    app:firmatypeface="firmaBold" />
+
+                </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/aboutRips"
+            android:weightSum="3"
+            android:layout_height="80dp">
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:rippleColor="@color/transparent"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@xml/rounded_circle_stroke_theme"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ics_icon_facebook" />
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:rippleColor="@color/transparent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/btnTwitter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@xml/rounded_circle_stroke_theme"
+                    >
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:src="@drawable/ics_icon_twitter"
+                        android:layout_centerInParent="true"
+                        android:layout_height="18dp"/>
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnInstagram"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@xml/rounded_circle_stroke_theme"
+                    >
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:src="@drawable/ics_icon_instagram"
+                        android:layout_centerInParent="true"
+                        android:layout_height="18dp"/>
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnCall"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@xml/rounded_circle_stroke_theme"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/ics_icon_call"
+                        android:layout_centerInParent="true"
+                        android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                style="@style/RippleStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:rippleColor="@color/transparent"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/btnEmail"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@xml/rounded_circle_stroke_theme"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ics_icon_email" />
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

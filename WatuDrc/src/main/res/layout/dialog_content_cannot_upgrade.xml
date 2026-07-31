@@ -1,0 +1,129 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    android:background="@xml/rounded_list_black_light"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:padding="10dp">
+
+
+        <!-- Close Button -->
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/backRips"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            app:rippleColor="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ics_icon_cancel"
+                    app:tint="@color/white" />
+            </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+        <!-- Title -->
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/backRips"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:text="@string/how_to_be_eligible_for_upgrade"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_large"
+            android:textStyle="bold"
+            app:firmatypeface="firmaBold" />
+
+        <!-- User Image -->
+        <ImageView
+            android:id="@+id/userImage"
+            android:layout_width="168dp"
+            android:layout_height="168dp"
+            android:layout_below="@id/titleText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_asset_woman" />
+
+        <!-- Description -->
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/descText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/clear_your_loan_first"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:firmatypeface="firmaLight" />
+
+        <!-- Pay To Upgrade Button -->
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/chatWithUsRips"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/descText"
+            android:layout_margin="10dp"
+            android:background="@xml/rounded_list_button"
+            app:rippleColor="@color/theme_color">
+
+            <RelativeLayout
+                android:id="@+id/btnChatWithUs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/chatWithUs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="@string/done"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_small"
+                    app:firmatypeface="firmaBold" />
+
+                <ImageView
+                    android:id="@+id/chatIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/chatWithUs"
+                    android:gravity="center"
+                    android:src="@drawable/ics_icon_chat"
+                    android:tint="@color/white"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout> 

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/tab_heightxx"
+    android:background="@drawable/custom_tab"
+    android:gravity="center"
+    android:layout_centerVertical="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:id="@+id/theTab"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/iconBackground"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:src="@drawable/ics_home"
+                android:layout_centerHorizontal="true"
+                android:tint="@color/custom_tab_selector"
+                />
+
+        </RelativeLayout>
+
+
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/iconText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:text="Tab"
+            app:firmatypeface="firmaMedium"
+            android:layout_below="@+id/iconBackground"
+            android:textSize="@dimen/textsize_xsmall"
+            android:textColor="@color/custom_tab_selector"
+            />
+
+        <!-- Dot below the label, hidden by default -->
+        <ImageView
+            android:id="@+id/tabDot"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_below="@id/iconText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/ic_dot"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
+        
+      
+

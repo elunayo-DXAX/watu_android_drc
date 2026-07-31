@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:background="@color/black">
+
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/feedback"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_large"
+                app:firmatypeface="firmaBold"
+
+                />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/headerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/header"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/wewouldlove"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                app:firmatypeface="firmaMedium"
+
+                />
+
+
+        </RelativeLayout>
+
+
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/selectH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topView"
+            android:layout_marginTop="20dp"
+            android:lineSpacingExtra="5dp"
+            android:text="@string/selecttheitem"
+            android:textColor="@color/theme_color"
+            android:textSize="@dimen/textsize_small"
+            app:firmatypeface="firmaMedium"
+
+            />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:id="@+id/radioView"
+                android:layout_below="@+id/selectH"
+                android:orientation="horizontal"
+                android:layout_height="100dp">
+
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rdPayment"
+                        android:text="@string/payment"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/theme_color"
+                        android:checked="true"
+                        android:textSize="@dimen/textsize_xsmall"
+                        android:layout_height="wrap_content"/>
+
+
+                    <CheckBox
+                        android:id="@+id/rdAccountDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rdPayment"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:text="@string/accountdetails"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_xsmall" />
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rdOther"
+                        android:layout_below="@+id/rdAccountDetails"
+                        android:text="@string/other"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_xsmall"
+                        android:layout_height="wrap_content"/>
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rdTransactions"
+                        android:text="@string/transactions"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_xsmall"
+                        android:layout_height="wrap_content"/>
+
+
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:id="@+id/rdUserExperience"
+                        android:layout_below="@+id/rdTransactions"
+                        android:text="@string/userexperience"
+                        android:layout_marginTop="10dp"
+                        android:button="@drawable/custom_checkbox"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="@dimen/textsize_xsmall"
+                        android:layout_height="wrap_content"/>
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@xml/rounded_list_transparent_stroke"
+            android:layout_below="@+id/radioView"
+            android:id="@+id/editView"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+
+
+        <EditText
+            android:id="@+id/commentEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pleasetype"
+            android:lines="3"
+            android:textSize="@dimen/textsize_small"
+            android:textColor="@color/white"
+            android:paddingTop="20dp"
+            android:gravity="top|left"
+            android:paddingLeft="10dp"
+            android:textColorHint="@color/white" />
+
+        </RelativeLayout>
+
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/loginRips"
+            style="@style/RippleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/editView"
+            android:layout_marginTop="20dp"
+            app:rippleColor="@color/transparent">
+
+            <RelativeLayout
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@xml/rounded_list_button">
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/submit"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_medium_small"
+                    app:firmatypeface="firmaBold" />
+
+
+            </RelativeLayout>
+
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:id="@+id/backView"
+        android:background="@color/black"
+        android:layout_height="@dimen/tab_heightx" >
+
+        <com.watudrc.app.view.MaterialRippleLayout
+            android:id="@+id/backRips"
+            style="@style/RippleStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            app:rippleColor="@color/transparent" >
+
+            <RelativeLayout
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    app:srcCompat="@drawable/ics_back"
+                    android:layout_centerInParent="true"
+                    android:layout_height="20dp"/>
+
+            </RelativeLayout>
+        </com.watudrc.app.view.MaterialRippleLayout>
+
+        <com.watudrc.app.font.FirmaTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/makepayment"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_medium_large"
+            app:firmatypeface="firmaMedium" />
+
+    </RelativeLayout>
+
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:fillViewport="true"-->
+<!--        android:layout_below="@+id/backView"-->
+<!--        android:layout_height="match_parent">-->
+
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:padding="20dp"-->
+<!--        android:background="@color/black">-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/iconView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginBottom="15dp"-->
+<!--            android:background="@xml/rounded_list_transparent_white_stroke"-->
+<!--            android:padding="10dp">-->
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="30dp"-->
+<!--                android:src="@drawable/ics_icon_store"-->
+<!--                android:id="@+id/iconStore"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_height="30dp"/>-->
+
+
+
+<!--            <com.watudrc.app.font.FirmaTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_toRightOf="@+id/iconStore"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="@string/cashpayments"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_small"-->
+<!--                app:firmatypeface="firmaMedium" />-->
+
+<!--        </RelativeLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_below="@+id/iconView"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                android:layout_below="@+id/paymentH"-->
+<!--                android:layout_height="wrap_content">-->
+
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@xml/rounded_list_black_light"-->
+<!--                    android:layout_height="102dp">-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:text="@string/name"-->
+<!--                        android:textColor="@color/theme_color"-->
+<!--                        android:textSize="@dimen/textsize_medium_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:id="@+id/userName"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:text="@string/name"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:src="@drawable/ics_tiny_person"-->
+<!--                        android:baselineAlignBottom="true"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_height="15dp"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@xml/rounded_list_black_light"-->
+<!--                    android:layout_height="102dp">-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:text="@string/device"-->
+<!--                        android:textColor="@color/theme_color"-->
+<!--                        android:textSize="@dimen/textsize_medium_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:id="@+id/deviceName"-->
+<!--                        android:layout_alignParentBottom="true"-->
+<!--                        android:text="@string/name"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:src="@drawable/ics_tiny_phone"-->
+<!--                        android:baselineAlignBottom="true"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_marginTop="13dp"-->
+<!--                        android:scaleType="center"-->
+<!--                        android:layout_height="15dp"/>-->
+
+<!--                </LinearLayout>-->
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:weightSum="2"-->
+<!--                android:layout_below="@+id/paymentH"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@xml/rounded_list_black_light"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:layout_height="102dp">-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:text="@string/days"-->
+<!--                        android:textColor="@color/theme_color"-->
+<!--                        android:textSize="@dimen/textsize_medium_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:id="@+id/deviceDays"-->
+<!--                        android:text="@string/days"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_medium"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="15dp"-->
+<!--                        android:src="@drawable/ics_tiny_calendar"-->
+<!--                        android:baselineAlignBottom="true"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:layout_height="15dp"/>-->
+
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_margin="5dp"-->
+<!--                    android:background="@drawable/ics_monto_back"-->
+<!--                    android:layout_height="102dp">-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:text="@string/amountpaymenth"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_medium_small"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:id="@+id/amount"-->
+<!--                        android:text="@string/amount"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_medium_large"-->
+<!--                        app:firmatypeface="firmaMedium" />-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:src="@drawable/ics_tiny_coins"-->
+<!--                        android:baselineAlignBottom="true"-->
+<!--                        android:layout_gravity="right"-->
+<!--                        android:layout_height="wrap_content"/>-->
+
+<!--                </LinearLayout>-->
+
+
+<!--            </LinearLayout>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:id="@+id/div"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_height="2dp"/>-->
+
+<!--            <com.watudrc.app.font.FirmaTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/puedes"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_small"-->
+<!--                app:firmatypeface="firmaBold" />-->
+
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_margin="10dp"-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:padding="5dp"-->
+<!--                android:src="@drawable/ics_stores_newest"-->
+<!--                android:layout_height="400dp"/>-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:background="@color/white"-->
+<!--                android:layout_height="1dp"/>-->
+
+<!--            <com.watudrc.app.font.FirmaTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:layout_marginTop="5dp"-->
+<!--                android:layout_marginEnd="5dp"-->
+<!--                android:layout_marginBottom="5dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:text="@string/poweredby"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_xsmall"-->
+<!--                app:firmatypeface="firmaMedium" />-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:padding="5dp"-->
+<!--                android:src="@drawable/ics_icon_paynet_logo"-->
+<!--                android:layout_height="50dp"/>-->
+
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:background="@xml/rounded_list_black_light"-->
+<!--                android:padding="10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:layout_height="wrap_content">-->
+
+
+<!--                <com.watudrc.app.font.FirmaTextView-->
+<!--                    android:id="@+id/instructionsTextH"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="5dp"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:layout_marginEnd="5dp"-->
+<!--                    android:layout_marginBottom="5dp"-->
+<!--                    android:text="@string/paymentinst"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/textsize_small"-->
+<!--                    app:firmatypeface="firmaBold" />-->
+
+<!--            <com.watudrc.app.font.FirmaTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_below="@+id/instructionsTextH"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:id="@+id/instructionsText"-->
+<!--                android:text="@string/paymentdescription2"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/textsize_small"-->
+<!--                app:firmatypeface="firmaMedium" />-->
+
+<!--            </LinearLayout>-->
+
+
+
+<!--            <com.watudrc.app.view.MaterialRippleLayout-->
+<!--                android:id="@+id/doneRips"-->
+<!--                style="@style/RippleStyle"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                app:rippleColor="@color/transparent">-->
+
+<!--                <RelativeLayout-->
+<!--                    android:id="@+id/btnDone"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@xml/rounded_list_button">-->
+
+<!--                    <com.watudrc.app.font.FirmaTextView-->
+<!--                        android:id="@+id/declineText"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_centerInParent="true"-->
+<!--                        android:text="@string/generatereferencenumber"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="@dimen/textsize_xsmall"-->
+<!--                        app:firmatypeface="firmaBold" />-->
+
+
+<!--                </RelativeLayout>-->
+
+<!--            </com.watudrc.app.view.MaterialRippleLayout>-->
+
+
+
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/poweredBy"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:padding="10dp">-->
+
+
+
+<!--                <com.watudrc.app.font.FirmaTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/poweredby"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:id="@+id/powered"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/textsize_xsmall"-->
+<!--                    app:firmatypeface="firmaMedium" />-->
+
+
+<!--                <com.watudrc.app.font.FirmaTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/paynet"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_toRightOf="@+id/powered"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="@dimen/textsize_small"-->
+<!--                    app:firmatypeface="firmaBold" />-->
+
+
+<!--            </RelativeLayout>-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/poweredByOpen"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginStart="15dp"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginEnd="15dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:padding="10dp">-->
+
+
+
+<!--                <com.watudrc.app.font.FirmaTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/poweredby"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:id="@+id/poweredOpen"-->
+<!--                    android:textColor="@color/theme_grey"-->
+<!--                    android:textSize="@dimen/textsize_xsmall"-->
+<!--                    app:firmatypeface="firmaMedium" />-->
+
+
+<!--                <com.watudrc.app.font.FirmaTextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/openpay"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_marginLeft="5dp"-->
+<!--                    android:layout_toRightOf="@+id/poweredOpen"-->
+<!--                    android:textColor="@color/theme_grey_main"-->
+<!--                    android:textSize="@dimen/textsize_small"-->
+<!--                    app:firmatypeface="firmaBold" />-->
+
+
+<!--            </RelativeLayout>-->
+
+
+
+
+
+<!--        </LinearLayout>-->
+
+<!--        -->
+
+
+
+<!--    </RelativeLayout>-->
+
+<!--    </ScrollView>-->
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

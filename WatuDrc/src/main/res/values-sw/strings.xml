@@ -1,0 +1,768 @@
+<resources>
+
+    <string name="action_settings">Mipangilio</string>
+    <string name="title_activity_detail_view">Watu</string>
+
+    <string name="loggingin">Tafadhali subiri inaunganisha...</string>
+    <string name="loginerror">Samahani, lakini hatukuweza kukuunganisha. Jaribu tena au wasiliana na wahudumu wetu iwapo tatizo litaendelea.</string>
+    <string name="loginsuccesstitle">Ombi limefaulu.</string>
+    <string name="loginsuccess">Umeunganishwa kikamilifu.</string>
+
+
+    <string name="registering">Tunakusajili tafadhali subiri.</string>
+    <string name="registererror">Tunapata matatizo kukamilisha ombi lako la usajili. Ikiwa unahitaji usaidizi wa haraka, tafadhali tembelea tovuti yetu au wasiliana na wahudumu wetu.</string>
+    <string name="registersuccess">Tunakuhitaji uthibitishe anwani ya barua pepe<b>%1$s</b>ili kukamilisha usajili wako. Bofya link ya uthibitisho tuliyokutumia katika barua pepe yako.</string>
+    <string name="registersuccesstitle">Ili kuendelea, tafadhali thibitisha barua pepe yako.</string>
+
+    <string name="didntreceive">Hukupata barua pepe\?</string>
+    <string name="sendagain"><u>Tuma ombi tena</u></string>
+
+    <string name="resettingpassword">Tupe muda tunapotengeneza PIN yako.</string>
+    <string name="resetpassworderror">Samahani, lakini hatukuweza kutengeneza PIN yako. Jaribu tena au uwasiliane na wahudumu wetu ikiwa tatizo litaendelea.</string>
+    <string name="resetpasswordsuccess">PIN imebadilishwa <b>%1$s</b>. Endelea</string>
+    <string name="resetpasswordsuccesstitle">Imefaulu!</string>
+
+
+    <string name="verifyidentityerror">Samahani, lakini hatukuweza kuthibitisha taarifa zako. Jaribu tena au uwasiliane na wahudumu wetu ikiwa tatizo litaendelea.</string>
+    <string name="verifyidentitysuccess">Imethibitisha taarifa zako.</string>
+    <string name="verifyidentitysuccesstitle">Uthibitishaji Umefaulu!</string>
+
+    <string name="error">Samahani. Haikuweza kukamilisha ombi. Jaribu tena.</string>
+
+
+    <string name="requestingotp">Inaomba namba ya uthibitisho.</string>
+    <string name="requestingotperror">Samahani, lakini hatukuweza kuomba namba ya uthibitisho. Jaribu tena nau uwasiliane na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="requestingotpsuccess">Namba ya kuthibitisha imetumwa kwa mafanikio.</string>
+    <string name="requestingotpsuccesstitle">Namba ya kuthibitisha imetumwa.</string>
+
+    <string name="confirmingotp">Inathibitisha code.</string>
+    <string name="confirmingotperror">Samahani, lakini hatukuweza kuthibitisha code. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="confirmingotpsuccess">Code imethibitishwa.</string>
+    <string name="confirmingotpsuccesstitle">Uthibitishaji Umefaulu.</string>
+
+    <string name="failed">Haijafaulu!</string>
+
+    <string name="gettingmyprofile">Tupe muda tunatafuta taarifa zako.</string>
+    <string name="getmyprofileerror">Hatukuweza kupata taarifa zako. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="editingmyprofile">Tupe muda tunapo sahihisha taarifa zako.</string>
+    <string name="editmyprofileerror">Hatukuweza kusahihisha taarifa zako. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="editmyprofilessuccess">Tumefanikiwa kubadilisha taarifa zako</string>
+
+    <string name="uploadingdocument">Tupe muda tunapandisha faili.</string>
+    <string name="uploaddocumenterror">Samahani, lakini hatukuweza kupandisha faili. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="uploaddocumentsuccess">Faili zako zimewasilishwa kikamilifu na zinakaguliwa.</string>
+
+    <string name="uploadingprofilepicimage">Tupe muda tunapopandisha picha yako ya wasifu.</string>
+    <string name="uploadprofilepicerror">Samahani, hatukuweza kubadilisha picha yako ya wasifu. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="uploadprofilepicsuccess">Picha ya wasifu imebadilika.</string>
+    <string name="taptodismiss">Bonyeza kuondoa.</string>
+
+    <string name="mainmsg1">UMILIKI</string>
+    <string name="mainmsg2">KUZINGATIA MTEJA</string>
+    <string name="mainmsg3">UWEZESHAJI</string>
+    <string name="mainmsg4">WATU</string>
+
+    <string name="awesome">Swadakta!</string>
+    <string name="successful">Imefaulu!</string>
+
+    <string name="makepayment">Fanya malipo</string>
+
+    <string name="outstandingbalance">Kiasi kilichobaki</string>
+
+    <string name="submsg1">Tunaamini katika uaminifu na uwazi. Simamia mkopo wako kwa urahisi kwenye Watu App yetu.</string>
+    <string name="submsg2">Tunaamini katika uaminifu na uwazi. Simamia mkopo wako kwa urahisi kwenye Watu App yetu.</string>
+    <string name="submsg3">Tunaamini katika uaminifu na uwazi. Simamia mkopo wako kwa urahisi kwenye Watu App yetu.</string>
+    <string name="submsg4">Tunaamini katika uaminifu na uwazi. Simamia mkopo wako kwa urahisi kwenye Watu App yetu.</string>
+
+    <string name="download">Pakua</string>
+    <string name="confirmlogout">Je, unataka kutoka kwenye akaunti yako\?</string>
+    <string name="accept">Kubali</string>
+    <string name="accepted">Imekubaliwa</string>
+    <string name="demo_title_custom_tab_icons">Aikoni Maalum</string>
+    <string name="demo_tab_1">Tab 1</string>
+    <string name="demo_tab_2">Tab ya 2</string>
+    <string name="demo_tab_3">Tab ya 3</string>
+    <string name="demo_tab_4">Tab ya 4</string>
+    <string name="demo_tab_5">Tab ya 5</string>
+    <string name="phone">Simu</string>
+
+    <string name="title_warning">Onyo</string>
+    <string name="info_lose_internet">Hakuna muunganisho wa intaneti. Tafadhali washa intaneti na ujaribu tena!</string>
+    <string name="info_server_error">Hatuwezi kuunganisha kwenye mfumo. Hakiki intaneti yako na ujaribu tena!</string>
+    <string name="title_yes">Ndiyo</string>
+    <string name="title_no">Hapana</string>
+    <string name="title_confirm">Thibitisha</string>
+    <string name="quit_message">Je, ungependa kutoka kurasa hii\?</string>
+    <string name="info_empty">Tafadhali weka neno kuu!</string>
+    <string name="retry">Jaribu tena</string>
+    <string name="decline">Kataa</string>
+
+    <string name="nameh">Jina</string>
+
+    <string name="tab_1">Nyumbani</string>
+    <string name="tab_2">Miamala</string>
+    <string name="tab_3">Malipo</string>
+
+    <string name="loading">Tafadhali subiri...</string>
+    <string name="skip">Ruka</string>
+    <string name="alreadyhaveanaccount">Je, tayari una akaunti\?</string>
+    <string name="signin">Ingia</string>
+    <string name="confirm">Thibitisha</string>
+    <string name="set">Weka</string>
+    <string name="no">Hapana</string>
+    <string name="yes">Ndio</string>
+
+    <string name="changelanguage">Badilisha Lugha</string>
+    <string name="emailaddress">Barua pepe</string>
+    <string name="login">Ingia </string>
+    <string name="register">Sajili</string>
+    <string name="name">Jina</string>
+    <string name="resetpassword">Unda Upya Nenosiri</string>
+    <string name="cancel">Sitisha</string>
+    <string name="reset">Unda upya</string>
+    <string name="zero">0</string>
+    <string name="permgivepermissions">Ruhusu kuendelea</string>
+    <string name="permallow">Tafadhali ruhusu ili uweze kuendelea</string>
+    <string name="enteremail">Weka barua pepe</string>
+    <string name="enterphonenumber">Weka namba ya simu</string>
+    <string name="okay">Sawa</string>
+    <string name="turnon">Washa</string>
+
+    <string name="drawer_open">Fungua</string>
+    <string name="drawer_close">Funga</string>
+    <string name="done">Maliza</string>
+    <string name="noitemsview">Hakuna chochote</string>
+
+    <string name="item">Zilizoshirikishwa</string>
+
+    <string name="phonenumber">Namba ya simu</string>
+    <string name="continueh">Endelea</string>
+    <string name="share">Share</string>
+
+    <string name="success">Imefanikiwa</string>
+
+    <string name="logintoyouraccount">Ingia kwenye akaunti yako</string>
+    <string name="entervalidphonenumber">Weka namba sahihi ya simu</string>
+    <string name="enterthecodereceived">Ingiza code uliopokea kupitia SMS</string>
+
+    <string name="newuser">Mtumiaji mpya?</string>
+
+    <string name="welcomeback">Karibu tena</string>
+    <string name="selectcountry">Chagua Nchi</string>
+    <string name="selectyourcountrytocontinue">Chagua nchi yako ili kuendelea</string>
+    <string name="openemailapp">Fungua Programu ya Barua pepe</string>
+    <string name="enterregisterphone"> Tutatuma namba ya siri ya wakati mmoja (OTP), kwenye namba hii ili kuthibitisha utambulisho wako.</string>
+
+    <string name="idnumber">Weka namba yako ya kitambulisho</string>
+    <string name="day">Siku</string>
+    <string name="paymentmethod">Njia ya malipo</string>
+    <string name="mpesah">M-Pesa</string>
+
+    <string name="other">Nyingine</string>
+
+    <string name="hello">Habari</string>
+
+
+    <string name="submit">Wasilisha</string>
+
+    <string name="step1">Hatua ya 1</string>
+    <string name="step2">Hatua ya 2</string>
+
+    <string name="step3U">Hatua ya 3</string>
+
+
+    <string name="transactions">Miamla</string>
+
+    <string name="getloanserror">Hatukuweza kupata akaunti za mkopo. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+
+    <string name="gettingpayments">Tunachakata taarifa.</string>
+    <string name="getpaymentserror">Hatukuweza kupata taarifa ya malipo. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+
+
+    <string name="gettingloandetails">Inaleta maelezo ya mkopo.</string>
+    <string name="getloandetailsserror">Hatukuweza kupata maelezo ya mkopo. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+
+
+    <string name="initiatingpayment">Malipo yameanzishwa.</string>
+    <string name="initiatepaymenterror">Hatukuweza kuanzisha malipo. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+
+    <string name="confirmingpayment">Tunasubiri kuthibitisha malipo.</string>
+    <string name="confirmpaymenterror">Tumeshindwa kuthibitisha malipo. Jaribu tena au wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+
+
+    <string name="getupcomingpaymentserror">Haikuweza kuleta malipo yajayo. Jaribu tena na wasiliana na huduma kwa wateja ikiwa tatizo litaendelea.</string>
+    <string name="monthlypayment">Malipo ya mwezi</string>
+
+    <string name="paymentsuccesstitle">Malipo yamefaulu</string>
+    <string name="paymentsuccessmessage">Malipo yako yameanzishwa.</string>
+
+    <string name="logout">Ondoka</string>
+
+
+    <string name="paynow">Lipa sasa</string>
+    <string name="enteramount">Weka Kiasi</string>
+
+    <string name="chatwithus">Chati nasi</string>
+    <string name="helpcenter">Kituo cha usaidizi</string>
+
+    <string name="welcometowatu">Watu...Kuwezesha mustakabali wa usafirishaji barani Afrika</string>
+    <string name="areyouanexisting">Je, wewe ni wakala wa mauzo uliopo?</string>
+    <string name="idnumberh">Namba kitambulisho</string>
+
+    <string name="date">Tarehe</string>
+    <string name="notifications">Taarifa</string>
+    <string name="aboutus">Kuhusu Watu</string>
+    <string name="settings">Mipangilio</string>
+    <string name="back">Rudi nyuma</string>
+    <string name="enter">Endelea</string>
+    <string name="logindot">Ingia!</string>
+    <string name="signupdot">Jisajili!</string>
+    <string name="enteronetimecode">Weka Namba ya siri iliyotumwa kwenye hii namba</string>
+    <string name="enterpin">Seti PIN</string>
+    <string name="confirmpin">Thibitisha PIN</string>
+    <string name="forgotpin">Umesahau PIN?</string>
+    <string name="watusimu">Watu Simu</string>
+    <string name="watuboda">Watu Boda</string>
+    <string name="amountpaid">Kiasi Kilicholipwa</string>
+    <string name="pay">Lipa</string>
+    <string name="recenttransactions">Miamala</string>
+    <string name="payment">Malipo</string>
+    <string name="monthly">Kila mwezi</string>
+    <string name="daily">Kila siku</string>
+    <string name="choosepaymentplan">Chagua Mpango wa Malipo</string>
+    <string name="paideveryweek">Kulipwa kila wiki</string>
+    <string name="weekly">Kila wiki</string>
+    <string name="ownership">Karibu Watu</string>
+    <string name="termsofservice">Masharti ya Huduma</string>
+    <string name="enterwatudetails">Weka namba yako ya simu iliyosajiliwa na Watu ili Kujisajili.</string>
+    <string name="declined">Imekataliwa</string>
+    <string name="fetchfailed">Pole. Haikuweza kuleta maelezo.</string>
+    <string name="asof">Tarehe</string>
+    <string name="loanfrom">Namba: %1$s</string>
+    <string name="at">Saa: %1$s</string>
+    <string name="on">Tarehe: %1$s</string>
+    <string name="acceptterms">Kubali sheria na masharti ili kuendelea</string>
+    <string name="sorry">Haijafaulu!</string>
+    <string name="difficulties">Tunapata matatizo katika kuchakata ombi lako la kuingia. Ikiwa unahitaji usaidizi wa haraka, tafadhali tembelea tovuti yetu au wasiliana na wahuduma wetu.</string>
+
+    <string name="emergencies">(Dharura)</string>
+    <string name="watugari">Watu Gari</string>
+    <string name="verify">Thibitisha</string>
+    <string name="loantype">Aina ya mkopo</string>
+    <string name="loanstatus">Hali ya Mkopo</string>
+    <string name="loantypeh">Aina ya mkopo:</string>
+    <string name="issuedateh">Siku ya kutolewa:</string>
+    <string name="maturitydateh">Tarehe ya kukomaa:</string>
+    <string name="loanstatush">Hali ya mkopo:</string>
+    <string name="overdue">Imepitwa na wakati</string>
+    <string name="totalpayment">Jumla ya malipo</string>
+    <string name="amountoverdue">Kiasi kimechelewa</string>
+    <string name="dailypayment">Malipo ya kila siku</string>
+    <string name="installmentperiod">Kipindi cha ufungaji</string>
+    <string name="week">Wiki</string>
+    <string name="deviceactivetill">Kifaa kinatumika mpaka</string>
+    <string name="mynumber">Namba yangu</string>
+    <string name="paymentconfirmation">Uthibitisho wa malipo</string>
+    <string name="from">Kutoka</string>
+    <string name="type">Andika</string>
+    <string name="processingpayment">Inashughulikia malipo</string>
+    <string name="wrongcode">Namba ya kuthibitisha uliyoweka si sahihi. Jaribu tena hapa chini.</string>
+    <string name="resend">Tuma tena</string>
+    <string name="privacynotice">Ilani ya faragha ya Watu</string>
+    <string name="anothernumber">Namba nyingine</string>
+    <string name="paideveryday">Kulipa kila siku</string>
+    <string name="paideverymonth">Kulipa kila mwezi</string>
+    <string name="bridging">Kuziba pengo kati ya watu na upatikanaji wa ufadhili unaobadilika.</string>
+    <string name="aboutwatu">Watu ni Asset FinTech inayobadilisha uhamaji wa soko kubwa barani Afrika kupitia ujumuishaji wa kifedha na ufikiaji.\n\nKatika umri wa wastani wa miaka 18, Afrika ndilo bara changa zaidi duniani na linalokua kwa kasi. Kwa wastani wa ukuaji wa watu bilioni 1.2 katika miaka kumi ijayo, Watu wamejitolea kubadilisha uhamaji wa mijini na hali ya ukopeshaji. Tunaendelea kusaidia kuunda mfumo mzuri na bora kwa kuwapa watu fursa za kujenga na kuboresha maisha yao.</string>
+    <string name="installmentamount">Kiasi cha Malipo</string>
+    <string name="wrongpin">PIN uliyoweka si sahihi</string>
+    <string name="loanassetupdated">Kipengee cha mkopo %1$s kimesasishwa.</string>
+    <string name="hellowatu">Hello Watu</string>
+    <string name="supportinquiry">Kwa Msaada Zaidi</string>
+    <string name="returning_nyour_ndevice">Kurejesha\nSimu\nYako</string>
+    <string name="if_the_phone_nis_recovered">Ikiwa Simu\nImepatikana</string>
+
+
+
+
+    <string name="payall30days">Lipia Mwezi</string>
+    <string name="days">Siku</string>
+    <string name="slidetoselect">Telezesha kidole ili uchague siku za kulipa</string>
+
+
+    <string name="sorryunder">Samahani Mfumo unafanyiwa marekebisho!</string>
+    <string name="checklater">Tafadhali angalia baadae</string>
+    <string name="selectasset">Chagua aina ya mkopo wa kulipia</string>
+    <string name="app_version">Toleo la Watu App %1$s</string>
+    <string name="nextpaymentdate">Tarehe Ya Malipo Yajayo</string>
+    <string name="confirmpaymentfailed">Hatuwezi kuthibitisha malipo. Hali ni %1$s</string>
+    <string name="languagelugha">Select Language | Chagua Lugha</string>
+    <string name="language">Lugha</string>
+    <string name="kiswahili">Kiswahili</string>
+    <string name="english">Kiingereza</string>
+    <string name="languagechanged">Lugha imebadilishwa kuwa</string>
+
+
+    <string name="loanbalance">Jumla ya salio</string>
+    <string name="lastpayment">Malipo ya mwisho</string>
+    <string name="weeklypayment">Malipo ya kila wiki</string>
+    <string name="amountduetounlock">Kiasi cha Kulipa</string>
+    <string name="registrationneeded">Unafaa kujisajili kwanza</string>
+
+
+    <string name="feedback">Maoni</string>
+    <string name="wewouldlove">Tungependa kusikia kutoka kwako.</string>
+    <string name="selecttheitem">Chagua kipengele: </string>
+    <string name="accountdetails">Maelezo ya akaunti</string>
+    <string name="userexperience">Uzoefu wa utumiaji</string>
+    <string name="pleasetype">Tafadhali andika hapa maoni yako ya ziada...</string>
+
+
+    <string name="submittingfeedback">Kuwasilisha maoni...</string>
+    <string name="submitfeedbackserror">Haikuweza kuwasilisha maoni. Jaribu tena au wasiliana na msaidizi wetu ikiwa tatizo litaendelea.</string>
+    <string name="thankyouforyourfeedback">Asante kwa maoni yako.</string>
+    <string name="feedbacksubmitted">Maoni Yamewasilishwa</string>
+    <string name="temporaryunlock">Kufungua kwa muda</string>
+
+
+    <string name="requestingunlock">Inaomba kufungua kwa muda.</string>
+    <string name="requestingunlockerror">Samahani, lakini hatukuweza kufungua kwa muda. Jaribu tena na uwasiliane na msaidizi wetu ikiwa tatizo litaendelea.</string>
+    <string name="requestingunlocksuccess"> <Data><![CDATA[<font color=\'#ffffff\'>Simu yako imefunguliwa kwa muda wa dakika &nbsp;</font><font color=\'#04AFAB\'>%1$s </font>]]></Data></string>
+    <string name="requestingunlocksuccessmessage">Ili kuendelea kutumia simu yako, tafadhali bonyeza kitufe kilicho hapa chini</string>
+    <string name="unlocklimitreached">Samahani umezidisha kikomo cha kufungua kwa muda. Tafadhali jaribu tena baadae</string>
+    <string name="deviceacquired">Kifaa kilipokelewa</string>
+    <string name="kindlyratepayment">Tafadhali tathmini kuridhika kwako kwa ujumla na mchakato wako wa malipo</string>
+    <string name="seeaccountstatus">Angalia hali ya akaunti yako.</string>
+    <string name="thankyouforfeedback">Asante kwa malipo.</string>
+
+
+
+    <string name="accountstatus">Hali ya akaunti</string>
+    <string name="devicelockedon">Simu imefungwa tarehe</string>
+    <string name="progressstatus">Hali ya akaunti</string>
+    <string name="calluson">Tupigie bure kupitia</string>
+    <string name="maxunlockattempts">Umefika kikomo cha maombi ya kufungua kwa muda. Jaribu tena baada ya masaa 24</string>
+    <string name="maxpayforanother">Huwezi endelea kujaribu kulipa.\Umefikisha mwisho wa kujaribu\kulipa na namba nyingine. Jaribu tena kesho.</string>
+    <string name="dailyamount">Malipo ya siku</string>
+    <string name="temporarilyunlockedfor">Imefunguliwa kwa muda</string>
+    <string name="minutesremaining"> zimesalia</string>
+    <string name="alreadyunlocked">Simu yako inaonekana kuwa imefunguliwa kwa muda tayari</string>
+    <string name="devicealreadyunlocked">Simu yako imefunguliwa kwa muda.</string>
+
+
+    <string name="paybill">650880</string>
+    <string name="makepayments">Fanya malipo</string>
+    <string name="howtopayviampesa">Jinsi ya kulipa na M-pesa:</string>
+    <string name="paympesa"><Data><![CDATA[1. Bonyeza <font color=\'#9CC652\'> Lipa </font> hapo chini.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Chagua 4 Lipa kwa M-Pesa.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Chagua 4 Weka namba ya kampuni <font color=\'#9CC652\'> %2$s</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Weka namba ya kumbukumbu ya malipo <font color=\'#9CC652\'> (%3$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Ingiza kiasi cha pesa cha rejesho lako la kila wiki.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Ingiza namba yako ya siri.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7. Thibitisha malipo kwa kubonyeza 1. jina la kampuni <font color=\'#9CC652\'> %4$s</font> .<br /> <br /> ]]></Data></string>
+
+
+
+
+    <string name="howtopayviaairtel">Jinsi ya kulipa na Airtel Money:</string>
+    <string name="payairtel"><Data><![CDATA[1. Bonyeza <font color=\'#EC665C\'> Lipa </font> hapo chini.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Chagua 5 Lipa Bili.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Chagua 2 Weka namba ya kampuni.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Chagua 7 Chagua kampuni,<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Chagua # kuendelea na orodha.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Ingiza namba 20 (Kuchagua Watu Credit kutoka kwenye orodha).<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7. Ingiza kiasi cha pesa cha rejesho lako la wiki.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[8. Weka namba ya kumbukumbu ya malipo (Namba ya chombo kwa mkopo wa bodaboda na tuk tuk. Namba ya simu kwa mkopo wa simu).<br /> <br /> ]]></Data>
+                            <Data><![CDATA[9. Chagua 1 kuthibitisha malipo.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[10. Kisha weka namba yako ya siri.<br /> <br /> ]]></Data></string>
+
+
+
+    <string name="howtopayviatigo">Jinsi ya kulipa na Mixx By Yas:</string>
+    <string name="paytigo"><Data><![CDATA[1. Bonyeza <font color=\'#04AFAB\'> Lipa </font> hapo chini.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[2. Chagua 4 Lipa Bili.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[3. Chagua 4 Weka Namba Ya kampuni.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[4. Weka namba ya biashara <font color=\'#04AFAB\'> (%2$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[5. Ingiza kiasi cha pesa cha rejesho lako la kila wiki.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[6. Weka namba ya kumbukumbu ya malipo <font color=\'#04AFAB\'> (%3$s)</font>.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[7.Ingiza namba yako ya siri.<br /> <br /> ]]></Data>
+                            <Data><![CDATA[8.Thibitisha jina la kampuni <font color=\'#04AFAB\'> %4$s</font>.<br /> <br /> ]]></Data></string>
+
+
+    <string name="paybillnumber">Namba ya bili</string>
+    <string name="yourphonenumber">Namba ya simu</string>
+
+
+    <string name="sorryundermaintenance">Samahani tuko chini ya matengenezo!</string>
+    <string name="loginagainlater">Tafadhali ingia baadaye</string>
+    <string name="currentlyundermaintenance">Kwa sasa tuko chini ya matengenezo. Tafadhali angalia tena baadaye</string>
+
+    <string name="activebranchh">Tawi la uanzishaji:</string>
+    <string name="havingaproblemsignup">Una matatizo ya kujisajili?</string>
+
+    <string name="pleaseverifyagain">Tafadhali dhibitisha akaunti ili unedelee.</string>
+    <string name="amountlessthandaily">Kiasi ni chini ya kiasi cha kila siku</string>
+
+
+    <string name="paywithphonenumber">Lipa kwa Namba ya Simu</string>
+
+
+    <string name="congrats">Hongera</string>
+    <string name="wearehappy">"Tunafurahi kukujulisha kwamba malipo yako ya mkopo yamekamilika."</string>
+    <string name="gobackhome">Rudi nyumbani</string>
+
+
+    <string name="knoxmessage">Unapata shida kuingia kwenye simu yako iliyofadhiliwa na Watu? Bofya hapa kupata Namba yako ya Siri ya Muda.</string>
+    <string name="havingissuesmakingpayment">Unapata shida kufanya malipo?</string>
+    <string name="havingissuesunlockingdevice">Unapata shida kufungua simu kwa muda?</string>
+    <string name="resendknox">Namba ya siri imetumwa kwa kifaa chako. Unaweza kuomba nyingine baada ya sekunde %1$s</string>
+    <string name="resendsms">Msimbo umetumwa kwa nambari yako. Unaweza kuomba mpya baada ya %1$s sekunde</string>
+
+
+    <string name="securenotification">Taarifa ya Usalama</string>
+    <string name="havingtroublereceiving">Unapata shida kupokea nambari yako ya siri ya muda kupitia ujumbe wa kawaida?</string>
+    <string name="knoxinstruction">1. Hakikisha unaomba kupitia Kifaa kilichofadhiliwa na Watu.\n2. Hakikisha umeunganishwa kwenye intaneti, aidha kutumia Data ya Simu au Wifi.\n3. Kumbuka kukariri au kuandika nambari ya siri iliyotumwa kutoka kwenye taarifa ya usalama.</string>
+    <string name="smsinstruction">1. Hakikisha unaomba kutoka kwa Nambari iliyosajiliwa na Watu.\n2. Msimbo wa Mara Moja utatumwa kwenye kisanduku chako cha SMS.</string>
+
+    <string name="getyouronetimepasscode">Pata namba yako ya siri ya muda</string>
+    <string name="unabletosendknox">Hatuwezi kutoa namba ya siri kwa usalama, tafadhali jaribu tena.</string>
+
+
+    <string name="addinguserction">Inaongeza historia.</string>
+    <string name="adduseractionerror">Haiwei ongeza historia. Jaribu tena na uwasiliane na usaidizi ikiwa tatizo litaendelea.</string>
+    <string name="adduseractionsuccess">Imeongeza historia.</string>
+
+    <string name="pleaseturnonnetwork">Tafadhali Washa Mtandao Wako</string>
+    <string name="havingtroublenetwork">Washa mipangilio ya mtandao wako ili kuendelea kutumia programu.</string>
+
+    <string name="howtosignup">Jinsi ya kujiandikisha</string>
+    <string name="howtomakepayments">Jinsi ya kufanya malipo</string>
+    <string name="loancompletetext">Asante kwa kuwa mteja wa thamani wa Watu. Tunatumai kuwa %1$s imekuwa kile ulichotaka—na zaidi!</string>
+
+    <string name="markallasread">Weka Zote Kama Zimesomwa</string>
+    <string name="filter_all">Zote</string>
+    <string name="filternotifications">Chagua Taarifa</string>
+    <string name="filter_unread">Zisizosomwa</string>
+    <string name="filter_general_notifications">Taarifa za Jumla</string>
+    <string name="filter_payment_notifications">Taarifa za Malipo</string>
+    <string name="filter_reminders">Ukumbusho</string>
+    <string name="viewtransactionsh">View Transactions</string>
+
+    <string name="instructionsforotherpayment">Maelekezo kwa Chaguo Nyingine za Malipo</string>
+    <string name="general">Jumla</string>
+
+
+    <string name="updatingtoken">Inasasisha tokeni ya mtumiaji.</string>
+    <string name="updatetokensuccess">Imefanikiwa kusasisha tokeni ya mtumiaji.</string>
+    <string name="updatetokenerror">Haikuweza kuongeza sasisho la tokeni ya mtumiaji. Jaribu tena na wasiliana na msaada ikiwa shida itaendelea.</string>
+
+    <string name="turnedon">Imewezeshwa</string>
+    <string name="reminder">Kumbusho</string>
+
+
+    <string name="pendingpayment">Malipo Yanayosubiri</string>
+    <string name="confirmpending">Hatukuweza kuthibitisha malipo. Hali\nni INAYOSUBIRI</string>
+    <string name="paymentfailed">Malipo yako hayakufaulu.</string>
+    <string name="confirmyourpayment">Thibitisha Malipo Yako</string>
+    <string name="confirmpayment">Thibitisha Malipo</string>
+
+    <string name="paymentcompletedmessage">Malipo yako yamekamilishwa vizuri.</string>
+    <string name="enteramountgreaterthanfive">Weka kiasi kilicho zaidi ya 500</string>
+
+
+
+    <string name="smspasscode">Msimbo wa Kupita wa SMS</string>
+    <string name="getcodeviaknox">Pata Msimbo Kupitia Knox</string>
+    <string name="getcodeviasms">Pata Msimbo Kupitia SMS</string>
+
+
+    <string name="termsandconditions">Vigezo na Masharti</string>
+    <string name="acceptthe">Kubali</string>
+    <string name="foryoutogetstarted">ili uweze kuendelea.</string>
+    <string name="gettingstarted">Mwongozo wa kuanza</string>
+    <string name="enter5digitcode">Ingiza Nambari ya Tarakimu 5</string>
+    <string name="confirmyourpin">Thibitisha PIN yako</string>
+    <string name="enterthesamepin">Ingiza PIN ile ile.</string>
+    <string name="pindoesnotmatch">PIN hazifanani</string>
+    <string name="enterpindigits">Tafadhali ingiza tarakimu zote 4 katika sehemu zote mbili</string>
+    <string name="hiname">Hujambo, %1$s!</string>
+    <string name="helptip">Kidokezo cha Msaada</string>
+    <string name="tiphelpcontent">&#8226; Je, unaingia kutoka kwa Nambari yako iliyosajiliwa na Watu?\n\n&#8226; Hakikisha una data hai kwenye kifaa chako ili kuingia</string>
+
+    ```xml
+    <string name="hours">Masaa</string>
+    <string name="minutes">Dakika</string>
+    <string name="seconds">Sekunde</string>
+    <string name="refresh">Sahihisha</string>
+    <string name="helloicon">Habari ✋🏾</string>
+    <string name="seeaccountdetails">Tazama maelezo ya akaunti yako</string>
+    <string name="yourdevicewillbeactivefor">Simu yako itatumika kwa</string>
+    <string name="downloadstatement">Pakua Taarifa</string>
+    <string name="amounttounlock">Kiasi cha Kufungua</string>
+    <string name="paymentprogress">Maendeleo ya Malipo</string>
+    <string name="yourbalanceis">Salio lako ni</string>
+    <string name="jijenge">Jijenge!</string>
+    <string name="yourjourneystartshere">Safari yako inaanza hapa...</string>
+    <string name="ownit">Miliki!</string>
+    <string name="tracktheprogressofyourjourney">Fuata maendeleo ya safari yako na fafanua salio lako ili kumiliki kifaa chako</string>
+    <string name="checkprogress">Angalia Maendeleo</string>
+    <string name="yourdevicewaslockedon">Simu yako ilifungwa tarehe</string>
+    <string name="generalsettings">Mipangilio ya Jumla</string>
+    <string name="downloads">Vipakuzi</string>
+    <string name="levelup">Panda Ngazi</string>
+    <string name="more">Zaidi</string>
+    <string name="faqsupport">Msaada wa Maswali</string>
+    <string name="resourcecenter">Kituo cha Usaidizi</string>
+    <string name="documents">Hati</string>
+    <string name="confirmyourfingeprint">Thibitisha Alama Yako ya Vidole</string>
+    <string name="enabletouchid">Gusa Kitambulisho</string>
+    <string name="placeyourfingerprint">Gusa \"Weka Alama ya Vidole\" hapo chini na weka \nkidole chako kwenye sensa ili uthibitishe</string>
+    <string name="setfingerprint">Weka Alama ya Vidole</string>
+    <string name="fingeprintnotsupported">Uthibitishaji wa kibaometri hauoansiwi kwenye kifaa hiki</string>
+    <string name="fingeprintnotsetup">Hakuna alama ya kidole imejisajili. Tafadhali weka mfumo wa kibaometri.</string>
+    <string name="loginwithfingerprint">Ingia kwa Alama ya Vidole</string>
+    <string name="touchfingerprinttoauthenticate">Thibitisha ili upate kufikia programu</string>
+    <string name="loansuccessful">Mkopo wako umepongezwa kwa mafanikio!</string>
+    <string name="totalamount">Jumla ya Kiasi</string>
+    <string name="support">Msaada</string>
+    <string name="getyourdocumentshere">Pata hati zako hapa.</string>
+    <string name="loanagreementform">Fomu ya Makubaliano ya Mkopo</string>
+    <string name="accountstatements">Taarifa za Akaunti</string>
+
+    <string name="downloadingloanagreement">Inapakua Makubaliano ya Mkopo...</string>
+    <string name="unabletodownloadloanagreement">Mkataba wa Mkopo Haujapatikana</string>
+
+    <string name="downloadloanagreementerror">Hatukuweza kupakia mkataba wako wa mkopo kwa sasa.\nUsijali, timu yetu iko tayari kusaidia. Zungumza nasi kupitia WhatsApp kwa usaidizi.</string>
+
+    <string name="biometricauthentication">Uthibitishaji wa Kibaometri</string>
+    <string name="commonappissues">Matatizo ya App</string>
+    <string name="phoneunlockhelp">Msaada wa Kufungua Simu</string>
+    <string name="troubleshootunlockingyourphone">Tatua matatizo ya kufungua simu yako</string>
+    <string name="payments">Malipo</string>
+    <string name="havingissueswith_loggingin">Una matatizo kuingia?</string>
+
+    <string name="help_center">Kituo cha Msaada</string>
+    <string name="phone_unlock">Kufungua Simu</string>
+    <string name="device_stolen">Simu Imeibiwa</string>
+    <string name="replacement_process">Kupata Simu Mbadala</string>
+    <string name="returns">Kurudisha Simu</string>
+    <string name="service_center">Kutengeneza\nSimu</string>
+    <string name="check_progress">Angalia Maendeleo</string>
+    <string name="upgrade_your_device">Boresha kifaa chako</string>
+    <string name="recovery_nprocess">Simu\nIkipatikana</string>
+
+    <!-- Phone Unlock Help Strings -->
+    <string name="quick_simple_step_by_step">Haraka,\nrahisi,\nhatua kwa hatua</string>
+    <string name="step_1">Hatua 1.</string>
+    <string name="step_2">Hatua 2.</string>
+    <string name="step_3">Hatua 3.</string>
+    <string name="is_done_on_the_phone_condition">inafanywa kulingana na hali ya simu.</string>
+    <string name="step_4">Hatua 4</string>
+    <string name="refund_takes_about">Rejesho huchukua takriban</string>
+    <string name="_3_days">3 siku.</string>
+    <string name="loan_must">Mkopo lazima</string>
+    <string name="not">SIO</string>
+    <string name="be_matured">iwe imekamilika</string>
+    <string name="screen_damage_or_missing_accessories">Uharibifu wa skrini au vifaa vinavyokosekana =</string>
+    <string name="no_refund_or_deductions">hakuna rejesho au makato</string>
+    <string name="chat_with_us">Ongea nasi</string>
+    <string name="similar_issues">Maswala Yanayofanana</string>
+    <string name="replacement_nprocess">Kupata\nSimu Mbadala</string>
+    <string name="service_ncenter">Kutengeneza\nSimu</string>
+    <string name="my_asset">Kifaa changu</string>
+    <string name="check_your_current_loan_status_and_stay_on_track">Angalia hali ya mkopo wako wa sasa na baki kwenye mstari.</string>
+    <string name="unlock_after_payment">Fungua Baada ya Malipo</string>
+    <string name="make_your_payment">Fanya malipo yako.</string>
+    <string name="if_still_locked_make_sure_you_re_connected_to_the_internet">Ikiwa bado imefungwa, hakikisha umeunganishwa na mtandao.</string>
+    <string name="tap_support_then_refresh">Gusa Msaada→ kisha Sasisha</string>
+    <string name="phone_will_unlock">Simu ita Funguka</string>
+
+    <string name="unlock_step1_sentence"><![CDATA[Bonyeza <font color=\'#04AFAB\'><b>Kufungua kwa Muda</b></font> kwenye app]]></string>
+    <string name="unlock_step2_sentence"><![CDATA[Simu yako itafunguka kwa <font color=\'#04AFAB\'><b>dakika 5</b></font> ili kukuezesha kukamilisha malipo.]]></string>
+
+    <string name="device_stolen_step1"><![CDATA[<font color=\"#04afab\">Toa Ripoti kupitia WhatsApp:</font> 0758 399 169 au namba ya huduma kwa wateja 08142967729\n]]></string>
+    <string name="device_stolen_step2"><![CDATA[Nenda <font color=\'#04AFAB\'><b>kituo cha polisi</b></font>, toa taarifa ya wizi, na upate loss ripoti yenye IMEI ya simu iliyoibiwa.]]></string>
+    <string name="device_stolen_step3"><![CDATA[Nenda <font color=\'#04AFAB\'><b>kituo cha polisi</b></font> na ripoti wizi.]]></string>
+    <string name="device_stolen_step4"><![CDATA[Pata <font color=\'#04AFAB\'><b>muhtasari wa polisi</b></font>.]]></string>
+    <string name="device_stolen_step5"><![CDATA[Tuma muhtasari kupitia <font color=\'#04AFAB\'><b>WhatsApp: 0757555111</b></font>, <font color=\'#04AFAB\'><b>Barua pepe: customercare@watuafrica.co.ke</b></font> au tembelea <font color=\'#04AFAB\'><b>ofisi ya Watu</b></font> karibu nawe.]]></string>
+    <string name="device_stolen_step6"><![CDATA[Subiri angalau <font color=\'#04AFAB\'><b>wiki 2</b></font> kuona kama kifaa kitarudishwa na polisi au upande wa tatu.]]></string>
+    <string name="device_stolen_step8"><![CDATA[Kama ulitembelea: <font color=\'#04AFAB\'><b>Rudi ofisini</b></font> kwa hatua zinazofuata.]]></string>
+    <string name="step_5">Hatua 5</string>
+    <string name="step_6">Hatua 6</string>
+    <string name="step_7">Hatua 7</string>
+    <string name="step_8">Hatua 8</string>
+    <string name="if_you_visited_return_to_the_office_for_next_steps">Kama ulitembelea: Rudi ofisini kwa hatua zinazofuata.</string>
+    <string name="stolen_device">Simu Imeibiwa</string>
+
+    <string name="replacement_step1"><![CDATA[<font color=\'#04AFAB\'><b>Lipa angalau malipo 10 ya kila wiki</b></font>, lipa malipo madogo ya awali kwa kifaa cha kubadilisha, salio la mkopo lazima liwe juu ya <font color=\'#04AFAB\'><b>3,000</b></font>, na <font color=\'#04AFAB\'><b>hakuna ubadilishaji kwa mikopo iliyo kamilika</b></font>.]]></string>
+    <string name="replacement_step2"><![CDATA[<font color=\'#04AFAB\'><b>Tembelea ofisi ya Watu iliyo karibu</b></font>. Tiketi ya ubadilishaji itaundwa. Ikiwa itaidhinishwa, utapokea <font color=\'#04AFAB\'><b>simu mbadala</b></font>.]]></string>
+    <string name="device_nstolen">Simu\nImeibiwa</string>
+    <string name="phone_nunlock">Kufungua\nSimu</string>
+    <string name="ifyourphoneisstolen">Kama\nSimu Yako\nImeibiwa</string>
+    <string name="toqualifyyourdevice">Ili kustahiki\n simu ya\nkubadilishaji, unahitaji</string>
+    <string name="assessment">Tathmini</string>
+    <string name="borrower_nrecovery">Mkopaji\nUrejeshaji</string>
+
+    <string name="returns_step1"><![CDATA[Tembelea <font color=\'#04AFAB\'><b>ofisi ya Watu</b></font> karibu nawe.]]></string>
+    <string name="returns_step2"><![CDATA[Tiketi ya <font color=\'#04AFAB\'><b>Kurudisha</b></font> itaundwa katika programu.]]></string>
+    <string name="returns_step3"><![CDATA[Tathmini <font color=\'#04AFAB\'><b>ya hali ya simu</b></font> inafanywa.]]></string>
+    <string name="returns_step4"><![CDATA[Unaweza kupata <font color=\'#04AFAB\'><b>rejesho la sehemu</b></font> ya malipo yako ya awali.]]></string>
+
+    <string name="recovery_step1"><![CDATA[<font color=\'#04AFAB\'><b>WhatsApp: 0757555111</b></font> au tembelea <font color=\'#04AFAB\'><b>ofisi ya Watu</b></font> karibu nawe.]]></string>
+    <string name="recovery_step2"><![CDATA[<font color=\'#04AFAB\'><b>Tutarejesha ufikiaji wako kwa simu</b></font>.]]></string>
+    <string name="recovery_step3"><![CDATA[Tathmini <font color=\'#04AFAB\'><b>ya hali ya simu</b></font> inafanywa.]]></string>
+    <string name="recovery_step4"><![CDATA[Unaweza kupata <font color=\'#04AFAB\'><b>rejesho la sehemu</b></font> ya malipo yako ya awali tu.]]></string>
+
+    <string name="service_center_step1"><![CDATA[<b>Hatua 1.</b> Tembelea Kituo cha Huduma Kinachotambulishwa cha Samsung (ASC), utapewa nakala ya <font color=\'#00C6B7\'><b>Kadi ya Kazi ya Samsung</b></font> baada kifaa chako kuwekwa akiba.]]></string>
+    <string name="service_center_step2"><![CDATA[<b>Hatua 2.</b> Fuata mara baada ya <font color=\'#00C6B7\'><b>wiki 2</b></font>.]]></string>
+    <string name="service_center_step3"><![CDATA[<b>Hatua 3.</b> Kusanya simu yako ndani ya siku 30 mara utapofahamishwa kuwa iko tayari. Kukosa kufanya hivyo, kifaa kitatambuliwa kuwa kimekabidhiwa kwa Watu.]]></string>
+
+    <string name="service_center_note_bullet1"><![CDATA[Unaweza kustahili kulipa <font color=\'#00C6B7\'><b>asilimia 30% tu</b></font> (ikiwa unastahili)]]></string>
+    <string name="service_center_note_bullet2"><![CDATA[<font color=\'#00C6B7\'>Malipo ya ziada</font> kwa 30% yatahitajika kulingana na kiasi cha deni]]></string>
+    <string name="service_center_note_bullet3">Watu italipa kiasi kamili kwa kituo cha huduma, na kiasi hicho kitaongezwa kwenye mkopo wako</string>
+    <string name="service_center_note_bullet4"><![CDATA[Tutumie WhatsApp nambari <font color=\'#00C6B7\'><b>0757555111</b></font> ili kujua kama unastahili]]></string>
+
+    <string name="can_t_afford_full_repair">Huwezi kumudu ukarabati kamili?</string>
+    <string name="go_further">Endelea na teknolojia ya kisasa — betri ndefu zaidi, kamera yenye umbo kali, utendaji laini zaidi.</string>
+    <string name="upgrade_now">Boresha Sasa</string>
+    <string name="view_status">Angalia Hali</string>
+    <string name="on_the_path">Uko katika njia ya umiliki kamili! Fuata maendeleo yako na fafanua salio lako.</string>
+    <string name="returningyourdevice">Kurudisha\nKifaa\nChako</string>
+    <string name="note">Kumbuka</string>
+
+    <string name="upgradeyourdevice">Boresha kifaa chako</string>
+    <string name="currentdevice">Kifaa cha sasa</string>
+    <string name="paynowtoupgrade">Lipa ili Kuboresha</string>
+    <string name="downpayment">Malipo ya awali</string>
+    <string name="yourupgradeoptions">Chaguzi Zako za Uboreshaji!</string>
+    <string name="longerbatterylife">Uhai wa betri mrefu</string>
+    <string name="bettercamera">Kamera Bora</string>
+    <string name="increasedstoragecapacity">Uwezo wa kuhifadhi ulioboreshwa</string>
+    <string name="fasterprocessing">Utendaji wa haraka</string>
+    <string name="chatuswhatssapp">Ongea nasi kupitia WhatsApp</string>
+    <string name="cannotupgrade">Haiwezi kuboresha. Jaribu tena baadaye.</string>
+    <string name="ram">RAM</string>
+    <string name="rom">ROM</string>
+    <string name="camera">Kamera</string>
+    <string name="battery">Betri</string>
+    <string name="whatsappnotinstalled">WhatsApp haijapakuliwa kwenye kifaa chako</string>
+    <string name="problemopeningwhatsapp">Tatizo kufungua WhatsApp</string>
+    <string name="whatsapp_upgrade_message">Ujumbe: Upsell Hi Support, ningependa kuboresha kifaa changu cha sasa chenye nambari ya mali %1$s hadi Mfano wa Kifaa %2$s.</string>
+    <string name="youarejustfromupgrade"><Data><![CDATA[Uko umbali wa <font color=\'#04AFAB\'>%1$s</font> pekee kutoka uboreshaji wako]]></Data></string>
+    <string name="youcanunlock">Sasa unaweza kufungua Uboreshaji wako unaofuata!!!!!</string>
+    <string name="unlocklonger">Fungua uhai wa betri mrefu, kamera bora, uwezo wa kuhifadhi ulioboreshwa na utendaji wa haraka.</string>
+    <string name="getbiggerstorage">Pata nafasi kubwa ya kuhifadhi, utendaji bora, na uhai mrefu wa betri.</string>
+    <string name="downloadloanagreement">Pakua Mkataba wa Mkopo</string>
+    <string name="paywithanothernumber">Lipa kwa Nambari Nyingine</string>
+    <string name="selectapaymentprovider">Chagua Mtoa Huduma ya Malipo</string>
+    <string name="accessgranted">Ruhusa Imetolewa</string>
+    <string name="accessexpire">Huduma hii itafika kikomo chake ndani ya mda tajwa. Tafadhali fanya malipo ndani ya mda huu.</string>
+    <string name="couldnotdisplaydocument">Samahani. Hati haikuweza kuonyeshwa.</string>
+    <string name="downloadsuccess">Imepakuliwa kwa mafanikio</string>
+    <string name="viewdocument">Tazama Hati</string>
+    <string name="pdfsavedtodownloads">PDF imehifadhiwa kwenye Vipakuliwa</string>
+    <string name="downloadfailed">Imeshindikana kupakua hati.</string>
+    <string name="sharefilevia">Shiriki Hati kupitia</string>
+    <string name="couldnotsharedocument">Imeshindikana kushiriki hati.</string>
+    <string name="enjoyingtheapp">Unafurahia programu?</string>
+    <string name="enjoyingtheappsofar">Je, umefurahia matumizi yako hadi sasa?</string>
+    <string name="notreally">Sivyo Sana</string>
+    <string name="readmore">Soma Zaidi</string>
+
+    <string name="did_you_know"><Data><![CDATA[
+    <b>Je, unajua? Programu ya Watu inakupa udhibiti kamili!</b><br/><br/>
+    &#8226; Fanya malipo kwa haraka<br/>
+    &#8226; Fungua kifaa chako kwa mguso mmoja<br/>
+    &#8226; Fuatilia malipo yako yote ya awali<br/>
+    &#8226; Angalia salio lako la mkopo lililobaki<br/><br/>
+    <b>Unahitaji msaada? Tembelea Kituo chetu cha Msaada</b>
+    ]]></Data></string>
+
+    <string name="welcomeh">Karibu</string>
+    <string name="didyouknowthewatuapp">Je, unajua? Programu ya Watu inakupa udhibiti kamili!</string>
+    <string name="watuwelcomebody"> Fanya malipo kwa haraka • Fungua kifaa chako kwa mguso mmoja • Fuatilia malipo yako yote ya awali • Angalia salio lako la mkopo lililobaki. Unahitaji msaada? Tembelea Kituo chetu cha Msaada</string>
+
+    <string name="temporary_unlock_5_mins">Kufungua kwa Muda (dakika 5)</string>
+    <string name="color_teal_text">Kufunguliwa kwa Muda</string>
+    <string name="then">→ kisha</string>
+    <string name="text_support">\"Msaada\"</string>
+
+    <string name="unlock_step3_sentence">Fanya malipo yako.</string>
+    <string name="unlock_step4_sentence">Ikiwa simu bado imefungwa hakikisha umeunganishwa na intaneti.</string>
+    <string name="unlock_step5_sentence"><![CDATA[Bonyeza <font color=\"#04AFAB\">\"Support\"</font> → kisha bonyeza<font color=\"#04AFAB\"> \"Refresh\"</font>]]></string>
+
+
+    <string name="send_the_loss_report_by">Tuma loss ripoti kupitia:</string>
+
+    <string name="ifyourphoneisstolenH">Kama Simu Yako Imeibiwa</string>
+    <string name="whatsapp_0758399169">WhatsApp: 0758399169</string>
+    <string name="visit_a_watu_office_near_you">Tembelea ofisi ya Watu iliyo karibu nawe.</string>
+    <string name="device_status_after_theft">Hali ya Kifaa Baada ya Wizi</string>
+    <string name="the_phone_will_be_locked_and_cannot_be_used">Simu itafungwa na haiwezi kutumika.</string>
+    <string name="email_customercare_watuafrica_co_tz"><![CDATA[Barua pepe: <font color=\"#04AFAB\">info_drc@watuafrica.com</font>]]></string>
+    <string name="device_stolen_step7"><![CDATA[Ujumbe utaonekana kwenye skrini:<br><i>\"This device has been reported stolen.<br>Please return it to any Watu Credit branch near you for a cash reward of 20,000USD.\"</i>\n]]></string>
+    <string name="to_qualify_for_a_replacement_phone_you_need_to">Ili kukidhi kupata simu ya mbadala:</string>
+    <string name="steps">Hatua:</string>
+    <string name="select_among_the_phones_you_will_be_shown_at_the_office">Chagua miongoni mwa simu zitakazoonyeshwa ofisini.</string>
+    <string name="a_loan_officer_will_register_you_and_you_can_leave_with_your_phone">Afisa wa mikopo atakusajili na utaweza kuondoka na simu yako.</string>
+    <string name="replacement_step_1">Uwe umetoa taarifa ya wizi huduma kwa wateja au katika tawi la Watu karibu yako.</string>
+    <string name="replacement_step_2"><![CDATA[Uwe umelipa angalau <font color="#04afab">malipo kamili za wiki 10.</font>]]></string>
+    <string name="replacement_step_3"><![CDATA[Uwe na  <font color="#04afab">kianzio kidogo</font> kuipata simu mbadala.]]></string>
+    <string name="replacement_step_4">Simu mbadala haitolewi kwa mikopo iliyolipwa kikamilifu.</string>
+    <string name="replacement_step_5">Tembelea ofisi ya Watu iliyo karibu nawe.</string>
+    <string name="replacement_step_6">Fanya chaguo lako kutokana na aina za simu utakazoonyeshwa.</string>
+    <string name="replacement_step_7">Afisa mikopo atakusajili na utaondoka na simu yako.</string>
+    <string name="borrower_recovery">Mnunuzi Ameipata:</string>
+    <string name="third_party_recovery">Ikiwa Mtu Ameipata:</string>
+    <string name="returns_step_1">Wasiliana nasi kupitia WhatsApp 0777716615, namba ya huduma kwa wateja 08142967729 au tembelea ofisi ya Watu.</string>
+    <string name="returns_step_2">Tutarejesha matumizi ya simu yako.</string>
+    <string name="returns_step_3">Marekebisho ya mkopo yatafanyika kwa siku ambazo simu ilipotea.</string>
+    <string name="returns_step_4">Tutachukua maelezo yao.</string>
+    <string name="returns_step_5">Baada ya uthibitisho, simu itarejeshwa kwako.</string>
+    <string name="returns_step_6"><![CDATA[Tutarejesha matumizi ya simu yako.]]></string>
+    <string name="returning_your_device">Kurudisha Simu Yako</string>
+    <string name="note_">Kumbuka:</string>
+    <string name="recovery_step_1">Tembelea ofisi ya Watu iliyo karibu nawe</string>
+    <string name="recovery_step_2">Tathmini ya hali ya simu itafanyika.</string>
+    <string name="recovery_step_3">Unaweza rejeshewa malipo ya awali kamili au pungufu.</string>
+    <string name="recovery_step_4"><![CDATA[Marejesho hayo huchukuwa  <font color="#04afab">siku 5 za kazi.</font>]]></string>
+    <string name="recovery_step_5"><![CDATA[Mkopo <font color="#04afab">lazima usiwe umekamilika.</font>]]></string>
+    <string name="recovery_step_6"><![CDATA[Uharibifu wa skrini au upungufu wa vifaa <font color="#04afab">= hakuna marejesho au kupunguziwa malipo ya awali.</font>]]></string>
+    <string name="in_warranty">Ndani ya Dhamana:</string>
+    <string name="out_of_warranty">Nje ya Dhamana:</string>
+    <string name="service_center_step_1">Tembelea Kituo cha Huduma kilichoidhinishwa na Samsung (Accredited Service Centre - ASC). Utapewa nakala ya kadi ya kazi ya Samsung baada ya kifaa chako kusajiliwa.</string>
+    <string name="service_repairs"><![CDATA[Huduma na Matengenezo]]></string>
+    <string name="need_na_repair">Huduma na\nMatengenezo</string>
+    <string name="if_someone_returns_your_phone">Ikiwa mtu atarudisha simu yako:</string>
+    <string name="throttlederror">Bado tunashughulikia ombi lako la mwisho. Tafadhali jaribu tena hivi punde.</string>
+    <string name="toomanyrequests">Maombi mengi sana</string>
+    <string name="unlock_step6_sentence">Simu itafunguka.</string>
+
+    <string name="service_center_step_2">Hitilafu zinazotokana na kasoro ya kiwandani kwenye kifaa (mfano, matatizo ya spika au maikrofoni). Gharama ya matengenezo italipwa na Samsung.</string>
+    <string name="service_center_step_3">Uharibifu uliofanywa na mtumiaji (mfano, skrini iliyopasuka). Gharama ya matengenezo italipwa na mteja.</string>
+
+    <string name="device_beyond_nrepair">Simu Haiwezi\nKutengenezwa</string>
+    <string name="find_samsung_asc">Tafuta Samsung Accredited Service Center</string>
+    <string name="service_center_step_4"><![CDATA[Matengenezo yaliyofanywa na wahusika wasio rasmi yanabatilisha dhamana.]]></string>
+    <string name="service_center_step_5">Tumia kituo rasmi cha matengenezo kilichoidhinishwa na Samsung (Accredited Service Centre - ASC) pekee.</string>
+    <string name="important">Muhimu</string>
+    <string name="beyond_repair_step1">Kama simu yako haitengenezeki ifikishe katika tawi la Watu karibu yako au katika duka ulipochukua simu.</string>
+    <string name="beyond_repair_step2"><![CDATA[Uwe umelipa angalau malipo  <font color=\"#04afab\">15 ya wiki kamili.</font>]]></string>
+    <string name="beyond_repair_step3"><![CDATA[Lipa <font color=\"#04afab\">kianzio kidogo</font> kupata simu mbadala.\n]]></string>
+    <string name="beyond_repair_step4"><![CDATA[Pokea simu mbadala.]]></string>
+    <string name="device_nbeyond_nrepair">Simu Haiwezi\nKutengenezwa</string>
+    <string name="recovery_process">Simu Ikipatikana</string>
+    <string name="if_your_phone_can_t_be_fixed">Simu Haiwezi Kutengenezwa</string>
+
+    <string name="updatinginformation">Inasasisha taarifa...</string>
+    <string name="updateinformationfailednetwork">Samahani. Haikuwezekana kusasisha taarifa. Angalia muunganisho wako wa intaneti kisha bonyeza kujaribu tena.</string>
+    <string name="updateinformationerror">Samahani, hatukuweza kusasisha taarifa.  Jaribu tena na wasiliana na usaidizi ikiwa tatizo litaendelea.</string>
+    <string name="updateinformationsuccess">Taarifa zimesasishwa kwa mafanikio.</string>
+    <string name="updateinformationtitle">Taarifa Zimesasishwa.</string>
+    <string name="info_gps_enable">Washa GPS yafuatayo ili kuboresha eneo lako</string>
+
+    <string name="serviceinterruption">Kukatizwa kwa Huduma</string>
+    <string name="closeh">Funga</string>
+    <string name="servicedowndescription"><Data><![CDATA[ Tunaendelea kurekebisha hitilafu kwenye sytem zetu ambayo imeathiri App na huduma zingine.\n\nBado unaweza kulipia kwa urahisi <font color=\'#9CC652\'> kupitia Paybill kwa 650880</font>. \nTunaishughulikia ili turejeshe huduma haraka iwezekanavyo.]]></Data></string>
+    <string name="levelupoptions">Chaguo zako za Jijenge!</string>
+</resources>

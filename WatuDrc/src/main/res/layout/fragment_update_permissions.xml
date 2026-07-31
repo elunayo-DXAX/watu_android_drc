@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <RelativeLayout
+            android:id="@+id/generalContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:padding="10dp">
+
+
+            <LinearLayout
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/icBluetooth"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_location" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icBluetooth"
+                        android:text="@string/bluetooth"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnBluetooth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/icBluetooth2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_notification_bell_empty" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icBluetooth2"
+                        android:text="@string/bluetooth"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnBluetoothPermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/icLocationOld"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_notification" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icLocationOld"
+                        android:text="@string/location"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnLocationPermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/icInternet"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_location" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icInternet"
+                        android:text="@string/internet"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_medium_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnInternet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+
+
+
+
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/permissions"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_medium_small"
+                    app:firmatypeface="firmaBold" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/icNotification"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_notification" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icNotification"
+                        android:text="@string/notifications"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/icLocation"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_location" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/icLocation"
+                        android:text="@string/location"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/icBiometric"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ics_perm_fingerprint" />
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/icBiometric"
+                        android:text="@string/biometrics"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnFingerPrint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@xml/rounded_list_black_light">
+
+                    <ImageView
+                        android:id="@+id/icEnableCall"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:src="@drawable/ic_call"
+                        app:tint="@color/theme_teal"/>
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/icEnableCall"
+                        android:text="@string/enable_calling"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/btnCallPermission"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="@bool/mdtp_title_all_caps"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:padding="10dp"
+                        android:scaleX="1.5"
+                        android:scaleY="1.5"
+                        android:theme="@style/SwitchCompatTheme" />
+
+                </RelativeLayout>
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    android:id="@+id/doneRips"
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/password"
+                    android:layout_marginTop="20dp"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnDone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/continueH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/continueh"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold" />
+
+                        <ImageView
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/continueH"
+                            android:src="@drawable/ics_next_icon"
+                            app:tint="@color/white"
+                            android:visibility="gone"/>
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/loadView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/progressWheel"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true" />
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/progressWheel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="@string/pleasewait"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_xsmall"
+                    app:firmatypeface="firmaMedium" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/completeView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/iconComplete"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ics_icon_complete" />
+
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    android:id="@+id/completeRips"
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="20dp"
+                    android:layout_marginBottom="20dp"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnComplete"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/proceedtodashboard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/continueh"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <include layout="@layout/loading_view" />
+
+</RelativeLayout>

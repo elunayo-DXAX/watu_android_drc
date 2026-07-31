@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="-30dp"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <RelativeLayout
+            android:id="@+id/topView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            >
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:text="@string/recenttransactions"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium"
+                app:firmatypeface="firmaBold" />
+
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                android:id="@+id/backRips"
+                style="@style/RippleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="10dp"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/icBack"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/ics_back" />
+                </RelativeLayout>
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnDownloadStatement"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/topView"
+            android:layout_marginStart="16dp"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@xml/rounded_list_black_light"
+            android:gravity="center_vertical">
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:background="@xml/rounded_circle_transparent_black_light">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ics_icon_download_nose"
+                    app:tint="@color/theme_green" />
+
+            </RelativeLayout>
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textsize_small"
+                android:layout_centerVertical="true"
+                android:text="@string/downloadstatement"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium" />
+
+
+        </RelativeLayout>
+
+
+        <com.watudrc.app.view.EndlessListView
+            android:id="@+id/listViewTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transparent"
+            android:dividerHeight="1dp"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/btnDownloadStatement"
+            android:background="@color/black"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/topView"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/no_items_view" />
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+    <include layout="@layout/loading_view" />
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+

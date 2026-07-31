@@ -1,0 +1,103 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'android-pdf-viewer'
+
+    publishedGroupId = 'com.github.barteksc'
+    libraryName = 'AndroidPdfViewer'
+    artifact = 'android-pdf-viewer'
+
+    libraryDescription = 'Android view for displaying PDFs rendered with PdfiumAndroid'
+
+    siteUrl = 'https://github.com/barteksc/AndroidPdfViewer'
+    gitUrl = 'https://github.com/barteksc/AndroidPdfViewer.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'barteksc'
+    developerName = 'Bartosz Schiller'
+    developerEmail = 'barteksch@boo.pl'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+android {
+    namespace 'com.github.barteksc.pdfviewer'
+    compileSdkVersion 36
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 36
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // Configure packaging for 16 KB page size compatibility.
+    // Native libraries should be stored uncompressed and page-aligned in the APK.
+    packagingOptions {
+        jniLibs {
+            // Setting to false ensures native libraries are stored uncompressed and aligned.
+            // This is the default for AGP 3.6+ but explicitly set for clarity.
+            useLegacyPackaging false
+        }
+    }
+
+    // Enable 16 KB page size support for native libraries
+    ndkVersion "28.0.12433566"  // Use NDK r28+ for 16 KB support
+
+    // Disable lint for now to focus on 16 KB compatibility
+    lint {
+        abortOnError false
+    }
+
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core:1.17.0'
+    api 'io.github.oothp:pdfium-android:1.9.5-beta01'
+}
+
+// Configure Maven publishing for JitPack
+group = project.findProperty("group") ?: "com.github.xposed73"
+version = project.findProperty("version") ?: "1.0.0"
+
+// sources jar is produced via android.publishing.singleVariant.withSourcesJar()
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = project.group
+                artifactId = "AndroidPdfViewer"
+                version = project.version as String
+                pom {
+                    name = "AndroidPdfViewer"
+                    description = "Android view for displaying PDFs rendered with PdfiumAndroid"
+                    licenses {
+                        license {
+                            name = "The Apache Software License, Version 2.0"
+                            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                        }
+                    }
+                    scm {
+                        url = "https://github.com/xposed73/AndroidPdfViewer"
+                    }
+                }
+            }
+        }
+    }
+}
+

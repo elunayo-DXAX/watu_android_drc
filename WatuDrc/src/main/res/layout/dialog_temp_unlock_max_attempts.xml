@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/dark_bg_cards"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="36dp"
+        android:background="@color/theme_dark_darker_blue"
+        android:padding="15dp"
+        android:src="@drawable/ic_icon_lock" />
+
+    <com.watudrc.app.font.FirmaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:text="@string/device_locked"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_large"
+        app:firmatypeface="firmaBold" />
+
+    <com.watudrc.app.font.FirmaTextView
+        android:id="@+id/ftvPayPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/make_a_payment_to_unlock_and_keep_using_your_device"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_small"
+        app:firmatypeface="firmaMedium" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/light_btn_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/ftvAttempts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:text="0"
+                android:textColor="@color/theme_teal"
+                android:textSize="@dimen/textsize_large"
+                app:firmatypeface="firmaBold" />
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/ftvMaxAttempts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/max_unlocks"
+                android:textColor="@color/theme_teal"
+                android:textSize="@dimen/textsize_medium_small"
+                app:firmatypeface="firmaBold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <com.watudrc.app.font.FirmaTextView
+        android:id="@+id/ftvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/you_have_3_temporary_unlocks_remaining_today"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_xsmall"
+        app:firmatypeface="firmaMedium" />
+
+
+    <com.watudrc.app.view.MaterialRippleLayout
+        android:id="@+id/payRips"
+        style="@style/RippleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:rippleColor="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/btnPayNow"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/payOtherH"
+            android:background="@xml/rounded_list_button"
+            android:gravity="center_vertical">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableStart="@drawable/ics_coins"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:text="@string/pay_now"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_medium"
+                app:firmatypeface="firmaBold" />
+
+        </RelativeLayout>
+    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+    <com.watudrc.app.view.MaterialRippleLayout
+        android:id="@+id/tempUnlockRips"
+        style="@style/RippleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="30dp"
+        app:rippleColor="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/btnTempUnlock"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/payOtherH"
+            android:gravity="center_vertical">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/temporary_unlock_for_5_minutes"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                app:firmatypeface="firmaBold" />
+
+        </RelativeLayout>
+    </com.watudrc.app.view.MaterialRippleLayout>
+
+    <com.watudrc.app.view.MaterialRippleLayout
+        android:id="@+id/learnToPayRips"
+        style="@style/RippleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="30dp"
+        android:visibility="gone"
+        app:rippleColor="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/btnLearnToPay"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/payOtherH"
+            android:background="@xml/rounded_list_transparent_white_stroke"
+            android:gravity="center_vertical">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableStart="@drawable/ics_help_no_tint"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:text="@string/temp_unlock_exhausted_learn_to_pay"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                app:firmatypeface="firmaBold" />
+
+        </RelativeLayout>
+    </com.watudrc.app.view.MaterialRippleLayout>
+
+</LinearLayout>

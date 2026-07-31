@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="200dp"
+    android:viewportWidth="300"
+    android:viewportHeight="200">
+
+  <!-- 1) Blue Background -->
+  <path
+      android:fillColor="#007FFF"
+      android:pathData="M0,0H300V200H0Z" />
+
+  <!-- 2) Wide Yellow diagonal stroke for border -->
+  <path
+      android:pathData="M 0,200 L 300,0"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#FCDD09"
+      android:strokeWidth="45"
+      android:strokeLineCap="butt"
+      android:strokeLineJoin="miter" />
+
+  <!-- 3) Narrow Red diagonal stroke on top -->
+  <path
+      android:pathData="M 0,200 L 300,0"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#CE1021"
+      android:strokeWidth="35"
+      android:strokeLineCap="butt"
+      android:strokeLineJoin="miter" />
+
+  <!-- 4) Yellow Star in top-left corner -->
+  <!-- A simple 5-point star centered roughly around (50,50) -->
+  <path
+      android:fillColor="#FCDD09"
+      android:pathData="M 50,30
+                         L 59,46
+                         L 78,46
+                         L 63,58
+                         L 69,75
+                         L 50,66
+                         L 31,75
+                         L 37,58
+                         L 22,46
+                         L 41,46 Z" />
+
+</vector>

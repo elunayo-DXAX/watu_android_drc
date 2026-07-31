@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/indicatorView"
+            android:layout_centerHorizontal="true"
+            android:layout_height="40dp">
+
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_margin="5dp"
+                android:background="@xml/rounded_circle_stroke_theme"
+                android:layout_height="10dp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_margin="5dp"
+                android:background="@xml/rounded_circle_theme_small"
+                android:layout_height="10dp">
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_margin="5dp"
+                android:background="@xml/rounded_circle_stroke_theme"
+                android:layout_height="10dp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="10dp"
+                android:layout_margin="5dp"
+                android:background="@xml/rounded_circle_stroke_theme"
+                android:layout_height="10dp">
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:fillViewport="true"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/indicatorView"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@xml/rounded_list_black_light">
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:padding="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:id="@+id/topView"
+                        android:layout_height="wrap_content">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/loanType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/watusimu"
+                            android:textColor="@color/theme_color"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/loanModel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/loanType"
+                            android:text="@string/watusimu"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_xsmall"
+                            app:firmatypeface="firmaMedium" />
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/loanCategory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentRight="true"
+                            android:text="@string/loantype"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/div"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/topView"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white" />
+
+
+                    <ImageView
+                        android:id="@+id/loanIcon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/div"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/ics_simu" />
+
+                    <RelativeLayout
+                        android:layout_width="220dp"
+                        android:background="@xml/rounded_list_button_green_stroke"
+                        android:padding="10dp"
+                        android:id="@+id/activeUntilView"
+                        android:layout_below="@+id/div"
+                        android:layout_marginTop="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="60dp">
+
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:id="@+id/iconLock"
+                            android:src="@drawable/ics_lock"
+                            android:tint="@color/white"
+                            android:layout_height="50dp"/>
+
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/deviceActiveH"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_toRightOf="@+id/iconLock"
+                            android:gravity="right"
+                            android:text="@string/deviceactivetill"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_xsmall"
+                            app:firmatypeface="firmaMedium" />
+
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:id="@+id/countView"
+                            android:layout_marginTop="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_below="@+id/deviceActiveH"
+                            android:layout_height="wrap_content">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/deviceActiveDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:gravity="right"
+                                android:textColor="@color/theme_green"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/deviceActiveCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:text=""
+                                android:textColor="@color/theme_green"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+
+                        </RelativeLayout>
+
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/seekView"
+                        android:layout_below="@+id/loanIcon"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:id="@+id/progressStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/progressstatus"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaBold" />
+
+                        <SeekBar
+                            android:id="@+id/seekBar"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_below="@+id/loanAmount"
+                            android:layout_marginTop="10dp"
+                            android:progress="40"
+                            android:max="100"
+                            android:progressDrawable="@drawable/seek_progress"
+                            android:thumb="@color/transparent" >
+                        </SeekBar>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/amountView"
+                        android:layout_below="@+id/seekView"
+                        android:layout_marginTop="20dp"
+                        android:weightSum="2"
+                        android:layout_height="60dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="bottom"
+                            android:layout_height="match_parent">
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanBalanceTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/payment"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanCurrency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_below="@+id/loanBalanceTitle"
+                                android:text="@string/ksh"
+                                android:textColor="@color/theme_green"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaMedium" />
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanBalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/loanCurrency"
+                                android:layout_below="@+id/loanBalanceTitle"
+                                android:layout_marginLeft="5dp"
+                                android:text="@string/amount"
+                                android:textColor="@color/theme_green"
+                                android:textSize="@dimen/textsize_large"
+                                app:firmatypeface="firmaMedium" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:layout_height="match_parent">
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                style="@style/RippleStyle"
+                                android:layout_width="130dp"
+                                android:layout_height="match_parent"
+                                app:rippleColor="@color/transparent">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnPay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@xml/rounded_list_button_green">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_height="wrap_content">
+
+
+
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:id="@+id/payIcon"
+                                            android:src="@drawable/ics_coins"
+                                            />
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_toRightOf="@+id/payIcon"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/pay"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_medium_small"
+                                            app:firmatypeface="firmaBold" />
+
+                                    </RelativeLayout>
+
+
+
+                                </RelativeLayout>
+
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_below="@+id/amountView"
+                        android:id="@+id/midView"
+                        android:orientation="vertical"
+                        android:layout_marginTop="20dp"
+                        android:layout_height="wrap_content">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/payTipView"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:background="@color/white"
+                                android:layout_toLeftOf="@+id/midTip"
+                                android:layout_centerVertical="true"
+                                android:layout_height="1dp"/>
+
+
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:id="@+id/midTip"
+                                android:layout_height="wrap_content">
+
+                                <com.watudrc.app.view.MaterialRippleLayout
+                                    android:id="@+id/unlockToolTipRips"
+                                    style="@style/RippleStyle"
+                                    android:layout_width="300dp"
+                                    android:visibility="gone"
+                                    android:layout_height="30dp"
+                                    app:rippleColor="@color/transparent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnUnlockTip"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@xml/rounded_list_button_white_stroke">
+
+                                        <RelativeLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:layout_height="wrap_content">
+
+                                            <ImageView
+                                                android:layout_width="15dp"
+                                                android:id="@+id/payUnlockIcon"
+                                                android:src="@drawable/ics_help_icon"
+                                                android:layout_centerVertical="true"
+                                                android:tint="@color/theme_orange_light"
+                                                android:layout_height="wrap_content"/>
+
+
+                                            <com.watudrc.app.font.FirmaTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_toRightOf="@+id/payUnlockIcon"
+                                                android:layout_marginLeft="5dp"
+                                                android:layout_centerVertical="true"
+                                                android:text="@string/havingissuesunlockingdevice"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/textsize_xsmall"
+                                                app:firmatypeface="firmaMedium" />
+
+
+                                        </RelativeLayout>
+
+
+
+                                    </RelativeLayout>
+
+                                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                                <com.watudrc.app.view.MaterialRippleLayout
+                                    android:id="@+id/payToolTipRips"
+                                    style="@style/RippleStyle"
+                                    android:layout_width="250dp"
+                                    android:layout_height="30dp"
+                                    app:rippleColor="@color/transparent">
+
+                                    <RelativeLayout
+                                        android:id="@+id/btnPayTip"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@xml/rounded_list_button_white_stroke">
+
+                                        <ImageView
+                                            android:layout_width="15dp"
+                                            android:src="@drawable/ics_help_icon"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toLeftOf="@+id/payTipText"
+                                            android:layout_marginRight="5dp"
+                                            android:tint="@color/theme_color"
+                                            android:layout_height="wrap_content"/>
+
+
+                                        <com.watudrc.app.font.FirmaTextView
+                                            android:id="@+id/payTipText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="@string/havingissuesmakingpayment"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/textsize_xsmall"
+                                            app:firmatypeface="firmaMedium" />
+
+
+                                    </RelativeLayout>
+
+                                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:background="@color/white"
+                                android:layout_toRightOf="@+id/midTip"
+                                android:layout_centerVertical="true"
+                                android:layout_height="1dp"/>
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/temporaryUnlockView"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+                            <com.watudrc.app.view.MaterialRippleLayout
+                                android:id="@+id/unlockRips"
+                                style="@style/RippleStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                app:rippleColor="@color/transparent">
+
+                                <RelativeLayout
+                                    android:id="@+id/btnUnlock"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@xml/rounded_list_button_orange_light">
+
+                                    <ImageView
+                                        android:layout_width="20dp"
+                                        android:id="@+id/unlockIcon"
+                                        android:src="@drawable/ics_unlock"
+                                        android:layout_centerVertical="true"
+                                        android:layout_toLeftOf="@+id/unlockText"
+                                        android:layout_marginRight="20dp"
+                                        android:layout_height="wrap_content"/>
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/unlockText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:text="@string/temporaryunlock"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaMedium" />
+
+
+                                </RelativeLayout>
+
+                            </com.watudrc.app.view.MaterialRippleLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/unlockRips"
+                                android:layout_marginTop="10dp"
+                                android:id="@+id/unlockLimitView"
+                                android:visibility="visible"
+                                android:layout_height="wrap_content">
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:src="@drawable/ics_emergency"
+                                    android:id="@+id/iconEmergency"
+                                    android:layout_centerVertical="true"
+                                    android:layout_height="wrap_content"/>
+
+                                <com.watudrc.app.font.FirmaTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/iconEmergency"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="@string/unlocklimitreached"
+                                    android:textColor="@color/theme_orange"
+                                    android:textSize="@dimen/textsize_small"
+                                    app:firmatypeface="firmaMedium" />
+
+
+
+                            </RelativeLayout>
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:id="@+id/accStatus"
+                            android:layout_below="@+id/temporaryUnlockView"
+                            android:layout_marginTop="20dp"
+                            android:layout_height="wrap_content">
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/accountStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/accountstatus"
+                                android:singleLine="true"
+                                android:layout_toLeftOf="@+id/btnRefresh"
+                                android:layout_marginRight="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/asOf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/asof"
+                                android:visibility="invisible"
+                                android:layout_alignParentRight="true"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_xsmall"
+                                app:firmatypeface="firmaMedium" />
+
+                            <RelativeLayout
+                                android:id="@+id/btnRefresh"
+                                android:layout_width="30dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_height="30dp">
+
+
+                                <ImageView
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_marginTop="1dp"
+                                    android:src="@drawable/ics_refresh" />
+
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:layout_below="@+id/accStatus"
+                            android:id="@+id/branchView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingRight="5dp"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/activebranchh"
+                                        android:layout_marginTop="10dp"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+
+                                </RelativeLayout>
+
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/activeBranchText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_alignParentRight="true"
+                                        android:gravity="right"
+                                        android:text=""
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+
+
+
+                                </RelativeLayout>
+
+
+
+                            </RelativeLayout>
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:weightSum="2"
+                            android:layout_below="@+id/accStatus"
+                            android:id="@+id/loanView"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingRight="5dp"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/issueDateH"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/issuedateh"
+                                        android:layout_marginTop="10dp"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/maturityDateH"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_below="@+id/issueDateH"
+                                        android:text="@string/maturitydateh"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+
+
+                                </RelativeLayout>
+
+
+
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:paddingLeft="5dp"
+                                android:layout_height="match_parent">
+
+                                <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/loanIssueDateText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_alignParentRight="true"
+                                        android:gravity="right"
+                                        android:text="10th Jan, 2023"
+                                        android:textColor="@color/theme_color"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+                                    <com.watudrc.app.font.FirmaTextView
+                                        android:id="@+id/loanMaturityDateText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:gravity="right"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_below="@+id/loanIssueDateText"
+                                        android:text="14th Nov, 2023"
+                                        android:textColor="@color/theme_green"
+                                        android:textSize="@dimen/textsize_small"
+                                        app:firmatypeface="firmaBold" />
+
+
+
+                                </RelativeLayout>
+
+
+
+                            </RelativeLayout>
+
+
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    </LinearLayout>
+
+
+
+
+
+                    <ImageView
+                        android:id="@+id/div2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/midView"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_below="@+id/div2"
+                        android:layout_marginTop="10dp"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@xml/rounded_list_black"
+                            android:padding="10dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/ics_coins"
+                                android:id="@+id/icC1"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/icC1"
+                                android:layout_centerVertical="true"
+                                android:text="@string/outstandingbalance"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanTotalPayment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/amount"
+                                android:gravity="right"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@xml/rounded_list_black"
+                            android:padding="10dp"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/ics_coins"
+                                android:id="@+id/icC2"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/icC2"
+                                android:layout_centerVertical="true"
+                                android:text="@string/amountoverdue"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanAmountOverdue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/amount"
+                                android:gravity="right"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@xml/rounded_list_black"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/ics_coins"
+                                android:id="@+id/icCD"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/icCD"
+                                android:layout_centerVertical="true"
+                                android:text="@string/dailypayment"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanDailyAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:text="@string/amount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@xml/rounded_list_black"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/ics_coins"
+                                android:id="@+id/icC5"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/icC5"
+                                android:layout_centerVertical="true"
+                                android:text="@string/weeklypayment"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanWeeklyAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:text="@string/amount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:background="@xml/rounded_list_black"
+                            android:padding="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="60dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:src="@drawable/ics_coins"
+                                android:id="@+id/icC4"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"/>
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/icC4"
+                                android:layout_centerVertical="true"
+                                android:text="@string/monthlypayment"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/loanMonthlyAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:gravity="right"
+                                android:text="@string/amount"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

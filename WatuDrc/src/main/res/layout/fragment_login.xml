@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:padding="20dp">
+
+
+
+
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/loginTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/welcomeback"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_xlarge"
+            app:firmatypeface="firmaBold"
+
+            />
+
+        <com.watudrc.app.font.FirmaTextView
+            android:id="@+id/loginTitleH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginTitle"
+            android:layout_centerHorizontal="true"
+            android:text="@string/logintoyouraccount"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_small"
+            app:firmatypeface="firmaMedium"
+
+            />
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/iconView"
+            android:layout_below="@+id/loginTitleH"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content">
+            
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/inView"
+                android:layout_centerHorizontal="true"
+                android:background="@xml/rounded_list_white_small"
+                android:layout_height="50dp">
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/userInitials"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:textColor="@color/theme_color"
+                    android:textSize="@dimen/textsize_small"
+
+                    app:firmatypeface="firmaBold" />
+
+
+            </RelativeLayout>
+
+
+            <com.watudrc.app.font.FirmaTextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inView"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="15dp"
+                android:text="@string/hiname"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_small"
+                app:firmatypeface="firmaBold" />
+            
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/midContent"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/iconView"
+            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_centerHorizontal="true">
+
+                <RelativeLayout
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/mobileH"
+                    android:layout_marginTop="15dp"
+                    android:background="@xml/rounded_list_transparent_dark_light_small"
+                    android:gravity="center_vertical">
+
+                    <EditText
+                        android:id="@+id/phoneNumberEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ccc"
+                        android:background="@color/transparent"
+                        android:gravity="left|center_vertical"
+                        android:hint="0000 000 000"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:minHeight="50dp"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/theme_color"
+                        android:textColorHint="@color/theme_hint"
+                        android:textSize="@dimen/textsize_medium" />
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/ccc"
+                        android:layout_marginLeft="15dp"
+                        android:src="@drawable/ics_country_drc"
+                        android:layout_height="20dp"/>
+
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        app:ccpDialog_searchEditTextTint="@color/theme_hint"
+                        app:ccpDialog_textColor="@color/theme_color"
+                        app:ccp_defaultNameCode="CD"
+                        app:ccp_autoFormatNumber="false"
+                        android:visibility="gone"
+                        app:ccp_customMasterCountries="CD"
+                        app:ccp_showNameCode="false"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textSize="@dimen/textsize_small" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+
+                    android:background="@xml/rounded_list_transparent_dark_light_small"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+
+                    <EditText
+                        android:id="@+id/emailEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/emailaddress"
+                        android:imeOptions="actionDone"
+                        android:inputType="textEmailAddress"
+                        android:minHeight="50dp"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/theme_color"
+                        android:textColorHint="@color/theme_hint"
+                        android:textSize="@dimen/textsize_small" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:visibility="gone"
+                    android:layout_below="@+id/passwordH"
+                    android:layout_marginTop="15dp"
+                    android:background="@xml/rounded_list_transparent_dark_light_small"
+                    android:gravity="center_vertical">
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:gravity="left|center_vertical"
+                        android:hint="@string/type"
+                        android:imeOptions="actionDone"
+                        android:inputType="phone"
+                        android:maxLength="4"
+                        android:minHeight="50dp"
+                        android:paddingLeft="25dp"
+                        android:singleLine="true"
+                        android:textColor="@color/theme_color"
+                        android:textColorHint="@color/theme_hint"
+                        android:textSize="@dimen/textsize_medium_small" />
+
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:layout_width="50dp"
+                            android:layout_height="50dp">
+
+                            <com.watudrc.app.font.FontView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="@string/dw_eye"
+                                android:textColor="@color/theme_grey_dark"
+                                android:textSize="@dimen/textsize_large" />
+
+                        </RelativeLayout>
+
+
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/passwordH"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/code1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@xml/rounded_list_transparent_square_small"
+                        android:gravity="center">
+
+
+                        <EditText
+                            android:id="@+id/codeEditText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:textAllCaps="true"
+                            android:hint="*"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:minHeight="50dp"
+                            android:singleLine="true"
+                            android:textColor="@color/theme_color"
+                            android:textColorHint="@color/theme_grey"
+                            android:textSize="@dimen/textsize_large" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/code2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/code1"
+                        android:background="@xml/rounded_list_transparent_square_small"
+                        android:gravity="center">
+
+
+                        <EditText
+                            android:id="@+id/codeEditText2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:enabled="false"
+                            android:hint="*"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:minHeight="50dp"
+                            android:singleLine="true"
+                            android:textColor="@color/theme_color"
+                            android:textColorHint="@color/theme_grey"
+                            android:textSize="@dimen/textsize_large" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/code3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/code2"
+                        android:background="@xml/rounded_list_transparent_square_small"
+                        android:gravity="center">
+
+
+                        <EditText
+                            android:id="@+id/codeEditText3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:enabled="false"
+                            android:hint="*"
+                            android:imeOptions="actionNext"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:minHeight="50dp"
+                            android:singleLine="true"
+                            android:textColor="@color/theme_color"
+                            android:textColorHint="@color/theme_grey"
+                            android:textSize="@dimen/textsize_large" />
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/code4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/code3"
+                        android:background="@xml/rounded_list_transparent_square_small"
+                        android:gravity="center">
+
+
+                        <EditText
+                            android:id="@+id/codeEditText4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:imeOptions="actionDone"
+                            android:hint="*"
+                            android:inputType="phone"
+                            android:maxLength="1"
+                            android:enabled="false"
+                            android:minHeight="50dp"
+                            android:singleLine="true"
+                            android:textColor="@color/theme_color"
+                            android:textColorHint="@color/theme_grey"
+                            android:textSize="@dimen/textsize_large" />
+
+                    </RelativeLayout>
+
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:id="@+id/wrongView"
+                    android:layout_below="@+id/code"
+                    android:visibility="gone"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/icWrong"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ics_emergency"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content"/>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/icWrong"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/wrongpin"
+                        android:textColor="@color/theme_orange"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaBold" />
+
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/resetRips"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp">
+
+                    <RelativeLayout
+                        android:id="@+id/registerH"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/newuser"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaLight" />
+
+
+                    </RelativeLayout>
+
+
+                    <com.watudrc.app.view.MaterialRippleLayout
+                        style="@style/RippleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/registerH"
+                        app:rippleColor="@color/transparent">
+
+                        <RelativeLayout
+                            android:id="@+id/btnRegister"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:text="@string/signupdot"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaBold" />
+
+
+                        </RelativeLayout>
+
+                    </com.watudrc.app.view.MaterialRippleLayout>
+
+
+                </RelativeLayout>
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/mobileH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:text="@string/enterphonenumber"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_small"
+                    app:firmatypeface="firmaBold"
+
+                    />
+
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/passwordH"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/phone"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignStart="@+id/code"
+                    android:text="@string/enterpin"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_small"
+                    app:firmatypeface="firmaBold"
+
+                    />
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    android:id="@+id/resetRips"
+                    style="@style/RippleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loginRips"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forgotpin"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_small"
+                            app:firmatypeface="firmaMedium" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+                <com.watudrc.app.view.MaterialRippleLayout
+                    android:id="@+id/loginRips"
+                    style="@style/RippleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_below="@+id/code"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    app:rippleColor="@color/transparent">
+
+                    <RelativeLayout
+                        android:id="@+id/btnLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@xml/rounded_list_button">
+
+                        <com.watudrc.app.font.FirmaTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/login"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_medium_small"
+                            app:firmatypeface="firmaBold" />
+
+
+                    </RelativeLayout>
+
+                </com.watudrc.app.view.MaterialRippleLayout>
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="300dp"
+        android:src="@drawable/ic_watu"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_height="300dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/support_hub_dialog_bg"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_close"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_gravity="end"/>
+
+
+    <LinearLayout
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/circular_theme_icon_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_chat_un_available"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <com.watudrc.app.font.FirmaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="@string/chat_unavailable_nwithout_data"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium_large"
+        app:firmatypeface="firmaBold" />
+
+    <com.watudrc.app.font.FirmaTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/turn_on_your_data_or_connect_to_wifi_for_live_chat_ncall_customer_care_for_urgent_issues"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_xsmall"
+        app:firmatypeface="firmaBold"
+        android:gravity="center"/>
+
+    <com.watudrc.app.view.MaterialRippleLayout
+        android:id="@+id/chatRips"
+        style="@style/RippleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:rippleColor="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/call_cc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@xml/rounded_list_button">
+
+            <com.watudrc.app.font.FirmaTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableStart="@drawable/ic_call"
+                android:drawablePadding="8dp"
+                android:drawableTint="@color/white"
+                android:text="@string/call_customer_care"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_xsmall"
+                app:firmatypeface="firmaBold" />
+
+
+        </RelativeLayout>
+
+    </com.watudrc.app.view.MaterialRippleLayout>
+
+    <com.watudrc.app.font.FirmaTextView
+        android:id="@+id/tv_copy_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:drawableStart="@drawable/ic_copy"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/black"
+        android:hint="@string/_0700_000_000"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textsize_medium_small"
+        app:firmatypeface="firmaLight" />
+
+</LinearLayout>

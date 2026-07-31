@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_container"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:id="@+id/seekBarView"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content">
+
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:progress="1"
+                    android:padding="0dp"
+                    android:paddingEnd="0dp"
+                    android:paddingStart="0dp"
+                    android:max="3"
+                    android:progressDrawable="@drawable/seek_progress"
+                    android:thumb="@color/transparent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true">
+                </SeekBar>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/topView"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/seekBarView"
+                android:layout_height="wrap_content">
+
+
+                <com.watudrc.app.font.FirmaTextView
+                    android:id="@+id/header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="center"
+                    android:text="@string/choosehowtoreceive"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_medium_large"
+                    app:firmatypeface="firmaBold" />
+
+
+
+
+
+            </RelativeLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/optionsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topView"
+                android:layout_marginTop="5dp"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/whatsAppContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/whatsAppContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@xml/rounded_list_transparent_theme_stroke"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/iconWhatsApp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ics_icon_opt_whatsapp" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/chkWhatsApp"
+                            android:layout_toRightOf="@+id/iconWhatsApp">
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/whatsAppText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/whatsapp"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaMedium" />
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/whatsAppDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/whatsAppText"
+                                android:text="@string/receiveotpviawhatsapp"
+                                android:textColor="@color/theme_color"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/chkWhatsApp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/ics_icon_opt_selected" />
+
+
+                    </RelativeLayout>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/whatsAppExtra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/whatsAppContainer"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:lineSpacingExtra="5sp"
+                        android:text="@string/whatsappinstructions"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaLight" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/knoxContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/knoxContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@xml/rounded_list_transparent_white_stroke"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/iconKnox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ics_icon_otp_knox" />
+
+
+                        <ImageView
+                            android:id="@+id/chkKnox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/ics_icon_opt_empty" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/chkKnox"
+                            android:layout_toRightOf="@+id/iconKnox">
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/knoxText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/securenotification"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaMedium" />
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/knoxDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/knoxText"
+                                android:text="@string/receiveotpviaknox"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/knoxExtra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/knoxContainer"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:lineSpacingExtra="5sp"
+                        android:text="@string/knoxinstructions"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaLight"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/smsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:padding="10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/smsContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@xml/rounded_list_transparent_white_stroke"
+                        android:padding="10dp">
+
+
+                        <ImageView
+                            android:id="@+id/iconSMS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            app:srcCompat="@drawable/ics_icon_otp_sms" />
+
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toLeftOf="@+id/chkSMS"
+                            android:layout_toRightOf="@+id/iconSMS">
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/smsText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sms"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_medium"
+                                app:firmatypeface="firmaMedium" />
+
+
+                            <com.watudrc.app.font.FirmaTextView
+                                android:id="@+id/smsDesc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/smsText"
+                                android:text="@string/receiveotpviasms"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_small"
+                                app:firmatypeface="firmaLight" />
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/chkSMS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="5dp"
+                            app:srcCompat="@drawable/ics_icon_opt_empty" />
+
+
+                    </RelativeLayout>
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:id="@+id/smsExtra"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/smsContainer"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:lineSpacingExtra="5sp"
+                        android:text="@string/smsinstructions"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaLight"
+                        android:visibility="gone"/>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <com.watudrc.app.view.MaterialRippleLayout
+                android:id="@+id/continueRips"
+                style="@style/RippleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/optionsView"
+                android:layout_margin="10dp"
+                app:rippleColor="@color/transparent">
+
+                <RelativeLayout
+                    android:id="@+id/btnContinue"
+                    android:layout_width="match_parent"
+                    android:background="@xml/rounded_list_button"
+                    android:padding="10dp"
+                    android:layout_height="match_parent">
+
+
+                    <com.watudrc.app.font.FirmaTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/continueh"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_small"
+                        app:firmatypeface="firmaMedium" />
+
+
+                </RelativeLayout>
+
+            </com.watudrc.app.view.MaterialRippleLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </ScrollView>
+
+    <include layout="@layout/loading_view" />
+
+
+</RelativeLayout>
