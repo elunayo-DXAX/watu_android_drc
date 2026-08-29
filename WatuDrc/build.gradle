@@ -51,7 +51,7 @@ android {
         applicationId "com.watudrc.app"
         minSdkVersion 23
         compileSdkVersion 36
-        targetSdkVersion 35
+        targetSdkVersion 36
 
 
         multiDexEnabled true

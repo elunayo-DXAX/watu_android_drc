@@ -847,7 +847,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
             @Override
             public void onClick(View v) {
 
-                GeneralCommands.logEvent(parentActivity,"click_drawer_notification","click_drawer_notifications");
+                GeneralCommands.logEvent(parentActivity,"click_drawer_notifications","click_drawer_notifications");
                 toggleDrawer();
                 viewPager.setCurrentItem(3);
             }

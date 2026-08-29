@@ -9,9 +9,6 @@
         android:name="android.hardware.telephony"
         android:required="false" />
 
-    <meta-data android:name= "delivery_metrics_exported_to_big_query_enabled"
-        android:value="true"/>
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -34,6 +31,9 @@
         android:theme="@style/AppTheme"
         tools:node="merge"
         tools:replace="android:allowBackup" >
+
+        <meta-data android:name= "delivery_metrics_exported_to_big_query_enabled"
+            android:value="true"/>
 
         <activity
             android:name=".PaymentProcessesActivity"
