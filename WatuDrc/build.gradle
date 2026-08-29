@@ -13,16 +13,16 @@ android {
 
     signingConfigs {
         release {
-           // storeFile file('/Users/reed/Desktop/Dev/Certs/Watu/WatuCert')
-            storeFile file('D:\\Dev\\Certs\\WatuCert')
+           storeFile file('/Users/reed/Desktop/Dev/Certs/Watu/WatuCert')
+//            storeFile file('D:\\Dev\\Certs\\WatuCert')
 
             storePassword '.Sm%[9s;jC4SM{&v'
             keyAlias 'watuapp'
             keyPassword '.Sm%[9s;jC4SM{&v'
         }
         debug {
-           // storeFile file('/Users/reed/Desktop/Dev/Certs/Watu/WatuCert')
-            storeFile file('D:\\Dev\\Certs\\WatuCert')
+            storeFile file('/Users/reed/Desktop/Dev/Certs/Watu/WatuCert')
+//            storeFile file('D:\\Dev\\Certs\\WatuCert')
 
             storePassword '.Sm%[9s;jC4SM{&v'
             keyAlias 'watuapp'
