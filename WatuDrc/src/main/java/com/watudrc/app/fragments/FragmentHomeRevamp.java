@@ -71,6 +71,7 @@ import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.FirebaseConfig;
 import com.watudrc.app.util.ImageUtil;
 import com.watudrc.app.view.MaterialRippleLayout;
+import com.ypyproductions.utils.StringUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -611,9 +612,30 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
         });
 
         //Should show statement
-        if (storageObject.hasLoanAgreement()) {
-            statementRips.setVisibility(View.VISIBLE);
-            statementCompleteRips.setVisibility(View.VISIBLE);
+        if (currentAsset != null) {
+            // Seed from the last-known per-asset flag so there's no flash of the wrong
+            // state while the silent background check below completes.
+            statementRips.setVisibility(currentAsset.hasLoanAgreement() ? View.VISIBLE : View.GONE);
+            statementCompleteRips.setVisibility(currentAsset.hasLoanAgreement() ? View.VISIBLE : View.GONE);
+
+            GetData ob1 = new GetData();
+            ob1.initializeSilent(parentActivity);
+            ob1.userDownloadLoanAgreement(currentAsset.getLoanNumber(), false, true);
+            ob1.setLoanAgreementListener(new GetData.LoanAgreementListener() {
+                @Override
+                public void onObjectReady(String title) {
+
+                }
+
+                @Override
+                public void onDataLoaded(String loanNumber) {
+                    boolean hasAgreement = !StringUtils.isStringEmpty(loanNumber);
+                    statementRips.setVisibility(hasAgreement ? View.VISIBLE : View.GONE);
+                    statementCompleteRips.setVisibility(hasAgreement ? View.VISIBLE : View.GONE);
+                    currentAsset.setHasLoanAgreement(hasAgreement);
+                    storageObject.saveCurrentAssetObjectToPrefs(currentAsset);
+                }
+            });
         } else {
             statementRips.setVisibility(View.GONE);
             statementCompleteRips.setVisibility(View.GONE);
@@ -2139,6 +2161,25 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
                     String imageUrl = currentLang.equals("sw") ? card.getLinkSw() : card.getLinkEn();
 
                     adCard.setVisibility(View.VISIBLE);
+
+                    String tab = card.getClickOpenTab();
+                    if (!StringUtils.isStringEmpty(tab)) {
+                        adCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                GeneralCommands.logEvent(parentActivity, "click_ad_card", "click_ad_card");
+
+                                int intTab = 0;
+                                try {
+                                    intTab = Integer.parseInt(tab);
+                                } catch (NumberFormatException e) {
+                                    e.printStackTrace();
+                                }
+
+                                try { MainActivity.viewPager.setCurrentItem(intTab); } catch (Exception e) { e.printStackTrace(); }
+                            }
+                        });
+                    }
 
                     Glide.with(this)
                             .load(imageUrl)

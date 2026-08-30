@@ -172,6 +172,8 @@ public class GetData implements IWhereMyLocationConstants {
 
     private CustomerDetailsListener listenerCustomerDetails;
 
+    private LoanAgreementListener listenerLoanAgreement;
+
     private LoanUpgradeListener listenerLoanUpgrade;
     private OTPConfirmListener listenerOTPConfirm;
     private PaymentInfoListener listenerPaymentInfo;
@@ -2176,6 +2178,7 @@ public class GetData implements IWhereMyLocationConstants {
         if (!isSilent) startLoading(theLoadingMsg);
 
         List<String> params = new ArrayList<String>();
+        params.add(loanNumber);
 
         JSONObject uParams = new JSONObject();
 
@@ -2215,8 +2218,7 @@ public class GetData implements IWhereMyLocationConstants {
 
                     } catch (Exception e) {
 
-//						if(listenerAddUserAction!=null) listenerAddUserAction.onDataLoaded(null);
-                        storageObject.setHasLoanAgreement(false);
+                        if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(null);
 
 
                         String info = mContext.getResources().getString(R.string.downloadloanagreementerror);
@@ -2238,7 +2240,7 @@ public class GetData implements IWhereMyLocationConstants {
                     }
 
                 } else {
-                    storageObject.setHasLoanAgreement(false);
+                    if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(null);
 
                     String message = mContext.getResources().getString(R.string.downloadloanagreementerror);
                     // Handle the error response here
@@ -2251,6 +2253,7 @@ public class GetData implements IWhereMyLocationConstants {
                             ErrorResponseObject errorResponse = gson.fromJson(errorBody.string(), ErrorResponseObject.class);
 
                             int errorCode = errorResponse.getError().getCode();
+                            message = getErrorMessage(errorCode);
 
                         }
                     } catch (Exception e) {
@@ -2277,8 +2280,7 @@ public class GetData implements IWhereMyLocationConstants {
             @Override
             public void onFailure(Call<ResponseBody> call, Throwable t) {
 
-//				if(listenerAddUserAction!=null) listenerAddUserAction.onDataLoaded(null);
-                storageObject.setHasLoanAgreement(false);
+                if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(null);
 
                 Logger.d("API error:", t.getMessage());
                 if (!isSilent) {
@@ -2299,6 +2301,90 @@ public class GetData implements IWhereMyLocationConstants {
             }
         });
 
+    }
+
+    private String getErrorMessage(int errorCode) {
+        int stringResId;
+
+        switch (errorCode) {
+            case 1000:
+                stringResId = R.string.err_invalid_phone;
+                break;
+            case 1001:
+                stringResId = R.string.err_otp_expired;
+                break;
+            case 1002:
+                stringResId = R.string.err_otp_wrong;
+                break;
+            case 1005:
+                stringResId = R.string.err_not_mifos_client;
+                break;
+            case 1100:
+                stringResId = R.string.err_missing_api_secret;
+                break;
+            case 1101:
+                stringResId = R.string.err_invalid_api_secret;
+                break;
+            case 2000:
+                stringResId = R.string.err_no_loan_w_phone_asset;
+                break;
+            case 2001:
+                stringResId = R.string.err_no_such_device;
+                break;
+            case 2002:
+                stringResId = R.string.err_temp_unlock_not_supported_loan;
+                break;
+            case 2003:
+                stringResId = R.string.err_no_payment_request;
+                break;
+            case 2004:
+                stringResId = R.string.maxpayforanother;
+                break;
+            case 2005:
+                stringResId = R.string.err_max_number_temp_unlock_req_reached;
+                break;
+            case 2006:
+                stringResId = R.string.err_no_payment_provider_found;
+                break;
+            case 2007:
+                stringResId = R.string.err_no_currency_found;
+                break;
+            case 2008:
+                stringResId = R.string.err_datasource_id_null;
+                break;
+            case 2009:
+                stringResId = R.string.err_no_upgrade_devices_for_loan;
+                break;
+            case 2010:
+                stringResId = R.string.err_no_agreement_for_loan_exists;
+                break;
+            case 2011:
+                stringResId = R.string.err_temp_unlock_out_of_service;
+                break;
+            case 2012:
+                stringResId = R.string.err_no_such_unlock_request;
+                break;
+            case 2020:
+                stringResId = R.string.err_tx_datasource_not_supported;
+                break;
+            case 2200:
+                stringResId = R.string.err_client_reached_max_verify_requests;
+                break;
+            case 2201:
+                stringResId = R.string.err_system_reached_max_verify_requests;
+                break;
+            case 2300:
+                stringResId = R.string.err_unsupported_otp_delivery_type;
+                break;
+            default:
+                // NOTE: source repo (WatuUg) used -1 here, which throws Resources.NotFoundException
+                // on an unmapped error code. Mapped to a generic fallback string instead per the
+                // agreeOptimization porting notes' recommended fix.
+                stringResId = R.string.err_generic_fallback;
+                break;
+        }
+
+        return mContext.getResources().getString(stringResId);
     }
 
 
@@ -5368,11 +5454,13 @@ public class GetData implements IWhereMyLocationConstants {
 
     public void performUserDownloadLoanAgreement(ServiceObject theObject, boolean shouldViewDocument, final boolean isSilent) {
         try {
+            String loanNumber = (theObject.getParams() != null && !theObject.getParams().isEmpty()) ? theObject.getParams().get(0) : null;
+
             JSONObject sampleObject = new JSONObject(theObject.getResult());
             String res = theObject.getResult();
 
             if (res.contains("content")) {
-                storageObject.setHasLoanAgreement(true);
+                if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(loanNumber);
 
 
                 String jsonString = sampleObject.getString("content");
@@ -5396,7 +5484,7 @@ public class GetData implements IWhereMyLocationConstants {
 
 
             } else {
-                storageObject.setHasLoanAgreement(false);
+                if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(null);
 
 
                 if (!isSilent) {
@@ -5418,7 +5506,7 @@ public class GetData implements IWhereMyLocationConstants {
             }
 
         } catch (Exception e) {
-            storageObject.setHasLoanAgreement(false);
+            if (listenerLoanAgreement != null) listenerLoanAgreement.onDataLoaded(null);
 
             if (!isSilent) {
                 //There was a problem
@@ -5548,6 +5636,10 @@ public class GetData implements IWhereMyLocationConstants {
 
     public void setCustomerDetailsListener(CustomerDetailsListener listener) {
         this.listenerCustomerDetails = listener;
+    }
+
+    public void setLoanAgreementListener(LoanAgreementListener listener) {
+        this.listenerLoanAgreement = listener;
     }
 
     public void setUserRegisterListener(UserRegisterListener listener) {
@@ -5969,6 +6061,15 @@ public class GetData implements IWhereMyLocationConstants {
 
         // or when data has been loaded
         void onDataLoaded(ProfileObject data);
+    }
+
+    public interface LoanAgreementListener {
+        // These methods are the different events and
+        // need to pass relevant arguments related to the event triggered
+        void onObjectReady(String title);
+
+        // or when data has been loaded (loan number if an agreement exists, null otherwise)
+        void onDataLoaded(String loanNumber);
     }
 
     public interface UserRegisterListener {

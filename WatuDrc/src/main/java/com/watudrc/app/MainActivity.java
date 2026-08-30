@@ -47,6 +47,7 @@ import androidx.core.text.HtmlCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -318,6 +319,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 //mToolbar.setTitle(mDrawerTitle);
                 super.onDrawerOpened(drawerView);
                 invalidateOptionsMenu();
+                refreshShowDocuments();
             }
         };
 
@@ -332,6 +334,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 mDrawerLayout.closeDrawer(Gravity.LEFT);
             } else {
                 mDrawerLayout.openDrawer(Gravity.LEFT);
+                refreshShowDocuments();
             }
         });
 
@@ -404,6 +407,92 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 .withApplicationCode(getString(R.string.infobip_application_code))
                 .build();
 
+        if (getIntent() != null) {
+            handleTabSelection(getIntent());
+        }
+
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);          // keep getIntent() in sync
+
+        // 1. Pop all nested fragment transactions inside MainActivity back to root tabs
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        }
+
+        // 2. Select the destination tab from extras
+        handleTabSelection(intent);
+    }
+
+    private void handleTabSelection(Intent intent) {
+        if (intent == null) return;
+
+        int targetTab = -1;
+        String category = null;
+
+        if (intent.hasExtra("OPEN_TAB")) {
+            targetTab = intent.getIntExtra("OPEN_TAB", -1);
+        } else if (intent.hasExtra("category")) {
+            category = intent.getStringExtra("category");
+        } else if (intent.hasExtra(KEY_START_FROM)) {
+            String startFrom = intent.getStringExtra(KEY_START_FROM);
+            if ("notifications".equalsIgnoreCase(startFrom)) {
+                targetTab = 3; // Notifications tab index
+            }
+        }
+
+        if (targetTab == -1 && category == null) {
+            // The push tap may have landed on LoginActivity/SplashScreenActivity first
+            // (they have no viewPager), which stashed the category for us to consume here.
+            String pendingCategory = storageObject.retrievePendingNotificationCategoryFromPrefs();
+            if (pendingCategory != null && !pendingCategory.isEmpty()) {
+                category = pendingCategory;
+                storageObject.clearPendingNotificationCategoryFromPrefs();
+            }
+        }
+
+        if (category != null && "livechat".equalsIgnoreCase(category)) {
+            goToChatPage("push_notification");
+            return;
+        }
+
+        if (targetTab == -1 && category != null) {
+            targetTab = mapCategoryToTab(category);
+        }
+
+        if (targetTab != -1 && viewPager != null) {
+            final int finalTab = targetTab;
+            viewPager.post(() -> {
+                // Smooth scroll set to false prevents page sliding flickers
+                viewPager.setCurrentItem(finalTab, false);
+                updateTabSelection(finalTab);
+            });
+        }
+    }
+
+    // Tabs: 0=Home, 1=Transactions, 2=Payments, 3=Notifications, 4=Support
+    // "livechat" is handled separately in handleTabSelection — it opens ChatActivity, not a tab.
+    private int mapCategoryToTab(String category) {
+        if (category == null) return -1;
+        switch (category.toLowerCase()) {
+            case "payment":
+                return 2;
+            case "transaction":
+            case "transactions":
+                return 1;
+            case "notification":
+            case "notifications":
+            case "reminder":
+                return 3;
+            case "support":
+            case "resources":
+                return 4;
+            default:
+                return -1;
+        }
     }
 
 //    @Override
@@ -870,7 +959,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
         if(storageObject!=null && documentRips !=null)
         {
             //Should show statement
-            if(storageObject.retrieveCurrentAssetObjectFromPrefs()!=null && storageObject.hasLoanAgreement())
+            if(storageObject.retrieveCurrentAssetObjectFromPrefs()!=null && storageObject.retrieveCurrentAssetObjectFromPrefs().hasLoanAgreement())
             {
                 documentRips.setVisibility(View.VISIBLE);
             }

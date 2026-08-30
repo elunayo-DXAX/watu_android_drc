@@ -127,6 +127,11 @@ public class FragmentPermissions extends Fragment implements IWhereMyLocationCon
 
         final Handler handler = new Handler();
 
+        // Remote Configs
+        remoteConfig = new FirebaseConfig();
+        mFirebaseConfig = remoteConfig.getConfigs();
+
+
         btnBluetooth = parentView.findViewById(R.id.btnBluetooth);
         btnBluetoothPermission = parentView.findViewById(R.id.btnBluetoothPermission);
         btnLocation = parentView.findViewById(R.id.btnLocation);
@@ -194,7 +199,11 @@ public class FragmentPermissions extends Fragment implements IWhereMyLocationCon
 
         btnLanguage.setOnClickListener(v -> {
             GeneralCommands.logEvent(parentActivity, "click_language", "click_language");
-            Toast.makeText(mContext, mContext.getResources().getString(R.string.english_), Toast.LENGTH_SHORT).show();
+            if (storageObject.retrieveLanguageFromPrefs().equalsIgnoreCase("fr")) {
+                Toast.makeText(mContext, mContext.getResources().getString(R.string.french_), Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(mContext, mContext.getResources().getString(R.string.english_), Toast.LENGTH_SHORT).show();
+            }
 
         });
 
@@ -849,9 +858,6 @@ public class FragmentPermissions extends Fragment implements IWhereMyLocationCon
 
     public void setDefaultConfigs()
     {
-        // Remote Configs
-        remoteConfig = new FirebaseConfig();
-        mFirebaseConfig = remoteConfig.getConfigs();
 
 // Set fetch interval (important!)
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()

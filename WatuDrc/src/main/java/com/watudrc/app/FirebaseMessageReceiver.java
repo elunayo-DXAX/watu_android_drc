@@ -102,7 +102,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             click_action = remoteMessage.getData().get("click_action") != null ? remoteMessage.getData().get("click_action") : "general";
 
             try {
-                showNotification(title, body, type);
+                showNotification(title, body, type, click_action);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -120,7 +120,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             click_action = "general";
 
             try {
-                showNotification(title, body, type);
+                showNotification(title, body, type, click_action);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -162,11 +162,13 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
     }
 
     // Method to display the notifications
-    public void showNotification(String title, String message, String type) {
+    public void showNotification(String title, String message, String type, String click_action) {
         // Intent to open MainActivity when notification is clicked
         Intent intent = new Intent(this, MainActivity.class);
         String channel_id = "notification_channel";
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear other activities on top
+        intent.putExtra("category", type);
+        intent.putExtra("click_action", click_action);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);

@@ -33,9 +33,8 @@ public class FragmentDeviceStolen extends Fragment {
 
         btnChatWithUs.setOnClickListener(v -> {
             // To DO: Open chat/support screen
-            GeneralCommands.logEvent(getContext(), "click_chat_with_us_button_device_stolen", "click_chat_with_us_button_device_stolen");
-//            MainActivity.openWhatsAppWithMessage(getContext().getResources().getString(R.string.hello));
-            goToChatPage("fragment_device_stolen");
+            GeneralCommands.logEvent(getContext(), "support_hub_opened_resource_device_stolen", "support_hub_opened_resource_device_stolen");
+            goToChatPage("resources_device_stolen");
         });
         btnReplacementProcess.setOnClickListener(v -> {
             // Open replacement process screen

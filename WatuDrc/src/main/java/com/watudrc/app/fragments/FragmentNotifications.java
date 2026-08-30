@@ -279,8 +279,17 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
             case "payment":
                 listData = filterByType(listData, "payment");
                 break;
-            case "reminders":
+            case "reminder":
                 listData = filterByType(listData, "reminder");
+                break;
+            case "transactions":
+                listData = filterByType(listData, "transaction", "transactions");
+                break;
+            case "support":
+                listData = filterByType(listData, "support");
+                break;
+            case "livechat":
+                listData = filterByType(listData, "livechat");
                 break;
             default:
                 // If no matching filter, return an empty list or original list
@@ -352,6 +361,22 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
 
     }
 
+    public void goToSupportPage()
+    {
+        Intent mIntent = new Intent(parentActivity, MainActivity.class);
+        mIntent.putExtra(KEY_START_FROM, "user_accounts");
+        try {MainActivity.viewPager.setCurrentItem(4); }catch(Exception e){e.printStackTrace();}
+
+        parentActivity.goBack();
+
+    }
+
+    public void goToLiveChatPage()
+    {
+        try {MainActivity.goToChatPage("notification_dialog"); }catch(Exception e){e.printStackTrace();}
+
+    }
+
 
     public void resetNotifications()
     {
@@ -403,7 +428,10 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                 getString(R.string.filter_unread),
                 getString(R.string.filter_general_notifications),
                 getString(R.string.filter_payment_notifications),
-                getString(R.string.filter_reminders)
+                getString(R.string.filter_reminders),
+                getString(R.string.filter_transactions_notifications),
+                getString(R.string.filter_support_notifications),
+                getString(R.string.filter_livechat_notifications)
         };
 
         // Create the AlertDialog
@@ -432,7 +460,19 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                         break;
                     case 4:
                         // Code to show Reminders
-                        setAdapter("reminders");
+                        setAdapter("reminder");
+                        break;
+                    case 5:
+                        // Code to show Transactions Notifications
+                        setAdapter("transactions");
+                        break;
+                    case 6:
+                        // Code to show Support Notifications
+                        setAdapter("support");
+                        break;
+                    case 7:
+                        // Code to show Live Chat Notifications
+                        setAdapter("livechat");
                         break;
                 }
             }
@@ -456,11 +496,15 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
     }
 
     // Helper method to filter notifications by type
-    private static ArrayList<NotificationObject> filterByType(ArrayList<NotificationObject> list, String type) {
+    private static ArrayList<NotificationObject> filterByType(ArrayList<NotificationObject> list, String... types) {
         ArrayList<NotificationObject> filteredList = new ArrayList<>();
         for (NotificationObject notification : list) {
-            if (notification.getType() != null && notification.getType().equalsIgnoreCase(type)) {
-                filteredList.add(notification);
+            if (notification.getType() == null) continue;
+            for (String type : types) {
+                if (notification.getType().equalsIgnoreCase(type)) {
+                    filteredList.add(notification);
+                    break;
+                }
             }
         }
         return filteredList;
@@ -523,12 +567,27 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
             typeTranslated=mContext.getResources().getString(R.string.payment);
         }
 
+        else if(notification.getType().toLowerCase().contains("transaction"))
+        {
+            typeTranslated=mContext.getResources().getString(R.string.transactions);
+        }
+
+        else if(notification.getType().toLowerCase().contains("support"))
+        {
+            typeTranslated=mContext.getResources().getString(R.string.support);
+        }
+
+        else if(notification.getType().toLowerCase().contains("livechat"))
+        {
+            typeTranslated=mContext.getResources().getString(R.string.livechat);
+        }
+
         type.setText(GeneralCommands.capitalizeWords(typeTranslated));
         message.setText(notification.getBody());
         date.setText(notification.getDate());
         time.setText(notification.getTime());
 
-        if(notification.getType().equals("payment"))
+        if(notification.getType().equalsIgnoreCase("payment"))
         {
             icon.setImageResource(R.drawable.ics_notification_payment);
             buttonText.setText(mContext.getResources().getString(R.string.viewtransactionsh));
@@ -543,7 +602,7 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                 }
             });
         }
-        else if(notification.getType().equals("reminder"))
+        else if(notification.getType().equalsIgnoreCase("reminder"))
         {
 
             icon.setImageResource(R.drawable.ics_notification_reminder);
@@ -556,6 +615,57 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                     GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_payments","click_notification_done_go_to_payments");
 
                     goToPaymentPage();
+                    dialogPlus.dismiss();
+                }
+            });
+        }
+        else if(notification.getType().equalsIgnoreCase("transaction") || notification.getType().equalsIgnoreCase("transactions"))
+        {
+
+            icon.setImageResource(R.drawable.ics_notification_general);
+            buttonText.setText(mContext.getResources().getString(R.string.viewtransactionsh));
+
+            btnNotification.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_transactions","click_notification_done_go_to_transactions");
+
+                    goToTransactionsPage();
+                    dialogPlus.dismiss();
+                }
+            });
+        }
+        else if(notification.getType().equalsIgnoreCase("support"))
+        {
+
+            icon.setImageResource(R.drawable.ics_notification_general);
+            buttonText.setText(mContext.getResources().getString(R.string.helpcenter));
+
+            btnNotification.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_support","click_notification_done_go_to_support");
+
+                    goToSupportPage();
+                    dialogPlus.dismiss();
+                }
+            });
+        }
+        else if(notification.getType().equalsIgnoreCase("livechat"))
+        {
+
+            icon.setImageResource(R.drawable.ics_notification_general);
+            buttonText.setText(mContext.getResources().getString(R.string.open_live_chat));
+
+            btnNotification.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_livechat","click_notification_done_go_to_livechat");
+
+                    goToLiveChatPage();
                     dialogPlus.dismiss();
                 }
             });

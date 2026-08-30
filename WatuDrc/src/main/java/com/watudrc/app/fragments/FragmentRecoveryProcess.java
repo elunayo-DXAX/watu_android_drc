@@ -62,7 +62,6 @@ public class FragmentRecoveryProcess extends Fragment {
         btnChatWithUs.setOnClickListener(v -> {
             // To DO: Open chat/support screen
             GeneralCommands.logEvent(getContext(), "support_hub_opened_resource_recovery", "support_hub_opened_resource_recovery");
-//            MainActivity.openWhatsAppWithMessage(getContext().getResources().getString(R.string.hello));
             goToChatPage("resources_recovery_process");
         });
 
