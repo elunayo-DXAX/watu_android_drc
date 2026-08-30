@@ -1774,7 +1774,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
             throw new RuntimeException(e);
         }
 
-        GeneralCommands.logEventObject(parentActivity,"click_pay_button_"+paymentProvider,"click_pay_button_"+paymentProvider,obj);
+        GeneralCommands.logEventObject(parentActivity,"click_pay_button_"+paymentProviderName,"click_pay_button_"+paymentProviderName,obj);
 
         btnConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
