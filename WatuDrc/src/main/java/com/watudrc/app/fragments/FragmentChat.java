@@ -314,7 +314,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
 
     private void setDefaults() {
-        if (StringUtils.isStringEmpty(CallTracker.getSupportNumber()))
+        if (!StringUtils.isStringEmpty(CallTracker.getSupportNumber()))
             support_care_number = CallTracker.getSupportNumber();
         if (CallTracker.getSoftCoolDownLimit() != 0)
             support_throttle_max_initial_attempts = CallTracker.getSoftCoolDownLimit();

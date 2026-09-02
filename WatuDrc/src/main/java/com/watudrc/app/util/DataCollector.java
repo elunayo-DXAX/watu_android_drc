@@ -379,10 +379,15 @@ public class DataCollector implements IWhereMyLocationConstants {
             }
 
 
-            // Attach and send
-            json.put("deviceSignals", sec);
         } catch (Exception e) {
             e.printStackTrace();
+        } finally {
+            // Always attach whatever was collected, even if collection failed partway through.
+            try {
+                json.put("deviceSignals", sec);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -506,6 +511,7 @@ public class DataCollector implements IWhereMyLocationConstants {
     }
 
     private void safePut(JSONObject obj, String key, Object val) {
+        if (obj == null) return;
         try {
             obj.put(key, val);
         } catch (JSONException e) {
