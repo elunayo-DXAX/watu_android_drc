@@ -479,13 +479,13 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
         if (category == null) return -1;
         switch (category.toLowerCase()) {
             case "payment":
+            case "reminder":
                 return 2;
             case "transaction":
             case "transactions":
                 return 1;
             case "notification":
             case "notifications":
-            case "reminder":
                 return 3;
             case "support":
             case "resources":

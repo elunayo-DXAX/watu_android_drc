@@ -590,14 +590,14 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
         if(notification.getType().equalsIgnoreCase("payment"))
         {
             icon.setImageResource(R.drawable.ics_notification_payment);
-            buttonText.setText(mContext.getResources().getString(R.string.viewtransactionsh));
+            buttonText.setText(mContext.getResources().getString(R.string.paynow));
             btnNotification.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
-                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_transactions","click_notification_done_go_to_transactions");
+                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_payments","click_notification_done_go_to_payments");
 
-                    goToTransactionsPage();
+                    goToPaymentPage();
                     dialogPlus.dismiss();
                 }
             });
