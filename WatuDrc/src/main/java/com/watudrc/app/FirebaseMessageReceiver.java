@@ -24,6 +24,8 @@ import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.SyncWorker;
 import com.ypyproductions.utils.StringUtils;
 
+import org.infobip.mobile.messaging.cloud.firebase.MobileMessagingFirebaseService;
+
 import java.util.concurrent.TimeUnit;
 
 public class FirebaseMessageReceiver extends FirebaseMessagingService {
@@ -52,11 +54,15 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
         GetData ob1 = new GetData();
         ob1.initializeSilentContext(getApplicationContext());
         ob1.userUpdateTokenFCM(token, true);
+
+        MobileMessagingFirebaseService.onNewToken(getApplicationContext(), token);
     }
 
     // Override onMessageReceived() method to extract the title and body from the message passed in FCM
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        MobileMessagingFirebaseService.onMessageReceived(getApplicationContext(), remoteMessage);
+
         String messageContent = getRemoteMessageContent(remoteMessage);
         Log.d("ZeFirebaseMessage", "ZeFirebaseMessage\n" + messageContent);
 
