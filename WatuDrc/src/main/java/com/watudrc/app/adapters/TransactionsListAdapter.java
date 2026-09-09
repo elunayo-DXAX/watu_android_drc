@@ -103,7 +103,7 @@ public class TransactionsListAdapter extends BaseAdapter implements IWhereMyLoca
 
 		String type = transaction.getPaymentInstName();
 		String transactionId = transaction.getTrxId();
-		String currency = transaction.getCurrencyCode().equals("SLE") ? "SLE." : transaction.getCurrencyCode();
+		String currency = transaction.getCurrencyCode().equals("USD") ? "USD." : transaction.getCurrencyCode();
 		String amount = "" + transaction.getAmount();
 		String category = transaction.getPaymentTypeName();
 
