@@ -1069,7 +1069,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
     private boolean hasCallPermission() {
         return ContextCompat.checkSelfPermission(
-                requireContext(),
+                mContext,
                 Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED;
     }
 
