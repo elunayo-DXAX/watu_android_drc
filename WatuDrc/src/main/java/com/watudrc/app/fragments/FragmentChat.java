@@ -686,7 +686,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         GeneralCommands.logEvent(parentActivity, "support_copy_number_tapped", "support_copy_number_tapped");
 
         ClipboardManager clipboard = getSystemService(mContext, ClipboardManager.class);
-        ClipData clip = ClipData.newPlainText(getString(R.string.copied_text), textToCopy);
+        ClipData clip = ClipData.newPlainText(mContext.getString(R.string.copied_text), textToCopy);
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
         }
@@ -1146,7 +1146,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         } catch (Exception e) {
             // 4. Log Intent Failure if the OS blocks or drops the call execution
             GeneralCommands.logEvent(parentActivity, "support_call_intent_failed", "support_call_intent_failed");
-            Toast.makeText(mContext, getString(R.string.call_failed) + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, mContext.getString(R.string.call_failed) + e.getMessage(), Toast.LENGTH_SHORT).show();
 
             // Hide loading indicator if the call immediately fails to launch
             if (loadingView != null) {

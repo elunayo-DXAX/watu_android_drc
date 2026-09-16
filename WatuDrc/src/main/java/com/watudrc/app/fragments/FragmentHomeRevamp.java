@@ -1095,6 +1095,9 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
         ob1.userTemporaryUnlockCheck(currentAsset.getLoanNumber(), false, new GetData.UnlockInfoCallback() {
             @Override
             public void onSuccess(UnlockInfoResponse data) {
+                if (parentActivity == null || parentActivity.isFinishing() || parentActivity.isDestroyed()) {
+                    return;
+                }
 
                 int dailyLimit = data.getDailyLimit();
                 int dailyRemaining = data.getDailyRemaining();
