@@ -27,6 +27,7 @@ import com.watudrc.app.constant.IWhereMyLocationConstants;
 import com.watudrc.app.font.FirmaTextView;
 import com.watudrc.app.objects.NotificationObject;
 import com.watudrc.app.prefs.StoreAndGetFromPrefs;
+import com.watudrc.app.util.NotificationDeepLinkResolver;
 import com.watudrc.app.view.EndlessListView;
 
 
@@ -338,7 +339,7 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
     {
         Intent mIntent = new Intent(parentActivity, MainActivity.class);
         mIntent.putExtra(KEY_START_FROM, "user_accounts");
-        try {MainActivity.viewPager.setCurrentItem(2); }catch(Exception e){e.printStackTrace();}
+        try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_PAYMENTS); }catch(Exception e){e.printStackTrace();}
 
         parentActivity.goBack();
 
@@ -353,7 +354,7 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
     {
         Intent mIntent = new Intent(parentActivity, MainActivity.class);
         mIntent.putExtra(KEY_START_FROM, "user_accounts");
-        try {MainActivity.viewPager.setCurrentItem(1); }catch(Exception e){e.printStackTrace();}
+        try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_TRANSACTIONS); }catch(Exception e){e.printStackTrace();}
 
         parentActivity.goBack();
 
@@ -365,7 +366,7 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
     {
         Intent mIntent = new Intent(parentActivity, MainActivity.class);
         mIntent.putExtra(KEY_START_FROM, "user_accounts");
-        try {MainActivity.viewPager.setCurrentItem(4); }catch(Exception e){e.printStackTrace();}
+        try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_SUPPORT); }catch(Exception e){e.printStackTrace();}
 
         parentActivity.goBack();
 
@@ -766,7 +767,7 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                 @Override
                 public void onClick(View v) {
                     // Opens Resource Center activity
-                    try {MainActivity.viewPager.setCurrentItem(4);}catch(Exception e ){e.printStackTrace();}
+                    try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_SUPPORT);}catch(Exception e ){e.printStackTrace();}
                     dialogPlus.dismiss();
 
 //                    deleteNotification(notification, notificationPosition);

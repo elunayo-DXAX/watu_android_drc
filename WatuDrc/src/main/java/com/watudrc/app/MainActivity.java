@@ -82,6 +82,7 @@ import com.watudrc.app.prefs.RateAppPrefs;
 import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.DataCollector;
 import com.watudrc.app.util.FirebaseConfig;
+import com.watudrc.app.util.NotificationDeepLinkResolver;
 import com.watudrc.app.util.PhoneNumberFormatter;
 import com.watudrc.app.view.BadgeDrawerArrowDrawable;
 import com.watudrc.app.view.MaterialRippleLayout;
@@ -440,7 +441,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
         } else if (intent.hasExtra(KEY_START_FROM)) {
             String startFrom = intent.getStringExtra(KEY_START_FROM);
             if ("notifications".equalsIgnoreCase(startFrom)) {
-                targetTab = 3; // Notifications tab index
+                targetTab = NotificationDeepLinkResolver.TAB_NOTIFICATIONS;
             }
         }
 
@@ -454,13 +455,13 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
             }
         }
 
-        if (category != null && "livechat".equalsIgnoreCase(category)) {
+        if (NotificationDeepLinkResolver.isLiveChatCategory(category)) {
             goToChatPage("push_notification");
             return;
         }
 
         if (targetTab == -1 && category != null) {
-            targetTab = mapCategoryToTab(category);
+            targetTab = NotificationDeepLinkResolver.resolveTabForCategory(category);
         }
 
         if (targetTab != -1 && viewPager != null) {
@@ -470,28 +471,6 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 viewPager.setCurrentItem(finalTab, false);
                 updateTabSelection(finalTab);
             });
-        }
-    }
-
-    // Tabs: 0=Home, 1=Transactions, 2=Payments, 3=Notifications, 4=Support
-    // "livechat" is handled separately in handleTabSelection — it opens ChatActivity, not a tab.
-    private int mapCategoryToTab(String category) {
-        if (category == null) return -1;
-        switch (category.toLowerCase()) {
-            case "payment":
-            case "reminder":
-                return 2;
-            case "transaction":
-            case "transactions":
-                return 1;
-            case "notification":
-            case "notifications":
-                return 3;
-            case "support":
-            case "resources":
-                return 4;
-            default:
-                return -1;
         }
     }
 
