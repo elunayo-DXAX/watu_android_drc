@@ -470,7 +470,7 @@
     <string name="havingissuesmakingpayment">Having issues making payments?</string>
     <string name="havingissuesunlockingdevice">Having issues with Unlocking your Device?</string>
     <string name="resendknox">A passcode has been sent to your device. You can request a new one after %1$s</string>
-    <string name="resendsms">A passode has been sent to your number. You can request a new one after %1$s sec</string>
+    <string name="resendsms">A passcode has been sent to your number. You can request a new one after %1$s sec</string>
 
 
     <string name="securenotification">Secure Notification</string>
@@ -913,7 +913,7 @@
     <string name="smsinstructions"><Data><![CDATA[1. Ensure you are requesting using a Watu-registered number.<br>2. The one-time password (OTP) will be sent to your SMS inbox.]]></Data></string>
 
     <string name="receiveotpviaknox">Get OTP via Pop-Up</string>
-    <string name="choosehowtoreceive">Choose how to receive</string>
+    <string name="choosehowtoreceive">Choose how to receive OTP</string>
     <string name="sms">SMS</string>
     <string name="receiveotpviasms">Get OTP via SMS</string>
 
