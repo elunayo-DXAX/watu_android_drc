@@ -116,7 +116,8 @@ public class LanguageActivity extends BaseActivity implements IWhereMyLocationCo
 	  @Override
 		public void onBackPressed() {
 			
-			goBack();
+			//goBack();
+		  goToPage();
 			
 		}
 	  
@@ -124,7 +125,8 @@ public class LanguageActivity extends BaseActivity implements IWhereMyLocationCo
 	  
 	  public void goBack()
 	  {
-		  finish();
+		 // finish();
+		  goToPage();
 	  }
 	  
 	  @Override
