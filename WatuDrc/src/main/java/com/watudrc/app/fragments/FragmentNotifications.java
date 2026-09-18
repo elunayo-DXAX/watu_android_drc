@@ -2,7 +2,6 @@ package com.watudrc.app.fragments;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -337,39 +336,18 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
     }
     public void goToPaymentPage()
     {
-        Intent mIntent = new Intent(parentActivity, MainActivity.class);
-        mIntent.putExtra(KEY_START_FROM, "user_accounts");
         try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_PAYMENTS); }catch(Exception e){e.printStackTrace();}
-
-        parentActivity.goBack();
-
-//        GeneralCommands.goToPage(parentActivity, mIntent,false);
-
-
-
     }
 
 
     public void goToTransactionsPage()
     {
-        Intent mIntent = new Intent(parentActivity, MainActivity.class);
-        mIntent.putExtra(KEY_START_FROM, "user_accounts");
         try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_TRANSACTIONS); }catch(Exception e){e.printStackTrace();}
-
-        parentActivity.goBack();
-
-
-
     }
 
     public void goToSupportPage()
     {
-        Intent mIntent = new Intent(parentActivity, MainActivity.class);
-        mIntent.putExtra(KEY_START_FROM, "user_accounts");
         try {MainActivity.viewPager.setCurrentItem(NotificationDeepLinkResolver.TAB_SUPPORT); }catch(Exception e){e.printStackTrace();}
-
-        parentActivity.goBack();
-
     }
 
     public void goToLiveChatPage()
