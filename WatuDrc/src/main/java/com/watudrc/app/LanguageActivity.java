@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -67,8 +68,20 @@ public class LanguageActivity extends BaseActivity implements IWhereMyLocationCo
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                goBack();
+				if (hasStoredUserAndMarketData()){
+					goToPage();
+				}else finish();
              }
+        });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+
+				if (hasStoredUserAndMarketData()){
+					goToPage();
+				}else finish();
+            }
         });
 
 
@@ -113,20 +126,17 @@ public class LanguageActivity extends BaseActivity implements IWhereMyLocationCo
 			}
 		}
 	  
-	  @Override
-		public void onBackPressed() {
-			
-			//goBack();
-		  goToPage();
-			
-		}
-	  
-	  
-	  
 	  public void goBack()
 	  {
 		 // finish();
 		  goToPage();
+	  }
+
+	  private boolean hasStoredUserAndMarketData()
+	  {
+		  return storageObject.checkIfUserIsRegistered()
+				  && !storageObject.retrieveUserPasswordFromPrefs().equals("")
+				  && !storageObject.retrieveUserKeyFromPrefs().equals("");
 	  }
 	  
 	  @Override

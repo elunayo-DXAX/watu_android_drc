@@ -546,7 +546,7 @@ public class StoreAndGetFromPrefs
 	public String retrieveUserCountryCodeFromPrefs()
 	{
 		String country = tinyDb.getString("UserCountryCode");
-		return country.equals("")? "ng": country;
+		return country.equals("")? "cd": country;
 
 	}
 

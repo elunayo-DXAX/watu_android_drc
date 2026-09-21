@@ -1177,6 +1177,9 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="refresh">Rafraîchir</string>
     <string name="helloicon">Bonjour ✋🏾</string>
 
+    <string name="enterpindigits">Veuillez saisir les 4 chiffres dans les deux champs</string>
+
+
 
     <string name="phoneunlockhelp">Aide au déverrouillage du téléphone</string>
     <string name="troubleshootunlockingyourphone">Dépannage du déverrouillage de votre téléphone</string>
