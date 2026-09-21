@@ -1029,6 +1029,10 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
     }
 
     public static void goToChatPage(String entryPoint) {
+        if (parentActivity == null || parentActivity.isFinishing() || parentActivity.isDestroyed()) {
+            return;
+        }
+
         Intent mIntent = new Intent(parentActivity, ChatActivity.class);
         mIntent.putExtra(KEY_START_FROM, entryPoint);
         GeneralCommands.goToPage(parentActivity, mIntent, false);
