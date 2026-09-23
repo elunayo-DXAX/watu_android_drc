@@ -17,6 +17,10 @@ stored yet.
 Added the French translation for `enterpindigits` (PIN-entry validation toast), previously falling back to
 English.
 
+### Clean up duplicate release build output directory
+Removed the stray nested `release/release/` baseline-profile and metadata files, and refreshed the top-level
+release build outputs to match the current build.
+
 ---
 
 ## v1.1.78 (38) — 2026-09-21
