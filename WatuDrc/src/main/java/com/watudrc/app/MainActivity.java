@@ -432,6 +432,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
 
         int targetTab = -1;
         String category = null;
+        String url = intent.getStringExtra("url");
 
         if (intent.hasExtra("OPEN_TAB")) {
             targetTab = intent.getIntExtra("OPEN_TAB", -1);
@@ -451,11 +452,19 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
             if (pendingCategory != null && !pendingCategory.isEmpty()) {
                 category = pendingCategory;
                 storageObject.clearPendingNotificationCategoryFromPrefs();
+
+                url = storageObject.retrievePendingNotificationUrlFromPrefs();
+                storageObject.clearPendingNotificationUrlFromPrefs();
             }
         }
 
         if (category != null && "livechat".equalsIgnoreCase(category)) {
             goToChatPage("push_notification");
+            return;
+        }
+
+        if (category != null && "link".equalsIgnoreCase(category)) {
+            openExternalUrl(url);
             return;
         }
 
@@ -471,6 +480,11 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 updateTabSelection(finalTab);
             });
         }
+    }
+
+    // "link" is handled separately in handleTabSelection — it opens an external browser, not a tab.
+    private void openExternalUrl(String url) {
+        GeneralCommands.openUrlInExternalBrowser(this, url);
     }
 
     // Tabs: 0=Home, 1=Transactions, 2=Payments, 3=Notifications, 4=Support

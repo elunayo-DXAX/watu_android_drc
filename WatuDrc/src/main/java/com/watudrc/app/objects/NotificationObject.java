@@ -9,6 +9,7 @@ public class NotificationObject {
 	private String type;
 	private String data;
 	private String action;
+	private String url;
 
 	private String date;
 
@@ -116,6 +117,14 @@ public class NotificationObject {
 	}
 	public void setAction(String action) {
 		this.action= action;
+	}
+
+
+	public String getUrl() {
+		return url;
+	}
+	public void setUrl(String url) {
+		this.url= url;
 	}
 
 
