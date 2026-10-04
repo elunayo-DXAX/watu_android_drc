@@ -981,6 +981,8 @@
     <string name="calling_isn_t_enabled">Calling isn\'t enabled</string>
     <string name="to_call_customer_care_from_watu_app_please_allow_phone_call_permission">To call Customer Care from Watu App, please allow phone call permission.</string>
     <string name="open_live_chat">Open Live Chat</string>
+    <string name="link">Link</string>
+    <string name="open_link">Open Link</string>
     <string name="enable_calling_for_help">Enable Calling For Help</string>
     <string name="your_privacy_is_protected">Your privacy is protected.</string>
     <string name="we_don_t_access_your_call_history_or_contacts">We don’t access your call history or contacts.</string>

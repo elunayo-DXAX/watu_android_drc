@@ -356,6 +356,11 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
 
     }
 
+    public void openNotificationUrl(String url)
+    {
+        GeneralCommands.openUrlInExternalBrowser(mContext, url);
+    }
+
 
     public void resetNotifications()
     {
@@ -561,6 +566,11 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
             typeTranslated=mContext.getResources().getString(R.string.livechat);
         }
 
+        else if(notification.getType().toLowerCase().contains("link"))
+        {
+            typeTranslated=mContext.getResources().getString(R.string.link);
+        }
+
         type.setText(GeneralCommands.capitalizeWords(typeTranslated));
         message.setText(notification.getBody());
         date.setText(notification.getDate());
@@ -645,6 +655,23 @@ public class FragmentNotifications extends Fragment implements IWhereMyLocationC
                     GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_livechat","click_notification_done_go_to_livechat");
 
                     goToLiveChatPage();
+                    dialogPlus.dismiss();
+                }
+            });
+        }
+        else if(notification.getType().equalsIgnoreCase("link"))
+        {
+
+            icon.setImageResource(R.drawable.ics_notification_general);
+            buttonText.setText(mContext.getResources().getString(R.string.open_link));
+
+            btnNotification.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    GeneralCommands.logEvent(parentActivity,"click_notification_done_go_to_link","click_notification_done_go_to_link");
+
+                    openNotificationUrl(notification.getUrl());
                     dialogPlus.dismiss();
                 }
             });

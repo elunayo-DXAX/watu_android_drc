@@ -1295,6 +1295,8 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="calling_isn_t_enabled">Les appels ne sont pas activés</string>
     <string name="to_call_customer_care_from_watu_app_please_allow_phone_call_permission">Pour appeler le service client depuis l’application Watu, veuillez autoriser les appels téléphoniques.</string>
     <string name="open_live_chat">Ouvrir le chat en direct</string>
+    <string name="link">Lien</string>
+    <string name="open_link">Ouvrir le lien</string>
     <string name="enable_calling_for_help">Activer les appels pour obtenir de l’aide</string>
     <string name="your_privacy_is_protected">Votre vie privée est protégée.</string>
     <string name="we_don_t_access_your_call_history_or_contacts">Nous n’accédons pas à votre historique d’appels ni à vos contacts.</string>

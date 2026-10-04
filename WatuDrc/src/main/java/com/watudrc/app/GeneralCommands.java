@@ -19,6 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -27,6 +28,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -1216,6 +1218,41 @@ public class GeneralCommands extends BaseActivity implements IWhereMyLocationCon
 		}
 
 
+	}
+
+
+	// Bypasses this app's own verified App Link so a "link" push never gets handed back to the app
+	// instead of rendering. Chrome honors App Link verification; most third-party browsers don't.
+	public static void openUrlInExternalBrowser(Context context, String url)
+	{
+		if (url == null || url.isEmpty()) return;
+
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+		intent.addCategory(Intent.CATEGORY_BROWSABLE);
+		if (!(context instanceof Activity)) {
+			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		}
+
+		// A host-less lookup can never match our own (or any) App Link, so this always
+		// resolves to the device's real default browser, never back to this app.
+		Intent genericBrowserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://"));
+		PackageManager packageManager = context.getPackageManager();
+		ResolveInfo defaultBrowser = packageManager.resolveActivity(genericBrowserIntent, PackageManager.MATCH_DEFAULT_ONLY);
+
+		// With no default browser set this resolves to the system chooser ("android"), which can't be
+		// targeted directly — leave the intent implicit then so the user still gets the picker.
+		if (defaultBrowser != null && defaultBrowser.activityInfo != null) {
+			String browserPackage = defaultBrowser.activityInfo.packageName;
+			if (!"android".equals(browserPackage) && !context.getPackageName().equals(browserPackage)) {
+				intent.setPackage(browserPackage);
+			}
+		}
+
+		try {
+			context.startActivity(intent);
+		} catch (ActivityNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 

@@ -450,6 +450,8 @@
     <string name="filter_support_notifications">Taarifa za Msaada</string>
     <string name="filter_livechat_notifications">Taarifa za Mazungumzo ya Moja kwa Moja</string>
     <string name="livechat">Mazungumzo ya Moja kwa Moja</string>
+    <string name="link">Kiungo</string>
+    <string name="open_link">Fungua Kiungo</string>
     <string name="viewtransactionsh">View Transactions</string>
 
     <string name="instructionsforotherpayment">Maelekezo kwa Chaguo Nyingine za Malipo</string>

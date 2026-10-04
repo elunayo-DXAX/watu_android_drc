@@ -1888,6 +1888,24 @@ public class StoreAndGetFromPrefs
 		tinyDb.putString("PendingNotificationCategory", "");
 	}
 
+	// URL carried by a "link" category push tapped on an activity (Login/Splash) that has
+	// no viewPager of its own — consumed by MainActivity once it starts, alongside the category.
+	public void savePendingNotificationUrlToPrefs(String url)
+	{
+		tinyDb.putString("PendingNotificationUrl", url);
+	}
+
+	public String retrievePendingNotificationUrlFromPrefs()
+	{
+		tinyDb = new TinyDB(mContext);
+		return tinyDb.getString("PendingNotificationUrl");
+	}
+
+	public void clearPendingNotificationUrlFromPrefs()
+	{
+		tinyDb.putString("PendingNotificationUrl", "");
+	}
+
 
 	//Retrieve NotificationObject Objects
 	public ArrayList<NotificationObject> retrieveNotificationObjectObjectsFromPrefs()

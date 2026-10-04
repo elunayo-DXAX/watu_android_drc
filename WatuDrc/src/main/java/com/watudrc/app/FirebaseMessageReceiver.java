@@ -35,6 +35,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
     String body = "";
     String type = "";
     String click_action = "";
+    String url = "";
 
 
     // Initialize the storageObject
@@ -106,9 +107,10 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             body = remoteMessage.getData().get("body");
             type = remoteMessage.getData().get("category") != null ? remoteMessage.getData().get("category") : "General";
             click_action = remoteMessage.getData().get("click_action") != null ? remoteMessage.getData().get("click_action") : "general";
+            url = remoteMessage.getData().get("url") != null ? remoteMessage.getData().get("url") : "";
 
             try {
-                showNotification(title, body, type, click_action);
+                showNotification(title, body, type, click_action, url);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -124,9 +126,10 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             body = remoteMessage.getNotification().getBody();
             type = "General";
             click_action = "general";
+            url = "";
 
             try {
-                showNotification(title, body, type, click_action);
+                showNotification(title, body, type, click_action, url);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -141,6 +144,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             obj.setData(remoteMessage.getData() != null ? remoteMessage.getData().toString() : "");
             obj.setType(type);
             obj.setAction(click_action);
+            obj.setUrl(url);
             obj.setDate(GeneralCommands.getCurrentDate());
             obj.setTime(GeneralCommands.getCurrentTime());
             obj.setTimestamp(System.currentTimeMillis());
@@ -168,13 +172,14 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
     }
 
     // Method to display the notifications
-    public void showNotification(String title, String message, String type, String click_action) {
+    public void showNotification(String title, String message, String type, String click_action, String url) {
         // Intent to open MainActivity when notification is clicked
         Intent intent = new Intent(this, MainActivity.class);
         String channel_id = "notification_channel";
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear other activities on top
         intent.putExtra("category", type);
         intent.putExtra("click_action", click_action);
+        intent.putExtra("url", url);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
