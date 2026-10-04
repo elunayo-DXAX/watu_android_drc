@@ -1103,6 +1103,10 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="filter_general_notifications">Notifications générales</string>
     <string name="filter_payment_notifications">Notifications de paiement</string>
     <string name="filter_reminders">Rappels</string>
+    <string name="filter_transactions_notifications">Notifications de transactions</string>
+    <string name="filter_support_notifications">Notifications d\'aide</string>
+    <string name="filter_livechat_notifications">Notifications de chat en direct</string>
+    <string name="livechat">Chat en direct</string>
     <string name="viewtransactionsh">Voir les transactions</string>
     <string name="general">Général</string>
     <string name="appnotifications">Notifications des applications</string>
@@ -1173,6 +1177,9 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="refresh">Rafraîchir</string>
     <string name="helloicon">Bonjour ✋🏾</string>
 
+    <string name="enterpindigits">Veuillez saisir les 4 chiffres dans les deux champs</string>
+
+
 
     <string name="phoneunlockhelp">Aide au déverrouillage du téléphone</string>
     <string name="troubleshootunlockingyourphone">Dépannage du déverrouillage de votre téléphone</string>
@@ -1221,7 +1228,7 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="smsinstructions"><Data><![CDATA[1. Assurez-vous d’effectuer la demande avec un numéro enregistré chez Watu.<br>2. Le mot de passe à usage unique (OTP) sera envoyé dans votre boîte SMS.]]></Data></string>
 
     <string name="receiveotpviaknox">Recevoir l’OTP via Pop-Up</string>
-    <string name="choosehowtoreceive">Choisissez comment recevoir</string>
+    <string name="choosehowtoreceive">Choisissez comment recevoir OTP</string>
     <string name="sms">SMS</string>
     <string name="receiveotpviasms">Recevoir l’OTP via SMS</string>
 
@@ -1323,5 +1330,29 @@ Un <font color=\'#04AFAB\'>prépaiement</font> signifie rembourser votre prêt
     <string name="next_steps">Notre équipe confirmera le montant correct et vous guidera pour les prochaines étapes.</string>
 
     <string name="email_customercare_watuafrica_co_tz"><![CDATA[Email : <font color=\"#04AFAB\">info_drc@watuafrica.com</font>]]></string>
+
+    <string name="err_invalid_phone">Numéro de téléphone invalide</string>
+    <string name="err_otp_expired">Vous ne pouvez plus utiliser ce code OTP pour cet appareil. Veuillez en demander un nouveau !</string>
+    <string name="err_otp_wrong">Le code OTP fourni pour ce numéro de téléphone est incorrect</string>
+    <string name="err_not_mifos_client">Client introuvable dans Mifos</string>
+    <string name="err_missing_api_secret">Secret API manquant</string>
+    <string name="err_invalid_api_secret">Secret API invalide</string>
+    <string name="err_no_loan_w_phone_asset">Aucun prêt avec un appareil associé n\'existe pour ce client</string>
+    <string name="err_no_such_device">Aucun appareil trouvé avec cet identifiant</string>
+    <string name="err_temp_unlock_not_supported_loan">Le déverrouillage temporaire n\'est pas pris en charge pour ce prêt</string>
+    <string name="err_no_payment_request">Aucune demande de paiement trouvée pour ce client</string>
+    <string name="err_max_number_temp_unlock_req_reached">Le nombre maximum de demandes de déverrouillage temporaire a été atteint !</string>
+    <string name="err_no_payment_provider_found">Aucun fournisseur de paiement trouvé avec cet identifiant</string>
+    <string name="err_no_currency_found">Aucune devise trouvée avec ce code</string>
+    <string name="err_datasource_id_null">L\'identifiant de la source de données est nul</string>
+    <string name="err_no_upgrade_devices_for_loan">Il n\'y a aucun appareil de mise à niveau pour ce prêt</string>
+    <string name="err_no_agreement_for_loan_exists">Il n\'existe aucun contrat pour ce prêt</string>
+    <string name="err_temp_unlock_out_of_service">Le service de déverrouillage temporaire est actuellement indisponible</string>
+    <string name="err_no_such_unlock_request">Aucune demande de déverrouillage trouvée avec cet identifiant</string>
+    <string name="err_tx_datasource_not_supported">La source de données de transaction utilisée pour ce fournisseur de paiement n\'est pas prise en charge.</string>
+    <string name="err_client_reached_max_verify_requests">Le client a atteint le nombre maximum de demandes de vérification au cours des dernières 24 heures.</string>
+    <string name="err_system_reached_max_verify_requests">Le système a atteint le nombre maximum de demandes de vérification au cours des dernières 24 heures.</string>
+    <string name="err_unsupported_otp_delivery_type">Type de livraison OTP non pris en charge</string>
+    <string name="err_generic_fallback">Une erreur inattendue s\'est produite. Veuillez réessayer plus tard.</string>
 
 </resources>

@@ -470,7 +470,7 @@
     <string name="havingissuesmakingpayment">Having issues making payments?</string>
     <string name="havingissuesunlockingdevice">Having issues with Unlocking your Device?</string>
     <string name="resendknox">A passcode has been sent to your device. You can request a new one after %1$s</string>
-    <string name="resendsms">A passode has been sent to your number. You can request a new one after %1$s sec</string>
+    <string name="resendsms">A passcode has been sent to your number. You can request a new one after %1$s sec</string>
 
 
     <string name="securenotification">Secure Notification</string>
@@ -502,6 +502,10 @@
     <string name="filter_general_notifications">General Notifications</string>
     <string name="filter_payment_notifications">Payment Notifications</string>
     <string name="filter_reminders">Reminders</string>
+    <string name="filter_transactions_notifications">Transaction Notifications</string>
+    <string name="filter_support_notifications">Support Notifications</string>
+    <string name="filter_livechat_notifications">Live Chat Notifications</string>
+    <string name="livechat">Live Chat</string>
     <string name="viewtransactionsh">View Transactions</string>
 
 
@@ -909,7 +913,7 @@
     <string name="smsinstructions"><Data><![CDATA[1. Ensure you are requesting using a Watu-registered number.<br>2. The one-time password (OTP) will be sent to your SMS inbox.]]></Data></string>
 
     <string name="receiveotpviaknox">Get OTP via Pop-Up</string>
-    <string name="choosehowtoreceive">Choose how to receive</string>
+    <string name="choosehowtoreceive">Choose how to receive OTP</string>
     <string name="sms">SMS</string>
     <string name="receiveotpviasms">Get OTP via SMS</string>
 
@@ -1014,5 +1018,29 @@ A <font color=\'#04AFAB\'>prepayment</font> means paying off your loan
     <string name="next_steps">Our team will confirm the correct amount for you and guide you on the next steps.</string>
 
     <string name="asset">Asset</string>
+
+    <string name="err_invalid_phone">Invalid phone number</string>
+    <string name="err_otp_expired">You cannot use requested OTP for the device anymore. Request new one!</string>
+    <string name="err_otp_wrong">Wrong OTP is provided for the phone number</string>
+    <string name="err_not_mifos_client">Not client in Mifos</string>
+    <string name="err_missing_api_secret">Missing API secret</string>
+    <string name="err_invalid_api_secret">Invalid API secret</string>
+    <string name="err_no_loan_w_phone_asset">There is no Loan with Phone asset linked for client exists</string>
+    <string name="err_no_such_device">No such device by passed id</string>
+    <string name="err_temp_unlock_not_supported_loan">Temporary unlock is not supported for this loan</string>
+    <string name="err_no_payment_request">No payment requests was found for client</string>
+    <string name="err_max_number_temp_unlock_req_reached">Maximum number of Temporary Unlock requests has been reached!</string>
+    <string name="err_no_payment_provider_found">No PaymentProvider found by id</string>
+    <string name="err_no_currency_found">No Currency found by code</string>
+    <string name="err_datasource_id_null">Datasource id is null</string>
+    <string name="err_no_upgrade_devices_for_loan">There are no Upgrade Devices for that Loan</string>
+    <string name="err_no_agreement_for_loan_exists">There is no agreement for Loan exists</string>
+    <string name="err_temp_unlock_out_of_service">Temporary unlock service is currently unavailable</string>
+    <string name="err_no_such_unlock_request">No such unlock request by passed id</string>
+    <string name="err_tx_datasource_not_supported">Used Tx Datasource for payment provider is not supported.</string>
+    <string name="err_client_reached_max_verify_requests">Client has reached maximum number of verify requests in last 24 hours.</string>
+    <string name="err_system_reached_max_verify_requests">System has reached maximum number of verify requests in last 24 hours.</string>
+    <string name="err_unsupported_otp_delivery_type">Unsupported OTP delivery type</string>
+    <string name="err_generic_fallback">An unexpected error occurred. Please try again later.</string>
 
 </resources>

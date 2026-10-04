@@ -546,7 +546,7 @@ public class StoreAndGetFromPrefs
 	public String retrieveUserCountryCodeFromPrefs()
 	{
 		String country = tinyDb.getString("UserCountryCode");
-		return country.equals("")? "ng": country;
+		return country.equals("")? "cd": country;
 
 	}
 
@@ -1870,6 +1870,24 @@ public class StoreAndGetFromPrefs
 
 	}
 
+	// Category of a push notification tapped on an activity (Login/Splash) that has
+	// no viewPager of its own — consumed by MainActivity once it starts, to pick the tab.
+	public void savePendingNotificationCategoryToPrefs(String category)
+	{
+		tinyDb.putString("PendingNotificationCategory", category);
+	}
+
+	public String retrievePendingNotificationCategoryFromPrefs()
+	{
+		tinyDb = new TinyDB(mContext);
+		return tinyDb.getString("PendingNotificationCategory");
+	}
+
+	public void clearPendingNotificationCategoryFromPrefs()
+	{
+		tinyDb.putString("PendingNotificationCategory", "");
+	}
+
 
 	//Retrieve NotificationObject Objects
 	public ArrayList<NotificationObject> retrieveNotificationObjectObjectsFromPrefs()
@@ -2267,16 +2285,6 @@ public class StoreAndGetFromPrefs
 		String lastPaymentDate = tinyDb.getString("LastPaymentDate");
 		if (StringUtils.isStringEmpty(lastPaymentDate)) lastPaymentDate = "";
 		return lastPaymentDate;
-	}
-
-	public void setHasLoanAgreement(boolean value) {
-
-		tinyDb.putBoolean("HasLoanAgreement", value);
-	}
-
-	public boolean hasLoanAgreement() {
-		tinyDb = new TinyDB(mContext);
-		return tinyDb.getBoolean("HasLoanAgreement");
 	}
 
 

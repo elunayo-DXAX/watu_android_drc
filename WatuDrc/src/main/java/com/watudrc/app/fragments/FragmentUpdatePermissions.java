@@ -125,6 +125,10 @@ public class FragmentUpdatePermissions extends Fragment implements IWhereMyLocat
 
         final Handler handler = new Handler();
 
+        // Remote Configs
+        remoteConfig = new FirebaseConfig();
+        mFirebaseConfig = remoteConfig.getConfigs();
+
         btnBluetooth = parentView.findViewById(R.id.btnBluetooth);
         btnBluetoothPermission = parentView.findViewById(R.id.btnBluetoothPermission);
         btnLocation = parentView.findViewById(R.id.btnLocation);
@@ -479,12 +483,14 @@ public class FragmentUpdatePermissions extends Fragment implements IWhereMyLocat
     public void onResume() {
         super.onResume();
 
-        // Re-fetch configs every time app comes to foreground
-        mFirebaseConfig.fetchAndActivate().addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                applyConfigs();
-            }
-        });
+        if (mFirebaseConfig != null) {
+            // Re-fetch configs every time app comes to foreground
+            mFirebaseConfig.fetchAndActivate().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    applyConfigs();
+                }
+            });
+        }
 
         if (btnCallPermission != null) {
             // We use ContextCompat directly so it doesn't accidentally prompt them again
@@ -888,9 +894,6 @@ public class FragmentUpdatePermissions extends Fragment implements IWhereMyLocat
 
     public void setDefaultConfigs()
     {
-        // Remote Configs
-        remoteConfig = new FirebaseConfig();
-        mFirebaseConfig = remoteConfig.getConfigs();
 
 // Set fetch interval (important!)
         FirebaseRemoteConfigSettings configSettings = new FirebaseRemoteConfigSettings.Builder()

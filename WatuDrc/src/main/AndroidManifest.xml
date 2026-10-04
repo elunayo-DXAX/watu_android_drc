@@ -2,15 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.watudrc.app"
-    android:versionCode="38"
-    android:versionName="1.1.78" >
+    android:versionCode="39"
+    android:versionName="1.1.79" >
 
     <uses-feature
         android:name="android.hardware.telephony"
         android:required="false" />
-
-    <meta-data android:name= "delivery_metrics_exported_to_big_query_enabled"
-        android:value="true"/>
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -34,6 +31,9 @@
         android:theme="@style/AppTheme"
         tools:node="merge"
         tools:replace="android:allowBackup" >
+
+        <meta-data android:name= "delivery_metrics_exported_to_big_query_enabled"
+            android:value="true"/>
 
         <activity
             android:name=".PaymentProcessesActivity"

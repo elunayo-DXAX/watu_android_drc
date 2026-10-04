@@ -46,9 +46,8 @@ public class FragmentServiceCenter extends Fragment {
 
         btnFindSamsungASC.setOnClickListener(v -> {
             // TODO: Open chat/support screen
-            GeneralCommands.logEvent(getContext(), "click_find_samsung_asc_button_service_centre", "click_find_samsung_asc_button_service_centre");
-//            MainActivity.openWhatsAppWithMessage(getContext().getResources().getString(R.string.hello));
-            goToChatPage("fragment_service_centre");
+            GeneralCommands.logEvent(getContext(), "support_hub_opened_resource_service_center", "support_hub_opened_resource_service_center");
+            goToChatPage("resources_service_center");
         });
 
         btnDeviceBeyondRepair.setOnClickListener(v -> {

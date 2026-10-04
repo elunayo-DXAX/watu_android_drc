@@ -47,6 +47,7 @@ import androidx.core.text.HtmlCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -81,6 +82,7 @@ import com.watudrc.app.prefs.RateAppPrefs;
 import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.DataCollector;
 import com.watudrc.app.util.FirebaseConfig;
+import com.watudrc.app.util.NotificationDeepLinkResolver;
 import com.watudrc.app.util.PhoneNumberFormatter;
 import com.watudrc.app.view.BadgeDrawerArrowDrawable;
 import com.watudrc.app.view.MaterialRippleLayout;
@@ -318,6 +320,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 //mToolbar.setTitle(mDrawerTitle);
                 super.onDrawerOpened(drawerView);
                 invalidateOptionsMenu();
+                refreshShowDocuments();
             }
         };
 
@@ -332,6 +335,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 mDrawerLayout.closeDrawer(Gravity.LEFT);
             } else {
                 mDrawerLayout.openDrawer(Gravity.LEFT);
+                refreshShowDocuments();
             }
         });
 
@@ -404,6 +408,70 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
                 .withApplicationCode(getString(R.string.infobip_application_code))
                 .build();
 
+        if (getIntent() != null) {
+            handleTabSelection(getIntent());
+        }
+
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);          // keep getIntent() in sync
+
+        // 1. Pop all nested fragment transactions inside MainActivity back to root tabs
+        if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+            getSupportFragmentManager().popBackStackImmediate(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+        }
+
+        // 2. Select the destination tab from extras
+        handleTabSelection(intent);
+    }
+
+    private void handleTabSelection(Intent intent) {
+        if (intent == null) return;
+
+        int targetTab = -1;
+        String category = null;
+
+        if (intent.hasExtra("OPEN_TAB")) {
+            targetTab = intent.getIntExtra("OPEN_TAB", -1);
+        } else if (intent.hasExtra("category")) {
+            category = intent.getStringExtra("category");
+        } else if (intent.hasExtra(KEY_START_FROM)) {
+            String startFrom = intent.getStringExtra(KEY_START_FROM);
+            if ("notifications".equalsIgnoreCase(startFrom)) {
+                targetTab = NotificationDeepLinkResolver.TAB_NOTIFICATIONS;
+            }
+        }
+
+        if (targetTab == -1 && category == null) {
+            // The push tap may have landed on LoginActivity/SplashScreenActivity first
+            // (they have no viewPager), which stashed the category for us to consume here.
+            String pendingCategory = storageObject.retrievePendingNotificationCategoryFromPrefs();
+            if (pendingCategory != null && !pendingCategory.isEmpty()) {
+                category = pendingCategory;
+                storageObject.clearPendingNotificationCategoryFromPrefs();
+            }
+        }
+
+        if (NotificationDeepLinkResolver.isLiveChatCategory(category)) {
+            goToChatPage("push_notification");
+            return;
+        }
+
+        if (targetTab == -1 && category != null) {
+            targetTab = NotificationDeepLinkResolver.resolveTabForCategory(category);
+        }
+
+        if (targetTab != -1 && viewPager != null) {
+            final int finalTab = targetTab;
+            viewPager.post(() -> {
+                // Smooth scroll set to false prevents page sliding flickers
+                viewPager.setCurrentItem(finalTab, false);
+                updateTabSelection(finalTab);
+            });
+        }
     }
 
 //    @Override
@@ -847,7 +915,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
             @Override
             public void onClick(View v) {
 
-                GeneralCommands.logEvent(parentActivity,"click_drawer_notification","click_drawer_notifications");
+                GeneralCommands.logEvent(parentActivity,"click_drawer_notifications","click_drawer_notifications");
                 toggleDrawer();
                 viewPager.setCurrentItem(3);
             }
@@ -870,7 +938,7 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
         if(storageObject!=null && documentRips !=null)
         {
             //Should show statement
-            if(storageObject.retrieveCurrentAssetObjectFromPrefs()!=null && storageObject.hasLoanAgreement())
+            if(storageObject.retrieveCurrentAssetObjectFromPrefs()!=null && storageObject.retrieveCurrentAssetObjectFromPrefs().hasLoanAgreement())
             {
                 documentRips.setVisibility(View.VISIBLE);
             }
@@ -961,6 +1029,10 @@ public class MainActivity extends BaseActivity implements IWhereMyLocationConsta
     }
 
     public static void goToChatPage(String entryPoint) {
+        if (parentActivity == null || parentActivity.isFinishing() || parentActivity.isDestroyed()) {
+            return;
+        }
+
         Intent mIntent = new Intent(parentActivity, ChatActivity.class);
         mIntent.putExtra(KEY_START_FROM, entryPoint);
         GeneralCommands.goToPage(parentActivity, mIntent, false);

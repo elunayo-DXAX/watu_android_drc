@@ -83,7 +83,7 @@ public class FragmentResetPassword extends Fragment implements IWhereMyLocationC
             }
             else {
 
-
+                GeneralCommands.logEvent(parentActivity,"click_reset_password","click_reset_password");
                 if(GeneralCommands.isDemo(phoneNumberEditText.getText().toString().replaceAll("\\s+", ""),"1234"))isPhoneNumberValid=true;
 
                 String userNumber= ccp.getFullNumber();

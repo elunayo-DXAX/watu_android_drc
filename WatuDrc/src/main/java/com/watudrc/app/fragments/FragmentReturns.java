@@ -58,7 +58,6 @@ public class FragmentReturns extends Fragment {
         btnChatWithUs.setOnClickListener(v -> {
             // To DO: Open chat/support screen
             GeneralCommands.logEvent(getContext(), "support_hub_opened_resource_returns", "support_hub_opened_resource_returns");
-//            MainActivity.openWhatsAppWithMessage(getContext().getResources().getString(R.string.hello));
             goToChatPage("resources_returns");
         });
 

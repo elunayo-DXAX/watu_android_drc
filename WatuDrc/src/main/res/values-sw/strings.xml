@@ -446,6 +446,10 @@
     <string name="filter_general_notifications">Taarifa za Jumla</string>
     <string name="filter_payment_notifications">Taarifa za Malipo</string>
     <string name="filter_reminders">Ukumbusho</string>
+    <string name="filter_transactions_notifications">Taarifa za Miamla</string>
+    <string name="filter_support_notifications">Taarifa za Msaada</string>
+    <string name="filter_livechat_notifications">Taarifa za Mazungumzo ya Moja kwa Moja</string>
+    <string name="livechat">Mazungumzo ya Moja kwa Moja</string>
     <string name="viewtransactionsh">View Transactions</string>
 
     <string name="instructionsforotherpayment">Maelekezo kwa Chaguo Nyingine za Malipo</string>
@@ -765,4 +769,28 @@
     <string name="closeh">Funga</string>
     <string name="servicedowndescription"><Data><![CDATA[ Tunaendelea kurekebisha hitilafu kwenye sytem zetu ambayo imeathiri App na huduma zingine.\n\nBado unaweza kulipia kwa urahisi <font color=\'#9CC652\'> kupitia Paybill kwa 650880</font>. \nTunaishughulikia ili turejeshe huduma haraka iwezekanavyo.]]></Data></string>
     <string name="levelupoptions">Chaguo zako za Jijenge!</string>
+
+    <string name="err_invalid_phone">Namba ya simu si sahihi</string>
+    <string name="err_otp_expired">Huwezi tena kutumia namba ya uthibitisho uliyoiomba kwa kifaa hiki. Omba nyingine!</string>
+    <string name="err_otp_wrong">Namba ya uthibitisho uliyotoa kwa namba hii ya simu si sahihi</string>
+    <string name="err_not_mifos_client">Si mteja katika mfumo wa Mifos</string>
+    <string name="err_missing_api_secret">API secret haipo</string>
+    <string name="err_invalid_api_secret">API secret si sahihi</string>
+    <string name="err_no_loan_w_phone_asset">Hakuna Mkopo wenye kifaa cha simu kilichounganishwa kwa mteja huyu</string>
+    <string name="err_no_such_device">Hakuna kifaa chenye kitambulisho hicho</string>
+    <string name="err_temp_unlock_not_supported_loan">Ufunguzi wa muda hauruhusiwi kwa mkopo huu</string>
+    <string name="err_no_payment_request">Hakuna ombi la malipo lililopatikana kwa mteja huyu</string>
+    <string name="err_max_number_temp_unlock_req_reached">Umefikia idadi ya juu ya maombi ya ufunguzi wa muda!</string>
+    <string name="err_no_payment_provider_found">Hakuna mtoa huduma wa malipo aliyepatikana kwa kitambulisho hicho</string>
+    <string name="err_no_currency_found">Hakuna sarafu iliyopatikana kwa msimbo huo</string>
+    <string name="err_datasource_id_null">Kitambulisho cha chanzo cha data hakipo (null)</string>
+    <string name="err_no_upgrade_devices_for_loan">Hakuna vifaa vya kuboresha kwa mkopo huo</string>
+    <string name="err_no_agreement_for_loan_exists">Hakuna makubaliano (agreement) yaliyopo kwa mkopo huo</string>
+    <string name="err_temp_unlock_out_of_service">Huduma ya ufunguzi wa muda haipatikani kwa sasa</string>
+    <string name="err_no_such_unlock_request">Hakuna ombi la ufunguzi lenye kitambulisho hicho</string>
+    <string name="err_tx_datasource_not_supported">Chanzo cha data cha muamala kinachotumika kwa mtoa huduma huyu wa malipo hakiruhusiwi.</string>
+    <string name="err_client_reached_max_verify_requests">Mteja amefikia idadi ya juu ya maombi ya uthibitisho ndani ya saa 24 zilizopita.</string>
+    <string name="err_system_reached_max_verify_requests">Mfumo umefikia idadi ya juu ya maombi ya uthibitisho ndani ya saa 24 zilizopita.</string>
+    <string name="err_unsupported_otp_delivery_type">Njia ya kutuma namba ya uthibitisho haiungwi mkono</string>
+    <string name="err_generic_fallback">Hitilafu isiyotarajiwa imetokea. Tafadhali jaribu tena baadaye.</string>
 </resources>

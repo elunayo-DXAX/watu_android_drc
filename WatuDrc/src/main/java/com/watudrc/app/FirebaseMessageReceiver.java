@@ -24,6 +24,8 @@ import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.SyncWorker;
 import com.ypyproductions.utils.StringUtils;
 
+import org.infobip.mobile.messaging.cloud.firebase.MobileMessagingFirebaseService;
+
 import java.util.concurrent.TimeUnit;
 
 public class FirebaseMessageReceiver extends FirebaseMessagingService {
@@ -52,11 +54,15 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
         GetData ob1 = new GetData();
         ob1.initializeSilentContext(getApplicationContext());
         ob1.userUpdateTokenFCM(token, true);
+
+        MobileMessagingFirebaseService.onNewToken(getApplicationContext(), token);
     }
 
     // Override onMessageReceived() method to extract the title and body from the message passed in FCM
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
+        MobileMessagingFirebaseService.onMessageReceived(getApplicationContext(), remoteMessage);
+
         String messageContent = getRemoteMessageContent(remoteMessage);
         Log.d("ZeFirebaseMessage", "ZeFirebaseMessage\n" + messageContent);
 
@@ -102,7 +108,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             click_action = remoteMessage.getData().get("click_action") != null ? remoteMessage.getData().get("click_action") : "general";
 
             try {
-                showNotification(title, body, type);
+                showNotification(title, body, type, click_action);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -120,7 +126,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             click_action = "general";
 
             try {
-                showNotification(title, body, type);
+                showNotification(title, body, type, click_action);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -162,11 +168,13 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
     }
 
     // Method to display the notifications
-    public void showNotification(String title, String message, String type) {
+    public void showNotification(String title, String message, String type, String click_action) {
         // Intent to open MainActivity when notification is clicked
         Intent intent = new Intent(this, MainActivity.class);
         String channel_id = "notification_channel";
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);  // Clear other activities on top
+        intent.putExtra("category", type);
+        intent.putExtra("click_action", click_action);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(
                 this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);

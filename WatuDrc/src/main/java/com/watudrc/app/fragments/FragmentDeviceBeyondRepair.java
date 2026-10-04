@@ -60,7 +60,6 @@ public class FragmentDeviceBeyondRepair extends Fragment {
         btnChatWithUs.setOnClickListener(v -> {
                 // To DO: Open chat/support screen
                 GeneralCommands.logEvent(getContext(), "support_hub_opened_resource_beyond_repair", "support_hub_opened_resource_beyond_repair");
-//            MainActivity.openWhatsAppWithMessage(getContext().getResources().getString(R.string.hello));
                 goToChatPage("resources_beyond_repair");
         });
     }

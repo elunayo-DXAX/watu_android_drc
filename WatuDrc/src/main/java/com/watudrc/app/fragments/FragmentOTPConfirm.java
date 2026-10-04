@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.Html;
+import android.text.InputFilter;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.Patterns;
@@ -104,6 +105,12 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
 
     //SMS
     private boolean isSmsReceiverRegistered = false;
+
+    // Guard flag to prevent TextWatcher recursion while distributing a pasted code
+    private boolean isDistributing = false;
+
+    // OTP length (matches the 5 EditText fields)
+    private static final int OTP_LENGTH = 5;
 
 
 
@@ -612,25 +619,87 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
 
     public void setCodeToEditTexts(String code)
     {
+        if (code == null || code.length() < OTP_LENGTH) {
+            Log.w("ZeSMSTAG", "setCodeToEditTexts: code too short or null");
+            return;
+        }
         Log.d("ZeSMSTAG", "ZeSMS CODe****"+code.charAt(0)+code.charAt(1)+code.charAt(2)+code.charAt(3)+code.charAt(4)+"********************");
 
-        codeEditText1.setText(""+code.charAt(0));
-        codeEditText2.setText(""+code.charAt(1));
-        codeEditText3.setText(""+code.charAt(2));
-        codeEditText4.setText(""+code.charAt(3));
-        codeEditText5.setText(""+code.charAt(4));
+        // Route through the distribution helper so paste/SMS share the same logic
+        distributePastedCode(code);
+    }
 
+    /**
+     * Takes a multi-character string (e.g. a pasted OTP) and spreads one
+     * character into each of the five codeEditText fields. Non-alphanumeric
+     * characters and whitespace are stripped first. Anything longer than
+     * OTP_LENGTH is truncated; anything shorter leaves the trailing fields blank.
+     */
+    private void distributePastedCode(String raw) {
+        if (raw == null) return;
 
+        // Keep only letters & digits (handles cases where the user pastes
+        // something like "A-1234" or "A 1 2 3 4").
+        String cleaned = raw.replaceAll("[^A-Za-z0-9]", "");
+        if (cleaned.length() > OTP_LENGTH) {
+            cleaned = cleaned.substring(0, OTP_LENGTH);
+        }
+
+        EditText[] fields = {
+                codeEditText1, codeEditText2, codeEditText3,
+                codeEditText4, codeEditText5
+        };
+
+        isDistributing = true;
+        try {
+            for (int i = 0; i < fields.length; i++) {
+                fields[i].setEnabled(true);
+                if (i < cleaned.length()) {
+                    String ch = String.valueOf(cleaned.charAt(i));
+                    fields[i].setText(ch);
+                    fields[i].setSelection(ch.length());
+                } else {
+                    fields[i].setText("");
+                }
+            }
+        } finally {
+            isDistributing = false;
+        }
+
+        // Place focus on the next empty field, or hide the keyboard if all 5 filled
+        if (cleaned.length() >= fields.length) {
+            fields[fields.length - 1].requestFocus();
+            hideKeyboard();
+        } else {
+            fields[cleaned.length()].requestFocus();
+        }
     }
 
     public void setCodeEditTexts(){
+
+        // Allow ANY of the five fields to receive a full pasted OTP. Without
+        // this, an android:maxLength="1" set in XML would truncate the paste
+        // to a single character before we ever see it. The TextWatchers below
+        // detect length>1 and re-distribute one char per field starting at
+        // codeEditText1.
+        InputFilter[] pasteFilters = new InputFilter[]{ new InputFilter.LengthFilter(OTP_LENGTH) };
+        codeEditText1.setFilters(pasteFilters);
+        codeEditText2.setFilters(pasteFilters);
+        codeEditText3.setFilters(pasteFilters);
+        codeEditText4.setFilters(pasteFilters);
+        codeEditText5.setFilters(pasteFilters);
+
         codeEditText1.addTextChangedListener(new TextWatcher() {
 
             public void onTextChanged(CharSequence s, int start,int before, int count)
             {
-                // TODO Auto-generated method stub
-                if(codeEditText1.getText().toString().length()==1)     //size as per your requirement
-                {
+                if (isDistributing) return;
+
+                String text = codeEditText1.getText().toString();
+                if (text.length() > 1) {
+                    // Paste (or fast multi-char input) - spread across the fields
+                    distributePastedCode(text);
+                } else if (text.length() == 1) {
                     codeEditText2.setEnabled(true);
                     codeEditText2.requestFocus();
                 }
@@ -651,8 +720,14 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
 
             public void onTextChanged(CharSequence s, int start,int before, int count)
             {
-                // TODO Auto-generated method stub
-                if(codeEditText2.getText().toString().length()==1)     //size as per your requirement
+                if (isDistributing) return;
+                String text = codeEditText2.getText().toString();
+                if (text.length() > 1) {
+                    // Paste into field 2 - still distribute from field 1
+                    distributePastedCode(text);
+                    return;
+                }
+                if(text.length()==1)     //size as per your requirement
                 {
                     codeEditText3.setEnabled(true);
                     codeEditText3.requestFocus();
@@ -676,8 +751,14 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
 
             public void onTextChanged(CharSequence s, int start,int before, int count)
             {
-                // TODO Auto-generated method stub
-                if(codeEditText3.getText().toString().length()==1)     //size as per your requirement
+                if (isDistributing) return;
+                String text = codeEditText3.getText().toString();
+                if (text.length() > 1) {
+                    // Paste into field 3 - still distribute from field 1
+                    distributePastedCode(text);
+                    return;
+                }
+                if(text.length()==1)     //size as per your requirement
                 {
                     codeEditText4.setEnabled(true);
                     codeEditText4.requestFocus();
@@ -700,8 +781,14 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
 
             public void onTextChanged(CharSequence s, int start,int before, int count)
             {
-                // TODO Auto-generated method stub
-                if(codeEditText4.getText().toString().length()==1)     //size as per your requirement
+                if (isDistributing) return;
+                String text = codeEditText4.getText().toString();
+                if (text.length() > 1) {
+                    // Paste into field 4 - still distribute from field 1
+                    distributePastedCode(text);
+                    return;
+                }
+                if(text.length()==1)     //size as per your requirement
                 {
                     codeEditText5.setEnabled(true);
                     codeEditText5.requestFocus();
@@ -726,7 +813,13 @@ public class FragmentOTPConfirm extends Fragment implements IWhereMyLocationCons
         codeEditText5.addTextChangedListener(new TextWatcher() {
             public void onTextChanged(CharSequence s, int start,int before, int count)
             {
-                // TODO Auto-generated method stub
+                if (isDistributing) return;
+                String text = codeEditText5.getText().toString();
+                if (text.length() > 1) {
+                    // Paste into field 5 - still distribute from field 1
+                    distributePastedCode(text);
+                    return;
+                }
                 codeEditText5.setEnabled(true);
                 hideKeyboard();
 

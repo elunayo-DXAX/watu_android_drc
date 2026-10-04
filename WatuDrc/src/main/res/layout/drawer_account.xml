@@ -584,7 +584,8 @@
                     style="@style/RippleStyle"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    app:rippleColor="@color/transparent">
+                    app:rippleColor="@color/transparent"
+                    android:visibility="gone">
 
                     <RelativeLayout
                         android:id="@+id/btnHelpAndSupport"

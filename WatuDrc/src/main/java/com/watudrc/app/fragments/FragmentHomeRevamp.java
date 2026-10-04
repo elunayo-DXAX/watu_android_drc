@@ -71,6 +71,7 @@ import com.watudrc.app.prefs.StoreAndGetFromPrefs;
 import com.watudrc.app.util.FirebaseConfig;
 import com.watudrc.app.util.ImageUtil;
 import com.watudrc.app.view.MaterialRippleLayout;
+import com.ypyproductions.utils.StringUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -610,15 +611,6 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
 
         });
 
-        //Should show statement
-        if (storageObject.hasLoanAgreement()) {
-            statementRips.setVisibility(View.VISIBLE);
-            statementCompleteRips.setVisibility(View.VISIBLE);
-        } else {
-            statementRips.setVisibility(View.GONE);
-            statementCompleteRips.setVisibility(View.GONE);
-
-        }
 
         btnDownloadStatement.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1103,6 +1095,9 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
         ob1.userTemporaryUnlockCheck(currentAsset.getLoanNumber(), false, new GetData.UnlockInfoCallback() {
             @Override
             public void onSuccess(UnlockInfoResponse data) {
+                if (parentActivity == null || parentActivity.isFinishing() || parentActivity.isDestroyed()) {
+                    return;
+                }
 
                 int dailyLimit = data.getDailyLimit();
                 int dailyRemaining = data.getDailyRemaining();
@@ -1953,6 +1948,29 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
             jijengeContainer.setVisibility(View.GONE);
         }
 
+        //Loan Agreement - silently re-check whether this asset actually has a downloadable
+        //agreement every time it's (re)selected, and show/hide the statement buttons based on
+        //the result (matches WatuKe's/WatuRw's placement of this check, since a fresh AssetObject
+        //from a background refresh - e.g. getListDataSilent() - never carries hasLoanAgreement
+        //from the server, so it must be re-verified on every selection rather than checked once).
+        GetData ob2 = new GetData();
+        ob2.initializeSilent(parentActivity);
+        ob2.userDownloadLoanAgreement(currentAsset.getLoanNumber(), false, true);
+        ob2.setLoanAgreementListener(new GetData.LoanAgreementListener() {
+            @Override
+            public void onObjectReady(String title) {
+
+            }
+
+            @Override
+            public void onDataLoaded(String loanNumber) {
+                boolean hasAgreement = !StringUtils.isStringEmpty(loanNumber);
+                statementRips.setVisibility(hasAgreement ? View.VISIBLE : View.GONE);
+                statementCompleteRips.setVisibility(hasAgreement ? View.VISIBLE : View.GONE);
+                currentAsset.setHasLoanAgreement(hasAgreement);
+                storageObject.saveCurrentAssetObjectToPrefs(currentAsset);
+            }
+        });
 
         //  return v
 
@@ -2139,6 +2157,25 @@ public class FragmentHomeRevamp extends Fragment implements IWhereMyLocationCons
                     String imageUrl = currentLang.equals("sw") ? card.getLinkSw() : card.getLinkEn();
 
                     adCard.setVisibility(View.VISIBLE);
+
+                    String tab = card.getClickOpenTab();
+                    if (!StringUtils.isStringEmpty(tab)) {
+                        adCard.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                GeneralCommands.logEvent(parentActivity, "click_ad_card", "click_ad_card");
+
+                                int intTab = 0;
+                                try {
+                                    intTab = Integer.parseInt(tab);
+                                } catch (NumberFormatException e) {
+                                    e.printStackTrace();
+                                }
+
+                                try { MainActivity.viewPager.setCurrentItem(intTab); } catch (Exception e) { e.printStackTrace(); }
+                            }
+                        });
+                    }
 
                     Glide.with(this)
                             .load(imageUrl)

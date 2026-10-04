@@ -86,6 +86,8 @@ public class AssetObject{
 	private boolean isUpgradable;
 	private boolean isSelected;
 
+	private boolean hasLoanAgreement;
+
 	public void setVehicleTypeId(int vehicleTypeId){
 		this.vehicleTypeId = vehicleTypeId;
 	}
@@ -253,6 +255,14 @@ public class AssetObject{
 	}
 	public void setUpgradable(boolean isUpgradable) {
 		this.isUpgradable = isUpgradable;
+	}
+
+	public boolean hasLoanAgreement() {
+		return hasLoanAgreement;
+	}
+
+	public void setHasLoanAgreement(boolean hasLoanAgreement) {
+		this.hasLoanAgreement = hasLoanAgreement;
 	}
 
 

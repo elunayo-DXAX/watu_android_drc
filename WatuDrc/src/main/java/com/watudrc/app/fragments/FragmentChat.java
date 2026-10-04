@@ -118,7 +118,6 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
     CallTracker callTracker;
 
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         parentView = inflater.inflate(R.layout.fragment_chat, container, false);
@@ -156,33 +155,22 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
 
         btnCallCC.setOnClickListener(v -> {
-            //        GeneralCommands.logEvent(parentActivity, "support_call_cta_viewed", "support_call_cta_viewed");
-//           GeneralCommands.logEvent(parentActivity, "support_call_cta_viewed_experiment", "support_call_cta_viewed_experiment");
             GeneralCommands.logEvent(parentActivity, "support_click_button_call_fragment_chat", "support_click_button_call_fragment_chat");
             NetworkUtils.checkInternetConnection(parentActivity, isConnected -> {
                 if (isConnected) {
-
                     if (callTracker.canMakeCall() == CallTracker.CallStatus.ALLOWED) {
                         enableDirectCall();
                     } else {
                         showThrottleCallsCoolDown();
                     }
-
                 } else {
-
                     if (callTracker.canMakeCall() == CallTracker.CallStatus.ALLOWED) {
                         showChatUnAvailableDialog();
                     } else {
-
-                        //showCallingDisabledDialog();
                         showThrottleCallsCoolDown();
                     }
-
                 }
-
             });
-
-
         });
 
         // showCallingDisabledDialog();
@@ -190,14 +178,39 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         btnNotifications.setOnClickListener(v -> {
 
             GeneralCommands.logEvent(parentActivity, "click_button_notifications_fragment_chat", "click_button_notifications_fragment_chat");
-            parentActivity.goBack();
             try {
                 MainActivity.viewPager.setCurrentItem(3, true);
             } catch (Exception e) {
                 e.printStackTrace();
             }
+            parentActivity.goBack();
 
         });
+
+
+
+//        btnNotifications.setOnClickListener(v -> {
+//            GeneralCommands.logEvent(requireContext(), "click_button_notifications_fragment_chat", "click_button_notifications_fragment_chat");
+//
+//            Activity currentActivity = getActivity();
+//            if (currentActivity == null) return;
+//
+//            Intent intent = new Intent(currentActivity, MainActivity.class);
+//            intent.putExtra("OPEN_TAB", 3);
+//            intent.putExtra(KEY_START_FROM, "notifications");
+//
+//            // Instantly bring MainActivity to top without transition animation
+//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
+//                    | Intent.FLAG_ACTIVITY_SINGLE_TOP
+//                    | Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//
+//            currentActivity.startActivity(intent);
+//            currentActivity.finish();
+//
+//            // Disable window animation on exit
+//            currentActivity.overridePendingTransition(0, 0);
+//        });
+
 
         userName = parentView.findViewById(R.id.userName);
         userInitials = parentView.findViewById(R.id.userInitials);
@@ -301,7 +314,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
 
     private void setDefaults() {
-        if (StringUtils.isStringEmpty(CallTracker.getSupportNumber()))
+        if (!StringUtils.isStringEmpty(CallTracker.getSupportNumber()))
             support_care_number = CallTracker.getSupportNumber();
         if (CallTracker.getSoftCoolDownLimit() != 0)
             support_throttle_max_initial_attempts = CallTracker.getSoftCoolDownLimit();
@@ -321,6 +334,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
             btnCallCC.setVisibility(View.GONE);
             btnCallCC.setEnabled(false);
         }
+
     }
 
     private void showThrottleCallsCoolDown() {
@@ -401,24 +415,68 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         }
 
         // Start countdown timer
-        new CountDownTimer(remainingSeconds * 1000, 1000) {
+
+        if (remainingSeconds <= 0) {
+            tvThrottle.setVisibility(View.GONE);
+            return;
+        }
+
+        // Start and store countdown timer reference
+        CountDownTimer timer = new CountDownTimer(remainingSeconds * 1000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                // Prevent IllegalStateException if Fragment is detached
+                if (!isAdded() || parentActivity == null || parentActivity.isFinishing()) {
+                    return;
+                }
+
                 long totalSeconds = millisUntilFinished / 1000;
                 long hours = totalSeconds / 3600;
                 long minutes = (totalSeconds % 3600) / 60;
                 long seconds = totalSeconds % 60;
 
                 String timeLeft = String.format("%02d:%02d:%02d", hours, minutes, seconds);
-                String html = String.format(getString(R.string.try_again_in_font_color_04afab_s_font), timeLeft);
+                // Use parentActivity.getString() for extra safety
+                String html = String.format(parentActivity.getString(R.string.try_again_in_font_color_04afab_s_font), timeLeft);
                 tvThrottle.setText(HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_LEGACY));
             }
 
             @Override
             public void onFinish() {
+                if (!isAdded() || parentActivity == null || parentActivity.isFinishing()) {
+                    return;
+                }
                 tvThrottle.setText(R.string.you_can_now_call_again);
             }
-        }.start();
+        };
+
+        timer.start();
+
+        // Cancel timer when dialog is dismissed to prevent memory leaks and background crashes
+        dialog.setOnDismissListener(d -> {
+            if (timer != null) {
+                timer.cancel();
+            }
+        });
+
+//        new CountDownTimer(remainingSeconds * 1000, 1000) {
+//            @Override
+//            public void onTick(long millisUntilFinished) {
+//                long totalSeconds = millisUntilFinished / 1000;
+//                long hours = totalSeconds / 3600;
+//                long minutes = (totalSeconds % 3600) / 60;
+//                long seconds = totalSeconds % 60;
+//
+//                String timeLeft = String.format("%02d:%02d:%02d", hours, minutes, seconds);
+//                String html = String.format(getString(R.string.try_again_in_font_color_04afab_s_font), timeLeft);
+//                tvThrottle.setText(HtmlCompat.fromHtml(html, HtmlCompat.FROM_HTML_MODE_LEGACY));
+//            }
+//
+//            @Override
+//            public void onFinish() {
+//                tvThrottle.setText(R.string.you_can_now_call_again);
+//            }
+//        }.start();
     }
 
     private void showEnableCallingSoftNudge() {
@@ -463,6 +521,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
             PermissionTracker.incrementCallPermissionRequest(parentActivity);
             if (isConnected) {
                 dialog.dismiss();
+
             } else {
                 Toast.makeText(mContext, R.string.please_turn_on_your_internet, Toast.LENGTH_SHORT).show();
                 showChatUnAvailableDialog();
@@ -484,6 +543,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         });
         dialog.show();
     }
+
 
     private void showEnableCallingHardNudge() {
         Dialog dialog = new Dialog(parentActivity);
@@ -508,6 +568,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         RelativeLayout btnCopyNumber = dialog.findViewById(R.id.btnCopyNumber);
         FirmaTextView tvCopyNumber = dialog.findViewById(R.id.tvCopyNumber);
         FirmaTextView tvCopyNumber2 = dialog.findViewById(R.id.tvCopyNumber2);
+        tvCopyNumber.setText(support_care_number);
         tvCopyNumber2.setText(support_care_number);
 
         NetworkUtils.checkInternetConnection(parentActivity, isConnected -> {
@@ -577,6 +638,8 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         ImageView ivClose = dialog.findViewById(R.id.iv_close);
+        RelativeLayout callCustomerCare = dialog.findViewById(R.id.call_cc);
+        FirmaTextView copyNumber = dialog.findViewById(R.id.tv_copy_number);
 
         ivClose.setOnClickListener(v -> {
             GeneralCommands.logEvent(parentActivity, "support_click_close_dialog_chat_un_available", "support_click_close_dialog_chat_un_available");
@@ -584,29 +647,20 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
             goToPage();
         });
 
-        RelativeLayout callCustomerCare = dialog.findViewById(R.id.call_cc);
-        FirmaTextView copyNumber = dialog.findViewById(R.id.tv_copy_number);
-
         callCustomerCare.setOnClickListener(v -> {
-            GeneralCommands.logEvent(parentActivity, "support_click_call_customer_care_dialog_chat_un_available", "support_click_call_customer_care_dialog_chat_un_available");
+            //Log CTA Tapped HERE
+            GeneralCommands.logEvent(parentActivity, "support_call_cta_tapped", "support_call_cta_tapped");
 
             dialog.dismiss();
             if (hasCallPermission()) {
                 CallTracker.CallStatus status = callTracker.canMakeCall();
-                // Toast.makeText(parentActivity, "" + status, Toast.LENGTH_SHORT).show();
                 if (status == CallTracker.CallStatus.ALLOWED) {
-                    // Proceed to make call
                     callTracker.recordCall();
                     makeSelfManagedCall("tel:" + support_care_number);
-                } else if (status == CallTracker.CallStatus.COOLDOWN) {
-
-                    showThrottleCallsCoolDown();
-
                 } else {
                     showThrottleCallsCoolDown();
                 }
             } else {
-
                 if (PermissionTracker.getCallPermissionRequestCount(parentActivity) >= 2) {
                     showDialogOpenSetUpWizard();
                 } else if (PermissionTracker.getCallPermissionRequestCount(parentActivity) == 1) {
@@ -620,12 +674,12 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         });
 
         copyNumber.setText(support_care_number);
-        copyNumber.setOnClickListener(v -> {
-            String textToCopy = copyNumber.getText().toString();
-            copyToClipboard(textToCopy);
-        });
+        copyNumber.setOnClickListener(v -> copyToClipboard(copyNumber.getText().toString()));
 
         dialog.show();
+
+        //Log CTA Viewed HERE (when dialog is shown)
+        GeneralCommands.logEvent(parentActivity, "support_call_cta_viewed", "support_call_cta_viewed");
     }
 
 
@@ -633,30 +687,37 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         GeneralCommands.logEvent(parentActivity, "support_copy_number_tapped", "support_copy_number_tapped");
 
         ClipboardManager clipboard = getSystemService(mContext, ClipboardManager.class);
-        ClipData clip = ClipData.newPlainText(getString(R.string.copied_text), textToCopy);
+        ClipData clip = ClipData.newPlainText(mContext.getString(R.string.copied_text), textToCopy);
         if (clipboard != null) {
             clipboard.setPrimaryClip(clip);
         }
     }
 
     private void enableDirectCall() {
-        GeneralCommands.logEvent(parentActivity, "support_call_cta_viewed", "support_call_cta_viewed");//
-//        GeneralCommands.logEvent(parentActivity, "support_call_cta_tapped_experiment", "support_call_cta_tapped_experiment");
         Dialog dialog = new Dialog(parentActivity);
         dialog.setContentView(R.layout.dialog_no_internet);
         dialog.setCancelable(false);
         Objects.requireNonNull(dialog.getWindow()).setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        // GeneralCommands.logEvent(getContext(), "support_call_cta_viewed", "support_call_cta_viewed");
 
         ImageView ivClose = dialog.findViewById(R.id.iv_close);
+        RelativeLayout chatWithUs = dialog.findViewById(R.id.chat_with_cc);
+        RelativeLayout callCustomerCare = dialog.findViewById(R.id.call_cc);
+        FirmaTextView copyNumber = dialog.findViewById(R.id.tv_copy_number);
 
         ivClose.setOnClickListener(v -> {
             dialog.dismiss();
             goToPage();
         });
 
-        RelativeLayout chatWithUs = dialog.findViewById(R.id.chat_with_cc);
-        RelativeLayout callCustomerCare = dialog.findViewById(R.id.call_cc);
+        chatWithUs.setOnClickListener(v -> NetworkUtils.checkInternetConnection(parentActivity, isConnected -> {
+            GeneralCommands.logEvent(parentActivity, "support_chat_cta_clicked", "support_chat_cta_clicked");
+
+            dialog.dismiss();
+            if (!isConnected) {
+                Toast.makeText(mContext, R.string.please_turn_on_your_internet, Toast.LENGTH_SHORT).show();
+                showChatUnAvailableDialog();
+            }
+        }));
 
         NetworkUtils.checkInternetConnection(parentActivity, isConnected -> {
             if (isConnected) {
@@ -665,11 +726,10 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
             } else {
                 chatWithUs.setVisibility(View.GONE);
             }
-
         });
 
         callCustomerCare.setOnClickListener(v -> {
-
+            //Log CTA Tapped HERE
             GeneralCommands.logEvent(getContext(), "support_call_cta_tapped", "support_call_cta_tapped");
 
             if (hasCallPermission()) {
@@ -678,12 +738,9 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
                     callTracker.recordCall();
                     makeSelfManagedCall("tel:" + support_care_number);
                 } else {
-                    // Show dialog and countdown
                     showThrottleCallsCoolDown();
                 }
-
                 GeneralCommands.logEvent(getContext(), "support_call_throttle_checked", "support_call_throttle_checked");
-
             } else {
                 dialog.dismiss();
                 if (PermissionTracker.getCallPermissionRequestCount(parentActivity) == 1) {
@@ -693,29 +750,16 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
                 } else {
                     showEnableCallingSoftNudge();
                 }
-
             }
             dialog.dismiss();
         });
 
-        FirmaTextView copyNumber = dialog.findViewById(R.id.tv_copy_number);
-
-        chatWithUs.setOnClickListener(v -> NetworkUtils.checkInternetConnection(parentActivity, isConnected -> {
-            if (isConnected) {
-                dialog.dismiss();
-            } else {
-                dialog.dismiss();
-                showChatUnAvailableDialog();
-            }
-        }));
-
-
-        copyNumber.setOnClickListener(v -> {
-            String textToCopy = copyNumber.getText().toString();
-            copyToClipboard(textToCopy);
-        });
+        copyNumber.setOnClickListener(v -> copyToClipboard(copyNumber.getText().toString()));
 
         dialog.show();
+
+        //Log CTA Viewed HERE (when dialog is shown)
+        GeneralCommands.logEvent(parentActivity, "support_call_cta_viewed", "support_call_cta_viewed");
     }
 
     private void showDialogOpenSetUpWizard() {
@@ -729,6 +773,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         ImageView ivClose = dialog.findViewById(R.id.iv_close);
         FirmaTextView tvCopyNumber = dialog.findViewById(R.id.tvCopyNumber);
         MaterialRippleLayout chatRips = dialog.findViewById(R.id.chatRips);
+        tvCopyNumber.setText(support_care_number);
 
         ivClose.setOnClickListener(v -> {
             GeneralCommands.logEvent(parentActivity, "click_close_dialog_open_set_up_wizard", "click_close_dialog_open_set_up_wizard");
@@ -741,7 +786,6 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
                 tvCopyNumber.setVisibility(View.GONE);
             } else {
                 chatRips.setVisibility(View.GONE);
-                tvCopyNumber.setText(support_care_number);
                 tvCopyNumber.setVisibility(View.VISIBLE);
             }
 
@@ -1026,25 +1070,42 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
 
     private boolean hasCallPermission() {
         return ContextCompat.checkSelfPermission(
-                requireContext(),
+                mContext,
                 Manifest.permission.CALL_PHONE) == PackageManager.PERMISSION_GRANTED;
     }
+
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//
+//        // Call Permission Listener
+//        if (requestCode == CALL_PERMISSION_REQUEST_CODE) {
+//            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                GeneralCommands.logEvent(parentActivity, "support_call_permission_granted", "support_call_permission_granted");
+//
+//            } else {
+//                GeneralCommands.logEvent(parentActivity, "support_call_permission_denied", "support_call_permission_denied");
+//
+//            }
+//        }
+//
+//    }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-        // Call Permission Listener
         if (requestCode == CALL_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 GeneralCommands.logEvent(parentActivity, "support_call_permission_granted", "support_call_permission_granted");
 
+                // Log tapped event and auto-initiate call after permission granted:
+                GeneralCommands.logEvent(parentActivity, "support_call_cta_tapped", "support_call_cta_tapped");
+                makeSelfManagedCall("tel:" + support_care_number);
             } else {
                 GeneralCommands.logEvent(parentActivity, "support_call_permission_denied", "support_call_permission_denied");
-
             }
         }
-
     }
 
 
@@ -1086,7 +1147,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         } catch (Exception e) {
             // 4. Log Intent Failure if the OS blocks or drops the call execution
             GeneralCommands.logEvent(parentActivity, "support_call_intent_failed", "support_call_intent_failed");
-            Toast.makeText(mContext, getString(R.string.call_failed) + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(mContext, mContext.getString(R.string.call_failed) + e.getMessage(), Toast.LENGTH_SHORT).show();
 
             // Hide loading indicator if the call immediately fails to launch
             if (loadingView != null) {
@@ -1180,13 +1241,15 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
         });
     }
 
+
     @Override
     public void onDestroyView() {
+        super.onDestroyView();
         if (throttleTimer != null) {
             throttleTimer.cancel();
             throttleTimer = null;
         }
-        super.onDestroyView();
     }
 
 }
+

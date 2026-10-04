@@ -40,6 +40,7 @@ public class PeopleSyncHelper {
         MobileMessaging.getInstance(context).personalize(
                 identity,
                 attributes,
+                true, // forceDepersonalize: allow re-personalizing an already-personalized installation
                 new MobileMessaging.ResultListener<org.infobip.mobile.messaging.User>() {
                     @Override
                     public void onResult(Result<User, MobileMessagingError> persResult) {
