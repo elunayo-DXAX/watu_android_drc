@@ -1177,6 +1177,9 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="refresh">Rafraîchir</string>
     <string name="helloicon">Bonjour ✋🏾</string>
 
+    <string name="enterpindigits">Veuillez saisir les 4 chiffres dans les deux champs</string>
+
+
 
     <string name="phoneunlockhelp">Aide au déverrouillage du téléphone</string>
     <string name="troubleshootunlockingyourphone">Dépannage du déverrouillage de votre téléphone</string>
@@ -1225,7 +1228,7 @@ ou appelez notre centre d\'appel et bénéficiez d\'une assistance pour identifi
     <string name="smsinstructions"><Data><![CDATA[1. Assurez-vous d’effectuer la demande avec un numéro enregistré chez Watu.<br>2. Le mot de passe à usage unique (OTP) sera envoyé dans votre boîte SMS.]]></Data></string>
 
     <string name="receiveotpviaknox">Recevoir l’OTP via Pop-Up</string>
-    <string name="choosehowtoreceive">Choisissez comment recevoir</string>
+    <string name="choosehowtoreceive">Choisissez comment recevoir OTP</string>
     <string name="sms">SMS</string>
     <string name="receiveotpviasms">Recevoir l’OTP via SMS</string>
 

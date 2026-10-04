@@ -334,6 +334,7 @@ public class FragmentChat extends Fragment implements IWhereMyLocationConstants 
             btnCallCC.setVisibility(View.GONE);
             btnCallCC.setEnabled(false);
         }
+
     }
 
     private void showThrottleCallsCoolDown() {

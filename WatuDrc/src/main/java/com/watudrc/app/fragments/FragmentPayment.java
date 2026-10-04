@@ -240,9 +240,6 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
 
     RelativeLayout btnChangeNumberClose;
 
-    private ImageView iconDevice;
-    private FirmaTextView ftvDevice;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
@@ -278,9 +275,6 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
         btnChangeNumberClose= parentView.findViewById(R.id.btnChangeNumberClose);
 
         defaultModel = parentView.findViewById(R.id.defaultModel);
-
-        ftvDevice = parentView.findViewById(R.id.ftvDevice);
-        iconDevice = parentView.findViewById(R.id.iconDevice);
 
         loanCompleteView= parentView.findViewById(R.id.loanCompleteView);
         activeLoanView= parentView.findViewById(R.id.activeLoanView);
@@ -397,29 +391,12 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
         }
 
 
-      //
-
-//        try{
-//            loanNumber = currentAsset.getLoanNumber();
-//            currencyCode = currentAsset.getCurrencyCode();
-//            payingFor = "";
-//
-//            if (currentAsset != null) {
-//                setDeviceIcon(currentAsset.getAssetTypeId());
-//                payingFor = currentAsset.getAssetTypeName();
-//                itemPositionName = payingFor;
-//                FragmentHomeNew.loanItemName = payingFor;
-//            }
-//        }catch(Exception e){}
-
         try {
             loanNumber = currentAsset.getLoanNumber();
             currencyCode = currentAsset.getCurrencyCode();
             payingFor = "";
 
             if (currentAsset != null) {
-                setDeviceIcon(currentAsset.getAssetTypeId());
-
                 payingFor = currentAsset.getAssetTypeName();
                 itemPositionName = payingFor;
             }
@@ -734,7 +711,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
                 pagaNumber = storageObject.retrieveUserPagaNumberFromPrefs();
 
                 //openDialogUSSD("mpesa", "*150*00#", "650880", loanNumber, "WATU CREDIT drc.");
-                showPaymentOptions(method, amountEditText.getText().toString(), payDays, user, device, pagaNumber, "650880", "*1122#");
+                showPaymentOptions(method, amountEditText.getText().toString(), payDays, user, device, currentAsset != null ? currentAsset.getAssetTypeId() : 0, pagaNumber, "650880", "*1122#");
                 GeneralCommands.logEvent(parentActivity, "click_mpesa", "click_mpesa");
             }
         });
@@ -856,7 +833,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
                 device = getAssetName(currentAsset);
                 pagaNumber = storageObject.retrieveUserPagaNumberFromPrefs();
 
-                showPaymentOptions(method, amountEditText.getText().toString(), numberOfDays, user, device, pagaNumber, "650880", "*1020#");
+                showPaymentOptions(method, amountEditText.getText().toString(), numberOfDays, user, device, currentAsset != null ? currentAsset.getAssetTypeId() : 0, pagaNumber, "650880", "*1020#");
                 GeneralCommands.logEvent(parentActivity, "click_afrimoney", "click_afrimoney");
             }
         });
@@ -1213,22 +1190,18 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
                     e.printStackTrace();
                 }
 
-                int assetId= object.getAssetTypeId();
-
                 if (object != null && (("" + object.getAssetTypeId()).equals("4")))//smartphone set has slider
                 {
 
 //                   showSliderView();
                     sliderView.setVisibility(View.VISIBLE);
                     buttonRipView.setVisibility(View.GONE);
-                    setDeviceIcon(assetId);
 
                 } else {
 
                     //Not a Smart Phone
                     sliderView.setVisibility(View.GONE);
                     buttonRipView.setVisibility(View.VISIBLE);
-                    setDeviceIcon(assetId);
                 }
 
                 //Laon COmplete View
@@ -1706,6 +1679,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
         FirmaTextView errorText = content.findViewById(R.id.errorText);
         RelativeLayout iconView= content.findViewById(R.id.iconView);
         ImageView payIcon= content.findViewById(R.id.payIcon);
+        RelativeLayout btnBack = content.findViewById(R.id.btnBack);
 
 
         FirmaTextView payAmount = content.findViewById(R.id.payAmount);
@@ -1860,6 +1834,13 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
 
 
         }
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialogPlus.dismiss();
+            }
+        });
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -3094,7 +3075,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
         return name;
     }
 
-    private void showPaymentOptions(String method, String amount, double numberOfDays, String user, String device, String pagaNumber, String paybill, String ussdCode) {
+    private void showPaymentOptions(String method, String amount, double numberOfDays, String user, String device, int assetTypeId, String pagaNumber, String paybill, String ussdCode) {
         Intent intent = new Intent(requireActivity(), PaymentProcessesActivity.class);
         Bundle bundle = new Bundle();
         bundle.putString("method", method);
@@ -3102,6 +3083,7 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
         bundle.putDouble("numberOfDays", numberOfDays);
         bundle.putString("user", user);
         bundle.putString("device", device);
+        bundle.putInt("assetTypeId", assetTypeId);
         bundle.putString("pagaNumber", pagaNumber);
         bundle.putString("ussdCode", ussdCode);
         bundle.putString("paybill", paybill);
@@ -3118,20 +3100,6 @@ public class FragmentPayment extends Fragment implements IWhereMyLocationConstan
     }
 
 
-    private void setDeviceIcon(int assetTypeId) {
 
-        if (iconDevice == null || ftvDevice == null || mContext == null) {
-            return;
-        }
-
-        if (assetTypeId == 4) {
-            iconDevice.setImageResource(R.drawable.ics_simu);
-            ftvDevice.setText(mContext.getResources().getString(R.string.device));
-        } else ftvDevice.setText(mContext.getResources().getString(R.string.asset));
-        if (assetTypeId == 1 || assetTypeId == 5) iconDevice.setImageResource(R.drawable.ics_boda);
-        if (assetTypeId == 10) iconDevice.setImageResource(R.drawable.ics_icon_tv);
-        if (assetTypeId == 2 || assetTypeId == 7 || assetTypeId == 9)
-            iconDevice.setImageResource(R.drawable.ics_tuk_tuk);
-    }
 
 }

@@ -41,9 +41,11 @@ public class FragmentPaymentProcess extends Fragment implements IWhereMyLocation
     String pagaNumber, ussdCode, paybill, loanNumber, company;
 
     String totalDays;
-    FirmaTextView textUsername, textDevice, textPagaNumber, amountText, numberOfDaysText, textTransferMethod, textBankTransfer, textMobileTransfer, textThirdPartyTransfer, paymentInstructions;
+    FirmaTextView textUsername, textDevice, textPagaNumber, amountText, numberOfDaysText, textTransferMethod, textBankTransfer, textMobileTransfer, textThirdPartyTransfer, paymentInstructions, ftvDevice;
 
-    ImageView iconImage, iconCopyPaga;
+    ImageView iconImage, iconCopyPaga, iconDevice;
+
+    int assetTypeId;
 
     MaterialRippleLayout backRips, bankPayDoneRips, bankPayCancelRips, mobilePayDoneRips, mobilePayCancelRips, thirdPartyPayDoneRips, thirdPartyPayCancelRips;
 
@@ -78,6 +80,7 @@ public class FragmentPaymentProcess extends Fragment implements IWhereMyLocation
             days = bundle.getDouble("numberOfDays"); // 👈 fix type!
             userName = bundle.getString("user");
             deviceName = bundle.getString("device");
+            assetTypeId = bundle.getInt("assetTypeId");
             pagaNumber = bundle.getString("pagaNumber");
             ussdCode = bundle.getString("ussdCode");
             paybill = bundle.getString("paybill");
@@ -105,6 +108,8 @@ public class FragmentPaymentProcess extends Fragment implements IWhereMyLocation
 
         textUsername = parentView.findViewById(R.id.textUsername);
         textDevice = parentView.findViewById(R.id.textDevice);
+        ftvDevice = parentView.findViewById(R.id.ftvDevice);
+        iconDevice = parentView.findViewById(R.id.iconDevice);
         amountText = parentView.findViewById(R.id.textAmount);
         numberOfDaysText = parentView.findViewById(R.id.textDays);
         iconView = parentView.findViewById(R.id.iconView);
@@ -117,6 +122,22 @@ public class FragmentPaymentProcess extends Fragment implements IWhereMyLocation
 
         paymentInstructions = parentView.findViewById(R.id.tv_instructions);
 
+    }
+
+    private void setDeviceIcon(int assetTypeId) {
+
+        if (iconDevice == null || ftvDevice == null || mContext == null) {
+            return;
+        }
+
+        if (assetTypeId == 4) {
+            iconDevice.setImageResource(R.drawable.ics_simu);
+            ftvDevice.setText(mContext.getResources().getString(R.string.device));
+        } else ftvDevice.setText(mContext.getResources().getString(R.string.asset));
+        if (assetTypeId == 1 || assetTypeId == 5) iconDevice.setImageResource(R.drawable.ics_boda);
+        if (assetTypeId == 10) iconDevice.setImageResource(R.drawable.ics_icon_tv);
+        if (assetTypeId == 2 || assetTypeId == 7 || assetTypeId == 9)
+            iconDevice.setImageResource(R.drawable.ics_tuk_tuk);
     }
 
     private void setViews() {
@@ -160,6 +181,7 @@ public class FragmentPaymentProcess extends Fragment implements IWhereMyLocation
         textDevice.setText(deviceName);
         amountText.setText(amount);
         numberOfDaysText.setText(totalDays);
+        setDeviceIcon(assetTypeId);
 
 //        textBankTransfer.setText(android.text.Html.fromHtml(getString(R.string.paybybanktransfer)));
 //        textMobileTransfer.setText(android.text.Html.fromHtml(getString(R.string.paybymobiletransfer)));

@@ -169,6 +169,7 @@ public class FragmentFAQs extends Fragment implements IWhereMyLocationConstants 
                             JSONObject obj = new JSONObject(carousel_view_sign_up);
 
                             Log.d("ZeCarousel","ZeCarousel"+ obj);
+
                             refreshCarouselDetailsSignUp(obj);
 
                         } catch (JSONException e) {
